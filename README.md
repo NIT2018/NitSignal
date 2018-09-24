@@ -12,11 +12,11 @@
 2. MarkDown基本格式与原理
 3. VsCode基本操作
 
-[课程文档链接:https://github.com/kingsone995/Signal-and-System.git](https://github.com/kingsone995/Signal-and-System.git)
+[课程文档链接:https://github.com/NIT2018/NitSignal.git](https://github.com/NIT2018/NitSignal.git)
 
 VsCode显示MarkDown页面效果时，需要添加相关插件。有个笨办法：在Debug菜单，选择Start Debugging，然后点击more。此时在左边页面出现一堆插件，在上面搜索栏输入MarkDown，就在左边会出现一批插件，可以选择其中某几种，但是要预览的话，必须选中Markdown Preview Enhanced。下图就是我的VsCode中整个工作页面。
 
-![image](https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/VsCode.png)
+![image](https://raw.githubusercontent.com/NIT2018/NitSignal/master/VsCode.png)
 
 [^_^]:
     [image](/Users/wangyigang/Documents/kingsone/github/Signal-and-System/VsCode.png)
