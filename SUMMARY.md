@@ -1,7 +1,7 @@
 # 目录
 
 * [前言](README.md)
-* [第1章 信号与系统的基本概念](chapter1.md)
+* [第1章 信号与系统的基本概念](ch1/chapter1.md)
     * [1.0 引言](chapter1.md)
     * [1.1 信号与系统的基本概念](chapter1.md)
     * [1.2 基本的连续时间信号](chapter1.md)
