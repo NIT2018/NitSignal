@@ -11,9 +11,9 @@
     * [1.6 系统的基本性质](chapter1.md)
     * [1.7 作业](chapter1.md)[
 
-* [第2章 线性时不变系统的时域分析](chapter1.md)
-* [第3章 连续时间信号与系统的傅立叶分析](chapter1.md)
-* [第4章 离散时间信号与系统的傅立叶分析](chapter1.md)
-* [第5章 采样调制与通信系统](chapter1.md)
-* [第6章 拉普拉斯变换](chapter1.md)
-* [第7章 Z变换](chapter1.md)
+* [第2章 线性时不变系统的时域分析](chapter2.md)
+* [第3章 连续时间信号与系统的傅立叶分析](chapter3.md)
+* [第4章 离散时间信号与系统的傅立叶分析](chapter4.md)
+* [第5章 采样调制与通信系统](chapter5.md)
+* [第6章 拉普拉斯变换](chapter6.md)
+* [第7章 Z变换](chapter7.md)
