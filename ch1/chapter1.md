@@ -11,44 +11,44 @@
 5)	什么是信号？
     A）信号是信息的具体表现形式。如光信号、电信号、声信号等。
 <center>
-  <img src="https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/flag-1.png" > 
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/flag-1.png" > 
   
   图1-1 旗语
 </center>
 
 <center>
-  <img src="https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/heart-1.png" > 
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/heart-1.png" > 
   
   图1-2 心电图
 </center>
 
 <center>
-  <img src="https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/telecomm-1.png" > 
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/telecomm-1.png" > 
   
   图1-3 电报
 </center>
 
 <center>
-  <img src="https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/signal-1.png" > 
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/signal-1.png" > 
   
   图1-4 未处理前的信号
 </center>
 
 <center>
-  <img src="https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/signal-filted-1.png" > 
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/signal-filted-1.png" > 
   
   图1-5 处理后的信号
 </center>
 
 <center>
-  <img src="https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/x-1.png" > 
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/x-1.png" > 
   
   图1-6 信号增强之后的示意图
   </center>
 
 
 [^_^]:
-    ![image](https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/flag-1.png)
+    ![image](https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/flag-1.png)
 
 B)	电信号又可分为电流信号（有线）和电磁波信号（无线）。
 C)	电信号是最便于存储、传输、处理和再现的，因此引用最广泛。在实际应用中，一般先将其他物理量通过传感器变成电信号，再进行处理和传输。如话筒，其功能就是将声波变成电信号。
