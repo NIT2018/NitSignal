@@ -57,7 +57,7 @@ D)	机械专业就是关心机械震动方面。信号与系统从开课初期�
 6)	什么是系统？
 
 <center>
-  <img src="https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/telesys-1.png" > 
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/telesys-1.png" > 
   
   图1-7 通信系统示意图
   </center>
@@ -98,7 +98,7 @@ D)	机械专业就是关心机械震动方面。信号与系统从开课初期�
     * 经过采样的连续信号是一种时间上离散的离散信号，但幅值仍旧连续，叫 ***抽样信号***；
     * 对信号幅值也离散化的离散信号，叫 ***数字信号***；
 <center>
-  <img src="https://raw.githubusercontent.com/kingsone995/Signal-and-System/master/signal-type-1.png" > 
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/signal-type-1.png" > 
   
   图1-8 模拟信号、抽样信号和数字信号比较
   </center>
