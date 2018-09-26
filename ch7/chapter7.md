@@ -5,9 +5,6 @@
 ## 7.1 Z变换
 
 
-1）前面我们学了离散傅里叶变换和反变换公式：\begin{cases}
-X(e^jw)= \\ 
-a_2x+b_2y+c_2z=d_2 \\ 
-\end{cases}
+1）前面我们学了离散傅里叶变换和反变换公式：\begin{cases}X(e^jw)= \\ a_2x+b_2y+c_2z=d_2 \\ \end{cases}
 
 
