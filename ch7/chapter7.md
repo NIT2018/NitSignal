@@ -5,7 +5,9 @@
 ## 7.1 Z变换
 
 
-1）前面我们学了离散傅里叶变换和反变换公式：
-$ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例} $
- 
+1）前面我们学了离散傅里叶变换和反变换公式：\begin{cases}
+X(e^jw)=\sum_{n=-\infty}^+\infty\fracx[n]e^-jwn \\ 
+a_2x+b_2y+c_2z=d_2 \\ 
+\end{cases}
+
 
