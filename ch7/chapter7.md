@@ -6,7 +6,7 @@
 
 
 1）前面我们学了离散傅里叶变换和反变换公式：\begin{cases}
-X(e^jw)=\sum_{n=-\infty}^+\infty\fracx[n]e^-jwn \\ 
+X(e^jw)= \\ 
 a_2x+b_2y+c_2z=d_2 \\ 
 \end{cases}
 
