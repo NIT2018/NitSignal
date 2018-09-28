@@ -19,7 +19,7 @@
 2)	一个信号，若系统对该信号的输出响应仅是一个常数乘以该输入，则该信号称为系统的*特征函数*，而幅度因子H(s)称为*特征值*。
 ### 4.1.2 本章应用 
 1)	对于离散时间系统来说，$x[n]=z^{\it n}$ 就是一个特征函数，证明如下：
-$$y[n]=h[n]*x[n]=\sum_{k=-\infty}^+\infty h[k]z^{n-k}=z^n\sum_{k=-\infty}^+\infty h[k]z^{-k}={\mit H}(z)z^n$$
+$$y[n]=h[n]*x[n]=\sum_{k=-\infty}^{+\infty} h[k]x[n-k]=\sum_{k=-\infty}^{+\infty} h[k]z^{n-k}=z^n\sum_{k=-\infty}^{+\infty} h[k]z^{-k}={\mit H}(z)z^n$$
  
 2)	任何复指数函数zn就是离散LTI系统的特征函数， 就是跟zn有关的特征值
 3)	对于信号 ，系统对于每个分量的响应分别是：
