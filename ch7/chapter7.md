@@ -7,7 +7,7 @@
 1）前面我们学了离散傅里叶变换和反变换公式：$
         \begin{cases}
         X(e{jw})=\sum_{n=-\infty}^{+\infty}{x[n]=e^{-jw}}\\ 
-        X[n]= \frac{1}{2\pi}\int_2\pi x(e^{jw})e^{jwn}dw\\
+        X[n]= \frac{1}{2\pi}\int_{2\pi}x(e^{jw})e^{jwn}dw\\
         \end{cases} 
     $
 
