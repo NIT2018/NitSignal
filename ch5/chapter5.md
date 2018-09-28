@@ -20,13 +20,13 @@
 1)	现看<font color="red">连续时间正弦幅度调制</font>：
 2)	正弦幅度调制有两种常用型式，
 a)	其一是载波信号c(t)为如下形式的复指数载波$\it c(t)=e^{j(\omega_ct+ \theta_c)}$
-b)	第二种是正弦载波$\t c(t)=cos(\omega_ct+\theta_c)$ 
+b)	第二种是正弦载波$\it c(t)=cos(\omega_ct+\theta_c)$ 
 c)	 叫做载波频率，为了方便，一边取$\theta_c=0$
 3)	所谓幅度调制：就是将待传送信号和载波相乘，这样载波幅度的包络就是待传送信号。即$\it y(t)=\chi(t)c(t)$，如图（<font color="red">奥本海默第一版P350图7.1</font>)所示。
-4)	设信号频谱为$X(\it j\omega)$，载波频谱为$C(\it j\omega)，则有$Y(\it j\omega)=\farc{1}{2\pi}X(\it j\omega)*C(\it j\omega)$，如下图示：
-a) $X(\it j\omega)$,<font color="red">奥本海默第一版P350图7.2 (a)</font>:
-b)$C(\it j\omega)=2\pi\delta(\omega-\omega_c)$,<font color="red">奥本海默第一版P350图7.2 (b)</font>:
-c)$Y(\it j\omega)=X(\it j(\omega-\omega_c))$,<font color="red">奥本海默第一版P350图7.2 (c)</font>:
+4)	设信号频谱为$X(\it j\omega)$，载波频谱为$C(\it j\omega)，则有$$Y(\it j\omega)=\farc{1}{2\pi}X(\it j\omega)*C(\it j\omega)$$，如下图示：
+a) $$X(\it j\omega)$$,<font color="red">奥本海默第一版P350图7.2 (a)</font>:
+b)$$C(\it j\omega)=2\pi\delta(\omega-\omega_c)$$,<font color="red">奥本海默第一版P350图7.2 (b)</font>:
+c)$$Y(\it j\omega)=X(\it j(\omega-\omega_c))$$,<font color="red">奥本海默第一版P350图7.2 (c)</font>:
 5)	从接收到的y(t)信号恢复出原发送信号x(t)的过程叫解调。
 6)	上述信号的解调方式就是 ，这样接收端得到的信号 就等于发送信号x(t)，实际上是将y(t)的频谱再原封不动地搬回原处。
 7)	复指数载波调制的实现方式，如图（奥本海默第一版P351图7.3）所示：
