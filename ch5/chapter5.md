@@ -26,7 +26,7 @@ c)	 叫做载波频率，为了方便，一边取$\theta_c=0$
 4)	设信号频谱为$X(\it j\omega)$，载波频谱为$C(\it j\omega)，则有$$Y(\it j\omega)=\farc{1}{2\pi}X(\it j\omega)*C(\it j\omega)$$，如下图示：
 a) $$X(\it j\omega)$$,<font color="red">奥本海默第一版P350图7.2 (a)</font>:
 b)$$C(\it j\omega)=2\pi\delta(\omega-\omega_c)$$,<font color="red">奥本海默第一版P350图7.2 (b)</font>:
-c)$$Y(\it j\omega)=X(\it j(\omega-\omega_c))$$,<font color="red">奥本海默第一版P350图7.2 (c)</font>:
+c)$$Y(\it j\omega)=X(\it j(\omega-\omega_c))$,<font color="red">奥本海默第一版P350图7.2 (c)</font>:
 5)	从接收到的y(t)信号恢复出原发送信号x(t)的过程叫解调。
 6)	上述信号的解调方式就是 ，这样接收端得到的信号 就等于发送信号x(t)，实际上是将y(t)的频谱再原封不动地搬回原处。
 7)	复指数载波调制的实现方式，如图（奥本海默第一版P351图7.3）所示：
