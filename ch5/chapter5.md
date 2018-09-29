@@ -86,7 +86,10 @@ b)	洗出来的照片，实际上就是一个个点组成，但看起来是连�
 1)	对于带限信号，由于我们只采集了有限个点，那么怎么恢复其原始信号呢？
 2)	从上一节中，我们知道要恢复原先的信号，只需在最后接收端加一个理想低通滤波即可，对于理想低通的实现，在时域上就是个卷积过程，这个也是内插过程。
 3)	由前一节我们可知，已调信号的表达式为$x_p(t)=\it x(t)p(t)=\sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT)$，然后要经过一个截止频率为$\it \omega_c$的理想低通滤波器H(jw)，其对应的时域形式为（即单位冲激响应）$h(t)={\it \frac {T}{\pi t}}sin{(\it \omega_ct)}$
-4) 所以$$$x_r(t)=\it x_p(t)*h(t)=(\it \sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT)* \left( \frac{T}{\pi t}sin(\omega_ct) \right) =\sum_{n=-\infty}^{+\infty} {\it x(nT)\frac {T}{\pi(t-nT)}}sin(\it \omega_c(t-nT))$$$
+4) 所以
+
+$$x_r(t)=\it x_p(t)*h(t)=(\it \sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT)* \left( \frac{T}{\pi t}sin(\omega_ct) \right) =\sum_{n=-\infty}^{+\infty} {\it x(nT)\frac {T}{\pi(t-nT)}}sin(\it \omega_c(t-nT))$$
+
 5)	这就是插值公式，任意一个时刻t的输出值，是所有样值点的线性组合，根据这个理想内插得到的信号，就跟原信号一模一样。如图(奥本海默第一版P401图8.11)所示
 6)	有时候我们也用其他的插值方法，如零阶保持，这样实际上用的不是理想低通滤波器，如图奥本海默第一版P401图8.12和奥本海默第一版P399图8.7最后一图所示
 7)	也有我们用一阶线性插值，如图奥本海默第一版P400图8.10和奥本海默第一版P403图8.14所示
