@@ -23,7 +23,7 @@ a)	其一是载波信号c(t)为如下形式的复指数载波$\it c(t)=e^{j(\ome
 b)	第二种是正弦载波$\it c(t)=cos(\omega_ct+\theta_c)$ 
 c)	 叫做载波频率，为了方便，一边取$\theta_c=0$
 3)	所谓幅度调制：就是将待传送信号和载波相乘，这样载波幅度的包络就是待传送信号。即$\it y(t)=\chi(t)c(t)$，如图（<font  color="red">奥本海默第一版P350图7.1</font>)所示。
-4)	设信号频谱为$X(\it j\omega)$，载波频谱为$C(\it j\omega)$，则有$$Y({\it j}\omega)={\farc{1}{2\pi}}X({\it j}\omega)*C({\it j}\omega)$$，如下图示：
+4)	设信号频谱为$X(\it j\omega)$，载波频谱为$C(\it j\omega)$，则有$$Y({\it j}\omega)={\frac{1}{2\pi}}X({\it j}\omega)*C({\it j}\omega)$$，如下图示：
 a) $$X(\it j\omega)$$,<font color="red">奥本海默第一版P350图7.2 (a)</font>:
 b)$$C({\it j}
 \omega)=2\pi\delta(\omega-\omega_c)$$,<font color="red">奥本海默第一版P350图7.2 (b)</font>:
