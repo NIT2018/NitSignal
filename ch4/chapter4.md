@@ -23,9 +23,9 @@ $$y[n]=h[n]*x[n]=\sum_{k=-\infty}^{+\infty} h[k]x[n-k]=\sum_{k=-\infty}^{+\infty
  
 2)	任何复指数函数zn就是离散LTI系统的特征函数，${\mit H}(z)=\sum_{k=-\infty}^{+\infty} h[k]z^{-k}$ 就是跟$z^n$有关的特征值
 3)	对于信号 $x[n]=a_1z_1^n+a_2z_2^n+a_3z_3^n$，系统对于每个分量的响应分别是：
- $a_1z_1^n \to a_1{\mit H}(z_1)z_1^n  
- a_2z_2^n \to a_2{\mit H}(z_2)z_2^n  
- a_3z_3^n \to a_3{\mit H}(z_3)z_3^n$
+$a_1z_1^n \to a_1{\mit H}(z_1)z_1^n$
+$a_2z_2^n \to a_2{\mit H}(z_2)z_2^n$  
+$a_3z_3^n \to a_3{\mit H}(z_3)z_3^n$
  
  
  
