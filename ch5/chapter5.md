@@ -33,5 +33,5 @@ c)	 叫做载波频率，为了方便，一边取$\theta_c=0$
 8)  再看正弦载波调制，此时载波信号为$c(t)=cos(\omega_ct+\theta_c)$，同样地，我们令$\omega_c=0$
 9)	此时的载波频谱为$\it C(j\omega)=\pi\delta(\omega-\omega_c)+\pi\delta(\omega+\omega_c)$，如图（奥本海默P351图7.5(b)）所示
 10)	最后已调波的频谱为(奥本海默P351图7.5 (c))：
-11)	解调方法：a) $\rm {x'(t)=y(t)cos(\omega_ct)}={\it {x}(t)(\frac {1}{2}+\frac {1}{2}cos(2\omega_ct))}$
+11)	解调方法：a) $\rm {x'(t)=y(t)cos(\omega_ct)}={\it {x} (t)(\frac {1}{2}+\frac {1}{2}cos(2\omega_ct))}$
 b) 再经过一个低通滤波器
