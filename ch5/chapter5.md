@@ -74,9 +74,9 @@ b)	洗出来的照片，实际上就是一个个点组成，但看起来是连�
 1)	并不是任何信号都能够唯一地由一组等间距的样本来表示，如图（奥本海默第一版P396图8.1）所示
 2)	如果一个信号是带限的，并且它的样本取得足够密的话，那么这些样本值就能够唯一地用来表征这一信号，并且能从这些样本中把信号完全恢复出来。
 3)	什么叫采样足够密？
-4)	对于x(t)，通过p(t)进行采样，得到$x_p(t)$，$x_p(t)={\it x}(t){\it p}(t)$，其中${\it p}(t)=\sum_{n=-\infty}^{+\infty} {\theta({\it t-nT})}$，所以$X_p(t)={\it x(t)p(t)}=\sum_{n=-\infty}^{+\infty} {\it x(nT)\theta(t-nT)}$，如图（奥本海默第一版P396图8.3(a)）所示。
+4)	对于x(t)，通过p(t)进行采样，得到$x_p(t)$，$x_p(t)={\it x}(t){\it p}(t)$，其中$${\it p}(t)=\sum_{n=-\infty}^{+\infty} {\theta({\it t-nT})}$$，所以$$X_p(t)={\it x(t)p(t)}=\sum_{n=-\infty}^{+\infty} {\it x(nT)\theta(t-nT)}$$，如图（奥本海默第一版P396图8.3(a)）所示。
 5) 因为x(t)是带限的，所以设频谱为()：
-6) $X_p({\it j\omega})=\frac {1}{2\pi}{\it X(j\omega)}*{\it p(j\omega)}=\frac {1}{{\it T}}\sum_{{\it k=-\infty}}^{+\infty} \it X(j(\omega-k\omega_s))$，其中${\it P(j\omega)}=\frac {2\pi}{\it T}\sum_{\it k=-\infty}^{+\infty} \theta(\omega-\omega_s)$，$\omega_s=2\pi/{\it T}$，P(jw)如图(奥本海默第一版P396图8.3(b))所示
+6) $$X_p({\it j\omega})=\frac {1}{2\pi}{\it X(j\omega)}*{\it p(j\omega)}=\frac {1}{{\it T}}\sum_{{\it k=-\infty}}^{+\infty} \it X(j(\omega-k\omega_s))$$，其中$${\it P(j\omega)}=\frac {2\pi}{\it T}\sum_{\it k=-\infty}^{+\infty} \theta(\omega-\omega_s)$，$\omega_s=2\pi/{\it T}$$，P(jw)如图(奥本海默第一版P396图8.3(b))所示
 7) $X_p({\it j\omega})$如图（奥本海默第一版P396图8.3(c)）所示
 8)	如果$\it \omega_s-\omega_M>\omega_M$，则频谱不会混叠，我们在接收端放一个理想低通滤波器即可恢复原始信号，否则，若$\it \omega_s-\omega_M<\omega_M$，则信号频谱发生混叠，信号将不能被恢复。如图（奥本海默第一版P396图8.3(d)）所示。
 9)	一个利用理想低通滤波器从信号样本中恢复连续信号的系统框图，（奥本海默第一版P398图8.5）
@@ -85,7 +85,7 @@ b)	洗出来的照片，实际上就是一个个点组成，但看起来是连�
 ### 5.2.3 利用内插从样本值重建信号
 1)	对于带限信号，由于我们只采集了有限个点，那么怎么恢复其原始信号呢？
 2)	从上一节中，我们知道要恢复原先的信号，只需在最后接收端加一个理想低通滤波即可，对于理想低通的实现，在时域上就是个卷积过程，这个也是内插过程。
-3)	由前一节我们可知，已调信号的表达式为$x_p(t)=\it x(t)p(t)=\sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT)$，然后要经过一个截止频率为$\it \omega_c$的理想低通滤波器H(jw)，其对应的时域形式为（即单位冲激响应）$h(t)={\it \frac {T}{\pi t}}sin{(\it \omega_ct)}$
+3)	由前一节我们可知，已调信号的表达式为$$x_p(t)=\it x(t)p(t)=\sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT)$$，然后要经过一个截止频率为$\it \omega_c$的理想低通滤波器H(jw)，其对应的时域形式为（即单位冲激响应）$h(t)={\it \frac {T}{\pi t}}sin{(\it \omega_ct)}$
 4) 所以
 
 $$x_r(t)=\it x_p(t)*h(t)=(\it \sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT)* \left( \frac{T}{\pi t}sin(\omega_ct) \right) =\sum_{n=-\infty}^{+\infty} {\it x(nT)\frac {T}{\pi(t-nT)}}sin(\it \omega_c(t-nT))$$
