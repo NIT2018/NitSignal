@@ -19,6 +19,7 @@
 ### 5.1.2 调制和解调(Modulation and Demodulation--MODEM)
 1)	现看连续时间正弦幅度调制：
 2)	正弦幅度调制有两种常用型式，
+
 a)	其一是载波信号c(t)为如下形式的复指数载波$\it c(t)=e^{j(\omega_ct+ \theta_c)}$
 
 b)	第二种是正弦载波$\it c(t)=cos(\omega_ct+\theta_c)$ 
