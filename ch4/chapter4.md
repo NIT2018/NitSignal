@@ -153,7 +153,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
 
     a)	解： $$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=-{N_1}}^{N_1} {\it e}^{-j\omega n}=\sum_{n=0}^{2N_1} {\it e}^{-j\omega (n-N_1)}={\it e}^{j\omega N_1}\frac{1-({\it e}^{-j\omega})^{2N_1+1}}{1-{\it e}^{-j\omega}}$$
 
-    b)	 
+    b)	 =\frac{{\it e}^{j\omega N_1}{\it e}^{-j\omega(N_1+\frac{1}{2})}({\it e}^{j\omega(N_1+\frac{1}{2})}-{\it e}^{-j\omega(N_1+\frac{1}{2})})}{{\it e}^{-j\omega/2}({\it e}^{j\omega/2}-{\it e}^{-j\omega/2})}$$
 
     c)	注意，上式也是以2π为周期的频谱，如图所示(奥本海默第一版P240图5.13)
 
