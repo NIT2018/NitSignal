@@ -142,7 +142,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
     c)	$$\angle X({\it e}^{j\omega})={\rm arctg}(\frac{-a\sin \omega}{1-a\cos \omega})$$ ，周期为2π
 2)	例2：求信号x[n]的频谱。$$x[n]=a_{|n|},|a|<1 $$
 
-    a)	解： $$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=0}^{=\infty} a^n{\it e}^{-j\omega n}+\sum_{n=-\infty}^{-1} a^{-n}{\it e}^{-j\omega n}=\sum_{n=0}^{+\infty} (a{\it e}^{-j\omega})^n+\sum_{n=-\infty}^{0} (a{\it e}^{j\omega})^{-n}-1=\frac{1-(a{\it e}^{j\omega})^\infty}{1-a{\it e}^{-j\omega}}+\frac{1-(a{\it e}^{j\omega})^\infty}{1-a{\it e}^{j\omega}}-1=\frac{1}{1-a{\it e}^{-j\omega}}+\frac{1}{1-a{\it e}^{j\omega}}-1=$$
+    a)	解： $$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=0}^{=\infty} a^n{\it e}^{-j\omega n}+\sum_{n=-\infty}^{-1} a^{-n}{\it e}^{-j\omega n}=\sum_{n=0}^{+\infty} (a{\it e}^{-j\omega})^n+\sum_{n=-\infty}^{0} (a{\it e}^{j\omega})^{-n}-1=\frac{1-(a{\it e}^{j\omega})^\infty}{1-a{\it e}^{-j\omega}}+\frac{1-(a{\it e}^{j\omega})^\infty}{1-a{\it e}^{j\omega}}-1=\frac{1}{1-a{\it e}^{-j\omega}}+\frac{1}{1-a{\it e}^{j\omega}}-1=\frac{1-a^2}{1-2a\cos \omega +a^2}$$
  
  
     b)	频谱是实数，如图所示（奥本海默第一版P239图5.12）
