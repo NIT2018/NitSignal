@@ -65,6 +65,8 @@ $$\sum_{k=0}^{N-1} {\it e}^{jk(2\pi/N)n}=\begin{cases} N,& \text{$\pm$1,$\pm$N,.
 2)	例2：求信号$$x[n]=1+\sin(\frac{2\pi}{N})n+3\cos(\frac{2\pi}{N})n+cos(\frac{4\pi}{N}n+\frac{\pi}{2})$$ 傅立叶级数的系数，N>=5。
 
     a)	解： $$x[n]=1+\frac{1}{2j}[{\it e}^{j(2\pi/N)n}-{\it e}^{-j(2\pi/N)n}]+\frac{3}{2}[{\it e}^{j(2\pi/N)n}+{\it e}^{-j(2\pi/N)n}]+\frac{1}{2}[{\it e}^{j(4\pi n/N+\pi/2)}+{\it e}^{-j(4\pi n/N+\pi/2)}]=
+
+    
     1+(\frac{3}{2}+\frac{1}{2j}){\it e}^{j(2\pi/N)n}+(\frac{3}{2}-\frac{1}{2j}){\it e}^{-j(2\pi/N)n}+(\frac{1}{2}{\it e}^{j\pi/2}){\it e}^{j2(2\pi/N)n}+(\frac{1}{2}{\it e}^{-j\pi/2}){\it e}^{-j2(2\pi/N)n}$$
  
  
