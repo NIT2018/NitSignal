@@ -110,16 +110,16 @@ $$\sum_{k=0}^{N-1} {\it e}^{jk(2\pi/N)n}=\begin{cases} N,& \text{$\pm$1,$\pm$N,.
 ### 4.3.2 离散傅立叶变换对的推导 
 1)	考虑一个非周期序列x[n]，它有有限持续期。也即对于一个整数$N_1$，当 $|n|> N_1$时，有x[n]=0，如下图所示。(奥本海默第一版P236图5.8)
 
-2)	将x[n]进行周期延拓，得到信号 ，周期为N，$N≥2N_1+1$，当$|n|\leq N_1$ 时，有 $s[n]$=x[n]
+2)	将x[n]进行周期延拓，得到信号 ，周期为N，$N≥2N_1+1$，当$|n|\leq N_1$ 时，有 $x[n]$=x[n]
 3)	根据上节介绍，我们可以将 表示成傅立叶级数形式，有$$\begin{cases} x[n]=\sum_{k=\langle N \rangle} a_k{\it e}^{jk(2\pi/N)n}...(1)\\
 a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{cases}$$
  
-4)	在 范围内，有 =x[n]，而当 时，x[n]=0，所以有
+4)	在 $|n|\leq N_1$范围内，有$x[n]$ =x[n]，而当$|n|\req N_1$ 时，x[n]=0，所以有$$a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}=\frac{1}{N}\sum_{k=-N_1}^{N-1} x[n]{\it e}{-jk(2\pi/N)n}=\frac{1}{N}\sum_{k=-\infty}^{\infty} x[n]{\it e}{-jk(2\pi/N)n}$$
  
-5)	我们定义 ，则 就是 在 处的采样，即 ，其中 为信号 的基波周期
-6)	接下来我们考虑用 来表示x[n]
-7)	将上面 表达式(3)代入到（1）式，有
- 
+5)	我们定义$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}$$ ，则$N_{a_k}$ 就是 $X({\it e}^{j\omega})$在$\omega=k(2\pi/N) $处的采样，即$$a_k=\frac{1}{N}X({\it e}^{jk\frac{2\pi}{N}})=\frac{1}{N}X({\it e}^{jk\omega})...(3) $$，其中$\omega_0=2\pi/N$ 为信号x[n] 的基波周期
+6)	接下来我们考虑用$X({\it e}^{j\omega})$ 来表示x[n]
+7)	将上面$a_k$ 表达式(3)代入到（1）式，有$$x[n]=\sum_{k=\langle N \rangle} \frac{1}{N}X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}=\frac{1]{2\pi}\sum_{k=\langle N \rangle} X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}\omega_0 ...(4)$$
+
 8)	当N∞时，有 ， ，则上式(4)变成
  ，接下来我们要确定积分范围
 9)	根据（４）式，k的取值范围是在一个周期内，不放先取[0,N-1]，则积分变量 的取值范围为[0,(N-1)  ]，即[0，(N-1)2π/N]，当N∞时，积分范围为[0,2π]，当k取值范围在一个连续N范围内时，积分范围也在一个连续2π内，所以有
