@@ -120,7 +120,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
 6)	接下来我们考虑用$X({\it e}^{j\omega})$ 来表示x[n]
 7)	将上面$a_k$ 表达式(3)代入到（1）式，有$$x[n]=\sum_{k=\langle N \rangle} \frac{1}{N}X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}=\frac{1}{2\pi} \sum_{k=\langle N \rangle} X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}\omega_0 ...(4)$$
 
-8)	当$N \to \infty$时，有 $\omega \to 0$，$$\lim_{N \to \infty} x[n]=x[n] $$，则上式(4)变成$$x[n]=\frac{1}{2\pi}\begin{array} \int X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega \end{array}$$
+8)	当$N \to \infty$时，有 $\omega \to 0$，$$\lim_{N \to \infty} x[n]=x[n] $$，则上式(4)变成$$x[n]=\frac{1}{2\pi}\begin{array} \int_0^1 X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega \end{array}$$
  ，接下来我们要确定积分范围
 9)	根据（４）式，k的取值范围是在一个周期内，不放先取[0,N-1]，则积分变量 的取值范围为[0,(N-1)  ]，即[0，(N-1)2π/N]，当N∞时，积分范围为[0,2π]，当k取值范围在一个连续N范围内时，积分范围也在一个连续2π内，所以有
  
