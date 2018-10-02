@@ -140,11 +140,12 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
     b)	 $$|X({\it e}^{j\omega})|=\mid \frac{1}{1-a\cos \omega +j(a\sin \omega)} \mid=\frac{1}{\sqrt{1+a^2-2a\cos\omega}}$$，周期为2π
 
     c)	$$\angle X({\it e}^{j\omega})={\rm arctg}(\frac{-a\sin \omega}{1-a\cos \omega})$$ ，周期为2π
-2)	例2：求信号x[n]的频谱。 
-a)	解： 
+2)	例2：求信号x[n]的频谱。$$x[n]=a_{|n|},|a|<1 $$
+
+    a)	解： $$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=0}^{=\infty} a^n{\it e}^{-j\omega n}=\sum_{n=-\infty}^{-1} a^{-n}{\it e}^{-j\omega n}$$
  
  
-b)	频谱是实数，如图所示（奥本海默第一版P239图5.12）
+    b)	频谱是实数，如图所示（奥本海默第一版P239图5.12）
 
 
 
