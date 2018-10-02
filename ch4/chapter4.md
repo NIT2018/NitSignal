@@ -128,8 +128,8 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
 10)	综上，有$$\lbrace x[n]=\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega...(5) \\ X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}...(6)$$ ，（5）为综合公式，（6）为分析公式，这是一个傅立叶变换对。$X({\it e}^{j\omega})$ 叫信号x[n]的频谱。
 
 ### 4.3.3 连续时间和离散时间傅立叶变换的异同  
-1)	连续时间傅立叶变换 一般来说是连续非周期信号
-2)	离散时间傅立叶变换 则是一个周期为2π的连续信号
+1)	连续时间傅立叶变换$$X(j\omega)=\int_-\infty^+\infty {x(t){\it e}^{-j\omega t}} \,{\rm d}t$$ 一般来说是连续非周期信号
+2)	离散时间傅立叶变换$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}$$ 则是一个周期为2π的连续信号
 
  
 ### 4.3.4 几个例子
