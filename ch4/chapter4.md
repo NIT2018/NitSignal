@@ -83,7 +83,7 @@ $$\sum_{k=0}^{N-1} {\it e}^{jk(2\pi/N)n}=\begin{cases} N,& \text{$\pm$1,$\pm$N,.
 
 
 
-3)	例3：求周期函数x[n]傅立叶级数的系数。$$x[n]=x[n+N].x[n]=\begin{cases} 1, & \text{-$N_1$ $\leq$ n $\leq$ $N_1$} \\ 0, & \text{$N_1$<|n|<N}\end{cases}$$
+3)	例3：求周期函数x[n]傅立叶级数的系数。$$x[n]=x[n+N].x[n]=\begin{cases} 1, & \text{-$N_1$ $\leq$ n $\leq$ $N_1$} $\\$ 0, & \text{$N_1$<|n|<N}\end{cases}$$
 
     a)	解：用公式得，$$a_k=\frac{1}{N}\sum_{n=\langle N \rangle} {\it e}^{-jk(2\pi/N)n}=\frac{1}{N}\sum_{n=\langle -N_1 \rangle}^{N_1} {\it e}^{-jk(2\pi/N)n}$$
 
