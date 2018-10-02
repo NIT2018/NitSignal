@@ -162,16 +162,17 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
 
 
 4)	例4：求单位脉冲序列x[n]=δ[n]的傅立叶变换。
-a)	解： 
+
+    a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=1$$ 
 
 ## 4.4 周期信号与离散时间傅立叶变换 
 ### 4.4.1 问题的导出 
-1)	例1：求下列周期冲激串 的傅立叶变换。 ，如下图所示(奥本海默第一版P242图5.15)
+1)	例1：求下列周期冲激串$x[n]$ 的傅立叶变换。$$x[n]=\sum_{k=-\infty}^{+\infty} \delta[n-kN]$$ ，如下图所示(奥本海默第一版P242图5.15)
 
 
-2)	如果用上节的方法，有 ，既要算内层，又要算外层，有点复杂
-3)	例2：求信号x[n]的频谱。 ，其中 为有理数
-a)	解： ，下面也很难计算
+2)	如果用上节的方法，有$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} [(\sum_{k=-\infty}^{+\infty} \delta[n-kN]){\it e}^{-j\omega n}]$$ ，既要算内层，又要算外层，有点复杂
+3)	例2：求信号x[n]的频谱。$x[n]={\it e}^{j\omega_0 n}$ ，其中$2\pi / \omega_0$ 为有理数
+a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} [{\it e}^{j\omega_0 n}{\it e}^{-j\omega_0 n}=\sum_{n=-\infty}^{+\infty} [{\it e}^{j(\omega_0-\omega)n}]$$ ，下面也很难计算
 4)	那么离散周期信号的傅立叶变换怎么求呢？
 
 ### 4.4.2 周期信号的傅立叶变换 
