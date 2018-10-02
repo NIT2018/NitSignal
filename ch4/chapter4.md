@@ -139,7 +139,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
  
     b)	 $$|X({\it e}^{j\omega})|=\mid \frac{1}{1-a\cos \omega +j(a\sin \omega)} \mid=\frac{1}{\sqrt{1+a^2-2a\cos\omega}}$$，周期为2π
 
-    c)	 ，周期为2π
+    c)	$$\angle X({\it e}^{j\omega})=arctg(\frac{-a\sin \omega}{1-a\cos \omega})$$ ，周期为2π
 2)	例2：求信号x[n]的频谱。 
 a)	解： 
  
