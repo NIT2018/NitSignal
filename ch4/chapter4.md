@@ -118,7 +118,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
  
 5)	我们定义$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}$$ ，则$N_{a_k}$ 就是 $X({\it e}^{j\omega})$在$\omega=k(2\pi/N) $处的采样，即$$a_k=\frac{1}{N}X({\it e}^{jk\frac{2\pi}{N}})=\frac{1}{N}X({\it e}^{jk\omega})...(3) $$，其中$\omega_0=2\pi/N$ 为信号x[n] 的基波周期
 6)	接下来我们考虑用$X({\it e}^{j\omega})$ 来表示x[n]
-7)	将上面$a_k$ 表达式(3)代入到（1）式，有$$x[n]=\sum_{k=\langle N \rangle} \frac{1}{N}X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n} ...(4)$$
+7)	将上面$a_k$ 表达式(3)代入到（1）式，有$$x[n]=\sum_{k=\langle N \rangle} \frac{1}{N}X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}=\frac{1}{2\pi} \sum_{k=\langle N \rangle} X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}\omega_0 ...(4)$$
 
 8)	当N∞时，有 ， ，则上式(4)变成
  ，接下来我们要确定积分范围
