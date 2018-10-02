@@ -89,7 +89,7 @@ $$\sum_{k=0}^{N-1} {\it e}^{jk(2\pi/N)n}=\begin{cases} N,& \text{$\pm$1,$\pm$N,.
 
     b)	当k＝0时，$a_k=(2N_1+1)/N$，否则
 
-    c)	做变量替换，$m=n+N_1$，有$$a_k=\frac{1}{N}\sum_{m=0}^{2N_1} {\it e}^{-jk(2\pi/N)(m-N_1)}=\frac{1}{N}{\it e}^{jk2\pi N_1/N}\sum_{m=0_1}^{2N_1} {\it e}^{-jk(2\pi/N)m}=\frac{1}{N}{\it e}^{jk2\pi N_1/N}$$
+    c)	做变量替换，$m=n+N_1$，有$$a_k=\frac{1}{N}\sum_{m=0}^{2N_1} {\it e}^{-jk(2\pi/N)(m-N_1)}=\frac{1}{N}{\it e}^{jk2\pi N_1/N}\sum_{m=0_1}^{2N_1} {\it e}^{-jk(2\pi/N)m}=\frac{1}{N}{\it e}^{jk2\pi N_1/N}\frac{1-{\it e}^{-jk(2\pi/N)(2N_1+1)}}{1-{\it e}^{-jk2\pi /N}}$$
  
  
  
