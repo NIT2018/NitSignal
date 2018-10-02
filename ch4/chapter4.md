@@ -83,7 +83,7 @@ $$\sum_{k=0}^{N-1} {\it e}^{jk(2\pi/N)n}=\begin{cases} N,& \text{$\pm$1,$\pm$N,.
 
 
 
-3)	例3：求周期函数x[n]傅立叶级数的系数。$$x[n]=x[n+N].x[n]=\begin{cases} 1, & \text{-$N_1$ $\leq$ n $\leq$ $N_1$} \\ 0, & \text{$N_1$<|n|<N}\end{cases}$$
+3)	例3：求周期函数x[n]傅立叶级数的系数。$$x[n]=x[n+N].x[n]= 1, -$N_1$ $\leq$ n $\leq$ $N_1$ \\ 0, $N_1$<|n|<N$$
 
     a)	解：用公式得，$$a_k=\frac{1}{N}\sum_{n=\langle N \rangle} {\it e}^{-jk(2\pi/N)n}=\frac{1}{N}\sum_{n=\langle -N_1 \rangle}^{N_1} {\it e}^{-jk(2\pi/N)n}$$
 
@@ -122,7 +122,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
 
 8)	当$N \to \infty$时，有 $\omega \to 0$，$$\lim_{N \to \infty} x[n]=x[n] $$，则上式(4)变成$$x[n]=\frac{1}{2\pi}\int_? X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega$$
  ，接下来我们要确定积分范围
-9)	根据（4）式，k的取值范围是在一个周期内，不放先取[0,N-1]，则积分变量 的取值范围为[0,(N-1)  ]，即[0，(N-1)2π/N]，当N∞时，积分范围为[0,2π]，当k取值范围在一个连续N范围内时，积分范围也在一个连续2π内，所以有$$x[n]=\frac{1}{2\pi}\int_2\pi X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega$$
+9)	根据（4）式，k的取值范围是在一个周期内，不放先取[0,N-1]，则积分变量 的取值范围为[0,(N-1)  ]，即[0，(N-1)2π/N]，当N∞时，积分范围为[0,2π]，当k取值范围在一个连续N范围内时，积分范围也在一个连续2π内，所以有$$x[n]=\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega$$
  
 10)	综上，有 ，（5）为综合公式，（6）为分析公式，这是一个傅立叶变换对。 叫信号x[n]的频谱。
 
