@@ -88,7 +88,7 @@ b)	洗出来的照片，实际上就是一个个点组成，但看起来是连�
 3)	由前一节我们可知，已调信号的表达式为$$x_p(t)=\it x(t)*p(t)=\sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT)$$，然后要经过一个截止频率为$\it \omega_c$的理想低通滤波器H(jw)，其对应的时域形式为（即单位冲激响应）$h(t)={\it \frac {T}{\pi t}}sin{(\it \omega_ct)}$
 4) 所以
 
-$x_r(t)=$ $\it x_p(t)*p(t)=$ $\it \sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT) * \left( \frac {\pi}{\pi t}sin(\omega_ct) \right)$ $\it \sum_{n=-\infty}^{+\infty} x(nT)\frac {T}{\pi(t-nT)}sin(\omega_c(t-nT))$
+$$x_r(t)=\it x_p(t)*p(t)=\it \sum_{n=-\infty}^{+\infty} x(nT)\theta(t-nT) * \left( \frac {\pi}{\pi t}sin(\omega_ct) \right)=\it \sum_{n=-\infty}^{+\infty} x(nT)\frac {T}{\pi(t-nT)}sin(\omega_c(t-nT))$$
 
 5)	这就是插值公式，任意一个时刻t的输出值，是所有样值点的线性组合，根据这个理想内插得到的信号，就跟原信号一模一样。如图(奥本海默第一版P401图8.11)所示
 6)	有时候我们也用其他的插值方法，如零阶保持，这样实际上用的不是理想低通滤波器，如图奥本海默第一版P401图8.12和奥本海默第一版P399图8.7最后一图所示
@@ -109,4 +109,3 @@ a)	先将信号伸展；
 b)	然后载进行滤波（插值），只要满足采样定理，则信号可以完全恢复；
 
 4)	介绍一种30万像素到130万像素插值算法的基本思想。
-1
