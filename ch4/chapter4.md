@@ -46,7 +46,7 @@ $$y[n]=h[n]*x[n]=\sum_{k=-\infty}^{+\infty} h[k]x[n-k]=\sum_{k=-\infty}^{+\infty
 1)	跟连续时间系统的推导类似，我们先可以证明 
 $$\sum_{k=0}^{N-1} {\it e}^{jk(2\pi/N)n}=\begin{cases} N,& \text{$\pm$1,$\pm$N,......} \\ 0, & \text{其它k值} \end{cases} $$
 2)	在（1）式两边各乘以${\it e}^{-jr(2\pi/N)n}$ ，然后在连续N项上求和，再利用上式，我们可以得到傅立叶级数系数的计算公式为：$$a_k= \frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}^{-jk(2\pi/N)n}$$
-3)	所以周期离散傅立叶信号的*分析*公式为： $$x[n]=\sum_{k=\langle N \rangle} a_k{\it e}^{jk(2\pi/N)n}
+3)	所以周期离散傅立叶信号的*分析*公式为： $$x[n]=\sum_{k=\langle N \rangle} a_k{\it e}^{jk(2\pi/N)n}$$
 4)	周期离散傅立叶信号的*综合*公式为:$$a_k= \frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}^{-jk(2\pi/N)n}$$ 
 5)	傅立叶级数系数$a_k$我们也叫做频谱系数
 6)	根据上面公式，我们有$a_k=a_k+N$.
