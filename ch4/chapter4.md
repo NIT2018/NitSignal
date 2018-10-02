@@ -151,7 +151,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
 
 3)	例3：求矩形脉冲序列x[n]的频谱。$$x[n]=\lbrace 1,|n|\leq N_1 \\ 0,|n|>N_1$$
 
-    a)	解： $$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=-{N_1}}^{N_1} {\it e}^{-j\omega n}=\sum_{n=0}^{2N_1} {\it e}^{-j\omega (n-N_1)}=$$
+    a)	解： $$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=-{N_1}}^{N_1} {\it e}^{-j\omega n}=\sum_{n=0}^{2N_1} {\it e}^{-j\omega (n-N_1)}={\it e}^{j\omega N_1}\frac{1-({\it e}^{-j\omega})^{2N_1+1}}{1-{\it e}^{-j\omega}}$$
 
     b)	 
 
