@@ -64,7 +64,7 @@ $$\sum_{k=0}^{N-1} {\it e}^{jk(2\pi/N)n}=\begin{cases} N,& \text{$\pm$1,$\pm$N,.
     e)	以N＝5为例，第一种情况，傅立叶级数为如图所示，画出示意图（同奥本海默第一版P230图5.2）；第二种情况，傅立叶级数如图所示，（同奥本海默第一版P230图5.3）
 2)	例2：求信号$$x[n]=1+\sin(\frac{2\pi}{N})n+3\cos(\frac{2\pi}{N})n+cos(\frac{4\pi}{N}n+\frac{\pi}{2})$$ 傅立叶级数的系数，N>=5。
 
-    a)	解： 
+    a)	解： $$x[n]1+\frac{1}{2j}[{\it e}^{j(2\pi/N)n-{\it e}^{-j(2\pi/N)n}]+\frac{3}{2}[{\it e}^{j(2\pi/N)n}]+\frac{1}{2}[{\it e}^{j(4\pi n/N+\pi/2)}+{\it e}^{-j(4\pi n/N+\pi/2)}]=1+(\frac{3}{2}+\frac{1}{2j})^{\it e}^{j(2\pi/N)n}+(\frac{3}{2}-\frac{1}{2j})^{\it e}^{-j(2\pi/N)n}+(\frac{1}{2} {\it e}^{j\pi/2}){\it e}^{j2(2\pi/N)n}+(\frac{1}{2}{\it e}^{-j\pi/2}){\it e}^{-j2(2\pi/N)n}$$
  
  
     b)	所以有 ，其余系数均为0
