@@ -190,11 +190,11 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
  
 7)	我们观察上式，希望能够得出一个更紧凑的形式
 8)	将上式每个求和均展开，我们观察l均取－1，0和1时的三种情况，有
-9)$$X({\it e}^{j\omega})=a_0 2\pi \delta(\omega+2\pi)+a_1 2\pi \delta(\omega-\frac{2\pi}{N}+2\pi)+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N}+2\pi)+a_0 2\pi \delta(\omega)+a_1 2\pi \delta(\omega-\frac{2\pi}{N})+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N})+a_0 2\pi \delta(\omega-2\pi)+a_1 2\pi \delta(\omega-\frac{2\pi}{N}-2\pi)+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N}-2\pi)$$	 
+9) $$X({\it e}^{j\omega})=a_0 2\pi \delta(\omega+2\pi)+a_1 2\pi \delta(\omega-\frac{2\pi}{N}+2\pi)+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N}+2\pi)+a_0 2\pi \delta(\omega)+a_1 2\pi \delta(\omega-\frac{2\pi}{N})+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N})+a_0 2\pi \delta(\omega-2\pi)+a_1 2\pi \delta(\omega-\frac{2\pi}{N}-2\pi)+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N}-2\pi)$$	 
  
  
 10)	根据傅立叶级数系数的特性，有$a_0=a_N=a_{-N}$，因为其也具有周期性
-11)	我们观察当l=1时的$a_0$项$a_0 2\pi \delta(\omega-2\pi)$ ，也可以写成$$a_N 2\pi \delta(\omega-N\frac{2\pi}{N})$$ ，其他项也是一样
+11)	我们观察当$l=1$时的$a_0$项$a_0 2\pi \delta(\omega-2\pi)$ ，也可以写成$$a_N 2\pi \delta(\omega-N\frac{2\pi}{N})$$ ，其他项也是一样
 12)	这样的话我们可以得到一个通项，$$a_k 2\pi \delta(\omega-k\frac{2\pi}{N})$$ ，所以可以将傅立叶变换写成$$X({\it e}^{j\omega})=\sum_{}^{+\infty} $$2\pi a_k \delta(\omega-k\frac{2\pi}{N})$$
  
 13)	前面第一种叫形式一，这种更紧凑的叫形式二，本质上是一样的。在以后做题过程中，如果遇到x[n]傅立叶级数系数N项均为非零的话，用形式二，否则用形式一。
