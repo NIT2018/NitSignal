@@ -100,7 +100,7 @@ B)	例2：求信号$x(t)=1+\sin\omega_0t+2\cos\omega_0t+cos(2\omega_0t+\frac{\pi
 - a)	解： $$x(t)=1+\frac{1}{2j}({\it e}^{j\omega_0t}-{\it e}^{-j\omega_0t})+({\it e}^{j\omega_0t}+{\it e}^{-j\omega_0t})+\frac{1}{2}[{\it e}^{j(2\omega_t+\pi/4}+{\it e}^{-j(2\omega_t+\pi/4)}]$$
 $$ x(t)=1+(1+\frac{1}{2j}){\it e}^{j\omega_0t}+(1-\frac{1}{2j}){\it e}^{-j\omega_0t}+(\frac{1}{2}{\it e}^{j\pi/4}{\it e}^{j2\omega_0t})+(\frac{1}{2}{\it e}^{-j\pi/4}{\it e}^{-j2\omega_0t})$$
 有：$a_0=1,a_1=1-\frac{1}{2j},a_{-1}=1+\frac{1}{2j}，a_2=\sqrt{2}/4(1+j),a_{-2}=\sqrt{2}/4(1-j)
-其余 $a_k=0$,|k|>2
+其余 $a_k$=0,|k|>2
 C)	例3：对于一个周期性的方波，$x(t)=\begin{cases}1,|t|<T_1 & \\0,T_1<|t|<T_0/2，周期为$T_0$，如图所示（奥本海默P135图4.7），求其对应的傅立叶级数的系数
 a)	解：当k＝0时，有$a_0=\frac{1}{T_0}\int_{-T_0/2}^{T_0/2} {x(t)},t=\frac{1}{T_0}\int_{-T_0}^{T_0},t=\frac{T_1}{T_0}$ ，
 b)	k<>0时，有$a_k=\frac{1}{T_0} \int_{-T_0/2}^{T_0/2} {x(t)}{\it e}^{-jkw_0t},t=\frac{1}{T_0}\int_{-T_0}^{T_0} {\it e}^{-jkw_0t},t=\frac{T_1}{T_0}$ ，
