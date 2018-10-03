@@ -180,13 +180,13 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 
 
 
-2)	顺便说一下，上面x[n]中如果 为无理数，其对应的傅立叶变换也是如此。
-3)	我们再继续进行扩展，如果有 ，则对应的傅立叶变换为 
+2)	顺便说一下，上面x[n]中如果$2\pi/\omega$ 为无理数，其对应的傅立叶变换也是如此。
+3)	我们再继续进行扩展，如果有$x[n]=b_1{\it e}^{j\omega_1 n}+b_2{\it e}^{j\omega_2 n}+...+b_M{\it e}^{j\omega_M n}$ ，则对应的傅立叶变换为  $$X({\it e}^{j\omega})=b_1\sum_{n=-\infty}^{+\infty} 2\pi\delta(\omega-\omega_1-2\pi l)+b_2\sum_{n=-\infty}^{+\infty} 2\pi\delta(\omega-\omega_2-2\pi l)+...+b_M\sum_{n=-\infty}^{+\infty} 2\pi\delta(\omega-\omega_M-2\pi l)$$
  
-4)	那么对于周期信号x[n]可以用傅立叶级数表示为 
-5)	我们将上述求和范围确定为[0,N-1]，所以有
+4)	那么对于周期信号x[n]可以用傅立叶级数表示为 $$x[n]=\sum_{k=\langle N \rangle} a_k{\it e}^{jk(2\pi/N)n}$$
+5)	我们将上述求和范围确定为[0,N-1]，所以有$x[n]=a_0+a_1{\it e}^{j(2\pi/N)n}+a_2{\it e}^{j_2(2\pi/N)n}+...+a_{N_1}{\it e}^{j_{N-1}(2\pi/N)n}$
  
-6)	对应傅立叶变换为： 
+6)	对应傅立叶变换为： $$X({\it e}^{j\omega})=a_0\sum_{n=-\infty}^{+\infty} 2\pi\delta(\omega-2\pi l)+a_1\sum_{n=-\infty}^{+\infty} 2\pi\delta({\omega-2\pi}/{N-2\pi l})+..+a_{N-1}\sum_{n=-\infty}^{+\infty} 2\pi\delta(\omega-(N-1)\frac{2\pi}{N}-2\pi l)$$
  
 7)	我们观察上式，希望能够得出一个更紧凑的形式
 8)	将上式每个求和均展开，我们观察l均取－1，0和1时的三种情况，有
