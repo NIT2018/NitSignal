@@ -94,7 +94,7 @@ A)	      分析公式$a_n=\frac{1}{T_0}\int_{T_0} {x(t)}{\it e}^{jk-w_0t},t$
 B)	      综合公式$x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}$
 9)	举例：
 A)	例1：求信号x(t)=sin($w_0t$)傅立叶级数的系数
-a)	解：x(t)=sin($w_0t$)＝$$\frac{1}{2j}{\it e}^{j\omega_0t}-\frac{1}{2j}{\it e}^{-j(2\omega_0t)}$$ ，所以对应的傅立叶级数为$$\begin{cases}a_1=\frac{1}{2j}& \\ a_-1=\frac{-1}{2j} &\\ a_k=0,k $\neq$ $\pm$ 1\end{case}$$
+a)	解：x(t)=sin($w_0t$)＝$\frac{1}{2j}{\it e}^{j\omega_0t}-\frac{1}{2j}{\it e}^{-j(2\omega_0t)}$ ，所以对应的傅立叶级数为$$\begin{cases}a_1=\frac{1}{2j}& \\ a_-1=\frac{-1}{2j} &\\ a_k=0,k $\neq$ $\pm$ 1\end{case}$$
  
 B)	例2：求信号$x(t)=1+\sin\omega_0t+2\cos\omega_0t+cos(2\omega_0t+\frac{\pi}{4})$ 傅立叶级数的系数。
 a)	解： $$x(t)=1+\frac{1}{2j}({\it e}^{j\omega_0t}-{\it e}^{-j\omega_0t})+({\it e}^{j\omega_0t}+{\it e}^{-j\omega_0t})+\frac{1}{2}[{\it e}^{j(2\omega_t+\pi/4)+{\it e}^{-j(2\omega_t+\pi/4)]$$
