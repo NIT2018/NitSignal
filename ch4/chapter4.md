@@ -219,8 +219,8 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 ### 4.5.2 线性性质 
 1)	若 $$x_1[n] \leftrightarrow X_1({\it e}^{j\omega})$$,$$x_2[n] \leftrightarrow X_2({\it e}^{j\omega})$$，则 $$ax_1[n]+bx_2[n] \leftrightarrow aX_1({\it e}^{j\omega})+bX_2({\it e}^{j\omega})$$
 ### 4.5.3 对称性 
-1)	若x[n]是某一实数序列，则有 ，共轭对称性
-2)	由此可以得出： 是w的偶函数， 是w的奇函数
+1)	若x[n]是某一实数序列，则有$X^*({\it e}^{j\omega})=X({\it e}^{-j\omega})$ ，共轭对称性
+2)	由此可以得出：$R_e\lbrace X({\it e}^{j\omega})\rbrace$ 是w的偶函数， 是w的奇函数
 3)	证明： 
 4)	根据共轭性质，我们就可以知道 的实部就是偶函数，奇部就是奇函数。
 5)	推论：如果x[n]是实且偶的，那么其傅立叶变换也是实偶的；如果x[n]是奇且实的，则其傅立叶变换是奇且纯虚的。
