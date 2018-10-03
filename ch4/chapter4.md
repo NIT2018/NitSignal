@@ -190,7 +190,7 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
  
 7)	我们观察上式，希望能够得出一个更紧凑的形式
 8)	将上式每个求和均展开，我们观察l均取－1，0和1时的三种情况，有
-9) $$X({\it e}^{j\omega})=a_0 2\pi \delta(\omega+2\pi)+a_1 2\pi \delta(\omega-\frac{2\pi}{N}+2\pi)+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N}+2\pi)$$ $$+a_0 2\pi \delta(\omega)+a_1 2\pi \delta(\omega-\frac{2\pi}{N})+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N})+a_0 2\pi \delta(\omega-2\pi)+a_1 2\pi \delta(\omega-\frac{2\pi}{N}-2\pi)+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N}-2\pi)$$	 
+9) $$X({\it e}^{j\omega})=a_0 2\pi \delta(\omega+2\pi)+a_1 2\pi \delta(\omega-\frac{2\pi}{N}+2\pi)+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N}+2\pi)$$ $$+a_0 2\pi \delta(\omega)+a_1 2\pi \delta(\omega-\frac{2\pi}{N})+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N})$$ $$+a_0 2\pi \delta(\omega-2\pi)+a_1 2\pi \delta(\omega-\frac{2\pi}{N}-2\pi)+...+a_{N-1} 2\pi \delta(\omega-(N-1)\frac{2\pi}{N}-2\pi)$$	 
  
  
 10)	根据傅立叶级数系数的特性，有$a_0=a_N=a_{-N}$，因为其也具有周期性
