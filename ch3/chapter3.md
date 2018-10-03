@@ -81,7 +81,7 @@ B)$=1+\frac{1}{2}\cos2πt+\cos4πt+\frac{2}{3}\cos6πt$
 - §3.2.2　周期信号傅立叶级数表示中系数的确定
 1)	$ x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t} $ 是周期信号的傅立叶级数表示，那么这些系数$a_k$是如何确定的？
 2)	上式两边乘以${\it e}^{jk-w_0t}$ ，得 $ x(t){\it e}^{jkw_0t}=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t} $
-3)	再两边从0到$T_0$＝2π/$ω_0$积分，有$\int_0^T_0 {x(t)}{\it e}^{jk-w_0t},t =\int_0^T_0\sum_{k=-\infty}^{+\infty}a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t} \,{\rm d}t $ ，其中$T_0$是基波周期。$$X(j\omega)=\int_{-\infty}^{+\infty} {x(t){\it e}^{-j\omega t}} \,{\rm d}t$$
+3)	再两边从0到$T_0$＝2π/$ω_0$积分，有$\int_0^T_0 {x(t)}{\it e}^{jk-w_0t} \,{\rm d}t =\int_0^T_0\sum_{k=-\infty}^{+\infty}a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t} \,{\rm d}t $ ，其中$T_0$是基波周期。$$X(j\omega)=\int_{-\infty}^{+\infty} {x(t){\it e}^{-j\omega t}} \,{\rm d}t$$
 4)	将上式右边交换求和与积分顺序后有$\int_0^T_0 {x(t)}{\it e}^{jk-w_0t},t =\int_0^T_0\sum_{k=-\infty}^{+\infty}a_k(\int_0^T_0{\it e}^{j(k-n)w_0t},t) $ 
 5)	我们先求出右边积分。
 A)	若k=n，则积分结果为$T_0$；
