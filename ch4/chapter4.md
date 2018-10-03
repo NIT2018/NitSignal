@@ -176,7 +176,7 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 4)	那么离散周期信号的傅立叶变换怎么求呢？
 
 ### 4.4.2 周期信号的傅立叶变换 
-1)	考查上例2和傅立叶反变换公式$$x[n]=\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j\omega}){\it e}^{j\omega n} \,{\rm d}\omega$$ ，若令 $$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} 2\pi\delta(\omega-\omega_0-2\pi l)$$ ，则在任意一个2π区间内对$ X({\it e}^{j\omega})$ 利用上面反变换公式，可得$x[n]={\it e}^{j\omega_0 n}$ ，所以周期信号x[n]的傅立叶变换为上式所代表的信号，如下图所示。(奥本海默第一版P243图5.16)
+1)	考查上例2和傅立叶反变换公式$$x[n]=\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j\omega}){\it e}^{j\omega n} \, {\rm d}\omega$$ ，若令 $$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} 2\pi\delta(\omega-\omega_0-2\pi l)$$ ，则在任意一个2π区间内对$ X({\it e}^{j\omega})$ 利用上面反变换公式，可得$x[n]={\it e}^{j\omega_0 n}$ ，所以周期信号x[n]的傅立叶变换为上式所代表的信号，如下图所示。(奥本海默第一版P243图5.16)
 
 
 2)	顺便说一下，上面x[n]中如果 为无理数，其对应的傅立叶变换也是如此。
