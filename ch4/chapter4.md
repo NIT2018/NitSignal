@@ -204,7 +204,7 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 
     a)	解：首先得到该信号的傅立叶级数的系数，$$x[n]=\sum_{k=-\infty}^{+\infty}a_k{\it e}^{jk(2\pi/N)n} $$，a_k=1/N ，
 
-    b)	所以傅立叶级数为 $$X({\it e}^{j\omega})=\sum_{}^{+\infty} 2\pi a_k \delta(\omega-\frac{2\pi k}{N})=\frac{2\pi}{N]\sum_{k=-\infty}^{+\infty} \delta(\omega-\frac{2\pi k}{N})$$
+    b)	所以傅立叶级数为 $$X({\it e}^{j\omega})=\sum_{}^{+\infty} 2\pi a_k \delta(\omega-\frac{2\pi k}{N})=$$
 
     2)	例2：求$x[n]=\cos(\omega_0 n)$ 的傅立叶变换。
 
