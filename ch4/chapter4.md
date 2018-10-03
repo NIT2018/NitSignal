@@ -106,22 +106,22 @@ $$\sum_{k=0}^{N-1} {\it e}^{jk(2\pi/N)n}=\begin{cases} N,& \text{$\pm$1,$\pm$N,.
 ## 4.3 非周期信号的表示：离散时间傅立叶变换 
 ### 4.3.1 非周期信号如何表示（基本思路）
 1)	根据上节推导，离散周期时间信号可以用傅立叶级数来表示，那么离散非周期信号呢？
-2)	跟连续时间相同，离散时间非周期信号x(t)可以看成是周期信号 的一个周期，当 的周期变成无穷大时， 就是x(t)
+2)	跟连续时间相同，离散时间非周期信号x(t)可以看成是周期信号$\tilde{x}(t)$ 的一个周期，当$\tilde{x}(t)$ 的周期变成无穷大时，$\tilde{x}(t)$ 就是x(t)
 3)	这样我们可以利用周期信号的研究结果来研究非周期信号
 ### 4.3.2 离散傅立叶变换对的推导 
 1)	考虑一个非周期序列x[n]，它有有限持续期。也即对于一个整数$N_1$，当 $|n|> N_1$时，有x[n]=0，如下图所示。(奥本海默第一版P236图5.8)
 
-2)	将x[n]进行周期延拓，得到信号 ，周期为N，$N≥2N_1+1$，当$|n|\leq N_1$ 时，有 $x[n]$=x[n]
-3)	根据上节介绍，我们可以将 表示成傅立叶级数形式，有$$\begin{cases} x[n]=\sum_{k=\langle N \rangle} a_k{\it e}^{jk(2\pi/N)n}...(1)\\
-a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{cases}$$
+2)	将x[n]进行周期延拓，得到信号$\tilde{x}[n]$ ，周期为N，$N≥2N_1+1$，当$|n|\leq N_1$ 时，有 $\tilde{x}[n]$=x[n]
+3)	根据上节介绍，我们可以将$\tilde{x}[n]$ 表示成傅立叶级数形式，有$$\begin{cases} \tilde{x}[n]=\sum_{k=\langle N \rangle} a_k{\it e}^{jk(2\pi/N)n}...(1)\\
+a_k=\frac{1}{N}\sum_{k=\langle N \rangle} \tilde{x}[n]{\it e}{-jk(2\pi/N)n}...(2)\end{cases}$$
  
-4)	在 $|n|\leq N_1$范围内，有$x[n]$ =x[n]，而当$|n|> N_1$ 时，x[n]=0，所以有$$a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}=\frac{1}{N}\sum_{k=-N_1}^{N-1} x[n]{\it e}{-jk(2\pi/N)n}=\frac{1}{N}\sum_{k=-\infty}^{\infty} x[n]{\it e}{-jk(2\pi/N)n}$$
+4)	在 $|n|\leq N_1$范围内，有$\tilde{x}[n]$ =x[n]，而当$|n|> N_1$ 时，x[n]=0，所以有$$a_k=\frac{1}{N}\sum_{k=\langle N \rangle} \tilde{x}[n]{\it e}{-jk(2\pi/N)n}=\frac{1}{N}\sum_{k=-N_1}^{N-1} x[n]{\it e}{-jk(2\pi/N)n}=\frac{1}{N}\sum_{k=-\infty}^{\infty} x[n]{\it e}{-jk(2\pi/N)n}$$
  
-5)	我们定义$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}$$ ，则$N_{a_k}$ 就是 $X({\it e}^{j\omega})$在$\omega=k(2\pi/N) $处的采样，即$$a_k=\frac{1}{N}X({\it e}^{jk\frac{2\pi}{N}})=\frac{1}{N}X({\it e}^{jk\omega})...(3) $$，其中$\omega_0=2\pi/N$ 为信号x[n] 的基波周期
+5)	我们定义$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}$$ ，则$N_{a_k}$ 就是 $X({\it e}^{j\omega})$在$\omega=k(2\pi/N) $处的采样，即$$a_k=\frac{1}{N}X({\it e}^{jk\frac{2\pi}{N}})=\frac{1}{N}X({\it e}^{jk\omega})...(3) $$，其中$\omega_0=2\pi/N$ 为信号$\tilde{x}[n]$ 的基波周期
 6)	接下来我们考虑用$X({\it e}^{j\omega})$ 来表示x[n]
-7)	将上面$a_k$ 表达式(3)代入到（1）式，有$$x[n]=\sum_{k=\langle N \rangle} \frac{1}{N}X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}=\frac{1}{2\pi} \sum_{k=\langle N \rangle} X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}\omega_0 ...(4)$$
+7)	将上面$a_k$ 表达式(3)代入到（1）式，有$$\tilde{x}[n]=\sum_{k=\langle N \rangle} \frac{1}{N}X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}=\frac{1}{2\pi} \sum_{k=\langle N \rangle} X({\it e}^{jk\omega_0}){\it e}^{jk\omega_0 n}\omega_0 ...(4)$$
 
-8)	当$N \to \infty$时，有 $\omega \to 0$，$$\lim_{N \to \infty} x[n]=x[n] $$，则上式(4)变成$$x[n]=\frac{1}{2\pi}\int_? X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega$$
+8)	当$N \to \infty$时，有 $\omega \to 0$，$$\lim_{N \to \infty} \tilde{x}[n]=x[n] $$，则上式(4)变成$$x[n]=\frac{1}{2\pi}\int_? X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega$$
  ，接下来我们要确定积分范围
 9)	根据（4）式，k的取值范围是在一个周期内，不放先取[0,N-1]，则积分变量 的取值范围为[0,(N-1)  ]，即[0，(N-1)2π/N]，当N∞时，积分范围为[0,2π]，当k取值范围在一个连续N范围内时，积分范围也在一个连续2π内，所以有$$x[n]=\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j\omega}){\it e}^{j\omega n} \ {\rm d}\omega$$
  
@@ -167,7 +167,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} x[n]{\it e}{-jk(2\pi/N)n}...(2)\end{ca
 
 ## 4.4 周期信号与离散时间傅立叶变换 
 ### 4.4.1 问题的导出 
-1)	例1：求下列周期冲激串$x[n]$ 的傅立叶变换。$$x[n]=\sum_{k=-\infty}^{+\infty} \delta[n-kN]$$ ，如下图所示(奥本海默第一版P242图5.15)
+1)	例1：求下列周期冲激串$\tilde{x}[n]$ 的傅立叶变换。$$\tilde{x}[n]=\sum_{k=-\infty}^{+\infty} \delta[n-kN]$$ ，如下图所示(奥本海默第一版P242图5.15)
 
 
 2)	如果用上节的方法，有$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} [(\sum_{k=-\infty}^{+\infty} \delta[n-kN]){\it e}^{-j\omega n}]$$ ，既要算内层，又要算外层，有点复杂
@@ -200,7 +200,7 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 13)	前面第一种叫形式一，这种更紧凑的叫形式二，本质上是一样的。在以后做题过程中，如果遇到x[n]傅立叶级数系数N项均为非零的话，用形式二，否则用形式一。
 
 ### 4.4.3 两个例子 
-1)	例1：求下列周期冲激串$x[n]$ 的傅立叶变换。$$x[n]=\sum_{k=-\infty}{+\infty} \delta[n-kN]$$
+1)	例1：求下列周期冲激串$\tilde{x}[n]$ 的傅立叶变换。$$\tilde{x}[n]=\sum_{k=-\infty}{+\infty} \delta[n-kN]$$
 
     a)	解：首先得到该信号的傅立叶级数的系数，$$x[n]=\sum_{k=-\infty}^{+\infty}a_k{\it e}^{jk(2\pi/N)n} $$，a_k=1/N ，
 
@@ -217,10 +217,10 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 ### 4.5.1 周期性 
 1)	离散时间信号的傅立叶变换$X({\it e}^{j\omega})$ 是周期的，周期为2π，这个上面已经说明
 ### 4.5.2 线性性质 
-1)	若 $$x_1[n] \leftrightarrow{}{F} X_1({\it e}^{j\omega})$$,$$x_2[n] \leftrightarrow X_2({\it e}^{j\omega})$$，则 $$ax_1[n]+bx_2[n] \leftrightarrow aX_1({\it e}^{j\omega})+bX_2({\it e}^{j\omega})$$
+1)	若 $$x_1[n] \leftrightarrow X_1({\it e}^{j\omega})$$,$$x_2[n] \leftrightarrow X_2({\it e}^{j\omega})$$，则 $$ax_1[n]+bx_2[n] \leftrightarrow aX_1({\it e}^{j\omega})+bX_2({\it e}^{j\omega})$$
 ### 4.5.3 对称性 
-1)	若x[n]是某一实数序列，则有 ，共轭对称性
-2)	由此可以得出： 是w的偶函数， 是w的奇函数
+1)	若x[n]是某一实数序列，则有$X^*({\it e}^{j\omega})=X({\it e}^{-j\omega})$ ，共轭对称性
+2)	由此可以得出：$R_e\lbrace X({\it e}^{j\omega})\rbrace$ 是w的偶函数， 是w的奇函数
 3)	证明： 
 4)	根据共轭性质，我们就可以知道 的实部就是偶函数，奇部就是奇函数。
 5)	推论：如果x[n]是实且偶的，那么其傅立叶变换也是实偶的；如果x[n]是奇且实的，则其傅立叶变换是奇且纯虚的。

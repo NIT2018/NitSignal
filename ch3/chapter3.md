@@ -94,16 +94,16 @@ A)	      分析公式$a_n=\frac{1}{T_0}\int_{T_0} {x(t)}{\it e}^{jk-w_0t},t$
 B)	      综合公式$x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}$
 9)	举例：
 A)	例1：求信号x(t)=sin($w_0t$)傅立叶级数的系数
-a)	解：x(t)=sin($w_0t$)＝$\frac{1}{2j}{\it e}^{j\omega_0t}-\frac{1}{2j}{\it e}^{-j(2\omega_0t)}$ ，所以对应的傅立叶级数为$$\begin{cases}a_1=\frac{1}{2j} ,& \\ a_-1=\frac{-1}{2j}, &\\ a_k=0,k $\neq$ $\pm$ 1 &\end{case}$$
+a)	解：x(t)=sin($w_0$t)＝$\frac{1}{2j}{\it e}^{j\omega_0t}-\frac{1}{2j}{\it e}^{-j(2\omega_0t)}$ ，所以对应的傅立叶级数为$$\begin{cases}a_1=\frac{1}{2j} ,& \\ a_{-1}=\frac{-1}{2j}, &\\ a_k=0,k \neq \pm1 \end{cases}$$
  
 B)	例2：求信号$x(t)=1+\sin\omega_0t+2\cos\omega_0t+cos(2\omega_0t+\frac{\pi}{4})$ 傅立叶级数的系数。
-- a)	解： $$x(t)=1+\frac{1}{2j}({\it e}^{j\omega_0t}-{\it e}^{-j\omega_0t})+({\it e}^{j\omega_0t}+{\it e}^{-j\omega_0t})+\frac{1}{2}{\it e}^{j(2\omega_t+\pi/4)+{\it e}^{-j(2\omega_t+\pi/4)$$
+- a)	解： $$x(t)=1+\frac{1}{2j}({\it e}^{j\omega_0t}-{\it e}^{-j\omega_0t})+({\it e}^{j\omega_0t}+{\it e}^{-j\omega_0t})+\frac{1}{2}[{\it e}^{j(2\omega_t+\pi/4)+{\it e}^{-j(2\omega_t+\pi/4)}]$$
 $$ x(t)=1+(1+\frac{1}{2j}){\it e}^{j\omega_0t}+(1-\frac{1}{2j}){\it e}^{-j\omega_0t}+(\frac{1}{2}{\it e}^{j\pi/4}{\it e}^{j2\omega_0t})+(\frac{1}{2}{\it e}^{-j\pi/4}{\it e}^{-j2\omega_0t})$$
-有：$a_0=1,a_1=1-\frac{1}{2j},a_{-1}=1+\frac{1}{2j}，a_2=\frac\sqrt{2}{4}(1+j),a_{-2}=\frac\sqrt{2}{4}(1-j)
+有：$a_0=1,a_1=1-\frac{1}{2j},a_{-1}=1+\frac{1}{2j}，a_2=\sqrt{2}/4(1+j),a_{-2}=\sqrt{2}/4(1-j)
 其余 $a_k=0$,$\left|k\right|>2$
-C)	例3：对于一个周期性的方波，$x(t)=\begin{case}1,\left|t\right|<T_1& \\0,T_1<\left|t\right|<T_0/2，周期为$T_0$，如图所示（奥本海默P135图4.7），求其对应的傅立叶级数的系数
-a)	解：当k＝0时，有$a_0=\frac{1}{T_0}\int_-T_0/2^T_0/2 {x(t)},t=\frac{1}{T_0}\int_-T_0^T_0,t=\frac{T_1}{T_0}$ ，
-b)	k<>0时，有$a_k=\frac{1}{T_0}\int_-T_0/2^T_0/2 {x(t)}{\it e}^{-jkw_0t},t=\frac{1}{T_0}\int_-T_0^T_0{\it e}^{-jkw_0t},t=\frac{T_1}{T_0}$ ，
+C)	例3：对于一个周期性的方波，$x(t)=\begin{cases}1,\|t|<T_1 & \\0,T_1<|t|<T_0/2，周期为$T_0$，如图所示（奥本海默P135图4.7），求其对应的傅立叶级数的系数
+a)	解：当k＝0时，有$a_0=\frac{1}{T_0}\int_{-T_0/2}^{T_0/2} {x(t)},t=\frac{1}{T_0}\int_{-T_0}^{T_0},t=\frac{T_1}{T_0}$ ，
+b)	k<>0时，有$a_k=\frac{1}{T_0} \int_{-T_0/2}^{T_0/2} {x(t)}{\it e}^{-jkw_0t},t=\frac{1}{T_0}\int_{-T_0}^{T_0} {\it e}^{-jkw_0t},t=\frac{T_1}{T_0}$ ，
  
 也即有 ，参见课本P13图1－27Sa(t)波形，只是差个系数
 c)	 ，此处注意两点：a0也可以包含在内；ak就是Sa在几个离散点的取值，具体密度由w0决定。
