@@ -167,7 +167,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} \tilde{x}[n]{\it e}{-jk(2\pi/N)n}...(2
 
 ## 4.4 周期信号与离散时间傅立叶变换 
 ### 4.4.1 问题的导出 
-1)	例1：求下列周期冲激串$\tilde{x}[n]$ 的傅立叶变换。$$x[n]=\sum_{k=-\infty}^{+\infty} \delta[n-kN]$$ ，如下图所示(奥本海默第一版P242图5.15)
+1)	例1：求下列周期冲激串$\tilde{x}[n]$ 的傅立叶变换。$$\tilde{x}[n]=\sum_{k=-\infty}^{+\infty} \delta[n-kN]$$ ，如下图所示(奥本海默第一版P242图5.15)
 
 
 2)	如果用上节的方法，有$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} [(\sum_{k=-\infty}^{+\infty} \delta[n-kN]){\it e}^{-j\omega n}]$$ ，既要算内层，又要算外层，有点复杂
@@ -200,7 +200,7 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 13)	前面第一种叫形式一，这种更紧凑的叫形式二，本质上是一样的。在以后做题过程中，如果遇到x[n]傅立叶级数系数N项均为非零的话，用形式二，否则用形式一。
 
 ### 4.4.3 两个例子 
-1)	例1：求下列周期冲激串$x[n]$ 的傅立叶变换。$$x[n]=\sum_{k=-\infty}{+\infty} \delta[n-kN]$$
+1)	例1：求下列周期冲激串$\tilde{x}[n]$ 的傅立叶变换。$$\tilde{x}[n]=\sum_{k=-\infty}{+\infty} \delta[n-kN]$$
 
     a)	解：首先得到该信号的傅立叶级数的系数，$$x[n]=\sum_{k=-\infty}^{+\infty}a_k{\it e}^{jk(2\pi/N)n} $$，a_k=1/N ，
 
