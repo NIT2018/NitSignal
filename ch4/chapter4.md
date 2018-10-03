@@ -217,7 +217,7 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 ### 4.5.1 周期性 
 1)	离散时间信号的傅立叶变换$X({\it e}^{j\omega})$ 是周期的，周期为2π，这个上面已经说明
 ### 4.5.2 线性性质 
-1)	若 $$x_1[n] {F}\onleftrightarrow X_1({\it e}^{j\omega})$$,$$x_2[n] \leftrightarrow X_2({\it e}^{j\omega})$$，则 $$ax_1[n]+bx_2[n] \leftrightarrow aX_1({\it e}^{j\omega})+bX_2({\it e}^{j\omega})$$
+1)	若 $$x_1[n] \leftrightarrow^{F} X_1({\it e}^{j\omega})$$,$$x_2[n] \leftrightarrow X_2({\it e}^{j\omega})$$，则 $$ax_1[n]+bx_2[n] \leftrightarrow aX_1({\it e}^{j\omega})+bX_2({\it e}^{j\omega})$$
 ### 4.5.3 对称性 
 1)	若x[n]是某一实数序列，则有 ，共轭对称性
 2)	由此可以得出： 是w的偶函数， 是w的奇函数
