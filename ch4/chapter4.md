@@ -167,7 +167,7 @@ a_k=\frac{1}{N}\sum_{k=\langle N \rangle} \tilde{x}[n]{\it e}{-jk(2\pi/N)n}...(2
 
 ## 4.4 周期信号与离散时间傅立叶变换 
 ### 4.4.1 问题的导出 
-1)	例1：求下列周期冲激串$x[n]$ 的傅立叶变换。$$x[n]=\sum_{k=-\infty}^{+\infty} \delta[n-kN]$$ ，如下图所示(奥本海默第一版P242图5.15)
+1)	例1：求下列周期冲激串$\tilde{x}[n]$ 的傅立叶变换。$$x[n]=\sum_{k=-\infty}^{+\infty} \delta[n-kN]$$ ，如下图所示(奥本海默第一版P242图5.15)
 
 
 2)	如果用上节的方法，有$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} [(\sum_{k=-\infty}^{+\infty} \delta[n-kN]){\it e}^{-j\omega n}]$$ ，既要算内层，又要算外层，有点复杂
