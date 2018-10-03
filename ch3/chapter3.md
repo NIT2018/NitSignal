@@ -81,7 +81,7 @@ B)$=1+\frac{1}{2}\cos2πt+\cos4πt+\frac{2}{3}\cos6πt$
 - §3.2.2　周期信号傅立叶级数表示中系数的确定
 1)	$ x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t} $ 是周期信号的傅立叶级数表示，那么这些系数$a_k$是如何确定的？
 2)	上式两边乘以${\it e}^{jk-w_0t}$ ，得 $ x(t){\it e}^{jkw_0t}=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t} $
-3)	再两边从0到$T_0$＝2π/$ω_0$积分，有$\int_0^T_0 {x(t)}{\it e}^{jk-w_0t},t =\int_0^T_0\sum_{k=-\infty}^{+\infty}a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t},t $ ，其中$T_0$是基波周期。
+3)	再两边从0到$T_0$＝2π/$ω_0$积分，有$\int_0^T_0 {x(t)}{\it e}^{jk-w_0t},t =\int_0^T_0\sum_{k=-\infty}^{+\infty}a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t} \,{\rm d}t $ ，其中$T_0$是基波周期。$$X(j\omega)=\int_{-\infty}^{+\infty} {x(t){\it e}^{-j\omega t}} \,{\rm d}t$$
 4)	将上式右边交换求和与积分顺序后有$\int_0^T_0 {x(t)}{\it e}^{jk-w_0t},t =\int_0^T_0\sum_{k=-\infty}^{+\infty}a_k(\int_0^T_0{\it e}^{j(k-n)w_0t},t) $ 
 5)	我们先求出右边积分。
 A)	若k=n，则积分结果为$T_0$；
@@ -102,8 +102,8 @@ a)	解： $$x(t)=1+\frac{1}{2j}({\it e}^{j\omega_0t}-{\it e}^{-j\omega_0t})+({\i
 有：$a_0=1,a_1=1-\frac{1}{2j},,a_-1=1+\frac{1}{2j}，a_2=\frac \sqrt{2}{4}(1+j),a_-2=\frac \sqrt{2}{4}(1-j)
 其余 $a_k=0$,$\left|k\right|>2$
 C)	例3：对于一个周期性的方波，$x(t)=\begin{case}1,\left|t\right|<T_1& \\0,T_1<\left|t\right|<T_0/2，周期为$T_0$，如图所示（奥本海默P135图4.7），求其对应的傅立叶级数的系数
-a)	解：当k＝0时，有$\frac{1}{T_0}\int_-T_0/2^T_0/2 {x(t)},t=\frac{1}{T_0}\int_-T_0^T_0,t=\frac{T_1}{T_0}$ ，
-b)	k<>0时，有 
+a)	解：当k＝0时，有$a_0=\frac{1}{T_0}\int_-T_0/2^T_0/2 {x(t)},t=\frac{1}{T_0}\int_-T_0^T_0,t=\frac{T_1}{T_0}$ ，
+b)	k<>0时，有$a_k=\frac{1}{T_0}\int_-T_0/2^T_0/2 {x(t)}{\it e}^{-jkw_0t},t=\frac{1}{T_0}\int_-T_0^T_0{\it e}^{-jkw_0t},t=\frac{T_1}{T_0}$ ，
  
 也即有 ，参见课本P13图1－27Sa(t)波形，只是差个系数
 c)	 ，此处注意两点：a0也可以包含在内；ak就是Sa在几个离散点的取值，具体密度由w0决定。
