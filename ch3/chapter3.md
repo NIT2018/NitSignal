@@ -85,20 +85,20 @@ B)$=1+\frac{1}{2}\cos2πt+\cos4πt+\frac{2}{3}\cos6πt$
 4)	将上式右边交换求和与积分顺序后有$\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t},t =\int_0^{T_0}\sum_{k=-\infty}^{+\infty}a_k(\int_0^{T_0}{\it e}^{j(k-n)w_0t},t) $ 
 5)	我们先求出右边积分。
 A)	若k=n，则积分结果为$T_0$；
-B)	若k<>n，则 $\int_0^T_0 {x(t){\it e}^{jk-w_0t}} \,{\rm d}t=\frac{1}{j(k-n)-w_0},t|0^T_0$
+B)	若k<>n，则 $\int_0^{T_0} {x(t){\it e}^{jk-w_0t}} \,{\rm d}t=\frac{1}{j(k-n)-w_0},t|0^T_0$
  
-6)	(2)式变成：$\int_0^T_0 {x(t)}{\it e}^{jk-w_0t},t=a_nT_0$ ，右边只留下k=n的结果，其余均为0
-7)	所以级数的系数为：$a_n=\frac{1}{T_0}\int_0^T_0 {x(t)}{\it e}^{jk-w_0t},t$ 
+6)	(2)式变成：$\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t},t=a_nT_0$ ，右边只留下k=n的结果，其余均为0
+7)	所以级数的系数为：$a_n=\frac{1}{T_0}\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t},t$ 
 8)	另外，这个积分区间只要是连续的一个周期内即可，不一定要从0-$T_0$，所以周期信号的傅立叶级数公式有
-A)	      分析公式$a_n=\frac{1}{T_0}\int_T_0 {x(t)}{\it e}^{jk-w_0t},t$
+A)	      分析公式$a_n=\frac{1}{T_0}\int_{T_0} {x(t)}{\it e}^{jk-w_0t},t$
 B)	      综合公式$x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}$
 9)	举例：
 A)	例1：求信号x(t)=sin($w_0t$)傅立叶级数的系数
-a)	解：x(t)=sin($w_0t$)＝$$\frac{1}{2j}{\it e}^{j\omega_0t}-\frac{1}{2j}{\it e}^{-j(2\omega_0t)}$$ ，所以对应的傅立叶级数为$$\begin{cases}a_1=\frac{1}{2j} \\ a_-1=\frac{-1}{2j} \\ a_k=0,k $\neq$ $\pm$ 1\end{case}$$
+a)	解：x(t)=sin($w_0t$)＝$$\frac{1}{2j}{\it e}^{j\omega_0t}-\frac{1}{2j}{\it e}^{-j(2\omega_0t)}$$ ，所以对应的傅立叶级数为$$\begin{cases}a_1=\frac{1}{2j}& \\ a_-1=\frac{-1}{2j} &\\ a_k=0,k $\neq$ $\pm$ 1\end{case}$$
  
 B)	例2：求信号$x(t)=1+\sin\omega_0t+2\cos\omega_0t+cos(2\omega_0t+\frac{\pi}{4})$ 傅立叶级数的系数。
-a)	解： $$x(t)=1+\frac{1}{2j}({\it e}^{j\omega_0t}-{\it e}^{-j\omega_0t})+({\it e}^{j\omega_0t}+{\it e}^{-j\omega_0t})+\frac{1}{2}[{\it e}^{j(2\omega_t+$\pi$/4)+{\it e}^{-j(2\omega_t+$\pi$/4)]$$
- x(t)=1+(1+\frac{1}{2j}){\it e}^{j\omega_0t}+(1-\frac{1}{2j}){\it e}^{-j\omega_0t}+(\frac{1}{2}{\it e}^{j$\pi/4}{\it e}^{j2\omega_0t})+(\frac{1}{2}{\it e}^{-j$\pi/4}{\it e}^{-j2\omega_0t})
+a)	解： $$x(t)=1+\frac{1}{2j}({\it e}^{j\omega_0t}-{\it e}^{-j\omega_0t})+({\it e}^{j\omega_0t}+{\it e}^{-j\omega_0t})+\frac{1}{2}[{\it e}^{j(2\omega_t+\pi/4)+{\it e}^{-j(2\omega_t+\pi/4)]$$
+$$ x(t)=1+(1+\frac{1}{2j}){\it e}^{j\omega_0t}+(1-\frac{1}{2j}){\it e}^{-j\omega_0t}+(\frac{1}{2}{\it e}^{j\pi/4}{\it e}^{j2\omega_0t})+(\frac{1}{2}{\it e}^{-j\pi/4}{\it e}^{-j2\omega_0t})$$
 有：$a_0=1,a_1=1-\frac{1}{2j},,a_-1=1+\frac{1}{2j}，a_2=\frac \sqrt{2}{4}(1+j),a_-2=\frac \sqrt{2}{4}(1-j)
 其余 $a_k=0$,$\left|k\right|>2$
 C)	例3：对于一个周期性的方波，$x(t)=\begin{case}1,\left|t\right|<T_1& \\0,T_1<\left|t\right|<T_0/2，周期为$T_0$，如图所示（奥本海默P135图4.7），求其对应的傅立叶级数的系数
