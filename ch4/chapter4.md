@@ -200,19 +200,24 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 13)	前面第一种叫形式一，这种更紧凑的叫形式二，本质上是一样的。在以后做题过程中，如果遇到x[n]傅立叶级数系数N项均为非零的话，用形式二，否则用形式一。
 
 ### 4.4.3 两个例子 
-1)	例1：求下列周期冲激串$X[n]$ 的傅立叶变换。 
-a)	解：首先得到该信号的傅立叶级数的系数， ， ，
-b)	所以傅立叶级数为 
-2)	例2：求 的傅立叶变换。
-a)	解： 
-b)	所以有： 
+1)	例1：求下列周期冲激串$x[n]$ 的傅立叶变换。$$x[n]=\sum_{k=-\infty}{+\infty} \delta[n-kN]$$
+
+    a)	解：首先得到该信号的傅立叶级数的系数，$$x[n]=\sum_{k=-\infty}^{+\infty}a_k{\it e}^{jk(2\pi/N)n} $$，a_k=1/N ，
+
+    b)	所以傅立叶级数为 $$X({\it e}^{j\omega})=\sum_{}^{+\infty} 2\pi a_k \delta(\omega-\frac{2\pi k}{N})=\frac{2\pi}{N]\sum_{k=-\infty}^{+\infty} \delta(\omega-\frac{2\pi k}{N})$$
+
+    2)	例2：求$x[n]=\cos(\omega_0 n)$ 的傅立叶变换。
+
+    a)	解： $$x[n]=frac{1}{2}{\it e}^{j\omega_0 n}+frac{1}{2}{\it e}^{-j\omega_0 n}$$
+
+    b)	所以有：  $$X({\it e}^{j\omega})=\sum_{}^{+\infty} \pi\lbrace\delta(\omega-\omega_0-2\pi l)+\delta(\omega-\omega_0-2\pi l)\rbrace$$
 
 ## 4.5 离散时间傅立叶变换的性质 
 离散时间傅立叶变换的性质及其推导方法基本上同连续时间傅立叶变换性质。
 ### 4.5.1 周期性 
-1)	离散时间信号的傅立叶变换 是周期的，周期为2π，这个上面已经说明
+1)	离散时间信号的傅立叶变换$X({\it e}^{j\omega})$ 是周期的，周期为2π，这个上面已经说明
 ### 4.5.2 线性性质 
-1)	若 ，则 
+1)	若 $$x_1[n] \leftrightarrow X_1({\it e}^{j\omega})$$,x_2[n] \leftrightarrow X_2({\it e}^{j\omega})$$，则 $$ax_1[n]+bx_2[n] \leftrightarrow aX_1({\it e}^{j\omega})+bX_2({\it e}^{j\omega})$$
 ### 4.5.3 对称性 
 1)	若x[n]是某一实数序列，则有 ，共轭对称性
 2)	由此可以得出： 是w的偶函数， 是w的奇函数
