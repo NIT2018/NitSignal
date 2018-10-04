@@ -350,18 +350,19 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
 
     k)	根据前面的微分性质，我们有 
     $$
-    nx[n] \leftrightarrow j\frac{dX({\it e}^{j\omega}}{d\omega}
+    nx[n] \leftrightarrow j\frac{dX({\it e}^{j\omega})}{d\omega}
     $$，加上
     $$
     \alpha^n u[n] \leftrightarrow = \frac{1}{1-\alpha{\it e}^{-j\omega}}
     $$，可得
     $$
      n\alpha^n u[n] \leftrightarrow = j\frac{d}{d\omega}(\frac{1}{1-\alpha{\it e}^{-j\omega}})
-     $$...(1)
+     ...(1)
+     $$
 
     l)	再根据时移性质 
     $$
-    x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0}X({\it e}^{j\omega}
+    x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0}X({\it e}^{j\omega})
     $$
     ，去$n_0$＝－1，应用于(1)就有：
 
