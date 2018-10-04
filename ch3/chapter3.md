@@ -152,7 +152,7 @@ A)	解，利用傅立叶反变换公式，得 x(t)=$\int_{-w}^{w} {\it e}^{-jwt}
 B)	通过例4例5，我们发现时域和频域变换之间存在着很有意思的对偶关系。x(t)$\longleftrightarrow$X(jw)的波形可以互相变换
 ## 3.5　周期信号与连续时间傅立叶变化
 - §3.5.1　非周期信号傅立叶变换在周期信号中的应用
-1)	非周期信号的傅立叶变换公式对$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{-jwt},w \\X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $
+1)	非周期信号的傅立叶变换公式对$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{jwt},w \\X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $
  
 2)	在求周期信号傅立叶变换时候的问题
 A)	对于周期为T的信号x(t)=x(t+T)，如 在一个周期内有x(t)=$ \begin{cases} 1,-T_1<t<T_1 \\0,T>|t|>T_1\end{cases} $ ，如图所示
@@ -168,57 +168,58 @@ B)	按照这个方法求傅立叶变换时 X（jw）=$\int_{-\infty}^{+\infty} x
  
 5)	如果上述频谱上冲激串前系数正好是周期信号傅立叶级数的系数的话，我们显然可以发现，这个频谱就是原始信号x(t)的傅立叶变换
 6)	例1：求信号$x(t)=\cos(\omega_0t)$ 的频谱
-A)	解：x(t)的傅立叶级数的系数为a1=a-1=1/2，所以x（t）对应的频谱为
+A)	解：x(t)的傅立叶级数的系数为$a_1$=a-1=1/2，所以x（t）对应的频谱为$X(j\omega)=\frac{1}{2}\delta(\omega-\omega_0)+\frac{1}{2}\delta(\omega+\omega_0)$
  
-7)	例2：求一个周期性冲激串 的频谱。
+7)	例2：求一个周期性冲激串$x(t)==\sum_{k=-\infty}^{+\infty} \delta(t-kT)$的频谱。
 A)	解：这个信号是周期的，周期为T；其对应的傅立叶级数的系数为
+- $a_k=\frac{1}{T}\int_{-T/2}^{T/2} \delta(t){\it e}^{-jkw_0t},t$
  
-B)	代入上面的式子，即可得对应的频谱为： 
+B)	代入上面的式子，即可得对应的频谱为：$X(j\omega)=\frac{2\pi}{T}\sum_{k=-\infty}^{+\infty} \delta(\omega-\frac{2\pi k}{T}) 
 ## 3.6　连续时间傅立叶变换的性质
 - §3.6.1　傅立叶变换对的表示
-1)	现在我们有： ，对于x(t)和X(jw)，是一个变换对
-2)	所以我们以后也写成：X(jw)=F{x(t)} ，x(t)= F-1{X(jw)}
-3)	对于整个变换对，也写成 ，注意：左边是时域函数，右边是频域函数，不能写反，若写反，则上面的F要变成F-1
-4)	例1： 
-5)	例2： 
-6)	例3： 
+1)	现在我们有：$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{jwt},w \\X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $ ，对于x(t)和X(jw)，是一个变换对
+2)	所以我们以后也写成：X(jw)=F{x(t)} ，x(t)= $F^{-1}{X(jw)}$
+3)	对于整个变换对，也写成$x(t)\longleftrightarrow F X(j\omega)$ ，注意：左边是时域函数，右边是频域函数，不能写反，若写反，则上面的F要变成$F_{-1}$
+4)	例1：$\frac{1}{a+j\omega}=F^{-1}{{\it e}^{-at}\mu(t)},a>0$ 
+5)	例2： ${\it e}^{-at}\mu(t)=F{\frac{1}{a+j\omega}},a>0$ 
+6)	例3： $\frac{1}{a+j\omega}\longleftrightarrow F {\it e}^{-at}\mu(t),a>0$ 
 §3.6.2　线性
-1)	若有 ，则 
+1)	若有$x_1(t)\longleftrightarrow F X_1(j\omega) x_2(t)\longleftrightarrow F X_2(j\omega)$，则$ax_1(t)+bx_2(t)\longleftrightarrow FaX_1(j\omega)+bX_2(j\omega)$
 2)	两个信号线性组合的傅立叶变换是单个信号变换的线性组合。
 3)	证明略。
 - §3.6.3　对称性
-1)	若x(t)是一个实时间函数，则有 ，这叫共轭对称性
-2)	证明： ，因为x(t)是实函数，有x*(t)=x(t)，所以有 
+1)	若x(t)是一个实时间函数，则有$X(-j\omega)=X*(j\omega)$,(1)，这叫共轭对称性
+2)	证明：$X*(j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t]*=\int_{-\infty}^{+\infty} x(t)*{\it e}^{jwt},t$ ，因为x(t)是实函数，有x*(t)=x(t)，所以有 $X*(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
 3)	将X(jw)用直角坐标形式表示，即X(jw)=Re{X(jw)}+jIm{X(jw)}，那么当x(t)为实函数时，根据(1)式，有
 A)	Re{X(jw)}=Re{X(-jw)}
 B)	Im{X(jw)}=-Im{X(-jw)}
 C)	也即，X（jw）的实部实频率的偶函数，虚部是频率的奇函数
 D)	同样道理，若将X(jw)用极坐标形式给出，则模是w的偶函数，幅角是x的奇函数
-4)	若x(t)是实的，而且为偶函数，则有
+4)	若x(t)是实的，而且为偶函数，则有$X(-j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t\tau=-t=\int_{-\infty}^{+\infty} x(-\tau){\it e}^{-jw\tau},\tau x(\tau)=x(-\tau)=\int_{-\infty}^{+\infty} x(\tau){\it e}^{-jw\tau},\tau=X(j\pmega)$ 
  ，加上共轭对称性，我们就可以知道X(jw)不仅是偶函数，而且是实函数。
 5)	若x(t)是实的，而且为奇函数，则有X（jw）是纯虚数，而且是奇函数。
 6)	以上的这些结论对傅立叶级数也同样成立，此处略（具体见奥本海默第一版P154-P155）
 - §3.6.4　时移性质
-1)	若有 ，则有 
-2)	证明： 
+1)	若有$x(t)\longleftrightarrow F X(j\omega)$ ，则有$x(t-t_0)\longleftrightarrow F X(j\omega)$  
+2)	证明：$F{X(t-t_0)}=\int_{-\infty}^{+\infty} x(t-t_0){\it e}^{-jwt},t \sigma=t-t_0=\int_{-\infty}^{+\infty} x(\sigma){\it e}^{-jw(\sigma+t_0)},\sigma={\it e}^{-jwt}X(j\omega)$ 
 3)	该性质说明：信号在时间上的位移，并没有改变其频谱的模，而只是在频谱上有一个相移，而且引入的相移跟w成线性关系，也即是线性相移。
 - §3.6.5　微分和积分性质
-1)	微分性质，傅立叶反变换公式两边对t求导，即得： ，所以有 
-2)	 
-3)	由此推出积分性质： 
+1)	微分性质，傅立叶反变换公式两边对t求导，即得：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \right=\frac{1}{2\pi}\int_{-\infty}^{+\infty} j\omegaX(j\omega){\it e}^{j\omegat},\omega$ ，所以有：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \right \longleftrightarrow F j\omegaX(j\omega)$
+2)	 $\mu(t)\longleftrightarrow F\frac{1}{j\omega}+\pi\delta(\omega)$
+3)	由此推出积分性质：$\int_{-\infty}^{t} x(\tau),\tau\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\piX(0)\tau(\omega)$
 4)	我们先看u(t)的推导：
 a)	先将u(t)分解成奇部和偶部，ev(t)=(u(t)+u(-t))/2，od(t)=(u(t)-u(-t))/2，即u(t)=1/2+(u(t)-1/2)
-b)	先考虑奇部od(t)= u(t)-1/2的频谱。设其频谱为Od(jw)，因为 ，由微分性质，可得：
- ，所以有Od(jw)=1/jw
+b)	先考虑奇部$o_d$(t)= u(t)-1/2的频谱。设其频谱为$O_d$(jw)，因为$ \left. \frac{{\rm d}o_d(t)}{{\rm d}t} \right=\left. \frac{{\rm d}u(t)}{{\rm d}t} \right=\tau(t)  $ ，由微分性质，可得：
+ ，所以有$O_d(jw)=1/jw$
 c)	再考虑偶部ev(t)=1/2，根据在周期信号傅立叶变换时的概念，我们有
 F{1/2}=πδ(w)
-d)	所以u(t)的傅立叶变换就是奇部和偶部傅立叶变换之和，也即：
+d)	所以u(t)的傅立叶变换就是奇部和偶部傅立叶变换之和，也即：$\mu(t)\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
  
-5)	接着根据后面的卷积性质，我们就可以得到积分性质，卷积性质为
+5)	接着根据后面的卷积性质，我们就可以得到积分性质，卷积性质为$y(t)=h(t)*x(t)\longleftrightarrow FY(j\omega)=H(j\omega)X(j\omega)$
  
-6)	根据这个性质，我们可知 ，而 ， ，所以有 ，也即 
+6)	根据这个性质，我们可知$\int_{-\infty}^{t} x(\tau),\tau=x(t)*\mu(t) ，而x(t)\longleftrightarrowF X(j\omega)$ ，$\mu(t)\longleftrightarrow F \frac{1}{j\omega}+\pi\delta(\omega)$，所以有$\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))，也即 $\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F \frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
 - §3.6.6　时间和频率的尺度变换性质
-1)	若有： ，则有 
+1)	若有：$x(t)\longleftrightarrow F X(j\omega$) ，则有 
 2)	证明：主要是利用变量替换τ=at. 
  
 3)	这个特性说明了时间压缩和频率压缩之间的相反关系。当时间压缩（a>1）时，对应信号的频谱展宽；而在时间上伸展时，则频谱压缩
