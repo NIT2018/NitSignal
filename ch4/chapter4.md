@@ -284,7 +284,7 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
 1)	定理：信号能量可以用能量密度谱积分得到，即 $$\sum_{n=-\infty}^{+\infty} {|x[n]|}^2=\frac{1}{2\pi}\int_{2\pi} {|X({\it e}^{j\omega})|}^2 \ {\rm d}\omega$$
 2)	证明：$$\sum_{n=-\infty}^{+\infty} {|x[n]|}^2=\sum_{n=-\infty}^{+\infty} x[n] \cdot x^*[n]=\sum_{n=-\infty}^{+\infty}  \lbrace x[n](\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j\omega}) {\it e}^{j\omega n} \ {\rm d}\omega)^\ast \rbrace$$ 
 3)	 $$=\sum_{n=-\infty}^{+\infty}  \lbrace x[n]\frac{1}{2\pi}\int_{2\pi} X^\ast({\it e}^{j\omega}) {\it e}^{-j\omega n} \ {\rm d}\omega \rbrace$$
-4)	交换积分和求和顺序，得$$\frac{1}{2\pi}\int_{2\pi} X^\ast({\it e}^{j\omega}) \lbrace \sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n} \rbrace \ {\rm d}\omega=
+4)	交换积分和求和顺序，得$$\frac{1}{2\pi}\int_{2\pi} X^\ast({\it e}^{j\omega}) \lbrace \sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n} \rbrace \ {\rm d}\omega=$$
  
 5)	同理可得：对于周期信号，在一个周期内信号能量跟傅立叶级数之间的关系为
  
