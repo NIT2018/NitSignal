@@ -482,7 +482,7 @@ $$
  ，求x(t)。
 a)	解：对于一个非周期离散时间信号 ，对应的傅立叶变换为 
 $$
-X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{j\omega n}=\frac{\sin(N_1+1/2)\omeg}{\sin(\omega/2)}
+X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{j\omega n}=\frac{\sin(N_1+1/2)\omega}{\sin(\omega/2)}
 $$
 b)	那么该离散非周期信号的倒置序列正好是连续周期信号的傅立叶级数，所以根据对偶性直接可以得出
 $$
