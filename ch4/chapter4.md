@@ -443,11 +443,12 @@ $$
 x[n]=\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j\omega}){\it e}^{j(\omega n} \ {\rm d}\omega \\ 
 X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}
 \end{cases}
+$$
 3)	连续周期信号傅立叶级数：
 $$
 \begin{cases}
 x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jk\omega_0 t} \\ 
-a_k=\frac{1}{T_0}\int_{T_0} x(t){\it e}^{-jk\omega_0 t} \ {\rm d}t$$ 
+a_k=\frac{1}{T_0}\int_{T_0} x(t){\it e}^{-jk\omega_0 t} \ {\rm d}t\end{cases}$$ 
 4)	接下来，令f(u)表示一个周期为2π的连续变量周期函数，g[m]跟f(u)通过下式联系： 
 $$f(u)=\sum_{m=-\infty}^{+\infty} g[m]{\it e}^{-jum}...(1)$$
 5)	令u=ω，m＝ｎ，（1）式有$$f({\it e}^{j\omega}=f(\omega)=\sum_{m=-\infty}^{+\infty} g[m]{\it e}^{-j\omega n}$$ ，g[n]可以看成是离散非周期函数，所以有$g[n] \leftrightarrow f({\it e}^{j\omega}$ ，g[n]则可通过上面的离散傅立叶反变换得到
