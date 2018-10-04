@@ -228,16 +228,16 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 ### 4.5.4 时移和频移性质 
 1)	若$x[n] \leftrightarrow X({\it e}^{j\omega})$ ，则有$$ x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0} X({\it e}^{j\omega})$$ 和$$ {\it e}^{-j\omega_0 n}x[n] \leftrightarrow X({\it e}^{j(\omega-\omega_0)})$$
 2)	证明： $$\sum_{n=-\infty}^{+\infty} x[n-n_0]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} x[l]{\it e}^{-j\omega (l+n_0)}={\it e}^{-j\omega n_0} \sum_{n=-\infty}^{+\infty} x[l]{\it e}^{-j\omega l}={\it e}^{-j\omega n_0} X({\it e}^{j\omega})$$
-3)	同理，同学可以自己证明：$$\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j(\omega-\omega_0)}) {\it e}^{j\omega n} \ {\rm d}\omega=\frac{1}{2\pi}\int_{0}^{2\pi} X({\it e}^{j\omega}){\it e}^{j(\omega-\omega_0)n} \ {\rm d}\omega=$$
+3)	同理，同学可以自己证明：$$\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j(\omega-\omega_0)}) {\it e}^{j\omega n} \ {\rm d}\omega=\frac{1}{2\pi}\int_{0}^{2\pi} X({\it e}^{j\omega}){\it e}^{j(\omega-\omega_0)n} \ {\rm d}\omega=\frac{1}{2\pi}\int_{-\omega_0}^{2\pi-\omega_0} X({\it e}^{j\omega}){\it e}^{j(\omega+\omega_0)n} \ {\rm d}\omega$$
  
  
 
 ### 4.5.5 差分与求和 
 1)	离散时间的求和相当于连续时间的积分，离散时间的差分相当于连续时间的微分，因此此处也有类似的结论
-2)	若 ，则 ，这个用上面的时移性质直接可以得到
+2)	若$x[n] \leftrightarrow X({\it e}^{j\omega})$ ，则$x[n]-x[n-1] \leftrightarrow (1-{\it e}^{-j\omega})X({\it e}^{j\omega})$ ，这个用上面的时移性质直接可以得到
 3)	那么x[n]求和后的信号其傅立叶变换如何求？
-令 ，显然 ，看起差分是求和的逆系统。所以两者的单位脉冲响应卷积和应该为单位脉冲响应δ[n]，根据卷积定理，两者的傅立叶变换之积应该为1，所以信号求和的傅立叶变换应该为： 
-4)	但是实际上除了这些还不够，正确的应该是：
+令$$y[n]=\sum_{k=-\infty}^{n} x[k]$$ ，显然$x[n]=y[n]-y[n-1]$ ，看起差分是求和的逆系统。所以两者的单位脉冲响应卷积和应该为单位脉冲响应δ[n]，根据卷积定理，两者的傅立叶变换之积应该为1，所以信号求和的傅立叶变换应该为：$$ \sum_{k=-\infty}^{n} x[k] \leftrightarrow \frac{1}{1-{\it e}^{-j\omega}} X({\it e}^{j\omega})$$
+4)	但是实际上除了这些还不够，正确的应该是：$$\sum_{k=-\infty}^{n} x[k] \leftrightarrow \frac{1}{1-{\it e}^{-j\omega}} X({\it e}^{j\omega})+\pi X(0)\sum_{k=-\infty}^{+\infty} \delta (\omega-2\pi k)$$
  
 5)	作为其一种特例，若x[n]=δ[n]，对应 ，则 ，所以有
  
