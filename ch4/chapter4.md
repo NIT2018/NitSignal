@@ -264,7 +264,7 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
 
     C)	当k=3时的实例如图所示（奥本海默第一版P250图5.20）
 
-    D)	对应的傅立叶变换为 $$ X_{(k)}({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x_{(k)}[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} x_{(k)}[rk]{\it e}^{-j\omega rk}=\sum_{n=-\infty}^{+\infty} x_{(k)}[r]{\it e}^{-j(k\omega) n}=X({it e}^{jk\omega})$$
+    D)	对应的傅立叶变换为 $$ X_{(k)}({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x_{(k)}[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} x_{(k)}[rk]{\it e}^{-j\omega rk}=\sum_{n=-\infty}^{+\infty} x_{(k)}[r]{\it e}^{-j(k\omega) n}=X({\it e}^{jk\omega})$$
 
     E)	 
 
