@@ -371,9 +371,15 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
     $$
 
     n)	上式两边除以α得：
+    $$
+    (n+1)\alpha^n u[n+1] \leftrightarrow = \frac{j}{\alpha}{\it e}^{j\omega}\frac{d}{d\omega}(\frac{1}{1-\alpha{\it e}^{-j\omega}})= \frac{1}({1-\alpha{\it e}^{-j\omega}})^2
+    $$
  
 
-    o)	所以有 ，因为n=-1时值为1
+    o)	所以有
+    $
+    y[n]=(n+1)\alpha^n u[n+1]=(n+1)\alpha^n u[n]
+    $ ，因为n=-1时值为1
 
 ## 4.7 调制性质 
 1)	前面说了时域卷积对应频域相乘，那么时域相乘对应频域又是如何呢？
