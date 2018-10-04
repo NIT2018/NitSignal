@@ -219,68 +219,84 @@ d)	所以u(t)的傅立叶变换就是奇部和偶部傅立叶变换之和，也�
  
 6)	根据这个性质，我们可知$\int_{-\infty}^{t} x(\tau),\tau=x(t)*\mu(t) ，而x(t)\longleftrightarrowF X(j\omega)$ ，$\mu(t)\longleftrightarrow F \frac{1}{j\omega}+\pi\delta(\omega)$，所以有$\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))，也即 $\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F \frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
 - §3.6.6　时间和频率的尺度变换性质
-1)	若有：$x(t)\longleftrightarrow F X(j\omega$) ，则有 
-2)	证明：主要是利用变量替换τ=at. 
+1)	若有：$x(t)\longleftrightarrow F X(j\omega$)$ ，则有$x(at)\longleftrightarrow F \frac{1}{|a|}X(\frac{\omega}{a}) 
+2)	证明：主要是利用变量替换τ=at.$F{x(at)}=\int_{-\infty}^{+\infty} x(at){\it e}^{-j\omegat},t\begin{cases}
+        1/a \int_{-\infty}^{+\infty}x(\tau){\it e}^{-j(w/a)\tau},\tau ,a>0
+        1/a \int_{-\infty}^{+\infty}x(\tau){\it e}^{-j(w/a)\tau},\tau ,a>0 
+        \end{cases}$ 
+        =1/|a|X(\frac{w}{a})$
  
 3)	这个特性说明了时间压缩和频率压缩之间的相反关系。当时间压缩（a>1）时，对应信号的频谱展宽；而在时间上伸展时，则频谱压缩
 a)	理解：当磁带快放时，正常的声音我们听起来也很尖，说明信号的频率变高，那就是频谱在高频部分增多，也就是将原频谱展宽
 b)	同理，在磁带慢放时，正常的声音都会变成低音，说明信号的频率变低，那就是频谱在低频部分增多，也就是将原频谱压缩
 - §3.6.7　对偶性
 1)	从傅立叶变换和反变换的公式中，我们也看出它们在形式上非常相近，它们之间存在这某种对称性，这就是所谓傅立叶变换的对称性。(附图奥本海默第一版P158图4.27)
-2)	 
-3)	我们考查下列积分式 
-a)	若u＝w，v＝t，则上式就是傅立叶变换公式，即 ，也即 
-b)	若u=t，v＝w，则对应傅立叶反变换公式，有
+2)	 $\begin{cases}
+       x(t)=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X(j\omega){\it e}^{jwt},\omega ...(1)
+       X(j\omega)=\int_{-\infty}^{+\infty}x(t){\it e}^{-jwt},t ...(2)
+        \end{cases}$ 
+      
+3)	我们考查下列积分式 $f(u)=\int_{-\infty}^{+\infty}g(v){\it e}^{juv},v$
+a)	若u＝w，v＝t，则上式就是傅立叶变换公式，即 ，也即 $f(\omega)=F{g(t)},g(t)\longleftrightarrow F f(w)$
+b)	若u=t，v＝w，则对应傅立叶反变换公式，有$f(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} F(j\omega){\it e}^{-j\omegat},\omega=\int_{-\infty}^{+\infty} g(\omega){\it e}^{-j\omegat},\omega=\int_{-\infty}^{+\infty} g(-\omega){\it e}^{j\omegat},\omega$
  
-所以：g(-w)=(1/2π)F(jw)，也即 
-4)	总结，所谓对偶性，就是：如果有 ，则有 
-5)	例1：求下列信号的傅立叶变换 
-a)	解：由以前知识我们知道 对应的傅立叶变换是 ，也即 ，现在要求X(t)对应的傅立叶变换，根据对偶性，应该有 ，则X(t)对应的傅立叶变换为 
+所以：g(-w)=(1/2π)F(jw)，也即$ f(t)\longleftrightarrow F 2\pig(-\omega)$
+4)	总结，所谓对偶性，就是：如果有x(t)\longleftrightarrow F X(j\omega) ，则有$X(t)\longleftrightarrow F 2\pix(-j\omega)$ 
+5)	例1：求下列信号的傅立叶变换 $x(t)=\frac{2}{t^2+1}$
+a)	解：由以前知识我们知道$x(t)={\it e}^{-|t|}$ 对应的傅立叶变换是X(j\omega)=\frac{2}{w^2+1}$ ，也即 ，现在要求X(t)对应的傅立叶变换，根据对偶性，应该有$X(t)\longleftrightarrow F 2\pix(-j\omega)$  ，则X(t)对应的傅立叶变换为 $2\pix(-j\omega)=2\pi{\it e}^{-|-w|}=2\pi{\it e}^{-|w|}$
 6)	很多地方都对应着对偶性，同学们自己要多观察，多练习。
 - §3.6.8　帕斯瓦尔(Parseval)定理
-1)	若 ，则 
-2)	证明： 
- ，交换积分顺序，有
+1)	若$x(t)\longleftrightarrow F X(j\omega)$ ，则$ \int_{-\infty}^{+\infty} {|x(t)|}^2,t=\frac{1}{2\pi}\int_{-\infty}^{+\infty} {|X(j\omega)|}^2,\omega$
+2)	证明：$ \int_{-\infty}^{+\infty} {|x(t)|}^2,t=$ \int_{-\infty}^{+\infty} x(t)^*x(t),t=$ \int_{-\infty}^{+\infty} x(t)[\frac{1}{2\pi}$ \int_{-\infty}^{+\infty}X(j\omega){\it e}^{j\omegat},\omega]^,t$ 
+ ，交换积分顺序，有$=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X(j\omega)\int_{-\infty}^{+\infty} x(t){\it e}^{-j\omegat},t,\omega=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X*(j\omega)X(j\omega),t=\frac{1}{2\pi} \int_{-\infty}^{+\infty}|X(j\omega)|^2,\omega$
  
 3)	一个信号的能量，可以从其时域的积分进行计算，也可以按照每单位频率内的能量（ ）在整个频率范围内积分得到，而 叫信号的能量谱密度
 ## 3.7　卷积性质
 - §3.7.1　卷积性质的数学证明
-1)	性质公式： ，两个信号卷积的频谱，是各自频谱的乘积，简言之：时域卷积对应频域相乘
+1)	性质公式：$y(t)=h(t)*x(t)\longleftrightarrow F Y(j\omega)=H(j\omega)X(j\omega)$ ，两个信号卷积的频谱，是各自频谱的乘积，简言之：时域卷积对应频域相乘
 2)	数学证明：
-a)	根据卷积积分定义，有 
-b)	y(t)的傅立叶变换为Y(jw)： 
-c)	交换积分顺序，有
+a)	根据卷积积分定义，有 $y(t)=\int_{-\infty}^{+\infty}x(\tau)h(t-\tau),\tau$
+b)	y(t)的傅立叶变换为Y(jw)：$Y(j\omega)=F{y(t)}=\int_{-\infty}^{+\infty}[\int_{-\infty}^{+\infty}x(\tau)h(t-\tau),\tau]{\it e}^{-jwt},t$ 
+c)	交换积分顺序，有=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}x(\tau)h(t-\tau){\it e}^{-jwt},t,\tau=\int_{-\infty}^{+\infty}x(\tau)[\int_{-\infty}^{+\infty}h(t-\tau){\it e}^{-jwt},t],\tau$
  
-d)	 
+d)$=\int_{-\infty}^{+\infty}x(\tau){\it e}^{-jwt}H(j\omega),\tau=H(j\omega)\int_{-\infty}^{+\infty}x(\tau){\it e}^{-jwt},\tau=H(j\omega)X(j\omega)$	 
 3.7.2　卷积性质的另一种理解
 1)	性质推导，也可以从指数信号的特征函数角度来理解和推导，具体见课本P105，此处略，最后结果是一致的
 2)	卷积性质是系统频域分析里最重要的理论基础，可以将信号卷积转换成频域上相乘的方法，所以单独列出一节
 3)	周期卷积相关概念也请同学们自学课本P105最后一段开始部分。
 §3.7.3　一个例子
-1)	设一个系统的冲激响应为 ，系统输入为 ，求系统的输出；
+1)	设一个系统的冲激响应为$h(t)={\it e}^{-at}\mu(t)$ ，a>0系统输入为$x(t)={\it e}^{-bt}\mu(t)$,b>0 ，求系统的输出；
 2)	根据以前的解法，y(t)＝x(t)*h(t)直接进行时域卷积即可
 3)	现在用卷积性质解
-a)	由以前解，可得： ，
-b)	Y(jw)=H(jw)X(jw)= 
-c)	若a<>b
-i.	则用待定系数法， ，A(b+jw)+B(a+jw)=1，根据实部虚部相等，得  
-ii.	所以 
-iii.	利用反变换，得 
-d)	若a=b，则 
-i.	经过整理，我们有 
-ii.	将傅立叶变换公式两边对w求导，得 ，所以有 
-iii.	因为 ，根据上性质，有 ，两边乘以-j，有 
-iv.	所以有 
+a)	由以前解，可得：$H(j\omega)=\frac{1}{a+j\omega} ，X(j\omega)=\frac{1}{b+j\omega}$
+b)	Y(jw)=H(jw)X(jw)=$ \frac{1}{a+j\omega}\frac{1}{b+j\omega}$
+c)	若a<>b,
+i.	则用待定系数法， $Y(j\omega)= \frac{A}{a+j\omega}+\frac{B}{b+j\omega}$，A(b+jw)+B(a+jw)=1，根据实部虚部相等，得$\begin{cases}
+        A+B=0
+        Ab+Ba=1
+        \end{cases}$ 
+        \rightarrow 
+        \begin{cases}
+        A=1/b-a
+        B=-1/B-A
+        \end{cases}$ 
+ii.	所以 $Y(jw)=\frac{1}{b-1}(\frac{1}{a+jw}-\frac{1}{b+jw})$
+iii.	利用反变换，得 $y(t)=\frac{1}{b-1}({\it e}^{-at}+{\it e}^{-bt})\mu(t)$
+d)	若a=b，则 $Y(jw)=\frac{1}{(a+jw)^2}$
+i.	经过整理，我们有$\frac{1}{(a+jw)^2}=j \left. \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega} \right $
+ii.	将傅立叶变换公式两边对w求导，得 ，所以有$ \left. \frac{{\rm d}X(jw)}{{\rm d}\omega} \right=\int_{-\infty}^{+\infty}-jtx(t){\it e}^{-jwt},t$
+iii.	因为 ，根据上性质，有$-jtx(t)\longleftrightarrow F \left. \frac{{\rm d}X(jw)}{{\rm d}\omega} \right$，两边乘以-j，有 $t{\it e}^{-at}\mu(t)\longleftrightarrow F j\left. \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega} \right $
+iv.	所以有 $y(t)=t{\it e}^{-at}\mu(t)$
 ## 3.8　调制性质
 1)	卷积性质是时域卷积可以转换为频域相乘，那么根据对偶原理，我们可以得到时域相乘可以转换为频域卷积，这就变成调制性质
-2)	调制性质： 
+2)	调制性质：r(t)=s(t)p(t)$\longleftrightarrow FR(jw)=\frac{1}{2\pi}S(j\omega)*P(jw)$
 3)	一个信号被另一个信号去乘，叫做一个信号去调制另一个信号的振幅，因此两个信号相乘叫幅度调制。（此处画载波和调制波信号及调制后信号三张图），所以叫调制性质。
-4)	证明：由已知，得， ，根据对偶性，有 ， 
-5)	利用卷积性质，有S(jt)*P(jt)4π2s(-w)p(-w)
-6)	再对上式用对偶性质，有 ，因为有 ，所以上式就相当于： 
-7)	例1：已知信号s(t)得频谱为如图所示（奥本海默第一版P167图4.30），另有一个信号p(t)=cosw0t，求两者相乘后得频谱
-a)	解：现在要求y(t)=s(t)p(t)得频谱，而已知s(t)的频谱，那么还得知道p(t)的频谱，而根据周期信号傅立叶变换方法，可得P(jw)为对应频率的冲激。且幅度为对应的傅立叶级数的系数，所以P(jw)=πδ(w-w0)+πδ(w+w0)，假设w0>w1
-b)	所以Y(jw)=(1/2π)S(jw)*P(jw)=1/2S(w-w0)+1/2S(w+w0)如图所示（奥本海默第一版P167图4.30）
+4)	证明：由已知，得，$p(t)\longleftrightarrow FP(jw)$ ，根据对偶性，有$S(jt)\longleftrightarrowF2\pis(-w) ， P(jt)\longleftrightarrowF2\pip(-w)$
+5)	利用卷积性质，有S(jt)*P(jt)$\longleftrightarrow$4π2s(-w)p(-w)
+6)	再对上式用对偶性质，有$4\pi^2s(-t)p(-t)\longleftrightarrowF 2\piS(-jw)* P(-jw)$ ，因为有x(-t)\longleftrightarrowFX(-jw)$ ，所以上式就相当于：$s(t)p(t)\longleftrightarrowF\frac{1}{2\pi}S(jw)*P(jw) 
+7)	例1：已知信号s(t)得频谱为如图所示（奥本海默第一版P167图4.30），另有一个信号p(t)=cos$w_0$t，求两者相乘后得频谱
+a)	解：现在要求y(t)=s(t)p(t)得频谱，而已知s(t)的频谱，那么还得知道p(t)的频谱，而根据周期信号傅立叶变换方法，可得P(jw)为对应频率的冲激。且幅度为对应的傅立叶级数的系数，所以$P(jw)=πδ(w-w_0)+πδ(w+w_0)，假设w_0>w_1
+b)	所以Y(jw)=(1/2π)S(jw)*P(jw)=1/2S(w-w_0)+1/2S(w+w_0)$如图所示（奥本海默第一版P167图4.30）
 
 
 c)	所谓幅度调制，就是将信号的频谱进行搬移（通过几次搬移后，将信号放到合适传输的中心频率上），其实现的方法就是乘法器，将载波和原始信号相乘
@@ -292,35 +308,52 @@ c)	所谓幅度调制，就是将信号的频谱进行搬移（通过几次搬�
 4)	此处略
 ## 3.10　用线性常系数微分方程表征的系统的频率响应
 - §3.10.1　频率响应概念
-1)	我们知道，一个LTI系统对于输入信号 ，其输出信号为 ，当s＝jw时，就变成 ，其中 。系统单位冲激h(t)的傅立叶变换H(jw)就是当频率为w的复指数信号通过一个线性时不变系统时，其复数振幅所经受的变化。因此一般也叫做系统的频率响应。
+1)	我们知道，一个LTI系统对于输入信号${\it e}^{st}$ ，其输出信号为$H(s){\it e}^{st}$ ，当s＝jw时，就变成${\it e}^{jwt}\rightarrowH(jw){\it e}^{jwt}$ ，其中$H(jw)=\int_{-\infty}^{+\infty}h(\tau){\it e}^{-jw\tau},\tau$ 。系统单位冲激h(t)的傅立叶变换H(jw)就是当频率为w的复指数信号通过一个线性时不变系统时，其复数振幅所经受的变化。因此一般也叫做系统的频率响应。
 2)	所以系统框图一般也表示为： ，从时域角度，输出是输入信号与单位冲激响应的卷积，从频域角度，输出信号的频谱是输入信号频谱与系统频率响应的卷积
 a)	y(t)=x(t)*h(t)
 b)	Y(jw)=X(jw)*H(jw)
 §3.10.2　已知数学方程的求解
 1)	已知系统方程，求频率响应；
-a)	例1：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应。 
-i.	解：两边进行傅立叶变换，即得： 
-ii.	 ，a>0
-iii.	而当a>0时，H(jw)对应的单位冲激响应也是收敛的，为 
-b)	例2：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应。 
-i.	解，同上，我们可得 ，接下来求单位冲激响应的话，就用部分分式法和待定系数法展开
-ii.	有 
-iii.	所以 
+a)	例1：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$\left. \frac{{\rm d}y(t)}{{\rm d}\t} \right+ay(t)=x(t),a>0$. 
+i.	解：两边进行傅立叶变换，即得：(jw)Y(jw)+aY(jw)=X(jw) 
+ii.	$H(jw)=\frac{Y(jw)}{X{jw}}=\frac{1}{a+jw}$ ，a>0
+iii.	而当a>0时，H(jw)对应的单位冲激响应也是收敛的，为 $h(t)={\it e}^{-at}\mu(t)$
+b)	例2：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$\left. \frac{{\rm d}^2y(t)}{{\rm d}t^2} \right+4\left. \frac{{\rm d}y(t)}{{\rm d}\t} \right+3y(t)=\left. \frac{{\rm d}x(t)}{{\rm d}\t} \right+2x(t)$。 
+i.	解，同上，我们可得$H(jw)=\frac{Y(jw)}{(X{jw}=\frac{jw+2}{(jw)^2+4(jw)+3} $，接下来求单位冲激响应的话，就用部分分式法和待定系数法展开
+ii.	有 $H(jw)=\frac{jw+2}{(jw)^2+4(jw)+3}=\frac{1/2}{jw+1}+\frac{1/2}{jw+3} $
+iii.	所以$h(t)=\frac{1}{2}{\it e}^{-t}u((t)+ \frac{1}{2}{\it e}^{-t}u((t)+\frac{1}{2}{\it e}^{-3t}u((t)$
 2)	已知系统方程和输入，求系统输出；
-a)	例3：求例2系统的输出，如果输入为 
-b)	解，根据上面方法，有 
-c)	这种部分分式展开方法为： ，可以解得待定系数为A11=1/4,A12=1/2,A21=-1/4，所以 
-d)	所以 
+a)	例3：求例2系统的输出，如果输入为 $x(t)={\it e}^{-t}u(t)$
+b)	解，根据上面方法，有$Y(jw)=X(jw)H(jw)^{X(jw)=\frac{1}{1+jw}}=\frac{jw+2}{(jw+1)^2(jw+3)}$ 
+c)	这种部分分式展开方法为：$Y(jw)=\frac{A_11}{jw+1}+\frac{A_12}{(jw+1)^2}+\frac{A_21}{jw+3}$ ，可以解得待定系数为A11=1/4,A12=1/2,A21=-1/4，所以 $Y(jw)=\frac{1/4}{jw+1}+\frac{1/2}{(jw+1)^2}-\frac{1/4}{jw+3}$
+d)	所以 $y(t)=(\frac{1}{4}{\it e}^{-t}+\frac{1}{2}t{\it e}^{-t}-\frac{1}{4}{\it e}^{-3t})u(t)$
 - §3.10.3　电路系统的频域求解
-1)	大量的电路系统是由放大器、加法器、电阻、电容和电感等线性单元电路和器件所组成，可以很方便的在频域进行分析。定义复阻抗 
-2)	列出初始静止时的时域电路方程： 
-3)	对该方程两边求傅立叶变换，得 
-4)	所以得到三种元器件的复阻抗为 ，可以将这些复阻抗作为电阻直接代入电路方程。
+1)	大量的电路系统是由放大器、加法器、电阻、电容和电感等线性单元电路和器件所组成，可以很方便的在频域进行分析。定义复阻抗$R(jw)=\frac{U(jw)}{I(jw)}$ 
+2)	列出初始静止时的时域电路方程：$
+        \begin{cases}
+        电阻u_R(t)=Ri_R(t) \\
+        电容i_c(t)=C \left \frac{{\rm d}u_c(t)}{{\rm d}\t} \right
+        电感u_L(t)=L\left\frac{{\rm d}i_L(t)}{{\rm d}\t} \right
+        \end{cases}
+$ 
+3)	对该方程两边求傅立叶变换，得 $
+        \begin{cases}
+        电阻U_R(jw)=RI_R(jw) \\
+        电容I_c(t)=jwCU_C(jw)
+        电感C_L(jw)=jwLI_L(jw)
+        \end{cases}
+$ 
+4)	所以得到三种元器件的复阻抗为 ， $
+        \begin{cases}
+        电阻R(jw)=R \\
+        电容R(jw)=1/jwC
+        电感R(jw)=jwL
+        \end{cases}
+        $可以将这些复阻抗作为电阻直接代入电路方程。
 5)	例：对于RC电路（加上图，课本P116页图3－22,加上数值，使RC=1/2），如果输入是一个阶跃信号，求系统输出。
-a)	解：输出端电压方程为： 
-b)	所以 
-c)	 
-d)	 
-e)	 
-f)	求得傅立叶反变换为： 
-$$ f(n)= \begin{cases} n/2, & \text {if $n$ is even} \\ 3n+1, & \text{if $n$ is odd} \end{cases} $$
+a)	解：输出端电压方程为：$V_C(jw)=\frac{1/jwC}{1/jwC+R}X(jw)$ 
+b)	所以 $H(jw)=\frac{V_C(jw)}{X(jw)}=\frac{1/jwC}{1/jwC+R}X(jw) =\frac{1}{1+jwRC}=\frac{2}{2+jw}$
+c)	 $X(jw=\frac{1}{jw}+\pi\delta(\omega)$
+d)	 $V_C(jw)=\frac{2}{2+jw}(\frac{1}{jw}+\pi\delta(\omega))=\frac{2}{(2+jw)jw}+\frac{2}{2+jw}\pi\delta(\omega)$
+e)=$\frac{1}{jw}-\frac{1}{2+jw}+\pi\delta=(\frac{1}{jw}+\pi\delta)-\frac{1}{2+jw}$	 
+f)	求得傅立叶反变换为： $v_C(t)=(1-{\it e}^{-2t})u(t)$
