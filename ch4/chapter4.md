@@ -383,9 +383,17 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
 
 ## 4.7 调制性质 
 1)	前面说了时域卷积对应频域相乘，那么时域相乘对应频域又是如何呢？
-2)	若 ， ，则
+2)	若 
+$
+x_1[n] \leftrightarrow X_1({\it e}^{j\omega})，x_2[n] \leftrightarrow X_2({\it e}^{j\omega}) ，则
+$$
+y[n]=x_1[n]x_2[n] \leftrightarrow \frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta})X_2({\it e}^{j(\omega-\theta)}) \ {\rm d}\theta
+$$
  
-3)	证明： 
+3)	证明：
+$$
+Y({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} y[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} x_1[n]x_2[n]{\it e}^{-j\omega n} =\sum_{n=-\infty}^{+\infty} x_2[n]\lbrace \frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta}){\it e}^{j(\omega-\theta)} \ {\rm d}\theta \rbrace {\it e}^{-j\omega n}=\frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta})[\sum_{n=-\infty}^{+\infty} x_2[n]{\it e}^{-j(\omega-\theta)n}] \ {\rm d}\theta=\frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta})X_2({\it e}^{j(\omega-\theta)}) \ {\rm d}\theta
+$$
 4)	 
 5)	 
 
