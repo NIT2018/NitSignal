@@ -519,12 +519,12 @@ $$
 
     i.	解：对差分方程两边做傅立叶变换，可得系统的频率响应：
     $$
-    H({\it e}^{j\omega})=\frac{Y({\it e}^{j\omega})}{X({\it e}^{j\omega})}=\frac{\sum_{k=0}^{M} b_k {\it e}^{-j\omega n_0}}{\sum_{k=0}^{N} a_k {\it e}^{-j\omega n_0}}=\frac{1}{1-a{\it e}^{-j\omega}$$ 
+    H({\it e}^{j\omega})=\frac{Y({\it e}^{j\omega})}{X({\it e}^{j\omega})}=\frac{\sum_{k=0}^{M} b_k {\it e}^{-j\omega n_0}}{\sum_{k=0}^{N} a_k {\it e}^{-j\omega n_0}}=\frac{1}{1-a{\it e}^{-j\omega}}$$ 
 
     ii.	根据常用傅立叶变换对，我们可以知道 $h[n]=a_nu[n]$
 b)	有一个初始松弛LTI系统，可用差分方程描述：
 $$
-y[n]-\frac{3}{4}y[n-1}+\frac{1}{8}y[n-2]=2x[n]
+y[n]-\frac{3}{4}y[n-1]+\frac{1}{8}y[n-2]=2x[n]
 $$
  ，求系统的单位脉冲响应。
 
