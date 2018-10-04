@@ -271,12 +271,14 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
     F)	也即时域展宽，则频域收缩。
 
 ### 4.5.7 频域微分 
-1)	若 ，则有 
+1)	若$x[n] \leftrightarrow X({\it e}^{j\omega})$ ，则有 $$nx[n] \leftrightarrow j\frac{dX({\it e}^{j\omega})}{d\omega}$$
 2)	证明：
-a)	由已知，有 ，两边对ω求导，得
+
+    a)	由已知，有$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}$$ ，两边对ω求导，得$$\frac{dX({\it e}^{j\omega})}{d\omega}=-\sum_{n=-\infty}^{+\infty} jnx[n]{\it e}^{-j\omega n}$$
  
-b)	两边乘以j，有 
-c)	也即 
+    b)	两边乘以j，有$$j\frac{dX({\it e}^{j\omega})}{d\omega}=\sum_{n=-\infty}^{+\infty} nx[n]{\it e}^{-j\omega n} $$
+
+    c)	也即 $$nx[n] \leftrightarrow j\frac{dX({\it e}^{j\omega})}{d\omega}$$
 
 ### 4.5.8 帕斯瓦尔定理 
 1)	定理：信号能量可以用能量密度谱积分得到，即 
