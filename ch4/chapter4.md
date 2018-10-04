@@ -221,13 +221,13 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 ### 4.5.3 对称性 
 1)	若x[n]是某一实数序列，则有$X^*({\it e}^{j\omega})=X({\it e}^{-j\omega})$ ，共轭对称性
 2)	由此可以得出：$R_e\lbrace X({\it e}^{j\omega})\rbrace$ 是w的偶函数， 是w的奇函数
-3)	证明： $$X^*({\it e}^{j\omega})={(\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n})}=\sum_{n=-\infty}^{+\infty} x[n] {\it e}^{j\omega n}=\sum_{n=-\infty}^{+\infty} x[n] {\it e}^{j\omega n}=X({\it e}^{-j\omega})$$
-4)	根据共轭性质，我们就可以知道 的实部就是偶函数，奇部就是奇函数。
+3)	证明： $$X^*({\it e}^{j\omega})={(\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n})}=\sum_{n=-\infty}^{+\infty} x[n] {\it e}^{j\omega n}=c {\it e}^{j\omega n}=X({\it e}^{-j\omega})$$
+4)	根据共轭性质，我们就可以知道$X({\it e}^{j\omega})$ 的实部就是偶函数，奇部就是奇函数。
 5)	推论：如果x[n]是实且偶的，那么其傅立叶变换也是实偶的；如果x[n]是奇且实的，则其傅立叶变换是奇且纯虚的。
 
 ### 4.5.4 时移和频移性质 
-1)	若 ，则有 和 
-2)	证明： 
+1)	若$x[n] \leftrightarrow X({\it e}^{j\omega})$ ，则有$$ x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0} X({\it e}^{j\omega})$$ 和$$ {\it e}^{-j\omega_0 n}x[n] \leftrightarrow X({\it e}^{j(\omega-\omega_0)})$$
+2)	证明： $$\sum_{n=-\infty}^{+\infty} x[n-n_0]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} x[l]{\it e}^{-j\omega (l+n_0)}={\it e}^{-j\omega n_0} \sum_{n=-\infty}^{+\infty} x[l]{\it e}^{-j\omega l}={\it e}^{-j\omega n_0} X({\it e}^{j\omega})$$
 3)	同理，同学可以自己证明：
  
  
