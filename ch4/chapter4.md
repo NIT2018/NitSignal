@@ -295,30 +295,47 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
 3.	例3：
 
 ## 4.6 卷积性质 
-1)	卷积性质： ， ，则 
-2)	也即： ， 
-3)	 称为系统的频率响应
+1)	卷积性质：$x[n] \leftrightarrow X({\it e}^{j\omega})$ ，$h[n] \leftrightarrow H({\it e}^{j\omega})$ ，则 $y[n]=x[n]*h[n]=X({\it e}^{j\omega})H({\it e}^{j\omega})$
+2)	也即：$y[n]=x[n]*h[n]$ ，$Y({\it e}^{j\omega})=X({\it e}^{j\omega})H({\it e}^{j\omega}) $
+3)	H({\it e}^{j\omega}) 称为系统的频率响应
 4)	证明完全类似连续信号卷积性质的推导，此处略
-5)	例1：已知系统单位脉冲响应为 ，则响应频率响应为：
-a)	 
-b)	若系统输入x[n]的频谱为 ，则通过该系统为输出为 ，幅度不发生变化，只发生相移，也即只是延迟了一段时间（n0）。
-6)	例2：已知 ， ，求y[n]
-a)	解：这个可以通过时域方法解，在这里我们用用频域方法
-b)	需要先求出 ，然后作反变换即可
-c)	 ，同理 
-d)	所以根据卷积定理，有 
-e)	接下来要根据 求出y[n]
-f)	若α≠β，则 ，可得 
-g)	所以有 ，由上面推导，可得 
-h)	 
-i)	若α＝β，则 ，其对应的y[n]怎么求呢？
-j)	 
-k)	根据前面的微分性质，我们有 ，加上 ，可得 
-l)	再根据时移性质 ，去n0＝－1，应用于(1)就有：
-m)	 
-n)	上式两边除以α得：
+5)	例1：已知系统单位脉冲响应为$h[n]=\delta[n-n_0]$ ，则响应频率响应为：
+
+    a)	$$ H({\it e}^{j\omega})=\sum_{n=-\infty}{+\infty} \delta[n-n_0]{\it e}^{-j\omega n_0}={\it e}^{-j\omega n_0}$$
+
+    b)	若系统输入x[n]的频谱为 $X({\it e}^{j\omega})$，则通过该系统为输出为 ${\it e}^{-j\omega n_0}X({\it e}^{j\omega})$，幅度不发生变化，只发生相移，也即只是延迟了一段时间（$n_0）。
+6)	例2：已知 $h[n]=\alpha^nu[n]$，$x[n]=\beta^nu[n]$ ，$|\alpha|<1$,$|\beta|$求y[n]
+
+    a)	解：这个可以通过时域方法解，在这里我们用用频域方法
+
+    b)	需要先求出$Y({\it e}^{j\omega})$ ，然后作反变换即可
+
+    c)	$$H({\it e}^{j\omega})=\sum_{n=-\infty}{+\infty} h[n]{\it e}^{-j\omega n_0}=\sum_{n=-\infty}{+\infty} \alpha^n{\it e}^{-j\omega n_0}=\frac{1}{1-\alpha{\it e}^{-j\omega}}$$ ，同理 $$X({\it e}^{j\omega})=\frac{1}{1-\beta{\it e}^{-j\omega}}$$
+
+    d)	所以根据卷积定理，有 $$Y({\it e}^{j\omega})=X({\it e}^{j\omega})H({\it e}^{j\omega})=\frac{1}{1-\alpha{\it e}^{-j\omega}}\frac{1}{1-\beta{\it e}^{-j\omega}}$$
+
+    e)	接下来要根据 $Y({\it e}^{j\omega})$求出y[n]
+
+    f)	若α≠β，则Y({\it e}^{j\omega})=\frac{A}{1-\alpha{\it e}^{-j\omega}}+\frac{B}{1-\beta{\it e}^{-j\omega}} ，可得 
+
+    g)	所以有 ，由上面推导，可得 
+
+    h)	 
+
+    i)	若α＝β，则 ，其对应的y[n]怎么求呢？
+
+    j)	 
+
+    k)	根据前面的微分性质，我们有 ，加上 ，可得 
+
+    l)	再根据时移性质 ，去n0＝－1，应用于(1)就有：
+
+    m)	 
+
+    n)	上式两边除以α得：
  
-o)	所以有 ，因为n=-1时值为1
+
+    o)	所以有 ，因为n=-1时值为1
 
 ## 4.7 调制性质 
 1)	前面说了时域卷积对应频域相乘，那么时域相乘对应频域又是如何呢？
