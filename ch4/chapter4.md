@@ -392,7 +392,7 @@ $$
  
 3)	证明：
 $$
-Y({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} y[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} x_1[n]x_2[n]{\it e}^{-j\omega n} =\sum_{n=-\infty}^{+\infty} x_2[n]\lbrace \frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta}){\it e}^{j(\omega-\theta)} \ {\rm d}\theta \rbrace {\it e}^{-j\omega n}=\frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta})[\sum_{n=-\infty}^{+\infty} x_2[n]{\it e}^{-j(\omega-\theta)n}] \ {\rm d}\theta=\frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta})X_2({\it e}^{j(\omega-\theta)}) \ {\rm d}\theta
+Y({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} y[n]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} x_1[n]x_2[n]{\it e}^{-j\omega n} =\sum_{n=-\infty}^{+\infty} x_2[n]\lbrace \frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta}){\it e}^{j(\omega-\theta)} \ {\rm d}\theta \rbrace {\it e}^{-j\omega n}$$ $$=\frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta})[\sum_{n=-\infty}^{+\infty} x_2[n]{\it e}^{-j(\omega-\theta)n}] \ {\rm d}\theta=\frac{1}{2\pi}\int_{2\pi} X_1({\it e}^{j\theta})X_2({\it e}^{j(\omega-\theta)}) \ {\rm d}\theta
 $$
 4)	 
 5)	 
