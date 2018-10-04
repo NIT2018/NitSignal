@@ -281,7 +281,7 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
     c)	也即 $$nx[n] \leftrightarrow j\frac{dX({\it e}^{j\omega})}{d\omega}$$
 
 ### 4.5.8 帕斯瓦尔定理 
-1)	定理：信号能量可以用能量密度谱积分得到，即 $$\sum_{n=-\infty}^{+\infty} {|\x[n]|}^2=\frac{1}{2\pi}\int_{2\pi} {|X({\it e}^{j\omega})|}^2 \ {\rm d}\omega$$
+1)	定理：信号能量可以用能量密度谱积分得到，即 $$\sum_{n=-\infty}^{+\infty} {\mid\x[n]|}^2=\frac{1}{2\pi}\int_{2\pi} {|X({\it e}^{j\omega})\mid}^2 \ {\rm d}\omega$$
 2)	证明： 
 3)	 
 4)	交换积分和求和顺序，得
