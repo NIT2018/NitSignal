@@ -248,9 +248,9 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 
     b)	设y[n]=Od{u[n]}，证明y[n]有如下形式y[n]=u[n]+a+bδ[n]，其中a和b是待确定的常数。
 
-    c)	利用F{y[n]}必然是纯虚数这一点，推导出 
+    c)	利用F{y[n]}必然是纯虚数这一点，推导出  $$g({\it e}^{j\omega})=\pi \sum_{k=-\infty}^{+\infty} \delta (\omega-2\pi k)$$
 
-    d)	利用上a)-c)结果和卷积性质，证明：
+    d)	利用上a)-c)结果和卷积性质，证明：$$F\lbrace \sum_{k=-\infty}^{n} x[k] \rbrace=\frac{1}{1-{\it e}^{-j\omega}} X({\it e}^{j\omega})++\pi X(0)\sum_{k=-\infty}^{+\infty} \delta (\omega-2\pi k)$$
  
 
 ### 4.5.6 时间和频率尺度特性 
