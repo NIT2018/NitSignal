@@ -239,14 +239,18 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 令$$y[n]=\sum_{k=-\infty}^{n} x[k]$$ ，显然$x[n]=y[n]-y[n-1]$ ，看起差分是求和的逆系统。所以两者的单位脉冲响应卷积和应该为单位脉冲响应δ[n]，根据卷积定理，两者的傅立叶变换之积应该为1，所以信号求和的傅立叶变换应该为：$$ \sum_{k=-\infty}^{n} x[k] \leftrightarrow \frac{1}{1-{\it e}^{-j\omega}} X({\it e}^{j\omega})$$
 4)	但是实际上除了这些还不够，正确的应该是：$$\sum_{k=-\infty}^{n} x[k] \leftrightarrow \frac{1}{1-{\it e}^{-j\omega}} X({\it e}^{j\omega})+\pi X(0)\sum_{k=-\infty}^{+\infty} \delta (\omega-2\pi k)$$
  
-5)	作为其一种特例，若x[n]=δ[n]，对应 ，则 ，所以有
+5)	作为其一种特例，若x[n]=δ[n]，对应  $X({\it e}^{j\omega})=1$，则$$\sum_{k=-\infty}^{n} x[k] $$，所以有$$u[n] \leftrightarrow \frac{1}{1-{\it e}^{-j\omega}}+\pi X(0)\sum_{k=-\infty}^{+\infty} \delta (\omega-2\pi k)$$
  
 6)	整个的推导方法完全类似于连续时间积分性质的推导，有兴趣的同学可以去试着推导一遍
 7)	推导方法：
-a)	利用δ[n]=u[n]-u[n-1]的关系，推导出 的形式，其中 只有在 时非零
-b)	设y[n]=Od{u[n]}，证明y[n]有如下形式y[n]=u[n]+a+bδ[n]，其中a和b是待确定的常数。
-c)	利用F{y[n]}必然是纯虚数这一点，推导出 
-d)	利用上a)-c)结果和卷积性质，证明：
+
+    a)	利用δ[n]=u[n]-u[n-1]的关系，推导出$$F\lbrace u[n] \rbrace=\frac{1}{1-{\it e}^{-j\omega}}+g({\it e}^{j\omega})$$ 的形式，其中 $g({\it e}^{j\omega})$只有在$\omege=0$,$\pm 2\pi$,%\pm 4\pi$ 时非零
+
+    b)	设y[n]=Od{u[n]}，证明y[n]有如下形式y[n]=u[n]+a+bδ[n]，其中a和b是待确定的常数。
+
+    c)	利用F{y[n]}必然是纯虚数这一点，推导出 
+
+    d)	利用上a)-c)结果和卷积性质，证明：
  
 
 ### 4.5.6 时间和频率尺度特性 
