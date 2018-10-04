@@ -228,7 +228,7 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 ### 4.5.4 时移和频移性质 
 1)	若$x[n] \leftrightarrow X({\it e}^{j\omega})$ ，则有$$ x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0} X({\it e}^{j\omega})$$ 和$$ {\it e}^{-j\omega_0 n}x[n] \leftrightarrow X({\it e}^{j(\omega-\omega_0)})$$
 2)	证明： $$\sum_{n=-\infty}^{+\infty} x[n-n_0]{\it e}^{-j\omega n}=\sum_{n=-\infty}^{+\infty} x[l]{\it e}^{-j\omega (l+n_0)}={\it e}^{-j\omega n_0} \sum_{n=-\infty}^{+\infty} x[l]{\it e}^{-j\omega l}={\it e}^{-j\omega n_0} X({\it e}^{j\omega})$$
-3)	同理，同学可以自己证明：$$\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j(\omega-\omega_0)}) {\it e}^{-j\omega n} \ {\rm d}\omega=$$
+3)	同理，同学可以自己证明：$$\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j(\omega-\omega_0)}) {\it e}^{j\omega n} \ {\rm d}\omega=\frac{1}{2\pi}\int_{0}^{2\pi} X({\it e}^{j\omega}){\it e}^{j(\omega-\omega_0)n} \ {\rm d}\omega=$$
  
  
 
