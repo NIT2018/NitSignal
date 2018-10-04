@@ -432,15 +432,25 @@ $$
 f[n] \leftrightarrow \frac{1}{N}g[-k]
 $$ 
 8)	也就是说：一个周期信号f[n]傅立叶级数的系数ak也是周期信号，其对应的傅立叶级数为 $$
-\frac{1}{N}f{-n}
+\frac{1}{N}f{[-n]}
 $$
 
 ### 4.9.2 离散时间傅立叶变换和连续时间傅立叶级数 
 1)	我们先看以下两组傅立叶变换对
 2)	离散非周期信号傅立叶变换对： 
-3)	连续周期信号傅立叶级数： 
+$$
+\begin{cases}
+x[n]=\frac{1}{2\pi}\int_{2\pi} X({\it e}^{j\omega}){\it e}^{j(\omega n} \ {\rm d}\omega \\ 
+X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}
+\end{cases}
+3)	连续周期信号傅立叶级数：
+$$
+\begin{cases}
+x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jk\omega_0 t} \\ 
+a_k=\frac{1}{T_0}\int_{T_0} x(t){\it e}^{-jk\omega_0 t} \ {\rm d}t$$ 
 4)	接下来，令f(u)表示一个周期为2π的连续变量周期函数，g[m]跟f(u)通过下式联系： 
-5)	令u=ω，m＝ｎ，（1）式有 ，g[n]可以看成是离散非周期函数，所以有 ，g[n]则可通过上面的离散傅立叶反变换得到
+$$f(u)=\sum_{m=-\infty}^{+\infty} g[m]{\it e}^{-jum}...(1)$$
+5)	令u=ω，m＝ｎ，（1）式有$$f({\it e}^{j\omega}=f(\omega)=\sum_{m=-\infty}^{+\infty} g[m]{\it e}^{-j\omega n}$$ ，g[n]可以看成是离散非周期函数，所以有$g[n] \leftrightarrow f({\it e}^{j\omega}$ ，g[n]则可通过上面的离散傅立叶反变换得到
 6)	同样，在（1）式中，我们令u=t，m=-k，代入有： ，则f(t)是周期为2π的函数，对应的ω0=1，上式也可写成： ，f(t)看成连续周期信号，则g[-k]是其傅立叶级数的系数
 7)	综上，离散非周期傅立叶变换和连续周期傅立叶级数之间存在对偶关系：
 a)	若 ，则 
