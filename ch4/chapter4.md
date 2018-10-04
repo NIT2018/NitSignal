@@ -244,7 +244,7 @@ a)	解：$$X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega
 6)	整个的推导方法完全类似于连续时间积分性质的推导，有兴趣的同学可以去试着推导一遍
 7)	推导方法：
 
-    a)	利用δ[n]=u[n]-u[n-1]的关系，推导出$$F\lbrace u[n] \rbrace=\frac{1}{1-{\it e}^{-j\omega}}+g({\it e}^{j\omega})$$ 的形式，其中 $g({\it e}^{j\omega})$只有在$\omege=0$,$\pm 2\pi$,%\pm 4\pi$ 时非零
+    a)	利用δ[n]=u[n]-u[n-1]的关系，推导出$$F\lbrace u[n] \rbrace=\frac{1}{1-{\it e}^{-j\omega}}+g({\it e}^{j\omega})$$ 的形式，其中 $g({\it e}^{j\omega})$只有在$\omege =0$,$\pm 2\pi$,$\pm 4\pi$ 时非零
 
     b)	设y[n]=Od{u[n]}，证明y[n]有如下形式y[n]=u[n]+a+bδ[n]，其中a和b是待确定的常数。
 
