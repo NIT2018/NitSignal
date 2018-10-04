@@ -316,21 +316,58 @@ A)	证明：$$\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}=\sum_{m=+\inft
 
     e)	接下来要根据 $Y({\it e}^{j\omega})$求出y[n]
 
-    f)	若α≠β，则Y({\it e}^{j\omega})=\frac{A}{1-\alpha{\it e}^{-j\omega}}+\frac{B}{1-\beta{\it e}^{-j\omega}} ，可得 
+    f)	若α≠β，则$$Y({\it e}^{j\omega})=\frac{A}{1-\alpha{\it e}^{-j\omega}}+\frac{B}{1-\beta{\it e}^{-j\omega}}$$ ，可得 
+    $$
+    \begin{cases}
+    A+B=1 \\
+    -A\beta-B\alpha=0
+    \end{cases}
+    $$
 
-    g)	所以有 ，由上面推导，可得 
+    g)	所以有
+    $$
+    \begin{cases}
+    A=\frac{\alpha}{\alpha-\beta} \\
+    B=\frac{-\beta}{\alpha-\beta}
+    \end{cases}
+    $$ 
+    ，由上面推导，可得 
+    $$
+    y[n]=\frac{\alpha}{\alpha-\beta} \alpha^nu[n]-\frac{\beta}{\alpha-\beta} \alpha^nu[n]=\frac{1}{\alpha-\beta}[\alpha^{n+1}u[n]-\beta^{n+1}u[n]]
+    $$
 
     h)	 
 
-    i)	若α＝β，则 ，其对应的y[n]怎么求呢？
+    i)	若α＝β，则
+    $$
+    Y({\it e}^{j\omega})=(\frac{1}{1-\alpha{\it e}^{-j\omega}})^2
+    $$
+     ，其对应的y[n]怎么求呢？
 
-    j)	 
+    j)	$$
+     Y({\it e}^{j\omega})=(\frac{1}{1-\alpha{\it e}^{-j\omega}})^2=\frac{j}{\alpha} {\it e}^{j\omega} \frac{d}{d\omega}(\frac{1}{1-\alpha{\it e}^{-j\omega}})
+     $$
 
-    k)	根据前面的微分性质，我们有 ，加上 ，可得 
+    k)	根据前面的微分性质，我们有 
+    $$
+    nx[n] \leftrightarrow j\frac{dX({\it e}^{j\omega}}{d\omega}
+    $$，加上
+    $$
+    \alpha^n u[n] \leftrightarrow = \frac{1}{1-\alpha{\it e}^{-j\omega}}
+    $$，可得
+    $$
+     n\alpha^n u[n] \leftrightarrow = j\frac{d}{d\omega}(\frac{1}{1-\alpha{\it e}^{-j\omega}})
+     $$...(1)
 
-    l)	再根据时移性质 ，去n0＝－1，应用于(1)就有：
+    l)	再根据时移性质 
+    $$
+    x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0}X({\it e}^{j\omega}
+    $$
+    ，去$n_0$＝－1，应用于(1)就有：
 
-    m)	 
+    m)	$$
+    (n+1)\alpha^{n+1} u[n+1] \leftrightarrow = j{\it e}^{j\omega}\frac{d}{d\omega}(\frac{1}{1-\alpha{\it e}^{-j\omega}}) 
+    $$
 
     n)	上式两边除以α得：
  
