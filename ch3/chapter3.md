@@ -189,7 +189,7 @@ B)	代入上面的式子，即可得对应的频谱为：$X(j\omega)=\frac{2\pi}
 3)	证明略。
 - §3.6.3　对称性
 1)	若x(t)是一个实时间函数，则有$X(-j\omega)=X*(j\omega)$,(1)，这叫共轭对称性
-2)	证明：$X^*(j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t]^*$=$\int_{-\infty}^{+\infty} x(t)^*{\it e}^{jwt},t $，因为x(t)是实函数，有$x^*(t)=x(t)x_1$，所以有$X^*(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
+2)	证明：$X * (j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t] * $=$\int_{-\infty}^{+\infty} x(t) * {\it e}^{jwt},t $，因为x(t)是实函数，有$x * (t)=x(t)x_1$，所以有$X * (j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
 3)	将X(jw)用直角坐标形式表示，即X(jw)=Re{X(jw)}+jIm{X(jw)}，那么当x(t)为实函数时，根据(1)式，有
 A)	Re{X(jw)}=Re{X(-jw)}
 B)	Im{X(jw)}=-Im{X(-jw)}
@@ -217,9 +217,9 @@ d)	所以u(t)的傅立叶变换就是奇部和偶部傅立叶变换之和，也�
  
 5)	接着根据后面的卷积性质，我们就可以得到积分性质，卷积性质为$y(t)=h(t)*x(t)\longleftrightarrow FY(j\omega)=H(j\omega)X(j\omega)$
  
-6)	根据这个性质，我们可知$\int_{-\infty}^{t} x(\tau),\tau=x(t)*\mu(t) ，而x(t)\longleftrightarrow F X(j\omega)$ ，$\mu(t)\longleftrightarrow F \frac{1}{j\omega}+\pi\delta(\omega)$，所以有$\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))$，也即 $\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F \frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
+6)	根据这个性质，我们可知$\int_{-\infty}^{t} x(\tau),\tau=x(t)*\mu(t) ，而x(t)\longleftrightarrow F X(j\omega)$ ，$\mu(t)\longleftrightarrow F \frac{1}{j\omega}+\pi\delta(\omega)$，所以有$\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))$，也即 $\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F \frac{1}{j\omega}X(j\omega)+\pi X(0)\delta(\omega)$
 - §3.6.6　时间和频率的尺度变换性质
-1)	若有：$x(t)\longleftrightarrow F X(j\omega$)$ ，则有$x(at)\longleftrightarrow F \frac{1}{|a|}X(\frac{\omega}{a})$ 
+1)	若有：$x(t)\longleftrightarrow F X(j\omega)$ ，则有$x(at)\longleftrightarrow F \frac{1}{|a|}X(\frac{\omega}{a})$ 
 2)	证明：主要是利用变量替换τ=at.$F{x(at)}=\int_{-\infty}^{+\infty} x(at){\it e}^{-j\omega t},t\begin{cases}
         1/a \int_{-\infty}^{+\infty}x(\tau){\it e}^{-j(w/a)\tau},\tau ,a>0
         1/a \int_{-\infty}^{+\infty}x(\tau){\it e}^{-j(w/a)\tau},\tau ,a>0 
