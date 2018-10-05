@@ -145,17 +145,17 @@ B)	 =$\frac{1}{a+j\omega}+\frac{1}{a-j\omega}=\frac{2a}{a^2+\omega^2}$
 A)	解： $X(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jkwt},t=\int_{-\infty}^{+\infty} \delta(t){\it e}^{-jkwt},t=1$
 B)	单位冲激信号的频谱是涵盖全频段的。
 4)	例4：求矩形脉冲信号的频谱$$ x(t)= \begin{cases} 1, |t|<T_1 \\  0,|t|>T_1 \end{cases} $$ 
-A)	解：  $X(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t=\int_{-T_1}^{T_1} {\it e}^{-jwt},t=2\frac{\sin {wT_1}{\omega}}$
+A)	解：  $X(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t=\int_{-T_1}^{T_1} {\it e}^{-jwt},t=2\frac{\sin wT_1}{\omega}$
 B)	如图所示（奥本海默P146图4.17）
 5)	例5：已知信号频谱X（jw），求原始信号X（jw）=$ \begin{cases} 1, |\omega|<T_1 \\  0,|\omega|>T_1 \end{cases}$， 
-A)	解，利用傅立叶反变换公式，得 x(t)=$\int_{-w}^{w} {\it e}^{-jwt},\omega=\frac{\sin {Wt}{\pi t}}$
+A)	解，利用傅立叶反变换公式，得 x(t)=$\int_{-w}^{w} {\it e}^{-jwt},\omega=\frac{\sin Wt}{\pi t}$
 B)	通过例4例5，我们发现时域和频域变换之间存在着很有意思的对偶关系。x(t)$\longleftrightarrow$X(jw)的波形可以互相变换
 ## 3.5　周期信号与连续时间傅立叶变化
 - §3.5.1　非周期信号傅立叶变换在周期信号中的应用
 1)	非周期信号的傅立叶变换公式对$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{jwt},w X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $
  
 2)	在求周期信号傅立叶变换时候的问题
-A)	对于周期为T的信号x(t)=x(t+T)，如 在一个周期内有x(t)=$ \begin{cases} 1,-T_1<t<T_1 \\0,T>|t|>T_1\end{cases} $ ，如图所示
+A)	对于周期为T的信号x(t)=x(t+T)，如 在一个周期内有x(t)=$ \begin{cases} 1,-T_1<t<T_1 0,T>|t|>T_1\end{cases} $ ，如图所示
 B)	按照这个方法求傅立叶变换时 X（jw）=$\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t$=$...\int_{-T-T_1}^{-T+T_1} {\it e}^{-jwt},t+\int_{-T_1}^{T_1} {\it e}^{-jwt},t+\int_{T-T_1}^{T+T_1} {\it e}^{-jwt},t$
  这个就比较复杂，难求
 - §3.5.2　周期信号的傅立叶变换
@@ -174,7 +174,7 @@ A)	解：x(t)的傅立叶级数的系数为$a_1$=a-1=1/2，所以x（t）对应�
 A)	解：这个信号是周期的，周期为T；其对应的傅立叶级数的系数为
 - $a_k=\frac{1}{T}\int_{-T/2}^{T/2} \delta(t){\it e}^{-jkw_0t},t$
  
-B)	代入上面的式子，即可得对应的频谱为：$X(j\omega)=\frac{2\pi}{T}\sum_{k=-\infty}^{+\infty} \delta(\omega-\frac{2\pi k}{T}) 
+B)	代入上面的式子，即可得对应的频谱为：$X(j\omega)=\frac{2\pi}{T}\sum_{k=-\infty}^{+\infty} \delta(\omega-\frac{2\pi k}{T})$ 
 ## 3.6　连续时间傅立叶变换的性质
 - §3.6.1　傅立叶变换对的表示
 1)	现在我们有：$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{jwt},w X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $ ，对于x(t)和X(jw)，是一个变换对
@@ -238,10 +238,10 @@ b)	同理，在磁带慢放时，正常的声音都会变成低音，说明信�
       
 3)	我们考查下列积分式 $f(u)=\int_{-\infty}^{+\infty}g(v){\it e}^{juv},v$
 a)	若u＝w，v＝t，则上式就是傅立叶变换公式，即 ，也即 $f(\omega)=F{g(t)},g(t)\longleftrightarrow F f(w)$
-b)	若u=t，v＝w，则对应傅立叶反变换公式，有$f(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} F(j\omega){\it e}^{-j\omegat},\omega=\int_{-\infty}^{+\infty} g(\omega){\it e}^{-j\omegat},\omega=\int_{-\infty}^{+\infty} g(-\omega){\it e}^{j\omegat},\omega$
+b)	若u=t，v＝w，则对应傅立叶反变换公式，有$f(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} F(j\omega){\it e}^{-j\omega t},\omega=\int_{-\infty}^{+\infty} g(\omega){\it e}^{-j\omega t},\omega=\int_{-\infty}^{+\infty} g(-\omega){\it e}^{j\omega t},\omega$
  
-所以：g(-w)=(1/2π)F(jw)，也即$ f(t)\longleftrightarrow F 2\pig(-\omega)$
-4)	总结，所谓对偶性，就是：如果有x(t)\longleftrightarrow F X(j\omega) ，则有$X(t)\longleftrightarrow F 2\pix(-j\omega)$ 
+所以：g(-w)=(1/2π)F(jw)，也即$ f(t)\longleftrightarrow F 2\pi g(-\omega)$
+4)	总结，所谓对偶性，就是：如果有x(t)\longleftrightarrow F X(j\omega) ，则有$X(t)\longleftrightarrow F 2\pi x(-j\omega)$ 
 5)	例1：求下列信号的傅立叶变换 $x(t)=\frac{2}{t^2+1}$
 a)	解：由以前知识我们知道$x(t)={\it e}^{-|t|}$ 对应的傅立叶变换是X(j\omega)=\frac{2}{w^2+1}$ ，也即 ，现在要求X(t)对应的傅立叶变换，根据对偶性，应该有$X(t)\longleftrightarrow F 2\pix(-j\omega)$  ，则X(t)对应的傅立叶变换为 $2\pix(-j\omega)=2\pi{\it e}^{-|-w|}=2\pi{\it e}^{-|w|}$
 6)	很多地方都对应着对偶性，同学们自己要多观察，多练习。
