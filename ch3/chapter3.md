@@ -291,9 +291,9 @@ iv.	所以有 $y(t)=t{\it e}^{-at}\mu(t)$
 1)	卷积性质是时域卷积可以转换为频域相乘，那么根据对偶原理，我们可以得到时域相乘可以转换为频域卷积，这就变成调制性质
 2)	调制性质：r(t)=s(t)p(t)$\longleftrightarrow FR(jw)=\frac{1}{2\pi}S(j\omega)*P(jw)$
 3)	一个信号被另一个信号去乘，叫做一个信号去调制另一个信号的振幅，因此两个信号相乘叫幅度调制。（此处画载波和调制波信号及调制后信号三张图），所以叫调制性质。
-4)	证明：由已知，得，$p(t)\longleftrightarrow FP(jw)$ ，根据对偶性，有$S(jt)\longleftrightarrow F 2\pis(-w) ， P(jt)\longleftrightarrow F 2\pip(-w)$
+4)	证明：由已知，得，$p(t)\longleftrightarrow FP(jw)$ ，根据对偶性，有$S(jt)\longleftrightarrow F 2\pi s(-w) ， P(jt)\longleftrightarrow F 2\pip(-w)$
 5)	利用卷积性质，有S(jt)*P(jt)$\longleftrightarrow$4π2s(-w)p(-w)
-6)	再对上式用对偶性质，有$4\pi^2s(-t)p(-t)\longleftrightarrowF 2\piS(-jw)* P(-jw)$ ，因为有x(-t)\longleftrightarrowFX(-jw)$ ，所以上式就相当于：$s(t)p(t)\longleftrightarrowF\frac{1}{2\pi}S(jw)*P(jw) 
+6)	再对上式用对偶性质，有$4\pi^2s(-t)p(-t)\longleftrightarrowF 2\piS(-jw)* P(-jw)$ ，因为有x(-t)\longleftrightarrow FX(-jw)$ ，所以上式就相当于：$s(t)p(t)\longleftrightarrowF\frac{1}{2\pi}S(jw)*P(jw) 
 7)	例1：已知信号s(t)得频谱为如图所示（奥本海默第一版P167图4.30），另有一个信号p(t)=cos$w_0$t，求两者相乘后得频谱
 a)	解：现在要求y(t)=s(t)p(t)得频谱，而已知s(t)的频谱，那么还得知道p(t)的频谱，而根据周期信号傅立叶变换方法，可得P(jw)为对应频率的冲激。且幅度为对应的傅立叶级数的系数，所以$P(jw)=πδ(w-w_0)+πδ(w+w_0)，假设w_0>w_1
 b)	所以Y(jw)=(1/2π)S(jw)*P(jw)=1/2S(w-w_0)+1/2S(w+w_0)$如图所示（奥本海默第一版P167图4.30）
@@ -312,48 +312,48 @@ c)	所谓幅度调制，就是将信号的频谱进行搬移（通过几次搬�
 2)	所以系统框图一般也表示为： ，从时域角度，输出是输入信号与单位冲激响应的卷积，从频域角度，输出信号的频谱是输入信号频谱与系统频率响应的卷积
 a)	y(t)=x(t)*h(t)
 b)	Y(jw)=X(jw)*H(jw)
-§3.10.2　已知数学方程的求解
-1)	已知系统方程，求频率响应；
-a)	例1：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$\left. \frac{{\rm d}y(t)}{{\rm d}\t} \right+ay(t)=x(t),a>0$. 
-i.	解：两边进行傅立叶变换，即得：(jw)Y(jw)+aY(jw)=X(jw) 
-ii.	$H(jw)=\frac{Y(jw)}{X{jw}}=\frac{1}{a+jw}$ ，a>0
-iii.	而当a>0时，H(jw)对应的单位冲激响应也是收敛的，为 $h(t)={\it e}^{-at}\mu(t)$
-b)	例2：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$\left. \frac{{\rm d}^2y(t)}{{\rm d}t^2} \right+4\left. \frac{{\rm d}y(t)}{{\rm d}\t} \right+3y(t)=\left. \frac{{\rm d}x(t)}{{\rm d}\t} \right+2x(t)$。 
-i.	解，同上，我们可得$H(jw)=\frac{Y(jw)}{(X{jw}=\frac{jw+2}{(jw)^2+4(jw)+3} $，接下来求单位冲激响应的话，就用部分分式法和待定系数法展开
-ii.	有 $H(jw)=\frac{jw+2}{(jw)^2+4(jw)+3}=\frac{1/2}{jw+1}+\frac{1/2}{jw+3} $
-iii.	所以$h(t)=\frac{1}{2}{\it e}^{-t}u((t)+ \frac{1}{2}{\it e}^{-t}u((t)+\frac{1}{2}{\it e}^{-3t}u((t)$
-2)	已知系统方程和输入，求系统输出；
-a)	例3：求例2系统的输出，如果输入为 $x(t)={\it e}^{-t}u(t)$
-b)	解，根据上面方法，有$Y(jw)=X(jw)H(jw)^{X(jw)=\frac{1}{1+jw}}=\frac{jw+2}{(jw+1)^2(jw+3)}$ 
-c)	这种部分分式展开方法为：$Y(jw)=\frac{A_11}{jw+1}+\frac{A_12}{(jw+1)^2}+\frac{A_21}{jw+3}$ ，可以解得待定系数为A11=1/4,A12=1/2,A21=-1/4，所以 $Y(jw)=\frac{1/4}{jw+1}+\frac{1/2}{(jw+1)^2}-\frac{1/4}{jw+3}$
-d)	所以 $y(t)=(\frac{1}{4}{\it e}^{-t}+\frac{1}{2}t{\it e}^{-t}-\frac{1}{4}{\it e}^{-3t})u(t)$
+- §3.10.2　已知数学方程的求解
+- 1)	已知系统方程，求频率响应；
+- a)	例1：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$\left. \frac{{\rm d}y(t)}{{\rm d}\t} \right+ay(t)=x(t),a>0$. 
+- i.	解：两边进行傅立叶变换，即得：(jw)Y(jw)+aY(jw)=X(jw) 
+- ii.	$H(jw)=\frac{Y(jw)}{X{jw}}=\frac{1}{a+jw}$ ，a>0
+- iii.	而当a>0时，H(jw)对应的单位冲激响应也是收敛的，为 $h(t)={\it e}^{-at}\mu(t)$
+- b)	例2：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$\left. \frac{{\rm d}^2y(t)}{{\rm d}t^2} \right+4\left. \frac{{\rm d}y(t)}{{\rm d}t} \right+3y(t)=\left. \frac{{\rm d}x(t)}{{\rm d}\t} \right+2x(t)$。 
+- i.	解，同上，我们可得$H(jw)=\frac{Y(jw)}{(X{jw}=\frac{jw+2}{(jw)^2+4(jw)+3} $，接下来求单位冲激响应的话，就用部分分式法和待定系数法展开
+- ii.	有 $H(jw)=\frac{jw+2}{(jw)^2+4(jw)+3}=\frac{1/2}{jw+1}+\frac{1/2}{jw+3} $
+- iii.	所以$h(t)=\frac{1}{2}{\it e}^{-t}u((t)+ \frac{1}{2}{\it e}^{-t}u((t)+\frac{1}{2}{\it e}^{-3t}u((t)$
+- 2)	已知系统方程和输入，求系统输出；
+- a)	例3：求例2系统的输出，如果输入为 $x(t)={\it e}^{-t}u(t)$
+- b)	解，根据上面方法，有$Y(jw)=X(jw)H(jw)^{X(jw)=\frac{1}{1+jw}}=\frac{jw+2}{(jw+1)^2(jw+3)}$ 
+- c)	这种部分分式展开方法为：$Y(jw)=\frac{A_11}{jw+1}+\frac{A_12}{(jw+1)^2}+\frac{A_21}{jw+3}$ ，可以解得待定系数为A11=1/4,A12=1/2,A21=-1/4，所以 $Y(jw)=\frac{1/4}{jw+1}+\frac{1/2}{(jw+1)^2}-\frac{1/4}{jw+3}$
+- d)	所以 $y(t)=(\frac{1}{4}{\it e}^{-t}+\frac{1}{2}t{\it e}^{-t}-\frac{1}{4}{\it e}^{-3t})u(t)$
 - §3.10.3　电路系统的频域求解
-1)	大量的电路系统是由放大器、加法器、电阻、电容和电感等线性单元电路和器件所组成，可以很方便的在频域进行分析。定义复阻抗$R(jw)=\frac{U(jw)}{I(jw)}$ 
-2)	列出初始静止时的时域电路方程：$
+- 1)	大量的电路系统是由放大器、加法器、电阻、电容和电感等线性单元电路和器件所组成，可以很方便的在频域进行分析。定义复阻抗$R(jw)=\frac{U(jw)}{I(jw)}$ 
+- 2)	列出初始静止时的时域电路方程：$
         \begin{cases}
         电阻u_R(t)=Ri_R(t) \\
         电容i_c(t)=C \left \frac{{\rm d}u_c(t)}{{\rm d}\t} \right
         电感u_L(t)=L\left\frac{{\rm d}i_L(t)}{{\rm d}\t} \right
         \end{cases}
 $ 
-3)	对该方程两边求傅立叶变换，得 $
+- 3)	对该方程两边求傅立叶变换，得 $
         \begin{cases}
         电阻U_R(jw)=RI_R(jw) \\
         电容I_c(t)=jwCU_C(jw)
         电感C_L(jw)=jwLI_L(jw)
         \end{cases}
 $ 
-4)	所以得到三种元器件的复阻抗为 ， $
+- 4)	所以得到三种元器件的复阻抗为 ， $
         \begin{cases}
         电阻R(jw)=R \\
         电容R(jw)=1/jwC
         电感R(jw)=jwL
         \end{cases}
         $可以将这些复阻抗作为电阻直接代入电路方程。
-5)	例：对于RC电路（加上图，课本P116页图3－22,加上数值，使RC=1/2），如果输入是一个阶跃信号，求系统输出。
-a)	解：输出端电压方程为：$V_C(jw)=\frac{1/jwC}{1/jwC+R}X(jw)$ 
-b)	所以 $H(jw)=\frac{V_C(jw)}{X(jw)}=\frac{1/jwC}{1/jwC+R}X(jw) =\frac{1}{1+jwRC}=\frac{2}{2+jw}$
-c)	 $X(jw=\frac{1}{jw}+\pi\delta(\omega)$
-d)	 $V_C(jw)=\frac{2}{2+jw}(\frac{1}{jw}+\pi\delta(\omega))=\frac{2}{(2+jw)jw}+\frac{2}{2+jw}\pi\delta(\omega)$
-e)=$\frac{1}{jw}-\frac{1}{2+jw}+\pi\delta=(\frac{1}{jw}+\pi\delta)-\frac{1}{2+jw}$	 
-f)	求得傅立叶反变换为： $v_C(t)=(1-{\it e}^{-2t})u(t)$
+- 5)	例：对于RC电路（加上图，课本P116页图3－22,加上数值，使RC=1/2），如果输入是一个阶跃信号，求系统输出。
+- a)	解：输出端电压方程为：$V_C(jw)=\frac{1/jwC}{1/jwC+R}X(jw)$ 
+- b)	所以 $H(jw)=\frac{V_C(jw)}{X(jw)}=\frac{1/jwC}{1/jwC+R}X(jw) =\frac{1}{1+jwRC}=\frac{2}{2+jw}$
+- c)	 $X(jw=\frac{1}{jw}+\pi\delta(\omega)$
+- d)	 $V_C(jw)=\frac{2}{2+jw}(\frac{1}{jw}+\pi\delta(\omega))=\frac{2}{(2+jw)jw}+\frac{2}{2+jw}\pi\delta(\omega)$
+- e)=$\frac{1}{jw}-\frac{1}{2+jw}+\pi\delta=(\frac{1}{jw}+\pi\delta)-\frac{1}{2+jw}$	 
+- f)	求得傅立叶反变换为： $v_C(t)=(1-{\it e}^{-2t})u(t)$
