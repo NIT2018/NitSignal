@@ -189,7 +189,7 @@ B)	代入上面的式子，即可得对应的频谱为：$X(j\omega)=\frac{2\pi}
 3)	证明略。
 - §3.6.3　对称性
 1)	若x(t)是一个实时间函数，则有$X(-j\omega)=X*(j\omega)$,(1)，这叫共轭对称性
-2)	证明：$X*(j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t] *=\int_{-\infty}^{+\infty} x(t)*{\it e}^{jwt},t$ ，因为x(t)是实函数，有$x*(t)=x(t)$，所以有$ X*(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
+2)	证明：$X*(j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t] *=\int_{-\infty}^{+\infty} x(t)*{\it e}^{jwt},t ，因为x(t)是实函数，有x*(t)=x(t)x_1，所以有X *(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
 3)	将X(jw)用直角坐标形式表示，即X(jw)=Re{X(jw)}+jIm{X(jw)}，那么当x(t)为实函数时，根据(1)式，有
 A)	Re{X(jw)}=Re{X(-jw)}
 B)	Im{X(jw)}=-Im{X(-jw)}
@@ -204,7 +204,7 @@ D)	同样道理，若将X(jw)用极坐标形式给出，则模是w的偶函数�
 2)	证明：$F{X(t-t_0)}=\int_{-\infty}^{+\infty} x(t-t_0){\it e}^{-jwt},t \sigma=t-t_0=\int_{-\infty}^{+\infty} x(\sigma){\it e}^{-jw(\sigma+t_0)},\sigma={\it e}^{-jwt}X(j\omega)$ 
 3)	该性质说明：信号在时间上的位移，并没有改变其频谱的模，而只是在频谱上有一个相移，而且引入的相移跟w成线性关系，也即是线性相移。
 - §3.6.5　微分和积分性质
-1)	微分性质，傅立叶反变换公式两边对t求导，即得：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \rightarrow=\frac{1}{2\pi}\int_{-\infty}^{+\infty} j\omega X(j\omega){\it e}^{j\omegat},\omega$ ，所以有：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \longleftrightarrow F j\omega X(j\omega)$
+1)	微分性质，傅立叶反变换公式两边对t求导，即得：$  \frac{{\rm d}u(t)}{{\rm d}t} \rightarrow=\frac{1}{2\pi}\int_{-\infty}^{+\infty} j\omega X(j\omega){\it e}^{j\omega t},\omega$ ，所以有：$  \frac{{\rm d}u(t)}{{\rm d}t} \longleftrightarrow F j\omega X(j\omega)$
 2)	 $\mu(t)\longleftrightarrow F\frac{1}{j\omega}+\pi\delta(\omega)$
 3)	由此推出积分性质：$\int_{-\infty}^{t} x(\tau),\tau\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\pi{X(0)}\tau(\omega)$
 4)	我们先看u(t)的推导：
