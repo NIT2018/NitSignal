@@ -283,9 +283,9 @@ i.	则用待定系数法， $Y(j\omega)= \frac{A}{a+j\omega}+\frac{B}{b+j\omega}
 ii.	所以 $Y(jw)=\frac{1}{b-1}(\frac{1}{a+jw}-\frac{1}{b+jw})$
 iii.	利用反变换，得 $y(t)=\frac{1}{b-1}({\it e}^{-at}+{\it e}^{-bt})\mu(t)$
 d)	若a=b，则 $Y(jw)=\frac{1}{(a+jw)^2}$
-i.	经过整理，我们有$\frac{1}{(a+jw)^2}=j \left. \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega} \right $
-ii.	将傅立叶变换公式两边对w求导，得 ，所以有$ \left. \frac{{\rm d}X(jw)}{{\rm d}\omega} \right=\int_{-\infty}^{+\infty}-jtx(t){\it e}^{-jwt},t$
-iii.	因为 ，根据上性质，有$-jtx(t)\longleftrightarrow F \left. \frac{{\rm d}X(jw)}{{\rm d}\omega} \right$，两边乘以-j，有 $t{\it e}^{-at}\mu(t)\longleftrightarrow F j\left. \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega} \right $
+i.	经过整理，我们有$\frac{1}{(a+jw)^2}=j \left \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega} \right $
+ii.	将傅立叶变换公式两边对w求导，得 ，所以有$ \left \frac{{\rm d}X(jw)}{{\rm d}\omega} \right=\int_{-\infty}^{+\infty}-jtx(t){\it e}^{-jwt},t$
+iii.	因为 ，根据上性质，有$-jtx(t)\longleftrightarrow F \left \frac{{\rm d}X(jw)}{{\rm d}\omega} \right$，两边乘以-j，有 $t{\it e}^{-at}\mu(t)\longleftrightarrow F j\left \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega} \right $
 iv.	所以有 $y(t)=t{\it e}^{-at}\mu(t)$
 ## 3.8　调制性质
 1)	卷积性质是时域卷积可以转换为频域相乘，那么根据对偶原理，我们可以得到时域相乘可以转换为频域卷积，这就变成调制性质
