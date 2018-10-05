@@ -314,12 +314,12 @@ a)	y(t)=x(t)*h(t)
 b)	Y(jw)=X(jw)*H(jw)
 - §3.10.2　已知数学方程的求解
 - 1)	已知系统方程，求频率响应；
-- a)	例1：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$\left. \frac{{\rm d}y(t)}{{\rm d}\t} \right+ay(t)=x(t),a>0$. 
+- a)	例1：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$ \frac{{\rm d}y(t)}{{\rm d}\t} +ay(t)=x(t),a>0$. 
 - i.	解：两边进行傅立叶变换，即得：(jw)Y(jw)+aY(jw)=X(jw) 
 - ii.	$H(jw)=\frac{Y(jw)}{X{jw}}=\frac{1}{a+jw}$ ，a>0
 - iii.	而当a>0时，H(jw)对应的单位冲激响应也是收敛的，为 $h(t)={\it e}^{-at}\mu(t)$
-- b)	例2：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$\left. \frac{{\rm d}^2y(t)}{{\rm d}t^2} \right+4\left. \frac{{\rm d}y(t)}{{\rm d}t} \right+3y(t)=\left. \frac{{\rm d}x(t)}{{\rm d}\t} \right+2x(t)$。 
-- i.	解，同上，我们可得$H(jw)=\frac{Y(jw)}{(X{jw}=\frac{jw+2}{(jw)^2+4(jw)+3} $，接下来求单位冲激响应的话，就用部分分式法和待定系数法展开
+- b)	例2：全部初始条件为零的一个LTI系统，由如下方程给出，求其频响和单位冲激响应$ \frac{{\rm d}^2y(t)}{{\rm d}t^2} +4\frac{{\rm d}y(t)}{{\rm d}t} +3y(t)=\frac{{\rm d}x(t)}{{\rm d}t} t+2x(t)$。 
+- i.	解，同上，我们可得$H(jw)=\frac{Y(jw)}{X(jw)}=\frac{jw+2}{(jw)^2+4(jw)+3} $，接下来求单位冲激响应的话，就用部分分式法和待定系数法展开;
 - ii.	有 $H(jw)=\frac{jw+2}{(jw)^2+4(jw)+3}=\frac{1/2}{jw+1}+\frac{1/2}{jw+3} $
 - iii.	所以$h(t)=\frac{1}{2}{\it e}^{-t}u((t)+ \frac{1}{2}{\it e}^{-t}u((t)+\frac{1}{2}{\it e}^{-3t}u((t)$
 - 2)	已知系统方程和输入，求系统输出；
