@@ -564,14 +564,14 @@ $$
 
     iii.	同样将其用部分分式展开：
     $$
-    Y({\it e}^{j\omega})= \frac{B_{11}}{1-\frac{1}{4}{\it e}^{-j\omega}}+\frac{B_{12}}({1-\frac{1}{4}{\it e}^{-j\omega}})^2+\frac{B_{21}}{1-\frac{1}{2}{\it e}^{-j\omega}}
+    Y({\it e}^{j\omega})= \frac{B_{11}}{1-\frac{1}{4}{\it e}^{-j\omega}}+\frac{B_{12}}{(1-\frac{1}{4}{\it e)^2}{-j\omega}}^2+\frac{B_{21}}{1-\frac{1}{2}{\it e}^{-j\omega}}
     $$
  
     iv.	求出待定系数：$B_{11}$=-4,$B_{12}$=-2,$B_2{1}$=8
 
     v.	其中第一项对应为 
     $$
-    (\frac{1}{4})^2 u[n] \leftrightarrow \frac{1}{1-\frac{1}{4}{\it e}^{-j\omega}}
+    (\frac{1}{4})^2 u[n] \leftrightarrow \frac{1}{(1-\frac{1}{4}{\it e}^{-j\omega})^2}
     $$， 
     $$
     Y_2({\it e}^{j\omega})=\frac{1}{1-\frac{1}{4}{\it e}^{-j\omega}}
@@ -592,12 +592,13 @@ $$
     $$
     　 ，所以有
     $$
-    na^nu[n] \leftrightarrow a({\it e}^{-j\omega})\frac{1}({1-a{\it e}^{-j\omega}})^2=j\frac{d}{d\omega}(\frac{1}{1-a{\it e}^{-j\omega}})
+    na^nu[n] \leftrightarrow a({\it e}^{-j\omega})\frac{1}{(1-a{\it e}^{-j\omega})^2}=j\frac{d}{d\omega}(\frac{1}{1-a{\it e}^{-j\omega}})
     $$
  
     ix.	再利用时移性质，
     $
-    x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0}X({\it e}^{j\omega}) 得
+    x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0}X({\it e}^{j\omega})
+    $ 得
 
     x.	 
 
