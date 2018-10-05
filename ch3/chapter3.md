@@ -124,7 +124,7 @@ C)	x(t)在任何有限区域内，只有有限个不连续点，而且在这些�
 5)	由此得到$T_0a_k$的包络为：$T_0a_k=X(j\omega)$=$\int_{-\infty}^{+\infty} x(t){\it e}^{-jkw_0t},t$ ，具体取值主要是在 这些离散点上，离散点取值的密度，取决于$T_0或者w_0$，用图表示。这个包络就叫做x(t)的傅立叶变换。
 6)	根据上面得到的傅立叶级数系数公式，可得 $\check{x}(t)=\sum_{k=-\infty}^{+\infty}\frac{1}{T_0}X(jk\omega_0) {\it e}^{jk\omega_0t}\omega_0=2\pi/T_0=\frac{1}{2\pi}\sum_{k=-\infty}^{+\infty}\frac{1}{T_0}X(jk\omega_0) {\it e}^{jk\omega_0t}\omega_0$
  
-7)	随着$T_0\rightarrow$无穷大，$\check{x}(t)\rightarrowx(t)，w_0\rightarrow0$，右边就变成一个积分，就有
+7)	随着$T_0\rightarrow$无穷大，$\check{x}(t)\rightarrow{x(t)}，w_0\rightarrow0$，右边就变成一个积分，就有
  
 8)	就有傅立叶变换对，下式称为傅立叶变换或傅立叶积分，上式称为傅立叶反变换$$ f(n)= \begin{cases} x(t)=\frac{1}{2\pi}  \int_{-\infty}^{+\infty} X(j\omega){\it e}^{-j\omega t},\omega \\ X(j\omega)= \int_{-\infty}^{+\infty} x(t){\it e}^{-jkwt},t \end{cases} $$
  ，X(jw)就叫x(t)的频谱，也即是x(t)相应的各个频率分量。
@@ -145,14 +145,14 @@ B)	 =$\frac{1}{a+j\omega}+\frac{1}{a-j\omega}=\frac{2a}{a^2+\omega^2}$
 A)	解： $X(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jkwt},t=\int_{-\infty}^{+\infty} \delta(t){\it e}^{-jkwt},t=1$
 B)	单位冲激信号的频谱是涵盖全频段的。
 4)	例4：求矩形脉冲信号的频谱$$ x(t)= \begin{cases} 1, |t|<T_1 \\  0,|t|>T_1 \end{cases} $$ 
-A)	解：  $X(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t=\int_{-T_1}^{T_1} {\it e}^{-jwt},t=2\frac{\sin {wT_1}{\omega}$
+A)	解：  $X(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t=\int_{-T_1}^{T_1} {\it e}^{-jwt},t=2\frac{\sin {wT_1}{\omega}}$
 B)	如图所示（奥本海默P146图4.17）
 5)	例5：已知信号频谱X（jw），求原始信号X（jw）=$ \begin{cases} 1, |\omega|<T_1 \\  0,|\omega|>T_1 \end{cases}$， 
-A)	解，利用傅立叶反变换公式，得 x(t)=$\int_{-w}^{w} {\it e}^{-jwt},\omega=\frac{\sin {Wt}{\pi t}$
+A)	解，利用傅立叶反变换公式，得 x(t)=$\int_{-w}^{w} {\it e}^{-jwt},\omega=\frac{\sin {Wt}{\pi t}}$
 B)	通过例4例5，我们发现时域和频域变换之间存在着很有意思的对偶关系。x(t)$\longleftrightarrow$X(jw)的波形可以互相变换
 ## 3.5　周期信号与连续时间傅立叶变化
 - §3.5.1　非周期信号傅立叶变换在周期信号中的应用
-1)	非周期信号的傅立叶变换公式对$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{jwt},w \\X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $
+1)	非周期信号的傅立叶变换公式对$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{jwt},w X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $
  
 2)	在求周期信号傅立叶变换时候的问题
 A)	对于周期为T的信号x(t)=x(t+T)，如 在一个周期内有x(t)=$ \begin{cases} 1,-T_1<t<T_1 \\0,T>|t|>T_1\end{cases} $ ，如图所示
@@ -177,7 +177,7 @@ A)	解：这个信号是周期的，周期为T；其对应的傅立叶级数的�
 B)	代入上面的式子，即可得对应的频谱为：$X(j\omega)=\frac{2\pi}{T}\sum_{k=-\infty}^{+\infty} \delta(\omega-\frac{2\pi k}{T}) 
 ## 3.6　连续时间傅立叶变换的性质
 - §3.6.1　傅立叶变换对的表示
-1)	现在我们有：$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{jwt},w \\X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $ ，对于x(t)和X(jw)，是一个变换对
+1)	现在我们有：$ \begin{cases} x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty} X(jw){\it e}^{jwt},w X(jw)=\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t\end{cases} $ ，对于x(t)和X(jw)，是一个变换对
 2)	所以我们以后也写成：X(jw)=F{x(t)} ，x(t)= $F^{-1}{X(jw)}$
 3)	对于整个变换对，也写成$x(t)\longleftrightarrow F X(j\omega)$ ，注意：左边是时域函数，右边是频域函数，不能写反，若写反，则上面的F要变成$F_{-1}$
 4)	例1：$\frac{1}{a+j\omega}=F^{-1}{{\it e}^{-at}\mu(t)},a>0$ 
@@ -195,7 +195,7 @@ A)	Re{X(jw)}=Re{X(-jw)}
 B)	Im{X(jw)}=-Im{X(-jw)}
 C)	也即，X（jw）的实部实频率的偶函数，虚部是频率的奇函数
 D)	同样道理，若将X(jw)用极坐标形式给出，则模是w的偶函数，幅角是x的奇函数
-4)	若x(t)是实的，而且为偶函数，则有$X(-j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t\tau=-t=\int_{-\infty}^{+\infty} x(-\tau){\it e}^{-jw\tau},\tau x(\tau)=x(-\tau)=\int_{-\infty}^{+\infty} x(\tau){\it e}^{-jw\tau},\tau=X(j\pmega)$ 
+4)	若x(t)是实的，而且为偶函数，则有$X(-j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t\tau=-t=\int_{-\infty}^{+\infty} x(-\tau){\it e}^{-jw\tau},\tau x(\tau)=x(-\tau)=\int_{-\infty}^{+\infty} x(\tau){\it e}^{-jw\tau},\tau=X(j\omega)$ 
  ，加上共轭对称性，我们就可以知道X(jw)不仅是偶函数，而且是实函数。
 5)	若x(t)是实的，而且为奇函数，则有X（jw）是纯虚数，而且是奇函数。
 6)	以上的这些结论对傅立叶级数也同样成立，此处略（具体见奥本海默第一版P154-P155）
@@ -204,12 +204,12 @@ D)	同样道理，若将X(jw)用极坐标形式给出，则模是w的偶函数�
 2)	证明：$F{X(t-t_0)}=\int_{-\infty}^{+\infty} x(t-t_0){\it e}^{-jwt},t \sigma=t-t_0=\int_{-\infty}^{+\infty} x(\sigma){\it e}^{-jw(\sigma+t_0)},\sigma={\it e}^{-jwt}X(j\omega)$ 
 3)	该性质说明：信号在时间上的位移，并没有改变其频谱的模，而只是在频谱上有一个相移，而且引入的相移跟w成线性关系，也即是线性相移。
 - §3.6.5　微分和积分性质
-1)	微分性质，傅立叶反变换公式两边对t求导，即得：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \right=\frac{1}{2\pi}\int_{-\infty}^{+\infty} j\omegaX(j\omega){\it e}^{j\omegat},\omega$ ，所以有：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \right \longleftrightarrow F j\omegaX(j\omega)$
+1)	微分性质，傅立叶反变换公式两边对t求导，即得：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \rightarrow=\frac{1}{2\pi}\int_{-\infty}^{+\infty} j\omegaX(j\omega){\it e}^{j\omegat},\omega$ ，所以有：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \longleftrightarrow F j\omegaX(j\omega)$
 2)	 $\mu(t)\longleftrightarrow F\frac{1}{j\omega}+\pi\delta(\omega)$
-3)	由此推出积分性质：$\int_{-\infty}^{t} x(\tau),\tau\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\piX(0)\tau(\omega)$
+3)	由此推出积分性质：$\int_{-\infty}^{t} x(\tau),\tau\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\pi{X(0)}\tau(\omega)$
 4)	我们先看u(t)的推导：
 a)	先将u(t)分解成奇部和偶部，ev(t)=(u(t)+u(-t))/2，od(t)=(u(t)-u(-t))/2，即u(t)=1/2+(u(t)-1/2)
-b)	先考虑奇部$o_d$(t)= u(t)-1/2的频谱。设其频谱为$O_d$(jw)，因为$ \left. \frac{{\rm d}o_d(t)}{{\rm d}t} \right=\left. \frac{{\rm d}u(t)}{{\rm d}t} \right=\tau(t)  $ ，由微分性质，可得：
+b)	先考虑奇部$o_d$(t)= u(t)-1/2的频谱。设其频谱为$O_d$(jw)，因为$ \frac{{\rm d}o_d(t)}{{\rm d}t} = \frac{{\rm d}u(t)}{{\rm d}t}=\tau(t)  $ ，由微分性质，可得：
  ，所以有$O_d(jw)=1/jw$
 c)	再考虑偶部ev(t)=1/2，根据在周期信号傅立叶变换时的概念，我们有
 F{1/2}=πδ(w)
@@ -217,10 +217,10 @@ d)	所以u(t)的傅立叶变换就是奇部和偶部傅立叶变换之和，也�
  
 5)	接着根据后面的卷积性质，我们就可以得到积分性质，卷积性质为$y(t)=h(t)*x(t)\longleftrightarrow FY(j\omega)=H(j\omega)X(j\omega)$
  
-6)	根据这个性质，我们可知$\int_{-\infty}^{t} x(\tau),\tau=x(t)*\mu(t) ，而x(t)\longleftrightarrowF X(j\omega)$ ，$\mu(t)\longleftrightarrow F \frac{1}{j\omega}+\pi\delta(\omega)$，所以有$\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))，也即 $\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F \frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
+6)	根据这个性质，我们可知$\int_{-\infty}^{t} x(\tau),\tau=x(t)*\mu(t) ，而x(t)\longleftrightarrow F X(j\omega)$ ，$\mu(t)\longleftrightarrow F \frac{1}{j\omega}+\pi\delta(\omega)$，所以有$\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))，也即 $\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F \frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
 - §3.6.6　时间和频率的尺度变换性质
 1)	若有：$x(t)\longleftrightarrow F X(j\omega$)$ ，则有$x(at)\longleftrightarrow F \frac{1}{|a|}X(\frac{\omega}{a}) 
-2)	证明：主要是利用变量替换τ=at.$F{x(at)}=\int_{-\infty}^{+\infty} x(at){\it e}^{-j\omegat},t\begin{cases}
+2)	证明：主要是利用变量替换τ=at.$F{x(at)}=\int_{-\infty}^{+\infty} x(at){\it e}^{-j\omega t},t\begin{cases}
         1/a \int_{-\infty}^{+\infty}x(\tau){\it e}^{-j(w/a)\tau},\tau ,a>0
         1/a \int_{-\infty}^{+\infty}x(\tau){\it e}^{-j(w/a)\tau},\tau ,a>0 
         \end{cases}$ 
