@@ -247,8 +247,8 @@ a)	解：由以前知识我们知道$x(t)={\it e}^{-|t|}$ 对应的傅立叶变�
 6)	很多地方都对应着对偶性，同学们自己要多观察，多练习。
 - §3.6.8　帕斯瓦尔(Parseval)定理
 1)	若$x(t)\longleftrightarrow F X(j\omega)$ ，则$ \int_{-\infty}^{+\infty} {|x(t)|}^2,t=\frac{1}{2\pi}\int_{-\infty}^{+\infty} {|X(j\omega)|}^2,\omega$
-2)	证明：$ \int_{-\infty}^{+\infty} {|x(t)|}^2,t$=$ \int_{-\infty}^{+\infty} x(t) * x(t),t$=$ \int_{-\infty}^{+\infty} x(t)[\frac{1}{2\pi} \int_{-\infty}^{+\infty}X(j\omega){\it e}^{j\omegat},\omega]^,t$ 
- ，交换积分顺序，有$=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X(j\omega)\int_{-\infty}^{+\infty} x(t){\it e}^{-j\omegat},t,\omega=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X*(j\omega)X(j\omega),t=\frac{1}{2\pi} \int_{-\infty}^{+\infty}|X(j\omega)|^2,\omega$
+2)	证明：$ \int_{-\infty}^{+\infty} {|x(t)|}^2,t$=$ \int_{-\infty}^{+\infty} x(t) * x(t),t$=$ \int_{-\infty}^{+\infty} x(t)[\frac{1}{2\pi} \int_{-\infty}^{+\infty}X(j\omega){\it e}^{j\omega t},\omega]^,t$ 
+ ，交换积分顺序，有$=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X(j\omega)\int_{-\infty}^{+\infty} x(t){\it e}^{-j\omega t},t,\omega=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X*(j\omega)X(j\omega),t=\frac{1}{2\pi} \int_{-\infty}^{+\infty}|X(j\omega)|^2,\omega$
  
 3)	一个信号的能量，可以从其时域的积分进行计算，也可以按照每单位频率内的能量（ ）在整个频率范围内积分得到，而 叫信号的能量谱密度
 ## 3.7　卷积性质
@@ -257,14 +257,14 @@ a)	解：由以前知识我们知道$x(t)={\it e}^{-|t|}$ 对应的傅立叶变�
 2)	数学证明：
 a)	根据卷积积分定义，有 $y(t)=\int_{-\infty}^{+\infty}x(\tau)h(t-\tau),\tau$
 b)	y(t)的傅立叶变换为Y(jw)：$Y(j\omega)=F{y(t)}=\int_{-\infty}^{+\infty}[\int_{-\infty}^{+\infty}x(\tau)h(t-\tau),\tau]{\it e}^{-jwt},t$ 
-c)	交换积分顺序，有=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}x(\tau)h(t-\tau){\it e}^{-jwt},t,\tau=\int_{-\infty}^{+\infty}x(\tau)[\int_{-\infty}^{+\infty}h(t-\tau){\it e}^{-jwt},t],\tau$
+c)	交换积分顺序，有=$\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}x(\tau)h(t-\tau){\it e}^{-jwt},t,\tau=\int_{-\infty}^{+\infty}x(\tau)[\int_{-\infty}^{+\infty}h(t-\tau){\it e}^{-jwt},t],\tau$
  
 d)$=\int_{-\infty}^{+\infty}x(\tau){\it e}^{-jwt}H(j\omega),\tau=H(j\omega)\int_{-\infty}^{+\infty}x(\tau){\it e}^{-jwt},\tau=H(j\omega)X(j\omega)$	 
-3.7.2　卷积性质的另一种理解
+- 3.7.2　卷积性质的另一种理解
 1)	性质推导，也可以从指数信号的特征函数角度来理解和推导，具体见课本P105，此处略，最后结果是一致的
 2)	卷积性质是系统频域分析里最重要的理论基础，可以将信号卷积转换成频域上相乘的方法，所以单独列出一节
 3)	周期卷积相关概念也请同学们自学课本P105最后一段开始部分。
-§3.7.3　一个例子
+- §3.7.3　一个例子
 1)	设一个系统的冲激响应为$h(t)={\it e}^{-at}\mu(t)$ ，a>0系统输入为$x(t)={\it e}^{-bt}\mu(t)$,b>0 ，求系统的输出；
 2)	根据以前的解法，y(t)＝x(t)*h(t)直接进行时域卷积即可
 3)	现在用卷积性质解
@@ -274,7 +274,7 @@ c)	若a<>b,
 i.	则用待定系数法， $Y(j\omega)= \frac{A}{a+j\omega}+\frac{B}{b+j\omega}$，A(b+jw)+B(a+jw)=1，根据实部虚部相等，得$\begin{cases}
         A+B=0
         Ab+Ba=1
-        \end{cases}$ 
+        \end{cases}
         \rightarrow 
         \begin{cases}
         A=1/b-a
