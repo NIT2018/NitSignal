@@ -331,23 +331,23 @@ b)	Y(jw)=X(jw)*H(jw)
 - 1)	大量的电路系统是由放大器、加法器、电阻、电容和电感等线性单元电路和器件所组成，可以很方便的在频域进行分析。定义复阻抗$R(jw)=\frac{U(jw)}{I(jw)}$ 
 - 2)	列出初始静止时的时域电路方程：$
         \begin{cases}
-       - 电阻u_R(t)=Ri_R(t) 
-       - 电容i_c(t)=C  \frac{{\rm d}u_c(t)}{{\rm d}\t}
-       - 电感u_L(t)=L\frac{{\rm d}i_L(t)}{{\rm d}\t} 
+        电阻u_R(t)=Ri_R(t) 
+        电容i_c(t)=C  \frac{{\rm d}u_c(t)}{{\rm d}t}
+        电感u_L(t)=L\frac{{\rm d}i_L(t)}{{\rm d}t} 
         \end{cases}
 $ 
 - 3)	对该方程两边求傅立叶变换，得 $
         \begin{cases}
-      - 电阻U_R(jw)=RI_R(jw) \\
-      - 电容I_c(t)=jwCU_C(jw)
-      - 电感C_L(jw)=jwLI_L(jw)
+      电阻U_R(jw)=RI_R(jw) \\
+      电容I_c(t)=jwCU_C(jw)
+      电感C_L(jw)=jwLI_L(jw)
         \end{cases}
 $ 
 - 4)	所以得到三种元器件的复阻抗为 ， $
         \begin{cases}
-      - 电阻R(jw)=R \\
-      - 电容R(jw)=1/jwC
-      - 电感R(jw)=jwL
+      电阻R(jw)=R \\
+      电容R(jw)=1/jwC
+      电感R(jw)=jwL
         \end{cases}
         $可以将这些复阻抗作为电阻直接代入电路方程。
 - 5)	例：对于RC电路（加上图，课本P116页图3－22,加上数值，使RC=1/2），如果输入是一个阶跃信号，求系统输出。
