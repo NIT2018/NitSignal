@@ -32,7 +32,7 @@
 # 第6章　拉普拉斯变换
 ## §6.0　引言
 ### §6.0.1　傅立叶变换概述
-1)在傅立叶变换中，我们已经知${\it e}^{st} \to {\mit H}(s){\it e}^{st}$，其中{\it e}^{st}是系统特征函数，H(s)则是特征值；并且s=jw；
+1)在傅立叶变换中，我们已经知${\it e}^{st} \to {\mit H}(s){\it e}^{st}$，其中${\it e}^{st}$是系统特征函数，H(s)则是特征值；并且s=jw；
 2)拉普拉斯将傅立叶的结论进行了扩展，$s=\sigma+j\omega $，这样就成为了拉普拉斯变换
 3)因此，两者在很大程度上有相似性
 ### §6.0.2　本章目标
@@ -40,11 +40,11 @@
 2)掌握拉普拉斯变换在LTI系统分析中的应用
 ### §6.1　拉普拉斯变换
 1)根据特征值和特征函数的关系，有${\it e}^{st} \to {\mit H}(s){\it e}^{st}$，其中$\int_{+\infty}^{-\infty} h(t)e^{st} \{\rm d}t$，就是h(t)的拉普拉斯变换
-2)所以x(t)的拉普拉斯定义：$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t$，记为
+2)所以x(t)的拉普拉斯定义：$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t$，记为$x(t)\leftrightarrow X(s)$
 3)当s=jw时，就变成了傅立叶变换，所以傅立叶变换是拉普拉斯的一种特例
-4)例1：求信号的拉普拉斯变换
-a)我们已知该信号的傅立叶变换为
-b)解：
+4)例1：求信号$x(t)={\it e}^{-at}u(t)$,{\it a}>0的拉普拉斯变换
+a)我们已知该信号的傅立叶变换为$X(j\omega)=\frac{1}{a+j\omega}$
+b)解：$$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t=\Delta\int_{+\infry}^{0}{\it e}^{-at}{\it e}^({-\sigma-j\omega})t\{\rm d}t=\frac{1}{-{\it a}-\sigma-j\omega}\{\it e}^({-{\it a}-\sigma-j\omega})t\right| _{+\infty}^{x=0}=\frac{1}{a+\sigma-j\omega}=\frac{1}{s+a}$$
 ，
 其中必须满足条件，即
 
