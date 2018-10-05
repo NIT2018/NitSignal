@@ -42,9 +42,9 @@
 1)根据特征值和特征函数的关系，有${\it e}^{st} \to {\mit H}(s){\it e}^{st}$，其中$\int_{+\infty}^{-\infty} h(t)e^{st} \{\rm d}t$，就是h(t)的拉普拉斯变换
 2)所以x(t)的拉普拉斯定义：$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t$，记为$x(t)\leftrightarrow X(s)$
 3)当s=jw时，就变成了傅立叶变换，所以傅立叶变换是拉普拉斯的一种特例
-4)例1：求信号$x(t)={\it e}^{-at}u(t)$,{\it a}>0的拉普拉斯变换
+4)例1：求信号$x(t)={\it e}^{-at}u(t)$,a>0的拉普拉斯变换
 a)我们已知该信号的傅立叶变换为$X(j\omega)=\frac{1}{a+j\omega}$
-b)解：$$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t=\Delta\int_{+\infry}^{0}{\it e}^{-at}{\it e}^({-\sigma-j\omega})t\{\rm d}t=\frac{1}{-{\it a}-\sigma-j\omega}\{\it e}^({-{\it a}-\sigma-j\omega})t\right| _{+\infty}^{x=0}=\frac{1}{a+\sigma-j\omega}=\frac{1}{s+a}$$
+b)解：$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t=\Delta\int_{+\infry}^{0}{\it e}^{-at}{\it e}^({-\sigma-j\omega})t\{\rm d}t=\frac{1}{-{\it a}-\sigma-j\omega}\{\it e}^({-{\it a}-\sigma-j\omega})t\right| _{+\infty}^{x=0}=\frac{1}{a+\sigma-j\omega}=\frac{1}{s+a}$
 ，
 其中必须满足条件，即
 
