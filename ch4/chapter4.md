@@ -550,23 +550,54 @@ $$
 
     c)	对于上述系统，输入信号$$x[n]=(\frac{1}{4})^n u[n]$$ ，求系统输出。
 
-    i.	解：由上例， ，输入为 
+    i.	解：由上例，$$
+     H({\it e}^{j\omega})=\frac{2}{1-\frac{3}{4}{\it e}^{-j\omega}+\frac{1}{8}{\it e}^{-j2\omega}}
+     $$ ，输入为 
+     $$
+     X({\it e}^{j\omega})=\frac{1}{1-\frac{1}{4}{\it e}^{-j\omega}}
+     $$
 
-    ii.	所以输出为 
+    ii.	所以输出为
+    $$
+    Y({\it e}^{j\omega})=H({\it e}^{j\omega})X({\it e}^{j\omega})=\frac{2}{1-\frac{3}{4}{\it e}^{-j\omega}+\frac{1}{8}{\it e}^{-j2\omega}} \frac{1}{1-\frac{1}{4}{\it e}^{-j\omega}}
+    $$
 
     iii.	同样将其用部分分式展开：
+    $$
+    Y({\it e}^{j\omega})= \frac{B_{11}}{1-\frac{1}{4}{\it e}^{-j\omega}}+\frac{B_{12}}({1-\frac{1}{4}{\it e}^{-j\omega}})^2+\frac{B_{21}}{1-\frac{1}{2}{\it e}^{-j\omega}}
+    $$
  
-    iv.	求出待定系数：B11=-4,B12=-2,B21=8
+    iv.	求出待定系数：$B_{11}$=-4,$B_{12}$=-2,$B_2{1}$=8
 
-    v.	其中第一项对应为 ， 
+    v.	其中第一项对应为 
+    $$
+    (\frac{1}{4})^2 u[n] \leftrightarrow \frac{1}{1-\frac{1}{4}{\it e}^{-j\omega}}
+    $$， 
+    $$
+    Y_2({\it e}^{j\omega})=\frac{1}{1-\frac{1}{4}{\it e}^{-j\omega}}
+    $$
 
-    vi.	现在关键求出 的反变换
+    vi.	现在关键求出$$ Y_2({\it e}^{j\omega})$$的反变换
 
-    vii.	观察 
+    vii.	观察 $$
+    a^nu[n] \leftrightarrow \frac{1}{1-a{\it e}^{-j\omega}}
+    $$
 
-    viii.	因为 ，两边对ω求导　 ，所以有
+    viii.	因为
+    $$
+    X({\it e}^{j\omega})=\sum_{n=-\infty}^{+\infty} x[n]{\it e}^{-j\omega n}
+    $$ ，两边对ω求导
+    $$
+    \frac{dX({\it e}^{j\omega})}{d\omega}=\sum_{n=-\infty}^{+\infty} -jnx[n]{\it e}^{-j\omega n}
+    $$
+    　 ，所以有
+    $$
+    na^nu[n] \leftrightarrow a({\it e}^{-j\omega})\frac{1}({1-a{\it e}^{-j\omega}})^2=j\frac{d}{d\omega}(\frac{1}{1-a{\it e}^{-j\omega}})
+    $$
  
-    ix.	再利用时移性质， 得
+    ix.	再利用时移性质，
+    $
+    x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0}X({\it e}^{j\omega}) 得
 
     x.	 
 
