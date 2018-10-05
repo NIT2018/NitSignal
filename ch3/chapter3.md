@@ -189,7 +189,7 @@ B)	代入上面的式子，即可得对应的频谱为：$X(j\omega)=\frac{2\pi}
 3)	证明略。
 - §3.6.3　对称性
 1)	若x(t)是一个实时间函数，则有$X(-j\omega)=X*(j\omega)$,(1)，这叫共轭对称性
-2)	证明：$X*(j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t]*=\int_{-\infty}^{+\infty} x(t)*{\it e}^{jwt},t$ ，因为x(t)是实函数，有x*(t)=x(t)，所以有 $X*(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
+2)	证明：$X*(j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t] *=\int_{-\infty}^{+\infty} x(t)*{\it e}^{jwt},t$ ，因为x(t)是实函数，有$x*(t)=x(t)$，所以有$ X*(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
 3)	将X(jw)用直角坐标形式表示，即X(jw)=Re{X(jw)}+jIm{X(jw)}，那么当x(t)为实函数时，根据(1)式，有
 A)	Re{X(jw)}=Re{X(-jw)}
 B)	Im{X(jw)}=-Im{X(-jw)}
@@ -204,7 +204,7 @@ D)	同样道理，若将X(jw)用极坐标形式给出，则模是w的偶函数�
 2)	证明：$F{X(t-t_0)}=\int_{-\infty}^{+\infty} x(t-t_0){\it e}^{-jwt},t \sigma=t-t_0=\int_{-\infty}^{+\infty} x(\sigma){\it e}^{-jw(\sigma+t_0)},\sigma={\it e}^{-jwt}X(j\omega)$ 
 3)	该性质说明：信号在时间上的位移，并没有改变其频谱的模，而只是在频谱上有一个相移，而且引入的相移跟w成线性关系，也即是线性相移。
 - §3.6.5　微分和积分性质
-1)	微分性质，傅立叶反变换公式两边对t求导，即得：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \rightarrow=\frac{1}{2\pi}\int_{-\infty}^{+\infty} j\omegaX(j\omega){\it e}^{j\omegat},\omega$ ，所以有：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \longleftrightarrow F j\omegaX(j\omega)$
+1)	微分性质，傅立叶反变换公式两边对t求导，即得：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \rightarrow=\frac{1}{2\pi}\int_{-\infty}^{+\infty} j\omega X(j\omega){\it e}^{j\omegat},\omega$ ，所以有：$ \left. \frac{{\rm d}u(t)}{{\rm d}t} \longleftrightarrow F j\omega X(j\omega)$
 2)	 $\mu(t)\longleftrightarrow F\frac{1}{j\omega}+\pi\delta(\omega)$
 3)	由此推出积分性质：$\int_{-\infty}^{t} x(\tau),\tau\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\pi{X(0)}\tau(\omega)$
 4)	我们先看u(t)的推导：
@@ -213,13 +213,13 @@ b)	先考虑奇部$o_d$(t)= u(t)-1/2的频谱。设其频谱为$O_d$(jw)，因�
  ，所以有$O_d(jw)=1/jw$
 c)	再考虑偶部ev(t)=1/2，根据在周期信号傅立叶变换时的概念，我们有
 F{1/2}=πδ(w)
-d)	所以u(t)的傅立叶变换就是奇部和偶部傅立叶变换之和，也即：$\mu(t)\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
+d)	所以u(t)的傅立叶变换就是奇部和偶部傅立叶变换之和，也即：$\mu(t)\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\pi X(0)\delta(\omega)$
  
 5)	接着根据后面的卷积性质，我们就可以得到积分性质，卷积性质为$y(t)=h(t)*x(t)\longleftrightarrow FY(j\omega)=H(j\omega)X(j\omega)$
  
-6)	根据这个性质，我们可知$\int_{-\infty}^{t} x(\tau),\tau=x(t)*\mu(t) ，而x(t)\longleftrightarrow F X(j\omega)$ ，$\mu(t)\longleftrightarrow F \frac{1}{j\omega}+\pi\delta(\omega)$，所以有$\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))，也即 $\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F \frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
+6)	根据这个性质，我们可知$\int_{-\infty}^{t} x(\tau),\tau=x(t)*\mu(t) ，而x(t)\longleftrightarrow F X(j\omega)$ ，$\mu(t)\longleftrightarrow F \frac{1}{j\omega}+\pi\delta(\omega)$，所以有$\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F X(j\omega)(\frac{1}{j\omega}+\pi\delta(\omega))$，也即 $\int_{-\infty}^{t} x(\tau),\tau \longleftrightarrow F \frac{1}{j\omega}X(j\omega)+\piX(0)\delta(\omega)$
 - §3.6.6　时间和频率的尺度变换性质
-1)	若有：$x(t)\longleftrightarrow F X(j\omega$)$ ，则有$x(at)\longleftrightarrow F \frac{1}{|a|}X(\frac{\omega}{a}) 
+1)	若有：$x(t)\longleftrightarrow F X(j\omega$)$ ，则有$x(at)\longleftrightarrow F \frac{1}{|a|}X(\frac{\omega}{a})$ 
 2)	证明：主要是利用变量替换τ=at.$F{x(at)}=\int_{-\infty}^{+\infty} x(at){\it e}^{-j\omega t},t\begin{cases}
         1/a \int_{-\infty}^{+\infty}x(\tau){\it e}^{-j(w/a)\tau},\tau ,a>0
         1/a \int_{-\infty}^{+\infty}x(\tau){\it e}^{-j(w/a)\tau},\tau ,a>0 
