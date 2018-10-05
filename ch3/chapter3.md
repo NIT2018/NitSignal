@@ -243,11 +243,11 @@ b)	若u=t，v＝w，则对应傅立叶反变换公式，有$f(t)=\frac{1}{2\pi}\
 所以：g(-w)=(1/2π)F(jw)，也即$ f(t)\longleftrightarrow F 2\pi g(-\omega)$
 4)	总结，所谓对偶性，就是：如果有$x(t)\longleftrightarrow F X(j\omega)$ ，则有$X(t)\longleftrightarrow F 2\pi x(-j\omega)$ 
 5)	例1：求下列信号的傅立叶变换 $x(t)=\frac{2}{t^2+1}$
-a)	解：由以前知识我们知道$x(t)={\it e}^{-|t|}$ 对应的傅立叶变换是$X(j\omega)=\frac{2}{w^2+1}$ ，也即 ，现在要求X(t)对应的傅立叶变换，根据对偶性，应该有$X(t)\longleftrightarrow F 2\pix(-j\omega)$  ，则X(t)对应的傅立叶变换为 $2\pix(-j\omega)=2\pi{\it e}^{-|-w|}=2\pi{\it e}^{-|w|}$
+a)	解：由以前知识我们知道$x(t)={\it e}^{-|t|}$ 对应的傅立叶变换是$X(j\omega)=\frac{2}{w^2+1}$ ，也即 ，现在要求X(t)对应的傅立叶变换，根据对偶性，应该有$X(t)\longleftrightarrow F 2\pi x(-j\omega)$  ，则X(t)对应的傅立叶变换为 $2\pi x(-j\omega)=2\pi{\it e}^{-|-w|}=2\pi{\it e}^{-|w|}$
 6)	很多地方都对应着对偶性，同学们自己要多观察，多练习。
 - §3.6.8　帕斯瓦尔(Parseval)定理
 1)	若$x(t)\longleftrightarrow F X(j\omega)$ ，则$ \int_{-\infty}^{+\infty} {|x(t)|}^2,t=\frac{1}{2\pi}\int_{-\infty}^{+\infty} {|X(j\omega)|}^2,\omega$
-2)	证明：$ \int_{-\infty}^{+\infty} {|x(t)|}^2,t=$ \int_{-\infty}^{+\infty} x(t)^*x(t),t=$ \int_{-\infty}^{+\infty} x(t)[\frac{1}{2\pi}$ \int_{-\infty}^{+\infty}X(j\omega){\it e}^{j\omegat},\omega]^,t$ 
+2)	证明：$ \int_{-\infty}^{+\infty} {|x(t)|}^2,t$=$ \int_{-\infty}^{+\infty} x(t) * x(t),t$=$ \int_{-\infty}^{+\infty} x(t)[\frac{1}{2\pi} \int_{-\infty}^{+\infty}X(j\omega){\it e}^{j\omegat},\omega]^,t$ 
  ，交换积分顺序，有$=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X(j\omega)\int_{-\infty}^{+\infty} x(t){\it e}^{-j\omegat},t,\omega=\frac{1}{2\pi} \int_{-\infty}^{+\infty}X*(j\omega)X(j\omega),t=\frac{1}{2\pi} \int_{-\infty}^{+\infty}|X(j\omega)|^2,\omega$
  
 3)	一个信号的能量，可以从其时域的积分进行计算，也可以按照每单位频率内的能量（ ）在整个频率范围内积分得到，而 叫信号的能量谱密度
