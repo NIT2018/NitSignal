@@ -283,15 +283,15 @@ i.	则用待定系数法， $Y(j\omega)= \frac{A}{a+j\omega}+\frac{B}{b+j\omega}
 ii.	所以 $Y(jw)=\frac{1}{b-1}(\frac{1}{a+jw}-\frac{1}{b+jw})$
 iii.	利用反变换，得 $y(t)=\frac{1}{b-1}({\it e}^{-at}+{\it e}^{-bt})\mu(t)$
 d)	若a=b，则 $Y(jw)=\frac{1}{(a+jw)^2}$
-i.	经过整理，我们有$\frac{1}{(a+jw)^2}=j \left \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega} \right $
-ii.	将傅立叶变换公式两边对w求导，得 ，所以有$ \left \frac{{\rm d}X(jw)}{{\rm d}\omega} \right=\int_{-\infty}^{+\infty}-jtx(t){\it e}^{-jwt},t$
-iii.	因为 ，根据上性质，有$-jtx(t)\longleftrightarrow F \left \frac{{\rm d}X(jw)}{{\rm d}\omega} \right$，两边乘以-j，有 $t{\it e}^{-at}\mu(t)\longleftrightarrow F j\left \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega} \right $
+i.	经过整理，我们有$\frac{1}{(a+jw)^2}=j \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega}  $
+ii.	将傅立叶变换公式两边对w求导，得 ，所以有$  \frac{{\rm d}X(jw)}{{\rm d}\omega} =\int_{-\infty}^{+\infty}-jtx(t){\it e}^{-jwt},t$
+iii.	因为 ，根据上性质，有$-jtx(t)\longleftrightarrow F  \frac{{\rm d}X(jw)}{{\rm d}\omega} $，两边乘以-j，有 $t{\it e}^{-at}\mu(t)\longleftrightarrow F j \frac{{\rm d}(\frac{1}{a+j\omega})}{{\rm d}\omega}  $
 iv.	所以有 $y(t)=t{\it e}^{-at}\mu(t)$
 ## 3.8　调制性质
 1)	卷积性质是时域卷积可以转换为频域相乘，那么根据对偶原理，我们可以得到时域相乘可以转换为频域卷积，这就变成调制性质
 2)	调制性质：r(t)=s(t)p(t)$\longleftrightarrow FR(jw)=\frac{1}{2\pi}S(j\omega)*P(jw)$
 3)	一个信号被另一个信号去乘，叫做一个信号去调制另一个信号的振幅，因此两个信号相乘叫幅度调制。（此处画载波和调制波信号及调制后信号三张图），所以叫调制性质。
-4)	证明：由已知，得，$p(t)\longleftrightarrow FP(jw)$ ，根据对偶性，有$S(jt)\longleftrightarrowF2\pis(-w) ， P(jt)\longleftrightarrowF2\pip(-w)$
+4)	证明：由已知，得，$p(t)\longleftrightarrow FP(jw)$ ，根据对偶性，有$S(jt)\longleftrightarrow F 2\pis(-w) ， P(jt)\longleftrightarrow F 2\pip(-w)$
 5)	利用卷积性质，有S(jt)*P(jt)$\longleftrightarrow$4π2s(-w)p(-w)
 6)	再对上式用对偶性质，有$4\pi^2s(-t)p(-t)\longleftrightarrowF 2\piS(-jw)* P(-jw)$ ，因为有x(-t)\longleftrightarrowFX(-jw)$ ，所以上式就相当于：$s(t)p(t)\longleftrightarrowF\frac{1}{2\pi}S(jw)*P(jw) 
 7)	例1：已知信号s(t)得频谱为如图所示（奥本海默第一版P167图4.30），另有一个信号p(t)=cos$w_0$t，求两者相乘后得频谱
@@ -308,7 +308,7 @@ c)	所谓幅度调制，就是将信号的频谱进行搬移（通过几次搬�
 4)	此处略
 ## 3.10　用线性常系数微分方程表征的系统的频率响应
 - §3.10.1　频率响应概念
-1)	我们知道，一个LTI系统对于输入信号${\it e}^{st}$ ，其输出信号为$H(s){\it e}^{st}$ ，当s＝jw时，就变成${\it e}^{jwt}\rightarrowH(jw){\it e}^{jwt}$ ，其中$H(jw)=\int_{-\infty}^{+\infty}h(\tau){\it e}^{-jw\tau},\tau$ 。系统单位冲激h(t)的傅立叶变换H(jw)就是当频率为w的复指数信号通过一个线性时不变系统时，其复数振幅所经受的变化。因此一般也叫做系统的频率响应。
+1)	我们知道，一个LTI系统对于输入信号${\it e}^{st}$ ，其输出信号为$H(s){\it e}^{st}$ ，当s＝jw时，就变成${\it e}^{jwt}\rightarrow H(jw){\it e}^{jwt}$ ，其中$H(jw)=\int_{-\infty}^{+\infty}h(\tau){\it e}^{-jw\tau},\tau$ 。系统单位冲激h(t)的傅立叶变换H(jw)就是当频率为w的复指数信号通过一个线性时不变系统时，其复数振幅所经受的变化。因此一般也叫做系统的频率响应。
 2)	所以系统框图一般也表示为： ，从时域角度，输出是输入信号与单位冲激响应的卷积，从频域角度，输出信号的频谱是输入信号频谱与系统频率响应的卷积
 a)	y(t)=x(t)*h(t)
 b)	Y(jw)=X(jw)*H(jw)
