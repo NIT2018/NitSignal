@@ -40,37 +40,37 @@
 2)掌握拉普拉斯变换在LTI系统分析中的应用
 ### §6.1　拉普拉斯变换
 1)根据特征值和特征函数的关系，有${\it e}^{st} \to {\mit H}(s){\it e}^{st}$，其中$\int_{+\infty}^{-\infty} h(t)e^{st} \{\rm d}t$，就是h(t)的拉普拉斯变换
-2)所以x(t)的拉普拉斯定义：$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t$，记为$x(t)\leftrightarrow X(s)$
+2)所以x(t)的拉普拉斯定义：$X(s)\overDelta{=}\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t$，记为$x(t)\overf{leftrightarrow} X(s)$
 3)当s=jw时，就变成了傅立叶变换，所以傅立叶变换是拉普拉斯的一种特例
 4)例1：求信号$x(t)={\it e}^{-at}u(t),{\it a}>0$的拉普拉斯变换
 a)我们已知该信号的傅立叶变换为$X(j\omega)=\frac{1}{a+j\omega}$
-b)解：$$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t=\Delta\int_{+\infty}^{0}{\it e}^{-at}{\it e}^({-\sigma-j\omega})t\{\rm d}t=\frac{1}{-{\it a}-\sigma-j\omega}\{\it e}^({-{\it a}-\sigma-j\omega})t\right| _{+\infty}^{x=0}=\frac{1}{a+\sigma-j\omega}=\frac{1}{s+a}$$
+b)解：$$X(s)=\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t=\int_{+\infty}^{0}{\it e}^{-at}{\it e}^({-\sigma-j\omega})t\{\rm d}t=\frac{1}{-{\it a}-\sigma-j\omega}\{\it e}^({-{\it a}-\sigma-j\omega})t\right| _{+\infty}^{x=0}=\frac{1}{a+\sigma-j\omega}=\frac{1}{s+a}$$
 ，
-其中必须满足条件，即
+其中必须满足条件$\sigma+a>0，\sigma>-a,Re{\it s}>-a$,即
 
 c)傅立叶变换是Re{s}=0的情况
-5)例2：求信号的拉普拉斯变换
-a)解：
+5)例2：求信号$x(t)=-{\it e}^{-at}u(-t),a>0$的拉普拉斯变换
+a)解：$$
 ，
-其中必须满足条件
+其中必须满足条件$\sigma+a<0,\sigma<-a,Re{\it s}<-a$
 
 6)从以上两个例子我们看出，同样的拉普拉斯，有可能是不同的原信号，这里有一个非常重要的收敛域的概念
 7)同时，如果虚轴Re{s}=0包含在收敛域内的话，则对应信号的傅立叶变换存在，否则不存在
 §6.2　拉普拉斯变换的收敛域(ROC: Region of Convergence)
-1)
+1)$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t$
 2)能使拉普拉斯变换收敛的s值的范围称为拉普拉斯变换的收敛域，一般简称为ROC
 3)一般来说，要使其收敛主要考察s的实部即可
 §6.3　收敛域的相关性质
 1)性质1：X(s)的ROC在s平面内由平行于jω轴的带状区域所组成
-a)因为X(s)的ROC是由这样一些s=σ+jω所组成，在这些范围里面，要使的傅立叶变换收敛，因此ROC只跟s的实部有关，所以ROC是平行于jω轴的带状区域
+a)因为X(s)的ROC是由这样一些s=σ+jω所组成，在这些范围里面，要使$x(t){\it e}^{-\sigma t}$的傅立叶变换收敛，因此ROC只跟s的实部有关，所以ROC是平行于jω轴的带状区域
 2)性质2：对有理拉氏变换来说，ROC内部不包括任何极点
-a)有理拉氏变换概念。，N(s)和D(s)均是s的多项式，X(s)具有这种形式的时候，叫有理拉氏变换。N(s)=0的根叫做零点，D(s)=0的根叫做极点。
+a)有理拉氏变换概念。，$X(s)=\frac{N(s)}{D(s)}$,N(s)和D(s)均是s的多项式，X(s)具有这种形式的时候，叫有理拉氏变换。N(s)=0的根叫做零点，D(s)=0的根叫做极点。
 b)所以我们可以理解ROC内部不能包含极点，否则的话，在该点处的X(s)值变成无限大，显然不收敛。
 3)性质3：如果x(t)是有限持续期，并至少存在一个s，使其拉氏变换收敛，那么ROC就是整个s平面
 a)x(t)是有限持续期，也就是在[T1，T2]，期间，x(t)取有限值，而在这个范围之外，x(t)=0，如图所示(奥本海默第一版P443图9.4)：
 
 
-b)现在假设对于某个s=σ0+jω来说，拉氏变换收敛，也就是的傅立叶变换存在，也即绝对收敛。所以有
+b)现在假设对于某个s=σ0+jω来说，拉氏变换收敛，也就是x(t){\it e}^{-\sigma}的傅立叶变换存在，也即绝对收敛。所以有
 c)接下来，我们证明对于，或者，均能使绝对收敛，这样就可以证明X(s)的收敛域是整个s平面。
 d)先假设，则
 ，所以绝对收敛，因此对于，如果在s=σ0+jω收敛，那么在s=σ1+jω处也收敛
