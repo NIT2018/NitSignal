@@ -40,7 +40,7 @@
 2)掌握拉普拉斯变换在LTI系统分析中的应用
 ### §6.1　拉普拉斯变换
 1)根据特征值和特征函数的关系，有${\it e}^{st} \to {\mit H}(s){\it e}^{st}$，其中$\int_{+\infty}^{-\infty} h(t)e^{st} \{\rm d}t$，就是h(t)的拉普拉斯变换
-2)所以x(t)的拉普拉斯定义：$X(s)\overDelta{=}\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t$，记为$x(t)\overf{leftrightarrow} X(s)$
+2)所以x(t)的拉普拉斯定义：$X(s)=\Delta\int_{+\infty}^{-\infty}{\it x}(t){\it e}^{-st}\{\rm d}t$，记为$x(t)\overleftrightarrow{f} X(s)$
 3)当s=jw时，就变成了傅立叶变换，所以傅立叶变换是拉普拉斯的一种特例
 4)例1：求信号$x(t)={\it e}^{-at}u(t),{\it a}>0$的拉普拉斯变换
 a)我们已知该信号的傅立叶变换为$X(j\omega)=\frac{1}{a+j\omega}$
