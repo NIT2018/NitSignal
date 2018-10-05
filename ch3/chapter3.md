@@ -189,7 +189,7 @@ B)	代入上面的式子，即可得对应的频谱为：$X(j\omega)=\frac{2\pi}
 3)	证明略。
 - §3.6.3　对称性
 1)	若x(t)是一个实时间函数，则有$X(-j\omega)=X*(j\omega)$,(1)，这叫共轭对称性
-2)	证明：$X*(j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t] *=\int_{-\infty}^{+\infty} x(t)*{\it e}^{jwt},t ，因为x(t)是实函数，有x*(t)=x(t)x_1，所以有X *(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
+2)	证明：$X^*(j\omega)=[\int_{-\infty}^{+\infty} x(t){\it e}^{-jwt},t]^*$=$\int_{-\infty}^{+\infty} x(t)^*{\it e}^{jwt},t $，因为x(t)是实函数，有$x^*(t)=x(t)x_1$，所以有$X^*(j\omega)=\int_{-\infty}^{+\infty} x(t){\it e}^{jwt},t=X(-j\omega)$
 3)	将X(jw)用直角坐标形式表示，即X(jw)=Re{X(jw)}+jIm{X(jw)}，那么当x(t)为实函数时，根据(1)式，有
 A)	Re{X(jw)}=Re{X(-jw)}
 B)	Im{X(jw)}=-Im{X(-jw)}
