@@ -564,7 +564,7 @@ $$
 
     iii.	同样将其用部分分式展开：
     $$
-    Y({\it e}^{j\omega})= \frac{B_{11}}{1-\frac{1}{4}{\it e}^{-j\omega}}+\frac{B_{12}}{(1-\frac{1}{4}{\it e})^2}{-j\omega}}^2+\frac{B_{21}}{1-\frac{1}{2}{\it e}^{-j\omega}}
+    Y({\it e}^{j\omega})= \frac{B_{11}}{1-\frac{1}{4}{\it e}^{-j\omega}}+\frac{B_{12}}{(1-\frac{1}{4}{\it e}^{-j\omega})^2}+\frac{B_{21}}{1-\frac{1}{2}{\it e}^{-j\omega}}
     $$
  
     iv.	求出待定系数：$B_{11}$=-4,$B_{12}$=-2,$B_2{1}$=8
