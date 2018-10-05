@@ -600,15 +600,31 @@ $$
     x[n-n_0] \leftrightarrow {\it e}^{-j\omega n_0}X({\it e}^{j\omega})
     $ 得
 
-    x.	 
+    x.$$
+    (n+1)a^(n+1)u[n+1] \leftrightarrow {\it e}^{j\omega}j\frac{d}{d\omega}(\frac{1}{1-a{\it e}^{-j\omega}})
+    $$	 
 
-    xi.	因为： ，即
+    xi.	因为：
+    $$
+    j\frac{d}{d\omega}(\frac{1}{1-a{\it e}^{-j\omega}})=(-1)(-a)(-j)({\it e}^{-j\omega})\frac{1}{(1-a{\it e}^{-j\omega})^2}
+    $$ ，即
 
-    xii.	 
+    xii.
+     $$
+     Y_2({\it e}^{j\omega})={\it e}^{j\omega} \frac{j}{a} \frac{d}{d\omega}(\frac{1}{1-a{\it e}^{-j\omega}})
+     $$	 
 
     xiii.	所以(2)两边除以a： 
+    $$
+    (n+1)a^nu[n+1] \leftrightarrow {\it e}^{j\omega} \frac{j}{a} \frac{d}{d\omega}(\frac{1}{1-a{\it e}^{-j\omega}})
+    $$
 
-    xiv.	等价于 
+    xiv.	等价于
+     $$
+     (n+1)a^nu[n] \leftrightarrow {\it e}^{j\omega} \frac{j}{a} \frac{d}{d\omega}(\frac{1}{1-a{\it e}^{-j\omega}})
+     $$
 
     xv.	所以，最终系统输出： 
+    $$
+    y[n]=-4(\frac{1}{4})^n u[n]-2(n+1)(\frac{1}{4})^n+8(\frac{1}{2})^n
 
