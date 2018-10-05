@@ -291,9 +291,9 @@ iv.	所以有 $y(t)=t{\it e}^{-at}\mu(t)$
 1)	卷积性质是时域卷积可以转换为频域相乘，那么根据对偶原理，我们可以得到时域相乘可以转换为频域卷积，这就变成调制性质
 2)	调制性质：r(t)=s(t)p(t)$\longleftrightarrow FR(jw)=\frac{1}{2\pi}S(j\omega)*P(jw)$
 3)	一个信号被另一个信号去乘，叫做一个信号去调制另一个信号的振幅，因此两个信号相乘叫幅度调制。（此处画载波和调制波信号及调制后信号三张图），所以叫调制性质。
-4)	证明：由已知，得，$p(t)\longleftrightarrow FP(jw)$ ，根据对偶性，有$S(jt)\longleftrightarrow F 2\pi s(-w) ， P(jt)\longleftrightarrow F 2\pip(-w)$
+4)	证明：由已知，得，$p(t)\longleftrightarrow FP(jw)$ ，根据对偶性，有$S(jt)\longleftrightarrow F 2\pi s(-w) ， P(jt)\longleftrightarrow F 2\pi p(-w)$
 5)	利用卷积性质，有S(jt)*P(jt)$\longleftrightarrow$4π2s(-w)p(-w)
-6)	再对上式用对偶性质，有$4\pi^2s(-t)p(-t)\longleftrightarrowF 2\piS(-jw)* P(-jw)$ ，因为有x(-t)\longleftrightarrow FX(-jw)$ ，所以上式就相当于：$s(t)p(t)\longleftrightarrowF\frac{1}{2\pi}S(jw)*P(jw) 
+6)	再对上式用对偶性质，有$4\pi^2s(-t)p(-t)\longleftrightarrowF 2\piS(-jw)* P(-jw)$ ，因为有x(-t)\longleftrightarrow FX(-jw)$ ，所以上式就相当于：$s(t)p(t)\longleftrightarrow F\frac{1}{2\pi}S(jw)*P(jw) 
 7)	例1：已知信号s(t)得频谱为如图所示（奥本海默第一版P167图4.30），另有一个信号p(t)=cos$w_0$t，求两者相乘后得频谱
 a)	解：现在要求y(t)=s(t)p(t)得频谱，而已知s(t)的频谱，那么还得知道p(t)的频谱，而根据周期信号傅立叶变换方法，可得P(jw)为对应频率的冲激。且幅度为对应的傅立叶级数的系数，所以$P(jw)=πδ(w-w_0)+πδ(w+w_0)，假设w_0>w_1
 b)	所以Y(jw)=(1/2π)S(jw)*P(jw)=1/2S(w-w_0)+1/2S(w+w_0)$如图所示（奥本海默第一版P167图4.30）
