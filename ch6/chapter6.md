@@ -44,7 +44,7 @@
 3)当s=jw时，就变成了傅立叶变换，所以傅立叶变换是拉普拉斯的一种特例
 4)例1：求信号$x(t)={\it e}^{-at}u(t),{\it a}>0$的拉普拉斯变换
 a)我们已知该信号的傅立叶变换为$X(j\omega)=\frac{1}{a+j\omega}$
-i:  $$ X(s)=\int_{+\infty}^{-\infty} {x(t) e^{-st}dt = \int_{+\infty}^{0}e^{-at} e^{(-\sigma - j\omega) t}dt  = \left. \frac{1}{-a-\sigma-j\omega} e^{(-a-\sigma-j\omega)t} \right| _{+\infty}^{x=0} = \frac{1}{a + \sigma - j\omega} = \frac{1}{s+a} $$
+i:  $$ X(s)=\int_{+\infty}^{-\infty} {x(t) e^{-st}dt = \int_{+\infty}^{0}e^{-at} e^{(-\sigma - j\omega) t}dt  =  \frac{{1}{-a-\sigma-j\omega}} \left. e^{(-a-\sigma-j\omega)t} \right| _{+\infty}^{x=0} = \frac{1}{a + \sigma - j\omega} = \frac{1}{s+a} $$
 ，
 其中必须满足条件$\sigma+a>0，\sigma>-a,Re{\it s}>-a$,即
 
