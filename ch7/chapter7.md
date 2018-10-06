@@ -55,67 +55,58 @@ c)	$-b^nu[-n-1]\underleftrightarrow{z}\frac{1}{1-b^{-1}z^{-1}},|z|<\frac{1}{b}$
 d)	所以X(z)的ROC是上面两个ROC的公共部分。若b>1，则两者没有公共部分，即不存在X(z)；若0<b<1，则公共部分为:$b<|z|<\frac{1}{b}$，对应z变换为$x[z]=\frac{1}{1-bz^{-1}}=\frac{1}{1-b^{-1}z^{-1}}$，零极点图如下所示。
  
 图 73
-9)	例2：信号x[n]的z变换为 ，求x[n]有几种不同的可能，并说明那种情况下，x[n]具有傅立叶变换。
-a)	先部分分式展开。 
-b)	根据上面的性质说明，在ROC中不能包含有极点。而其两个极点为z1=1/3，z2=2。
+9)	例2：信号x[n]的z变换为$x(z)=\frac{1}{(1-\frac{1}{3})(1-2z^{-1})}$，求x[n]有几种不同的可能，并说明那种情况下,x[n]具有傅立叶变换。
+a)	先部分分式展开。$x(z)=\frac{A}{1-\frac{1}{3}z^{-1}}+\frac{B}{1-2z^{-1}}=\frac{-\frac{1}{5}}{1-\frac{1}{3}z^{-1}}+\frac{\frac{6}{5}}{1-2z^{-1}}$ 
+b)	根据上面的性质说明，在ROC中不能包含有极点。而其两个极点为z_1=1/3，z_2=2。
 c)	所以有三种不同的ROC分布
-i.	 ，此时根据性质，我们知道对应的是右边信号，所以有 
-ii.	 ，此时根据性质，是个双边信号。
- 
-iii.	 ，是个左边信号。 
+i.|z|>2,此时根据性质，我们知道对应的是右边信号，所以有$x[n]=-\frac{1}{5}(\frac{1}{3})^nu[n]+\frac{6}{5}2^nu[n]$ 
+ii.$\frac{1}{3}<|z|<2$,此时根据性质,是个双边信号。$x[n]=$-\frac{1}{5}(\frac{1}{3})^nu[n]-\frac{6}{5}2^nu[-n-1]$
+iii.$|z|<\frac{1}{3}$,是个左边信号。$\frac{1}{5}(\frac{1}{3})^nu[n]-\frac{6}{5}2^nu[-n-1]$ 
 iv.	以上三种不同的情况中，只有ROC包含单位圆时对应的信号x[n]才有傅立叶变换，其他两种情况的傅立叶变换都不是收敛的。
 ## 7.3　Z变换的零极点图
 1)	零极点图就是标出z变换的零点和极点在z平面中的位置。
-2)	例1：求序列 对应z变换的零极点图。
-a)	解： 
+2)	例1：求序列$ $对应z变换的零极点图。
+a)	解:$x(z)=\sum_{n=-\infty}^{+\infty}{x[n]z^{-n}}=\sum_{n=0}^{N-1}{(az^{-1})}=\frac{1-(az^{-1})^N}{1-az^{-1}}=\frac{1}{z^{N-1}}\frac{z^{N}-a^{N}}{z-a}$
 b)	因为x[n]是有限长，根据性质3，ROC是除了原点和无限远处之外的整个z平面，又由于x[n]在[0，N-1]有值，所以无穷远处也是在ROC内。
 c)	而原点则是极点，从表达式中也可看出。
-d)	零点的话，应该是方程 的根，所以 ，k=0,1,…,N－1，而当k＝0时， 跟分母抵消，所以零点有N-1个。
+d)	零点的话，应该是方程$z^{N}-a^N=0$的根，所以&z_k=ae^{j(2\PiK/N)}&,k=0,1,…,N－1，而当k＝0时,$Z_0=a$跟分母抵消,所以零点有N-1个。
 e)	所以是一个极点，N-1个零点。如下图所示（奥本海默第一版P490图10.8）
 ## 7.4　Z变换的性质
 
- 7.4.1　线性
-1)	若 ； ，则有
- 
+#7.4.1　线性
+1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC=R_2$,则有$ax_1[n]+bX_2[n]\underleftrightarrow{z}aX_1(z)+bX_2(z)$包括$R_1\bigcapR_2$
 2)	证明略。
-
-7.4.2　时移性质
-1)	若 ；则有 ，ROC为R（也可能加上或出去原点或无穷远处）
+#7.4.2　时移性质
+1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$x[n-n_0]\underleftrightarrow{z}z^{-n_0}X_1(z)$,ROC为R（也可能加上或出去原点或无穷远处）
 2)	引入或者除去原点或无穷远处的极点，主要取决于n0和原来的X(z)。证明略。
-
- 7.4.3　频移定理
-1)	若 ；则有 ，ROC为R
-2)	若 ；则有 ，ROC为z0R
+#7.4.3　频移定理
+1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$e^{jw_0n}x[n]\underleftrightarrow{z}X(e^{-jw_0}z)$,ROC为R
+2)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有,${z^n}_0x[n]\underleftrightarrow{z}X(\frac{z}{z_0})$,ROC为$z_0R$
 3)	证明略。
-
-7.4.4　时间反转
-1)	若 ；则有 
-2)	也就是说，z0在x[n]的收敛域中，则1/z0就在x[-n]的ROC中。
-
-7.4.5　卷积性质
-1)	若 ； ，则有
- 
-2)	具体证明略。
-
-7.4.6　Z域微分
-1)	若 ；则有 
-2)	例1：求 的z反变换
-a)	解：考虑log的导数就是有理分式了，所以从这个思路入手；
-b)	 ， 
-c)	根据前面知识，有 ， 
-d)	所以： ， 
-e)	利用时移性质，有 ， 
-f)	所以有 ， 即为所求
-3)	例2：求 的z反变换
-a)	解：由已知。 ， 
-b)	 ，
- 
- 7.4.7　初值定理
-1)	若n<0，x[n]=0，则 
-2)	根据条件，可知 ，当z∞时，z-n0，而当n=0时，z-n=1，所以就有上面性质。
-§7.5　Z反变换
-§7.5.1　Z反变换公式推导
-1)	Z变换公式： ，将 代入得
+#7.4.4　时间反转
+1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$x[-n]\underleftrightarrow{z}X(\frac{1}{z})$,$ROC=\frac{1}{R}$
+2)	也就是说,$z_0$在x[n]的收敛域中，则1/z_0就在x[-n]的ROC中。
+#7.4.5　卷积性质
+1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC_2=R$,则有$x_1[n]*x_2[n]\underleftrightarrow{z}X_1(z)x_2(z)$,ROC包括$R_1\bigcapR_2$
+ 2)	具体证明略。
+#7.4.6　Z域微分
+1)	若$x[n]\underleftrightarrow{z}X(z),ROC=R$;则有$nx[n]\underleftrightarrow{z}-z\frac{dx(z)}{dz},ROC=R$ 
+2)	例1:求$X(z)=log(1+az^{-1}),|z|>|a|$的z反变换
+a)	解：考虑log的导数就是有理分式了,所以从这个思路入手；
+b)  $nx[n]\underleftrightarrow{z}-z\frac{dx(z)}{dz}=-z\frac{-az^{-2}}{1+az^{-1}}=\frac{az^{-1}}{1+az^{-1}}$,|z|>|a| 
+c)	根据前面知识,有$(-a)^nu[n]\underleftrightarrow{z}\fracc{1}{1+az^{-1}}$,|z|>|a|
+d)	所以：$a(-a)^nu[n]\underleftrightarrow{z}\fracc{a}{1+az^{-1}}$,|z|>|a|
+e)	利用时移性质，有$(-a)^{n-1}u[n-1]\underleftrightarrow{z}\fracc{az^{-1}}{1+az^{-1}}$,|z|>|a| 
+f)	所以有$\frac{-(-a)^n}{n}u[n-1]\underleftrightarrow{z}log(1+az^{-1})$,|z|>|a|,即为所求
+3)	例2：求$x(z)=\frac{az^{-1}}{(1-az^{-1})^2},|z|>|a|$的z反变换
+a)	解:由已知。$a^nu[n]\underleftrightarrow{z}\fracc{1}{1-az^{-1}}$,|z|>|a| 
+b)	 $na^nu[n]\underleftrightarrow{z}-z\frac{d}{dz}(\frac{1}{1-az^{-1}})=(-z)(-\frac{1}{(1-az^{-1})^2})(-a)(-z^{-2})=\frac{az^{-1}}{(1-az^{-1})^2}$,|z|>|a| 
+ #7.4.7　初值定理
+1)	若n<0，x[n]=0，则$x[0]=\lim_{z\to\infty}Z(z)$ 
+2)	根据条件,可知$x[z]=\sum_{n=-\infty}{+\infty}{x[n]z^{-n}}$,当$z\rightarrow∞$时，$z^{-n}\rightarrow0$,而当n=0时,$z^{-n}=1$,所以就有上面性质。
+##§7.5　Z反变换
+#§7.5.1　Z反变换公式推导
+1)	Z变换公式：  ，将 代入得
 2)	 ，所以就是 的傅立叶变换
 3)	所以利用傅立叶反变换得： 
 4)	即 这个积分范围是连续2π范围里面。
