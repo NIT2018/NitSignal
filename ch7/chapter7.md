@@ -103,13 +103,13 @@ a)	解:由已知。$a^nu[n]\underleftrightarrow{z}\fracc{1}{1-az^{-1}}$,|z|>|a|
 b)	 $na^nu[n]\underleftrightarrow{z}-z\frac{d}{dz}(\frac{1}{1-az^{-1}})=(-z)(-\frac{1}{(1-az^{-1})^2})(-a)(-z^{-2})=\frac{az^{-1}}{(1-az^{-1})^2}$,|z|>|a| 
  #7.4.7　初值定理
 1)	若n<0，x[n]=0，则$x[0]=\lim_{z\to\infty}Z(z)$ 
-2)	根据条件,可知$x[z]=\sum_{n=-\infty}{+\infty}{x[n]z^{-n}}$,当$z\rightarrow∞$时，$z^{-n}\rightarrow0$,而当n=0时,$z^{-n}=1$,所以就有上面性质。
+2)	根据条件,可知$x[z]=\sum_{n=0}{+\infty}{x[n]z^{-n}}$,当$z\rightarrow∞$时，$z^{-n}\rightarrow0$,而当n=0时,$z^{-n}=1$,所以就有上面性质。
 ##§7.5　Z反变换
 #§7.5.1　Z反变换公式推导
-1)	Z变换公式：  ，将 代入得
-2)	 ，所以就是 的傅立叶变换
-3)	所以利用傅立叶反变换得： 
-4)	即 这个积分范围是连续2π范围里面。
+1)	Z变换公式:$x[z]=\sum_{n=-\infty}{+\infty}{x[n]z^{-n}}$,将$z=re^{jw}$代入得
+2)	$X(re^{jw})=\sum_{n=-\infty}{+\infty}{x[n]r^{-n}e^{-jwn}}$,所以就是$x[n]r^{-n}$的傅立叶变换
+3)	所以利用傅立叶反变换得:$x[n]r^{-n}=\frac{1}{2\Pi}\int_2\Pi^ {X(re^{jw})e^{jwn}dw}$ 
+4)	即$x[n]=\frac{1}{2\Pi}\int_2\Pi^ {X(re^{jw})r^ne^{jwn}dw}=\frac{1}{2\Pi}\int_2\Pi^ {X(re^{jw})(re)^{jwn}dw}$这个积分范围是连续2π范围里面。
 5)	接下来变换积分变量。因为 ，当r固定时，两边取微分，有 ，所以 
 6)	所以有 ，积分范围dω从0--2π，对应着dz在以r为半径的圆周上逆时针一周，所以为 ，这个就是z反变换的数学公式。
 7)	在具体求反变换的时候，一般用到常用变换对以及相关z变换性质。实际的解法一般有3种。下面举例说明。
