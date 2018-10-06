@@ -43,7 +43,7 @@ a)	x[n]是右边信号，就是存在一个N0，当n<N0时，x[n]=0。
 b)	这样的话，z变换公式中只需要考虑z的负幂次情况。$X(z)=\sum_{n=N_0}^{+\infty}{x[n]z^{-n}}$ 
 c)	若$|z|=r_0$位于ROC内，说明$X(z)=\sum_{n=N_0}^{+\infty}{x[n](r_0e^{jw}^{-n})}$收敛，则$|z|>r_0$时，H(z)收敛得更快，所以原命题成立。
 d)	具体证明略。
-6)	性质5：如果x[n]是一个左边序列，并且$|z|=r_0$的圆位于ROC内，那么$|0<|z|<r_0|$的全部有限z值一定在这个ROC内
+6)	性质5：如果x[n]是一个左边序列，并且$|z|=r_0$的圆位于ROC内，那么$0<|z|<r_0$的全部有限z值一定在这个ROC内
 a)	基本证明和理解思路同性质4，此处略。
 7)	性质6：如果x[n]是一个双边序列，并且$|z|=r_0$的圆位于ROC内，那么该ROC一定由包括$|z|=r_0$得圆环所组成。
 a)	说明：可以把x[n]看成右边序列和左边序列的和。右边序列的话是向外延伸，但向内有限，而左边序列是对内延伸，但向外有限。
@@ -73,85 +73,79 @@ d)	零点的话，应该是方程$z^{N}-a^N=0$的根，所以&z_k=ae^{j(2\PiK/N)
 e)	所以是一个极点，N-1个零点。如下图所示（奥本海默第一版P490图10.8）
 ## 7.4　Z变换的性质
 
-#7.4.1　线性
+##7.4.1　线性
 1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC=R_2$,则有$ax_1[n]+bX_2[n]\underleftrightarrow{z}aX_1(z)+bX_2(z)$包括$R_1\bigcapR_2$
 2)	证明略。
-#7.4.2　时移性质
+##7.4.2　时移性质
 1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$x[n-n_0]\underleftrightarrow{z}z^{-n_0}X_1(z)$,ROC为R（也可能加上或出去原点或无穷远处）
 2)	引入或者除去原点或无穷远处的极点，主要取决于n0和原来的X(z)。证明略。
-#7.4.3　频移定理
+##7.4.3　频移定理
 1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$e^{jw_0n}x[n]\underleftrightarrow{z}X(e^{-jw_0}z)$,ROC为R
 2)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有,${z^n}_0x[n]\underleftrightarrow{z}X(\frac{z}{z_0})$,ROC为$z_0R$
 3)	证明略。
-#7.4.4　时间反转
+##7.4.4　时间反转
 1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$x[-n]\underleftrightarrow{z}X(\frac{1}{z})$,$ROC=\frac{1}{R}$
 2)	也就是说,$z_0$在x[n]的收敛域中，则1/z_0就在x[-n]的ROC中。
-#7.4.5　卷积性质
+##7.4.5　卷积性质
 1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC_2=R$,则有$x_1[n]*x_2[n]\underleftrightarrow{z}X_1(z)x_2(z)$,ROC包括$R_1\bigcapR_2$
  2)	具体证明略。
-#7.4.6　Z域微分
+##7.4.6　Z域微分
 1)	若$x[n]\underleftrightarrow{z}X(z),ROC=R$;则有$nx[n]\underleftrightarrow{z}-z\frac{dx(z)}{dz},ROC=R$ 
 2)	例1:求$X(z)=log(1+az^{-1}),|z|>|a|$的z反变换
 a)	解：考虑log的导数就是有理分式了,所以从这个思路入手；
 b)  $nx[n]\underleftrightarrow{z}-z\frac{dx(z)}{dz}=-z\frac{-az^{-2}}{1+az^{-1}}=\frac{az^{-1}}{1+az^{-1}}$,|z|>|a| 
-c)	根据前面知识,有$(-a)^nu[n]\underleftrightarrow{z}\fracc{1}{1+az^{-1}}$,|z|>|a|
+c)	根据前面知识,有$(-a)^nu[n]\underleftrightarrow{z}\frac{1}{1+az^{-1}}$,|z|>|a|
 d)	所以：$a(-a)^nu[n]\underleftrightarrow{z}\fracc{a}{1+az^{-1}}$,|z|>|a|
 e)	利用时移性质，有$(-a)^{n-1}u[n-1]\underleftrightarrow{z}\fracc{az^{-1}}{1+az^{-1}}$,|z|>|a| 
 f)	所以有$\frac{-(-a)^n}{n}u[n-1]\underleftrightarrow{z}log(1+az^{-1})$,|z|>|a|,即为所求
 3)	例2：求$x(z)=\frac{az^{-1}}{(1-az^{-1})^2},|z|>|a|$的z反变换
 a)	解:由已知。$a^nu[n]\underleftrightarrow{z}\fracc{1}{1-az^{-1}}$,|z|>|a| 
 b)	 $na^nu[n]\underleftrightarrow{z}-z\frac{d}{dz}(\frac{1}{1-az^{-1}})=(-z)(-\frac{1}{(1-az^{-1})^2})(-a)(-z^{-2})=\frac{az^{-1}}{(1-az^{-1})^2}$,|z|>|a| 
- #7.4.7　初值定理
+##7.4.7　初值定理
 1)	若n<0，x[n]=0，则$x[0]=\lim_{z\to\infty}Z(z)$ 
 2)	根据条件,可知$x[z]=\sum_{n=0}{+\infty}{x[n]z^{-n}}$,当$z\rightarrow∞$时，$z^{-n}\rightarrow0$,而当n=0时,$z^{-n}=1$,所以就有上面性质。
 ##§7.5　Z反变换
-#§7.5.1　Z反变换公式推导
+##§7.5.1　Z反变换公式推导
 1)	Z变换公式:$x[z]=\sum_{n=-\infty}{+\infty}{x[n]z^{-n}}$,将$z=re^{jw}$代入得
 2)	$X(re^{jw})=\sum_{n=-\infty}{+\infty}{x[n]r^{-n}e^{-jwn}}$,所以就是$x[n]r^{-n}$的傅立叶变换
-3)	所以利用傅立叶反变换得:$x[n]r^{-n}=\frac{1}{2\Pi}\int_2\Pi^ {X(re^{jw})e^{jwn}dw}$ 
-4)	即$x[n]=\frac{1}{2\Pi}\int_2\Pi^ {X(re^{jw})r^ne^{jwn}dw}=\frac{1}{2\Pi}\int_2\Pi^ {X(re^{jw})(re)^{jwn}dw}$这个积分范围是连续2π范围里面。
-5)	接下来变换积分变量。因为 ，当r固定时，两边取微分，有 ，所以 
-6)	所以有 ，积分范围dω从0--2π，对应着dz在以r为半径的圆周上逆时针一周，所以为 ，这个就是z反变换的数学公式。
+3)	所以利用傅立叶反变换得:$x[n]r^{-n}=\frac{1}{2π}\int_2π^ {X(re^{jw})e^{jwn}dw}$ 
+4)	即$x[n]=\frac{1}{2π}\int_2\Pi^ {X(re^{jw})r^ne^{jwn}dw}=\frac{1}{2π}\int_2π^ {X(re^{jw})(re)^{jwn}dw}$这个积分范围是连续2π范围里面。
+5)	接下来变换积分变量。因为$z=re^{jw}$,当r固定时，两边取微分，有$dz=rje^{jw}dw$所以$dw=\frac{1}{jz}dz$ 
+6)	所以有$x[n]=\frac{1}{2π}\int_?^ {Z(z)z^{n-1}dz}$在，积分范围dω从0--2π，对应着dz在以r为半径的圆周上逆时针一周，所以为$x[n]=\frac{1}{2πj}\int_ ^ {Z(z)z^{n-1}dz}$,这个就是z反变换的数学公式。
 7)	在具体求反变换的时候，一般用到常用变换对以及相关z变换性质。实际的解法一般有3种。下面举例说明。
-
-7.5.2　Z反变换求法一：幂级数展开法（长除法）
-1)	已知 ，求其z反变换x[n]
-a)	解：由已知，是右边序列，所以将分子分母多项式按z的降幂(即z-1的升幂)排列，并进行长除，得： 
- 
-b)	所以： ，所以有 
-2)	例2：已知 ，求其z反变换x[n]
-a)	解：由已知，是左边序列，所以将分子分母多项式按z的升幂(即z-1的升幂)排列，并进行长除，得： 
-b)	用长除，可得： ，所以 
-
- 7.5.3　Z反变换求法二：部分分式展开法
-1)	例1：已知 ，试求对应的时域序列x[n]
-a)	解： 
-b)	有 ，求得 
-c)	所以 ， 是右边信号，所以有 
-2)	例2，已知 ，试求对应的时域序列x[n]
-a)	解：先化成z-1形式， 
-  
-b)	 ，即 
-c)	因为 ，利用微分性质有
- 
-d)	所以 ，同时 
-e)	所以最终有： 
-
-7.5.4　Z反变换求法三：围线积分法（留数法）
+##7.5.2　Z反变换求法一：幂级数展开法（长除法）
+1)	已知$X(z)=\frac{z}{(z-1)^2},|z|>1$求其z反变换x[n]
+a)	@@@解：由已知，是右边序列，所以将分子分母多项式按z的降幂(即$z^{-1}$的升幂)排列，并进行长除，得：$X(z)=\frac{z^{-1}}{1-2z^{-1}+z^{-2}}$ 
+ b)	所以:$X(z)=z^{-1}+2^z^{-2}+3z^{-3}+......=\sum_{n=0}{+\infty}{nz^{-n}}$,所以有x[n]=mu[n] 
+2)	例2：已知$X(z)=\frac{z}{(z-1)^2},|z|<1$求其z反变换x[n]
+a)	解：由已知，是左边序列，所以将分子分母多项式按z的升幂(即$z^{-1}$的升幂)排列，并进行长除，得：$X(z)=\frac{z}{z^2-2z^1+1}$ 
+b)	用长除，可得:$X(z)=z+2^z^2+3z^3+......=\sum_{n=-\infty}{-1}{-nz^{-n}}$ ，所以$x[n]=-nu[-n-1]$ 
+##7.5.3　Z反变换求法二：部分分式展开法
+1)	例1：已知$X(z)=\frac{10z}{z^2-3z+2},|z|>2$试求对应的时域序列x[n]
+a)	解：$X(z)=\frac{10z}{z^2-3z+2}=\frac{10z^{-1}}{1-3z^{-1}+2z^{-2}}=\frac{A}{1-z^{-1}}+\frac{B}{1-2z^{-1}}$  
+b)	有$\begin{cases}A+B=0,&\\-2A-B=10,&\end{cases}$ ,求得$\begin{cases}A=-10,&\\B=10,&\end{cases}$ 
+c)	所以$\frac{-10}{1-z^{-1}}+\frac{10}{1-2z^{-1}}$,|z|>2是右边信号，所以有$x[n]=10(2^n-1)u[n]$
+2)	例2，已知$X(z)=\frac{2z+4}{(z-1)(z-2)^2}，|z|>2$试求对应的时域序列x[n]
+a)	解：先化成$z^{-1}$形式，$X(z)=\frac{4z^{-3}+2z{-2}}{(1-z^{-1})(1-2z^{-1})^2}=\frac{4^{-3}+2z^{-2}}{(1-z^{-1})(1-4z^{-1}+4z^{-2})}=\frac{4^{-3}+2z^{-2}}{(1-z^{-1})(1-4z^{-1}+4z^{-2})}=\frac{4^{-3}+2z^{-2}}{-4z^{-3}+8z^{-2}-5z^{-1}+1}=-1+\frac{10z^{-2}-5z^{-1}+1}{-4z^{-3}+8z^{-2}-5z^{-1}+1}=-1+\frac{10z^{-2}-5z^{-1}+1}{(1-z^{-1})(1-2z^{-1})^2}=-1+\frac{A}{1-z^{-1}}+\frac{B_1}{1-2z^{-1}}+\frac{B_2z^{-1}}{(1-2z^{-1})^2}$
+b)	$\begin{cases}A=6,&\\B_1=-5,&\\B_2=4,&\end{cases}$，即$-1+\frac{6}{1-z^{-1}}+\frac{-5}0{1-2z^{-1}}+\frac{4z^{-1}}{(1-2z^{-1})^2}$ 
+c)	因为$a^nu[n]\longleftrightarrow\frac{1}{1-az^{-1}}$,|z|>|a|，a>0利用微分性质有$a^nu[n]\longleftrightarrow\frac{az^{-1}}{(1-az^{-1})^2}$,|z|>a,a>0 
+d)	所以$2^nu[n]\longleftrightarrow\frac{1}{1-2z^{-1}}$,|z|>2,同时$2^nu[n]\longleftrightarrow\frac{2z^{-1}}{(1-2z^{-1})^2}$,|z|>2 
+e)	所以最终有:$x[n]=-\delta[n]+6U[n]-5(2)^nu[n]+2n(2)^nu[n]$ 
+## 7.5.4 Z反变换求法三：围线积分法（留数法）
 此法用到复变函数相关知识，此处略。
 ## 7.6　单边Z变换
-1)	Z变换（双边z变换）： 
-2)	单边z变换： 
-3)	记做： ，或 
+1)	Z变换（双边z变换):$X[n]=\sum_{n=-\infty}{+\infty}{x[n]z^{-n}}$ 
+2)	单边z变换：$\circ{X}[n]=\sum_{n=0}{+\infty}{x[n]z^{-n}}$  
+3)	记做：$x[n]\underleftrightarrow{uZ}	
+\circ{X}(Z)$，或$\circ{X}(Z)=z[x[n]u[n]]$ 
 4)	单边z变换的ROC总是位于某一个圆的外部
-5)	例：求 的单边z变换。
-a)	解： ， 
-b)	这个结果跟 的双边z变换一致，但跟 的双边z变换不一样
-6)	位移性：若x[n]是双边序列，其单边Z变换定义为 ，则序列左移m后，对应的单边z变换为 
-a)	证明： 
- 
-7)	同理：若右移m，则对应的单边z变换为： 
-8)	例1：已知描述系统的一阶差分方程为： ，输入为 ，起始条件为：y[-1]=4，求系统的零状态响应yzs[n]、零输入响应yzi[n]和全响应y[n]。
+5)	例：求$x[n]=a^nu[n+1]$的单边z变换。
+a)	解：$\circ{X}[n]=\sum_{n=0}{+\infty}{x[n]z^{-n}}=\sum_{n=0}{+\infty}{a^nu[n+1]z^{-n}}=\sum_{n=0}{+\infty}{a^nz^{-n}}=\frac{1}{1-az^{-1}},|z|>|a|$， 
+b)	这个结果跟$x[n]=a^nu[n]$的双边z变换一致，但跟$x[n]=a^nu[n+1]$的双边z变换不一样
+6)	位移性：若x[n]是双边序列，其单边Z变换定义为$x[n]\underleftrightarrow{uZ}\circ{X}(z)$ ，则序列左移m后，对应的单边z变换为$Z[x[n+m]u[n]]=z^m[X(z)-\sum_{k=0}{m-1}{x[k]z^{-k}}]$
+a)	证明:$Z[x[n+m]u[n]]=\sum_{n=0}{+\infty}{x[n+m]z^{-n}}=z^m\sum_{k=m}{+\infty}{x[k]z^{-k}}=z^m{\sum_{k=0}{+\infty}{x[k]z^{-k}}-\sum_{k=0}{m-1}{x[k]z^{-k}}}=z^m{\circ{X}(z)-\sum_{k=0}{m-1}{x[k]z^{-k}}}$
+7)	同理：若右移m，则对应的单边z变换为:$Z[x[n-m]u[n]]=z^{-m}[X(z)+\sum_{k=-m}{-1}{x[k]z^{-k}}]$ 
+8)	例1：已知描述系统的一阶差分方程为:$y[n]-\frac{1}{4}y[n-1]=x[n]$,输入为$x[n]=4^nu[n]$，起始条件为：y[-1]=4，求系统的零状态响应$y_{zs}[n]$、零输入响应$y_{zi}[n]$和全响应y[n]。
 a)	解：对上式两边求单边z变换，利用上面的性质，得： ，代入初始值，得：
 b)	 ，再代入x[n]的单边z变换 ， 
 c)	得： 
