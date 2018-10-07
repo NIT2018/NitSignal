@@ -140,11 +140,11 @@ e)根据上面分析s=-a不是零点，所以，零点为：$s=-a+j\frac{2k\pi}{
 
 8)例2：求信号$x(t)={\it e}^{-b|t|}$的拉普拉斯变换
 
-a)解：将x(t)分解成左边信号和右边信号之和。$$x(t)={\it e}^{-b|t|}={\it e}^{bt}u(t)+{\it e}^{bt}\u(-t)$$
+a)解：将x(t)分解成左边信号和右边信号之和。$$x(t)={\it e}^{-b|t|}={\it e}^{bt}\u(t)+{\it e}^{bt}\u(-t)$$
 
-b)由前面介绍，有${\it e}^{-bt}u(t)\leftrightarrow \frac{1}{s+b}$,Re{s}<-b
+b)由前面介绍，有${\it e}^{-bt}\u(t)\leftrightarrow \frac{1}{s+b}$,Re{s}<-b
 
-c)同理，${\it e}^{bt}u(t)\leftrightarrow \frac{-1}{s-b}$,Re{s}<b
+c)同理，${\it e}^{bt}\u(t)\leftrightarrow \frac{-1}{s-b}$,Re{s}<b
 
 
 d)所以有：${\it e}^{-b|t|}\leftrightarrow\frac{1}{s+b}\-\frac{1}{s-b}=\frac{2b}{s^2 -b^2}$,-b<Re{s}<b
@@ -157,74 +157,77 @@ a)解：信号的拉普拉斯变换，除了表达式之外，还要跟ROC结合
 
 b)由已知，信号有两个极点s=-1，s=-2，又根据性质，极点不能在ROC区域内，所以，有下列三种不同情况的ROC
 
+<<<<<<< HEAD
 c)情况(a)，右边信号，可得$x(t)={\it e}^{-t}u(t)-{\it e}^{-2t}u(t)$
 
 d)情况(b)，左边信号，可得$x(t)={\it -e}^{-t}u(-t)+{\it e}^{-2t}u(-t)$
 
 e)情况(c)，双边信号，可得$x(t)={\it -e}^{-t}u(-t)-{\it e}^{-2t}u(t)$
+
+
 ## §6.4　拉普拉斯反变换
 ### §6.4.1　拉普拉斯反变换公式
-1)由前面介绍，我们知道，要求拉普拉斯反变换的话，可以从傅立叶反变换的角度来考虑；
+1)由前面介绍，我们知道$s=\sigma+j\omega$，要求拉普拉斯反变换的话，可以从傅立叶反变换的角度来考虑；
 
-2)现在有
+2)现在有$$X(s)=X(\sigma+j\omega)=F{X(t){\it e}^{-\sigma t}}=\int_{+\infty}^{-\infty}x(t){\it e}^{-\sigma t}{\it e}^{-j\omega t}\{\mr d}t$$
 
-3)所以
+3)所以$$x(t){\it e}^{-\sigma t}=F^{-1}{X(\sigma +j\omega)}=\frac{1}{2\pi}\int_{+\infty}^{-\infty}X(\sigma+j\omega){\it e}^{j\omega t}\{\mr d}\omega$$
 
-4)也即
+4)也即$$x(t)=\int_{+\infty}^{-\infty}X(\sigma +)j\omega){\it e}^{(\sigma +)j\omega)t}\{\mr d}\omega=\frac{1}{2\pi j}\int_{\sigma+j\infty}^{\sigma-j\infty}X(s){\it e}^{st}\{\mr d}s$$
 
 5)这个积分的求值，是要求利用复平面的围线积分
 
 6)一般求拉普拉斯反变换的话，可以利用常用的变换对
 ### §6.4.2　常用变换对
 1)课本P235
-§6.4.3　几个例子
+### §6.4.3　几个例子
 待完成课后习题后补充。
-§6.5　拉普拉斯变换的性质
-§6.5.1　拉氏变换的线性性质
-1)若，ROC为R1；，ROC为R2。
-则有，ROC为
-2)利用拉氏变换的公式即可证明。
+## §6.5　拉普拉斯变换的性质
+### §6.5.1　拉氏变换的线性性质
+1)若$x_1(t)\leftrightarrow X_1(s)$，ROC为R1；$x_2(t)\leftrightarrow X_2(s)$，ROC为R2。
+则有$ax_1(t)+bx_2(t)\leftrightarrow aX_1(s)+bX_2(s)$，ROC为$R_1\bigcap R_2$
+2)利用拉氏变换的公式$X(s)=\int_{+\infty}^{-\infty}x(t){\it e}^{-st}\{\mr d}t$即可证明。
 3)如果有零极点抵消情况发生，则有可能最终的相交后ROC会比原来的ROC要大。
-4)例：；；；求X(s)
+4)例：$$X_1(s)=\frac{1}{s+1}；Re{s}>-1；X_2(s)=\frac{1}{(s+1)(s+2)},Re{s}>-1；x(t)=x_1(t)-x_2(t)$$求X(s)
 5)解：由拉氏变换的线性性质，得
-.
-6)原来两个ROC的交集为，现在因为零极点抵消，所以ROC扩展到
-§6.5.2　时域平移
-1)若，ROC=R；则有，ROC=R
-§6.5.3　s域平移
-1)若，ROC=R；则有，ROC：R1＝R+Re{s0}
+.$$X(s)=X_1(s)-X_2(s)=\frac{1}{s+1}-\frac{1}{(s+1)(s+2)}=\frac{1}{s+2},Re{s}>-2$$
+6)原来两个ROC的交集为Re{s}>-1，现在因为零极点抵消，所以ROC扩展到Re{s}>-2
+### §6.5.2　时域平移
+1)若$x(t)\leftrightarrow X(s)$，ROC=R；则有$x(t-t_0)\leftrightarrow {\it e}^{-st_0}X(s)$，ROC=R
+### §6.5.3　s域平移
+1)若$x(t)\leftrightarrow X(s)$，ROC=R；则有${\it e}^{s_0 t}x(t)\leftrightarrow X(s-s_0)$，ROC：R1＝R+Re{s0}
 2)ROC的变化如下图所示。
 
-§6.5.4　时间尺度变换
-1)若，ROC=R；则有，ROC：R1＝aR
+### §6.5.4　时间尺度变换
+1)若$x(t)\leftrightarrow X(s)$，ROC=R；则有$x(at)\leftrightarrow \frac{1}{|a|}X(\frac{s}{a})$，ROC：R1＝aR
 2)ROC的变化如下图所示。
 
-§6.5.5　卷积性质
-1)若，ROC为R1；，ROC为R2。则有，ROC为
+### §6.5.5　卷积性质
+1)若$x_1(t)\leftrightarrow X_1(s)$，ROC为R1；$x_2(t)\leftrightarrow X_2(s)$，ROC为R2。则有$x_1(t)\ast x_2(t)\leftrightarrow X_1(s)X_2(s)$，ROC为$R_1\bigcap R_2$
 2)如果有零极点抵消情况发生，则有可能最终的相交后ROC会比原来的ROC要大。
-3)例：；；求的频谱；
-4)解：由卷积性质得：；其ROC为整个s平面；
-§6.5.6　时域微分
-1)若，ROC=R；则有，ROC：包括R
-2)证明：，两边对t求导，即可得：
-3)，也即
+3)例：$X_1(s)=\frac{s+1}{s+2},Re{s}>-2；X_2(s)=\frac{s+2}{s+1},Re{s}>-1$；求$x(t)=x_1(t)\ast x_2(t)$的频谱；
+4)解：由卷积性质得：$X(s)=X_1(t)X_2(t)=1$；其ROC为整个s平面；
+### §6.5.6　时域微分
+1)若$x(t)\leftrightarrow X(s)$，ROC=R；则有$\frac{dx(t)}{dt}\leftrightarrow sX(s)$，ROC：包括R
+2)证明：$x(t)=\frac{1}{2\pi j}\int_{\sigma+j\omega}^{\sigma-j\omega}X(s){\it e}^{st}\{\rm d}s$，两边对t求导，即可得：
+3)$\frac{dx(t)}{dt}=\frac{1}{2\pi j}\int_{\sigma+j\omega}^{\sigma-j\omega}X(s){\it e}^{st}\{\rm d}s$，也即$\frac{dx(t)}{dt}\leftrightarrow sX(s)$
 4)新的ROC可能区域会更大
-§6.5.7　s域微分
-1)若，ROC=R；则有，ROC：包括R
-2)证明：，两边对s求导，得：，也即
-3)例1：求下列信号的拉氏变换。
-4)解，由前面可知：；再由上面性质，可得：
+### §6.5.7　s域微分
+1)若$x(t)\leftrightarrow X(s)$，ROC=R；则有$-tx(t)\leftrightarrow \frac{dX(s)}{ds}$，ROC：包括R
+2)证明：$X(s)=\int_{+\infty}^{-\infty}x(t){\it e}^{-st}\{\rm d}t$，两边对s求导，得：$\frac{dX(s)}{ds}=\int_{+\infty}{-\infty}(-t)x(t){\it e}^{-st}\{\mr d}t$，也即$-tx(t)\leftrightarrow \frac{dX(s)}{ds}$
+3)例1：求下列信号的拉氏变换。$x(t)=t{\it e}^{-at}u(t)$
+4)解，由前面可知：${\it e}^{-at}u(t)\leftrightarrow \frac{1}{s+a}$,Re{s}>-a$；再由上面性质，可得：$$t{\it e}^{-at}u(t)\leftrightarrow \frac{-d}{ds}(\frac{1}{s+a})=\frac{1}{(s+a)^2}$$,Re{s}>-a
 
-5)再用一次上面的性质，可得：
-6)更一般的有：
-§6.5.8　时域积分
-1)若，ROC=R；则有，ROC：
-2)证明：，，所以利用卷积性质，可得：
+5)再用一次上面的性质，可得：$\frac{t^2}{2}{\it e}^{-at}u(t)\leftrightarrow\frac{1}{(s+a)^3}$,Re{s}>-a
+6)更一般的有：$\frac{t^{(n-1)}{(n-1)!}{\it e}^{-at}u(t)\leftrightarrow\frac{1}{(s+a)^n}$,Re{s}>-a
+### §6.5.8　时域积分
+1)若$x(t)\leftrightarrow X(s)$，ROC=R；则有$\int_{t}^{-\infty}x(\tau)d\tau\leftrightarrow\frac{1}{s}X(s)$，ROC：$R\bigcap{Re{s}>0}$
+2)证明：$u(t)\leftrightarrow\frac{1}{s}$，$x(t)\ast u(t)=\int_{t}{-\infty}x(\tau)d\tau$，所以利用卷积性质，可得：$\int_{t}{-\infty}x(\tau)d\tau\leftrightarrow\frac{1}{s}X(s)$
 
 §6.5.9　初值与终值定理
-1)若t<0时，有x(t)=0。而且在t=0时刻，x(t)不包含任何冲激或者高阶奇异函数，那么就可以直接从拉氏变换中计算初值x(0+)[也就是x(t)当t从正值方向趋向于0时的值]和终值，即的x(t)值。
-2)初值定理：；
-3)终值定理：
+1)若t<0时，有x(t)=0。而且在t=0时刻，x(t)不包含任何冲激或者高阶奇异函数，那么就可以直接从拉氏变换中计算初值x(0+)[也就是x(t)当t从正值方向趋向于0时的值]和终值，即$t\rightarrow\infty$的x(t)值。
+2)初值定理：$x(0^+)=\lim_{s\to \infty}sX(s)$；
+3)终值定理：$\lim{t\to \infty}x(t)=\lim_{s\to 0}sX(s)$
 §6.6　利用拉氏变换分析和表征LTI系统
 §6.6.1　系统函数
 1)根据傅立叶变换，我们知道系统输出的频谱是输入的频谱和系统频响的乘积。也即：
