@@ -99,7 +99,7 @@ e)	所以是一个极点，N-1个零点。如下图所示（奥本海默第一�
 1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$x[-n]\underleftrightarrow{z}X(\frac{1}{z})$,$ROC=\frac{1}{R}$
 2)	也就是说,$z_0$在x[n]的收敛域中，则1/z_0就在x[-n]的ROC中。
 ### 7.4.5　卷积性质
-1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC_2=R$,则有$x_1[n]*x_2[n]\underleftrightarrow{z}X_1(z)x_2(z)$,ROC包括$R_1\bigcapR_2$
+1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC_2=R$,则有$x_1[n]*x_2[n]\underleftrightarrow{z}X_1(z)x_2(z)$,ROC包括${R_1}\bigcap{R_2}$
  2)	具体证明略。
 ### 7.4.6　Z域微分
 1)	若$x[n]\underleftrightarrow{z}X(z),ROC=R$;则有$nx[n]\underleftrightarrow{z}-z\frac{dx(z)}{dz},ROC=R$ 
