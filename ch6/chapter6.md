@@ -174,7 +174,7 @@ e)情况(c)，双边信号，可得$x(t)={\it -e}^{-t}u(-t)-{\it e}^{-2t}u(t)$
 
 3)所以$$x(t){\it e}^{-\sigma t}=F^{-1}{X(\sigma +j\omega)}=\frac{1}{2\pi}\int_{+\infty}^{-\infty}X(\sigma+j\omega){\it e}^{j\omega t}\{\rm d}\omega$$
 
-4)也即$$x(t)=\int_{+\infty}^{-\infty}X(\sigma +)j\omega){\it e}^{(\sigma +)j\omega)t}\{\mr d}\omega=\frac{1}{2\pi j}\int_{\sigma+j\infty}^{\sigma-j\infty}X(s){\it e}^{st}\{\rm d}s$$
+4)也即$$x(t)=\int_{+\infty}^{-\infty}X(\sigma +)j\omega){\it e}^{(\sigma +)j\omega)t}\{\rm d}\omega=\frac{1}{2\pi j}\int_{\sigma+j\infty}^{\sigma-j\infty}X(s){\it e}^{st}\{\rm d}s$$
 
 5)这个积分的求值，是要求利用复平面的围线积分
 
@@ -187,7 +187,7 @@ e)情况(c)，双边信号，可得$x(t)={\it -e}^{-t}u(-t)-{\it e}^{-2t}u(t)$
 ### §6.5.1　拉氏变换的线性性质
 1)若$x_1(t)\leftrightarrow X_1(s)$，ROC为R1；$x_2(t)\leftrightarrow X_2(s)$，ROC为R2。
 则有$ax_1(t)+bx_2(t)\leftrightarrow aX_1(s)+bX_2(s)$，ROC为$R_1\bigcap R_2$
-2)利用拉氏变换的公式$X(s)=\int_{+\infty}^{-\infty}x(t){\it e}^{-st}\{\mr d}t$即可证明。
+2)利用拉氏变换的公式$X(s)=\int_{+\infty}^{-\infty}x(t){\it e}^{-st}\{\rm d}t$即可证明。
 3)如果有零极点抵消情况发生，则有可能最终的相交后ROC会比原来的ROC要大。
 4)例：$$X_1(s)=\frac{1}{s+1}；Re{s}>-1；X_2(s)=\frac{1}{(s+1)(s+2)},Re{s}>-1；x(t)=x_1(t)-x_2(t)$$求X(s)
 5)解：由拉氏变换的线性性质，得
