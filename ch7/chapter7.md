@@ -84,13 +84,11 @@ c)	而原点则是极点，从表达式中也可看出。
 d)	零点的话，应该是方程$z^{N}-a^N=0$的根，所以&z_k=ae^{j(2\PiK/N)}&,k=0,1,…,N－1，而当k＝0时,$Z_0=a$跟分母抵消,所以零点有N-1个。
 e)	所以是一个极点，N-1个零点。如下图所示（奥本海默第一版P490图10.8）
 ## 7.4　Z变换的性质
-
-
-##7.4.1　线性
+### 7.4.1　线性
 1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC=R_2$,则有$ax_1[n]+bX_2[n]\underleftrightarrow{z}aX_1(z)+bX_2(z)$包括$R_1\bigcapR_2$
 2)	证明略。
 
-##7.4.2　时移性质
+### 7.4.2　时移性质
 1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$x[n-n_0]\underleftrightarrow{z}z^{-n_0}X_1(z)$,ROC为R（也可能加上或出去原点或无穷远处）
 2)	引入或者除去原点或无穷远处的极点，主要取决于n0和原来的X(z)。证明略。
 
