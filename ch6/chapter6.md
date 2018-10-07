@@ -127,11 +127,11 @@ e)所以原命题是成立
 
 7)例1：求信号$$ f(n)= \begin{cases} {\it e}^{-at}, & \text {0<t<T} \\ 0, & \text{其他t值} \end{cases} $$对应拉普拉斯变换X(s)的零极点
 
-a)解：$$X(s)=\int_{+\infty}^{-\infty}\x(t){\it e}^{-st}\{\rm d}t=\int_{T}^{0}\{\it e}^{-at}\{\it e}^{-st}\{\rm d}t=frac{1}{s+a}\(1-{\it e}^{-(s+a)T})$$
+a)解：$$X(s)=\int_{+\infty}^{-\infty}x(t){\it e}^{-st}\{\rm d}t=\int_{T}^{0}\{\it e}^{-at}\{\it e}^{-st}\{\rm d}t=frac{1}{s+a}\(1-{\it e}^{-(s+a)T})$$
 
 b)再确定ROC。根据性质2，有限持续的信号，其ROC会覆盖全部s平面。不过从上面的X(s)表达式中，我们似乎看到s=-a是一个极点，这个跟ROC中不包含极点相冲突。其实不然。
 
-c)当s=-a时，分母为0，分子也为零。当s=-a时，X(s)的值可以通过求s\rightarrow-a时的极限来得到。$$ \lim_{s \to -a}\X(s)=\lim_{s\to -a}\frac[{\frac{d}{ds}\(1-{\it e}^{-(s+a)T})}{\frac{d}{ds}\(s+a)}]=\lim_{s\to -a}\T{\it e}^{-(s+a)T}=T $$，所以X(-a)=T，所以s=-a既不是零点也不是极点。
+c)当s=-a时，分母为0，分子也为零。当s=-a时，X(s)的值可以通过求s\rightarrow-a时的极限来得到。$$ \lim_{s \to -a}X(s)=\lim_{s\to -a}\frac[{\frac{d}{ds}\(1-{\it e}^{-(s+a)T})}{\frac{d}{ds}\(s+a)}]=\lim_{s\to -a}T{\it e}^{-(s+a)T}=T $$，所以X(-a)=T，所以s=-a既不是零点也不是极点。
 
 d)接下来求零点。零点满足条件为：${\it e}^{-(s+a)T}=1={\it e}^{-j2k\pi}$，也即，$(s+a)T=j2k\pi$,$s=-a+j\frac{2k\pi}{T},k=0,\pm 1,\pm 2\ldots$
 
@@ -140,11 +140,11 @@ e)根据上面分析s=-a不是零点，所以，零点为：$s=-a+j\frac{2k\pi}{
 
 8)例2：求信号$x(t)={\it e}^{-b|t|}$的拉普拉斯变换
 
-a)解：将x(t)分解成左边信号和右边信号之和。$$x(t)={\it e}^{-b|t|}={\it e}^{bt}\u(t)+{\it e}^{bt}\u(-t)$$
+a)解：将x(t)分解成左边信号和右边信号之和。$$x(t)={\it e}^{-b|t|}={\it e}^{bt}u(t)+{\it e}^{bt}u(-t)$$
 
-b)由前面介绍，有${\it e}^{-bt}\u(t)\leftrightarrow \frac{1}{s+b}$,Re{s}<-b
+b)由前面介绍，有${\it e}^{-bt}u(t)\leftrightarrow \frac{1}{s+b}$,Re{s}<-b
 
-c)同理，${\it e}^{bt}\u(t)\leftrightarrow \frac{-1}{s-b}$,Re{s}<b
+c)同理，${\it e}^{bt}u(t)\leftrightarrow \frac{-1}{s-b}$,Re{s}<b
 
 
 d)所以有：${\it e}^{-b|t|}\leftrightarrow\frac{1}{s+b}\-\frac{1}{s-b}=\frac{2b}{s^2 -b^2}$,-b<Re{s}<b
@@ -224,12 +224,12 @@ e)情况(c)，双边信号，可得$x(t)={\it -e}^{-t}u(-t)-{\it e}^{-2t}u(t)$
 1)若$x(t)\leftrightarrow X(s)$，ROC=R；则有$\int_{t}^{-\infty}x(\tau)d\tau\leftrightarrow\frac{1}{s}X(s)$，ROC：$R\bigcap{Re{s}>0}$
 2)证明：$u(t)\leftrightarrow\frac{1}{s}$，$x(t)\ast u(t)=\int_{t}{-\infty}x(\tau)d\tau$，所以利用卷积性质，可得：$\int_{t}{-\infty}x(\tau)d\tau\leftrightarrow\frac{1}{s}X(s)$
 
-§6.5.9　初值与终值定理
+### §6.5.9　初值与终值定理
 1)若t<0时，有x(t)=0。而且在t=0时刻，x(t)不包含任何冲激或者高阶奇异函数，那么就可以直接从拉氏变换中计算初值x(0+)[也就是x(t)当t从正值方向趋向于0时的值]和终值，即$t\rightarrow\infty$的x(t)值。
 2)初值定理：$x(0^+)=\lim_{s\to \infty}sX(s)$；
 3)终值定理：$\lim{t\to \infty}x(t)=\lim_{s\to 0}sX(s)$
-§6.6　利用拉氏变换分析和表征LTI系统
-§6.6.1　系统函数
+## §6.6　利用拉氏变换分析和表征LTI系统
+### §6.6.1　系统函数
 1)根据傅立叶变换，我们知道系统输出的频谱是输入的频谱和系统频响的乘积。也即：
 2)相对应，我们有，当s＝jw时，就是傅立叶变换的公式。此处，H(s)就系统函数（或转移函数），（而H(jw)叫系统频率响应）
 3)为了能够唯一得到h(t)，则还需要说明H(s)的ROC，否则，只知道H(s)而不知道ROC的话，则无法确知系统
