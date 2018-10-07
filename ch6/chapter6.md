@@ -170,11 +170,11 @@ e)情况(c)，双边信号，可得$x(t)={\it -e}^{-t}u(-t)-{\it e}^{-2t}u(t)$
 ### §6.4.1　拉普拉斯反变换公式
 1)由前面介绍，我们知道$s=\sigma+j\omega$，要求拉普拉斯反变换的话，可以从傅立叶反变换的角度来考虑；
 
-2)现在有$$X(s)=X(\sigma+j\omega)=F{X(t){\it e}^{-\sigma t}}=\int_{+\infty}^{-\infty}x(t){\it e}^{-\sigma t}{\it e}^{-j\omega t}\{\mr d}t$$
+2)现在有$$X(s)=X(\sigma+j\omega)=F{X(t){\it e}^{-\sigma t}}=\int_{+\infty}^{-\infty}x(t){\it e}^{-\sigma t}{\it e}^{-j\omega t}\{\rm d}t$$
 
-3)所以$$x(t){\it e}^{-\sigma t}=F^{-1}{X(\sigma +j\omega)}=\frac{1}{2\pi}\int_{+\infty}^{-\infty}X(\sigma+j\omega){\it e}^{j\omega t}\{\mr d}\omega$$
+3)所以$$x(t){\it e}^{-\sigma t}=F^{-1}{X(\sigma +j\omega)}=\frac{1}{2\pi}\int_{+\infty}^{-\infty}X(\sigma+j\omega){\it e}^{j\omega t}\{\rm d}\omega$$
 
-4)也即$$x(t)=\int_{+\infty}^{-\infty}X(\sigma +)j\omega){\it e}^{(\sigma +)j\omega)t}\{\mr d}\omega=\frac{1}{2\pi j}\int_{\sigma+j\infty}^{\sigma-j\infty}X(s){\it e}^{st}\{\mr d}s$$
+4)也即$$x(t)=\int_{+\infty}^{-\infty}X(\sigma +)j\omega){\it e}^{(\sigma +)j\omega)t}\{\mr d}\omega=\frac{1}{2\pi j}\int_{\sigma+j\infty}^{\sigma-j\infty}X(s){\it e}^{st}\{\rm d}s$$
 
 5)这个积分的求值，是要求利用复平面的围线积分
 
