@@ -19,10 +19,13 @@
 6)	跟拉普拉斯变换相对应，这样的变换叫双边Z变换，在不混淆的情况下，我们就把双边Z变换称为Z变换。后面要介绍的单边Z变换就叫单边Z变换。
 7)	例1：求$x[n]=a^uu[n]$的Z变换。
 a)	解:$x(z)=\sum_{n=-\infty}^{+\infty}{x[n]z^{-n}}=\sum_{n=-\infty}^{+\infty}{a^nu[n]z^{-n}}=\sum_{n=0}^{+\infty}{(az^{-1})^n}$要使上式收敛,必须要$|az^{-1}|$,即|z|>|a|,此时,对应的结果为:$X(z)=\frac{1}{1-az^{-1}}=\frac{z}{z-a}$ 
- 
-图 7 1 例1的收敛域ROC
-8)	例2:求$x[n]=-a^nu[-n-1]$的Z变换。
-a)	解:$X(z)=\sum_{n=-\infty}^{+\infty}{x[n]z^{-n}}=\sum_{n=-\infty}^{+\infty}{-a^{n}u[-n-1]z^{-n}}=-\sum_{n=-\infty}^{-1}{(az^{-1})^{-n}}=1-\sum_{n=0}^{+\infty}{(a^{-1}z)^n}$
+ 图 7 1 
+<center>
+  <img src="https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/flag-1.png" >
+例1的收敛域ROC。
+a)	解:$X(z)=\sum_{n=-\infty}^{+\infty}{x[n]z^{-n}}=\sum_
+
+8)	例2:求$x[n]=-a^nu[-n-1]$的Z变换{n=-\infty}^{+\infty}{-a^{n}u[-n-1]z^{-n}}=-\sum_{n=-\infty}^{-1}{(az^{-1})^{-n}}=1-\sum_{n=0}^{+\infty}{(a^{-1}z)^n}$
 b)	要使上式收敛,必须有$|a^{-1}z|<1$,即|z|<|a| 
 c)	最后结果为:$X(z)=1-\frac{1}{1-a^{-1}z}=1-\frac{az^{-1}}{az^{-1}-1}=\frac{1}{1-az^{-1}}=\frac{z}{z-a}$
  
