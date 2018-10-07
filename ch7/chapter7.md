@@ -107,11 +107,11 @@ e)	所以是一个极点，N-1个零点。如下图所示（奥本海默第一�
 a)	解：考虑log的导数就是有理分式了,所以从这个思路入手；
 b)  $nx[n]\underleftrightarrow{z}-z\frac{dx(z)}{dz}=-z\frac{-az^{-2}}{1+az^{-1}}=\frac{az^{-1}}{1+az^{-1}}$,|z|>|a| 
 c)	根据前面知识,有$(-a)^nu[n]\underleftrightarrow{z}\frac{1}{1+az^{-1}}$,|z|>|a|
-d)	所以：$a(-a)^nu[n]\underleftrightarrow{z}\fracc{a}{1+az^{-1}}$,|z|>|a|
-e)	利用时移性质，有$(-a)^{n-1}u[n-1]\underleftrightarrow{z}\fracc{az^{-1}}{1+az^{-1}}$,|z|>|a| 
+d)	所以：$a(-a)^nu[n]\underleftrightarrow{z}\frac{a}{1+az^{-1}}$,|z|>|a|
+e)	利用时移性质，有$(-a)^{n-1}u[n-1]\underleftrightarrow{z}\frac{az^{-1}}{1+az^{-1}}$,|z|>|a| 
 f)	所以有$\frac{-(-a)^n}{n}u[n-1]\underleftrightarrow{z}log(1+az^{-1})$,|z|>|a|,即为所求
 3)	例2：求$x(z)=\frac{az^{-1}}{(1-az^{-1})^2},|z|>|a|$的z反变换
-a)	解:由已知。$a^nu[n]\underleftrightarrow{z}\fracc{1}{1-az^{-1}}$,|z|>|a| 
+a)	解:由已知。$a^nu[n]\underleftrightarrow{z}\frac{1}{1-az^{-1}}$,|z|>|a| 
 b)	 $na^nu[n]\underleftrightarrow{z}-z\frac{d}{dz}(\frac{1}{1-az^{-1}})=(-z)(-\frac{1}{(1-az^{-1})^2})(-a)(-z^{-2})=\frac{az^{-1}}{(1-az^{-1})^2}$,|z|>|a|
 ### 7.4.7　初值定理
 1)	若n<0，x[n]=0，则$x[0]=\lim_{z\to\infty}Z(z)$ 
