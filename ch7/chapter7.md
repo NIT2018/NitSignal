@@ -54,7 +54,6 @@ c)	$-b^nu[-n-1]\underleftrightarrow{z}\frac{1}{1-b^{-1}z^{-1}},|z|<\frac{1}{b}$
 d)	所以X(z)的ROC是上面两个ROC的公共部分。若b>1，则两者没有公共部分，即不存在X(z)；若0<b<1，则公共部分为:$b<|z|<\frac{1}{b}$，对应z变换为$x[z]=\frac{1}{1-bz^{-1}}=\frac{1}{1-b^{-1}z^{-1}}$，零极点图如下所示。
  <center>
   <img src="https://github.com/NIT2018/NitSignal/blob/master/ch7/%E5%9B%BE7-1.png">
-图 73
 9)	例2：信号x[n]的z变换为$x(z)=\frac{1}{(1-\frac{1}{3})(1-2z^{-1})}$，求x[n]有几种不同的可能，并说明那种情况下,x[n]具有傅立叶变换。
 a)	先部分分式展开。$x(z)=\frac{A}{1-\frac{1}{3}z^{-1}}+\frac{B}{1-2z^{-1}}=\frac{-\frac{1}{5}}{1-\frac{1}{3}z^{-1}}+\frac{\frac{6}{5}}{1-2z^{-1}}$ 
 b)	根据上面的性质说明，在ROC中不能包含有极点。而其两个极点为z_1=1/3，z_2=2。
