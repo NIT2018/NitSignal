@@ -204,6 +204,7 @@ h) 用部分分式法，可解出$y_zs[n]$,$y_zi[n]$。
 i)$\begin{cases}y_{zs}[n]=(-\frac{2}{5}2^n+\frac{9}{35}(-3)^n+\frac{8}{7}4^n)u[n], &\\y_{zi}[n]=(\frac{4}{5}2^n-\frac{9}{5}(-3)^n)u[n],&\end{cases}$
 j) $y[n]=y_{zs}[n]+y_{zi}[n]=(\frac{2}{5}2^n-\frac{54}{35}(-3)^n+\frac{8}{7}4^n)u[n]$	 
 5)	自己看例7－22，7－23，7－24
+$$ f(n)= \begin{cases} n/2, & \text {if $n$ is even} \\ 3n+1, & \text{if $n$ is odd} \end{cases} $$
 
 
 
