@@ -85,7 +85,7 @@ d)	零点的话，应该是方程$z^{N}-a^N=0$的根，所以&z_k=ae^{j(2\PiK/N)
 e)	所以是一个极点，N-1个零点。如下图所示（奥本海默第一版P490图10.8）
 ## 7.4　Z变换的性质
 ### 7.4.1　线性
-1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC=R_2$,则有$ax_1[n]+bX_2[n]\underleftrightarrow{z}aX_1(z)+bX_2(z)$包括$R_1\bigcapR_2$
+1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC=R_2$,则有$ax_1[n]+bX_2[n]\underleftrightarrow{z}aX_1(z)+bX_2(z)$包括${R_1}\bigcap{R_2}$
 2)	证明略。
 
 ### 7.4.2　时移性质
