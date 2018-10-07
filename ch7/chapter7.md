@@ -85,22 +85,28 @@ d)	零点的话，应该是方程$z^{N}-a^N=0$的根，所以&z_k=ae^{j(2\PiK/N)
 e)	所以是一个极点，N-1个零点。如下图所示（奥本海默第一版P490图10.8）
 ## 7.4　Z变换的性质
 
+
 ##7.4.1　线性
 1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC=R_2$,则有$ax_1[n]+bX_2[n]\underleftrightarrow{z}aX_1(z)+bX_2(z)$包括$R_1\bigcapR_2$
 2)	证明略。
+
 ##7.4.2　时移性质
 1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$x[n-n_0]\underleftrightarrow{z}z^{-n_0}X_1(z)$,ROC为R（也可能加上或出去原点或无穷远处）
 2)	引入或者除去原点或无穷远处的极点，主要取决于n0和原来的X(z)。证明略。
+
 ##7.4.3　频移定理
 1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$e^{jw_0n}x[n]\underleftrightarrow{z}X(e^{-jw_0}z)$,ROC为R
 2)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有,${z^n}_0x[n]\underleftrightarrow{z}X(\frac{z}{z_0})$,ROC为$z_0R$
 3)	证明略。
+
 ##7.4.4　时间反转
 1)	若$x[n]\underleftrightarrow{z}X(z)$,ROC=R;则有$x[-n]\underleftrightarrow{z}X(\frac{1}{z})$,$ROC=\frac{1}{R}$
 2)	也就是说,$z_0$在x[n]的收敛域中，则1/z_0就在x[-n]的ROC中。
+
 ##7.4.5　卷积性质
 1)	若$x_1[n]\underleftrightarrow{z}X_1(z),ROC=R_1$;$x_2[n]\underleftrightarrow{z}X_2(z),ROC_2=R$,则有$x_1[n]*x_2[n]\underleftrightarrow{z}X_1(z)x_2(z)$,ROC包括$R_1\bigcapR_2$
  2)	具体证明略。
+
 ##7.4.6　Z域微分
 1)	若$x[n]\underleftrightarrow{z}X(z),ROC=R$;则有$nx[n]\underleftrightarrow{z}-z\frac{dx(z)}{dz},ROC=R$ 
 2)	例1:求$X(z)=log(1+az^{-1}),|z|>|a|$的z反变换
@@ -112,11 +118,14 @@ e)	利用时移性质，有$(-a)^{n-1}u[n-1]\underleftrightarrow{z}\fracc{az^{-1
 f)	所以有$\frac{-(-a)^n}{n}u[n-1]\underleftrightarrow{z}log(1+az^{-1})$,|z|>|a|,即为所求
 3)	例2：求$x(z)=\frac{az^{-1}}{(1-az^{-1})^2},|z|>|a|$的z反变换
 a)	解:由已知。$a^nu[n]\underleftrightarrow{z}\fracc{1}{1-az^{-1}}$,|z|>|a| 
-b)	 $na^nu[n]\underleftrightarrow{z}-z\frac{d}{dz}(\frac{1}{1-az^{-1}})=(-z)(-\frac{1}{(1-az^{-1})^2})(-a)(-z^{-2})=\frac{az^{-1}}{(1-az^{-1})^2}$,|z|>|a| 
+b)	 $na^nu[n]\underleftrightarrow{z}-z\frac{d}{dz}(\frac{1}{1-az^{-1}})=(-z)(-\frac{1}{(1-az^{-1})^2})(-a)(-z^{-2})=\frac{az^{-1}}{(1-az^{-1})^2}$,|z|>|a|
+
 ##7.4.7　初值定理
 1)	若n<0，x[n]=0，则$x[0]=\lim_{z\to\infty}Z(z)$ 
-2)	根据条件,可知$x[z]=\sum_{n=0}{+\infty}{x[n]z^{-n}}$,当$z\rightarrow∞$时，$z^{-n}\rightarrow0$,而当n=0时,$z^{-n}=1$,所以就有上面性质。
+2)	根据条件,可知$x[z]=\sum_{n=0}{+\infty}{x[n]z^{-n}}$,当$z\rightarrow∞$时，$z^{-n}\rightarrow0$,而当n=0时,$z^{-n}=1$,所以就有上面性质。 
+
 ##§7.5　Z反变换
+
 ##§7.5.1　Z反变换公式推导
 1)	Z变换公式:$x[z]=\sum_{n=-\infty}{+\infty}{x[n]z^{-n}}$,将$z=re^{jw}$代入得
 2)	$X(re^{jw})=\sum_{n=-\infty}{+\infty}{x[n]r^{-n}e^{-jwn}}$,所以就是$x[n]r^{-n}$的傅立叶变换
@@ -125,6 +134,7 @@ b)	 $na^nu[n]\underleftrightarrow{z}-z\frac{d}{dz}(\frac{1}{1-az^{-1}})=(-z)(-\f
 5)	接下来变换积分变量。因为$z=re^{jw}$,当r固定时，两边取微分，有$dz=rje^{jw}dw$所以$dw=\frac{1}{jz}dz$ 
 6)	所以有$x[n]=\frac{1}{2π}\int_?^ {Z(z)z^{n-1}dz}$在，积分范围dω从0--2π，对应着dz在以r为半径的圆周上逆时针一周，所以为$x[n]=\frac{1}{2πj}\int_ ^ {Z(z)z^{n-1}dz}$,这个就是z反变换的数学公式。
 7)	在具体求反变换的时候，一般用到常用变换对以及相关z变换性质。实际的解法一般有3种。下面举例说明。
+
 ##7.5.2　Z反变换求法一：幂级数展开法（长除法）
 1)	已知$X(z)=\frac{z}{(z-1)^2},|z|>1$求其z反变换x[n]
 a)	@@@解：由已知，是右边序列，所以将分子分母多项式按z的降幂(即$z^{-1}$的升幂)排列，并进行长除，得：$X(z)=\frac{z^{-1}}{1-2z^{-1}+z^{-2}}$ 
@@ -132,6 +142,7 @@ a)	@@@解：由已知，是右边序列，所以将分子分母多项式按z的�
 2)	例2：已知$X(z)=\frac{z}{(z-1)^2},|z|<1$求其z反变换x[n]
 a)	解：由已知，是左边序列，所以将分子分母多项式按z的升幂(即$z^{-1}$的升幂)排列，并进行长除，得：$X(z)=\frac{z}{z^2-2z^1+1}$ 
 b)	用长除，可得:$X(z)=z+2^z^2+3z^3+......=\sum_{n=-\infty}{-1}{-nz^{-n}}$ ，所以$x[n]=-nu[-n-1]$ 
+
 ##7.5.3　Z反变换求法二：部分分式展开法
 1)	例1：已知$X(z)=\frac{10z}{z^2-3z+2},|z|>2$试求对应的时域序列x[n]
 a)	解：$X(z)=\frac{10z}{z^2-3z+2}=\frac{10z^{-1}}{1-3z^{-1}+2z^{-2}}=\frac{A}{1-z^{-1}}+\frac{B}{1-2z^{-1}}$  
@@ -143,8 +154,10 @@ b)	$\begin{cases}A=6,&\\B_1=-5,&\\B_2=4,&\end{cases}$，即$-1+\frac{6}{1-z^{-1}
 c)	因为$a^nu[n]\longleftrightarrow\frac{1}{1-az^{-1}}$,|z|>|a|，a>0利用微分性质有$a^nu[n]\longleftrightarrow\frac{az^{-1}}{(1-az^{-1})^2}$,|z|>a,a>0 
 d)	所以$2^nu[n]\longleftrightarrow\frac{1}{1-2z^{-1}}$,|z|>2,同时$2^nu[n]\longleftrightarrow\frac{2z^{-1}}{(1-2z^{-1})^2}$,|z|>2 
 e)	所以最终有:$x[n]=-\delta[n]+6U[n]-5(2)^nu[n]+2n(2)^nu[n]$ 
+
 ## 7.5.4 Z反变换求法三：围线积分法（留数法）
 此法用到复变函数相关知识，此处略。
+
 ## 7.6　单边Z变换
 1)	Z变换（双边z变换):$X[n]=\sum_{n=-\infty}{+\infty}{x[n]z^{-n}}$ 
 2)	单边z变换：$\circ{X}[n]=\sum_{n=0}{+\infty}{x[n]z^{-n}}$  
@@ -167,7 +180,8 @@ f)	所以$\begin{cases}A=-\frac{1}{15}, &\\B=\frac{16}{15},&\end{cases}$,所以$
 g)	同理得$y_{zs}[n]=(\frac{1}{4})^nu[n]$
 h)	而$y[n]=y_{zi}[n]+y_{zs}[n]=\frac{14}{15}(\frac{1}{4})^nu[n]+\frac{16}{15}(4)^nu[n]$ 
 ## 7.7　离散LTI系统的Z域分析
-##7.7.1　系统函数
+
+## 7.7.1　系统函数
 1)	系统函数概念。
 a)	输入信号的z变换X(z)经过系统后变成Y(z)。
 b)	y[n]=x[n]*h[n]，有Y(z)=X(z)H(z)
