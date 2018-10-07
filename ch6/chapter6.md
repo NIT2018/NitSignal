@@ -127,7 +127,8 @@ e)所以原命题是成立
 
 7)例1：求信号$$ f(n)= \begin{cases} {\it e}^{-at}, & \text {0<t<T} \\ 0, & \text{其他t值} \end{cases} $$对应拉普拉斯变换X(s)的零极点
 
-a)解：$$X(s)=\int_{+\infty}^{-\infty}x(t){\it e}^{-st}\{\rm d}t=\int_{T}^{0}\{\it e}^{-at}\{\it e}^{-st}\{\rm d}t=frac{1}{s+a}\(1-{\it e}^{-(s+a)T})$$
+a)解：$$X(s)=\int_{+\infty}^{-\infty}
+x(t){\it e}^{-st}\{\rm d}t=\int_{T}^{0}\{\it e}^{-at}\{\it e}^{-st}\{\rm d}t=frac{1}{s+a}\(1-{\it e}^{-(s+a)T})$$
 
 b)再确定ROC。根据性质2，有限持续的信号，其ROC会覆盖全部s平面。不过从上面的X(s)表达式中，我们似乎看到s=-a是一个极点，这个跟ROC中不包含极点相冲突。其实不然。
 
@@ -214,7 +215,7 @@ e)情况(c)，双边信号，可得$x(t)={\it -e}^{-t}u(-t)-{\it e}^{-2t}u(t)$
 4)新的ROC可能区域会更大
 ### §6.5.7　s域微分
 1)若$x(t)\leftrightarrow X(s)$，ROC=R；则有$-tx(t)\leftrightarrow \frac{dX(s)}{ds}$，ROC：包括R
-2)证明：$X(s)=\int_{+\infty}^{-\infty}x(t){\it e}^{-st}\{\rm d}t$，两边对s求导，得：$\frac{dX(s)}{ds}=\int_{+\infty}{-\infty}(-t)x(t){\it e}^{-st}\{\mr d}t$，也即$-tx(t)\leftrightarrow \frac{dX(s)}{ds}$
+2)证明：$X(s)=\int_{+\infty}^{-\infty}x(t){\it e}^{-st}\{\rm d}t$，两边对s求导，得：$\frac{dX(s)}{ds}=\int_{+\infty}{-\infty}(-t)x(t){\it e}^{-st}\{\rm d}t$，也即$-tx(t)\leftrightarrow \frac{dX(s)}{ds}$
 3)例1：求下列信号的拉氏变换。$x(t)=t{\it e}^{-at}u(t)$
 4)解，由前面可知：${\it e}^{-at}u(t)\leftrightarrow \frac{1}{s+a}$,Re{s}>-a$；再由上面性质，可得：$$t{\it e}^{-at}u(t)\leftrightarrow \frac{-d}{ds}(\frac{1}{s+a})=\frac{1}{(s+a)^2}$$,Re{s}>-a
 
