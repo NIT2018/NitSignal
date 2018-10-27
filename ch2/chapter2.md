@@ -45,7 +45,7 @@ b)	将n－k用m表示，则 $ u[n]= \sum_{m=n}^\infty \δ[m] $=$  \sum_{k \to -\
 因为 ，\delta_\Delta(t)\Delta=1所以有上式
 - b)	随着Δ \to 0，\hat{x}(t) 将愈来愈近似于x(t)，最后的极限是x(t)即有x(t)=$$ \lim_{\Delta \to 0} \$$\sum_{k=-infty}^infty \xk(\Delta)\delta_\Delta(t-k\Delta)\Delta
 c)	与此同时 ,Δ则变成了dΔ，最后就是
-x(t)=$$\int_-infty^+infty {x(k\tau)\delta(t-\tau)} \,{\rm d}\tau$$
+x(t)=$$\int_{-\infty}^{+\infty} {x(k\tau)\delta(t-\tau)} \,{\rm d}\tau$$
  
 d)	用上一章的公式x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0) ，我们也可推导出上式$$\int_-infty^+infty {x(\tau)\delta(t-\tau)} \,{\rm d}\tau$$=$$\int_-infty^+infty {x(t)\delta(t-\tau)} \,{\rm d}\tsu$$=x(t)$$\int_-infty^+infty {\delta(t-\tau)} \,{\rm d}\tau$$=x(t)
  
