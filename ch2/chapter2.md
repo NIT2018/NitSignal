@@ -40,10 +40,10 @@ b)	将n－k用m表示，则 $ u[n]= \sum_{m=n}^\infty \δ[m] $=$  \sum_{k \to -\
 2)	连续x(t)用冲激函数表示（两种方法，一种直观推导，一种用公式）
 - A)	跟离散类似，连续时间函数也可用冲激函数来表示，形式也跟离散类似，不过是用积分表示：$$\int_{n \to -\infty}^{n \to +\infty} {x(t)\delta(t-\tau)} \,{\rm d}t$$ ，具体理解方式如下：
 - B)	对于连续信号x（t），我们一般用\hat{x}(t) 来近似，图示
-- a)	为了将\hat{x} 用封闭数学公式表示，我们引入以前的\delta_\Delta(t)=$ f(n)= \begin{cases} 1/\Delta, & \text {0<t<\delta} \\ 0, & \text{t^2为其他值} \end{cases} $$
-面积为1的矩形，这样的话，就有\hat{x}(t)=\sum_{k \to -\infty}^\infty \x(k\Delta)\delta_\Delta(t-k\Delta)\Delta $
-因为 ，\delta_\Delta(t)\Delta=1所以有上式
-- b)	随着Δ \to 0，\hat{x}(t) 将愈来愈近似于x(t)，最后的极限是x(t)即有x(t)=$$ \lim_{\Delta \to 0} \$$\sum_{k=-infty}^infty \xk(\Delta)\delta_\Delta(t-k\Delta)\Delta
+- a)	为了将\hat{x} 用封闭数学公式表示，我们引入以前的δ_\Delta(t)=$ f(n)= \begin{cases} 1/\Delta, & \text {0<t<\delta} \\ 0, & \text{t^2为其他值} \end{cases} $$
+面积为1的矩形，这样的话，就有\hat{x}(t)=\sum_{k \to -\infty}^\infty \x(k\Delta)δ_Δ(t-kΔ)Δ $
+因为 ，δ_Δ(t)\Delta=1所以有上式
+- b)	随着Δ \to 0，\hat{x}(t) 将愈来愈近似于x(t)，最后的极限是x(t)即有x(t)=$$ \lim_{Δ \to 0} $$\sum_{k=-\infty}^{+\infty} \xk(Δ)\δ_Δ(t-kΔ)Δ$$
 c)	与此同时 ,Δ则变成了dΔ，最后就是
 x(t)=$$\int_{-\infty}^{+\infty} {x(k\tau)\delta(t-\tau)} \,{\rm d}\tau$$
  
