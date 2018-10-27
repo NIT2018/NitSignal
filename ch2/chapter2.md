@@ -49,7 +49,7 @@ x(t)=$$\int_-infty^+infty {x(k\tau)\delta(t-\tau)} \,{\rm d}\tau$$
  
 d)	用上一章的公式x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0) ，我们也可推导出上式$$\int_-infty^+infty {x(\tau)\delta(t-\tau)} \,{\rm d}\tau$$=$$\int_-infty^+infty {x(t)\delta(t-\tau)} \,{\rm d}\tsu$$=x(t)$$\int_-infty^+infty {\delta(t-\tau)} \,{\rm d}\tau$$=x(t)
  
-e)	同样的，以u(t)为例，有 u(t)=$$\int_-infty^+infty {u(\tau)\delta(t-\tau)} \,{\rm d}\tau$$=$$\int_0^+infty {\delta(t-\tau)} \,{\rm d}\tau$$
+e)	同样的，以u(t)为例，有 u(t)=$$\int_-∞^+∞ {u(\tau)\delta(t-\tau)} \,{\rm d}\tau$$=$$\int_0^+infty {\delta(t-\tau)} \,{\rm d}\tau$$
 做简单的变量替换t-τ=v，就有 u(t)=$$\int_-infty^t {\delta(\tau)} \,{\rm d}\tau$$
 3)	到现在为止，我们已经能够将任何信号用单位冲激信号表示，那么要求出系统的响应结果，也只要先知道系统对单位冲激信号的响应即可，其他的就可以用该响应通过叠加得到。所以接下来，我们先看看单位冲激信号的响应，简称单位冲激响应。
 ## §2.2　离散时间LTI系统的时域分析
