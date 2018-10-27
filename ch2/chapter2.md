@@ -27,7 +27,7 @@
 
 
 
-- B)	上章:x[n]\delta[n]=x[0]\delta[n]=x[0]，和x[n]\delta[n-n_0]=x[n_0]\delta[n-n_0]=x[n_0],
+- B)	上章:x[n]δ[n]=x[0]δ[n]=x[0]，和x[n]δ[n-n_0]=x[n_0]δ[n-n_0]=x[n_0],
 ### 上面信号的每一个分量都可以用该式来表达
 - a) x[-1]\delta[n+1]=$$ f(n)= \begin{cases} x[-1], & \text {$n=-1$} \\ 0, & \text{$n\neq-1$} \end{cases} $$
 - b) x[0]\delta[n]=$$ f(n)= \begin{cases} x[0], & \text {$n=0$} \\ 0, & \text{$n\neq0$} \end{cases} $$
