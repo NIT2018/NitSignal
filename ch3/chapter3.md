@@ -85,7 +85,7 @@ B)$=1+\frac{1}{2}\cos2πt+\cos4πt+\frac{2}{3}\cos6πt$
 - 4)	将上式右边交换求和与积分顺序后有$\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t},t =\int_0^{T_0}\sum_{k=-\infty}^{+\infty}a_k(\int_0^{T_0}{\it e}^{j(k-n)w_0t},t) $ 
 - 5)	我们先求出右边积分。
 - A)	若k=n，则积分结果为$T_0$；
-- B)	若k<>n，则 $\int_0^{T_0} {x(t){\it e}^{jk-w_0t}} \,{\rm d}t=\frac{1}{j(k-n)-w_0},t|0^T_0$
+- B)	若k<>n，则 $\int_0^{T_0} {x(t){\it e}^{jk-w_0t}} \,{\rm d}t=\frac{1}{j(k-n)-w_0},t|0^{T_0}$
  
 - 6)	(2)式变成：$\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t},t=a_nT_0$ ，右边只留下k=n的结果，其余均为0
 - 7)	所以级数的系数为：$a_n=\frac{1}{T_0}\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t},t$ 
