@@ -205,7 +205,7 @@ $$ x(t)=1+(1+\frac{1}{2j}){\it e}^{j\omega_0t}+(1-\frac{1}{2j}){\it e}^{-j\omega
 - 3)	该性质说明：信号在时间上的位移，并没有改变其频谱的模，而只是在频谱上有一个相移，而且引入的相移跟w成线性关系，也即是线性相移。
 - §3.6.5　微分和积分性质
 - 1)	微分性质，傅立叶反变换公式两边对t求导，即得：$  \frac{{\rm d}u(t)}{{\rm d}t} \rightarrow=\frac{1}{2\pi}\int_{-\infty}^{+\infty} j\omega X(j\omega){\it e}^{j\omega t}\ {\rm d}\omega$ ，所以有：$  \frac{{\rm d}u(t)}{{\rm d}t} \longleftrightarrow F j\omega X(j\omega)$
-- 2)	 $u(t)\longleftrightarrow F\frac{1}{j\omega}+\pi\delta(\omega)$
+- 2)	 $u(t)\longleftrightarrow F$ $\frac{1}{j\omega}+\pi\delta(\omega)$
 - 3)	由此推出积分性质：$\int_{-\infty}^{t} x(\tau),\tau\longleftrightarrow F\frac{1}{j\omega}X(j\omega)+\pi{X(0)}\tau(\omega)$
 - 4)	我们先看u(t)的推导：
 - a)	先将u(t)分解成奇部和偶部，ev(t)=(u(t)+u(-t))/2，od(t)=(u(t)-u(-t))/2，即u(t)=1/2+(u(t)-1/2)
