@@ -254,11 +254,11 @@ F{1/2}=πδ(w)
 - §3.7.1　卷积性质的数学证明
 1)	性质公式：$y(t)=h(t)*x(t)\longleftrightarrow F Y(j\omega)=H(j\omega)X(j\omega)$ ，两个信号卷积的频谱，是各自频谱的乘积，简言之：时域卷积对应频域相乘
 2)	数学证明：
-- a)	根据卷积积分定义，有 $y(t)=\int_{-\infty}^{+\infty}x(\tau)h(t-\tau),\tau$
-- b)	y(t)的傅立叶变换为Y(jw)：$Y(j\omega)=F{y(t)}=\int_{-\infty}^{+\infty}[\int_{-\infty}^{+\infty}x(\tau)h(t-\tau),\tau]{\it e}^{-jwt},t$ 
-- c)	交换积分顺序，有=$\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}x(\tau)h(t-\tau){\it e}^{-jwt},t,\tau=\int_{-\infty}^{+\infty}x(\tau)[\int_{-\infty}^{+\infty}h(t-\tau){\it e}^{-jwt},t],\tau$
+- a)	根据卷积积分定义，有 $y(t)=\int_{-\infty}^{+\infty}x(\tau)h(t-\tau)\ {\rm d}\tau$
+- b)	y(t)的傅立叶变换为Y(jw)：$Y(j\omega)=F{y(t)}=\int_{-\infty}^{+\infty}[\int_{-\infty}^{+\infty}x(\tau)h(t-\tau)\ {\rm d}\tau]{\it e}^{-jwt}\ {\rm d}t$ 
+- c)	交换积分顺序，有=$\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}x(\tau)h(t-\tau){\it e}^{-jwt}\ {\rm d}t\ {\rm d}\tau=\int_{-\infty}^{+\infty}x(\tau)[\int_{-\infty}^{+\infty}h(t-\tau){\it e}^{-jwt}\ {\rm d}t]\ {\rm d}\tau$
  
-- d)$=\int_{-\infty}^{+\infty}x(\tau){\it e}^{-jwt}H(j\omega),\tau=H(j\omega)\int_{-\infty}^{+\infty}x(\tau){\it e}^{-jwt},\tau=H(j\omega)X(j\omega)$	 
+- d)$=\int_{-\infty}^{+\infty}x(\tau){\it e}^{-jwt}H(j\omega)\ {\rm d}\tau=H(j\omega)\int_{-\infty}^{+\infty}x(\tau){\it e}^{-jwt}\ {\rm d}\tau=H(j\omega)X(j\omega)$	 
 - 3.7.2　卷积性质的另一种理解
 1)	性质推导，也可以从指数信号的特征函数角度来理解和推导，具体见课本P105，此处略，最后结果是一致的
 2)	卷积性质是系统频域分析里最重要的理论基础，可以将信号卷积转换成频域上相乘的方法，所以单独列出一节
