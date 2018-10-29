@@ -356,7 +356,7 @@ $
 - d)	 $V_C(jw)=\frac{2}{2+jw}(\frac{1}{jw}+\pi\delta(\omega))=\frac{2}{(2+jw)jw}+\frac{2}{2+jw}\pi\delta(\omega)$
 - e)=$\frac{1}{jw}-\frac{1}{2+jw}+\pi\delta=(\frac{1}{jw}+\pi\delta)-\frac{1}{2+jw}$	 
 - f)	求得傅立叶反变换为： $v_C(t)=(1-{\it e}^{-2t})u(t)$
-'''flow
+```flow
 st=>start:Start
 e=>end:End
 op1=>operation:My Operation
@@ -366,4 +366,4 @@ io=>inputoutput:catch something...
 st->op1->cond
 cond(yes)->io->e
 cond(no)->sub(right)->op1
-'''
+```
