@@ -492,6 +492,26 @@ x(t)= X({\it e}^{jt})=\frac{\sin(N_1+1/2)t}{\sin(t/2)}
 $$
 
 ### 4.9.3 对偶性的总结表 
+<table>
+<tr>
+<td></td>
+<td>连续时间</td>
+<td>离散时间</td>
+</tr>
+<tr>
+<td>时域</td>
+<td>频域</td>
+<td>时域</td>
+<td>频域</td>
+</tr>
+<tr>
+<td>傅立叶级数</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 <cente>
   <img
   src="asd.png">
