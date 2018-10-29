@@ -34,36 +34,36 @@
 - c)x[1]δ[n-1]=$$ f(n)= \begin{cases} x[1], & \text {$n=1$} \\ 0, & \text{$n\neq1$} \end{cases} $$
 - d)由此推广,可得: x[n]=Λ+x[-4]δ[n+4]+x[-3]δ[n+3]+x[-2]δ[n+2]+x[-1]δ[n+1]+x[0]δ[n-1]+x[2]δ[n-2]+x[3]δ[n-3]+x[4]δ[n-4]+Λ
 - e)当n=0时,根据上式x[0]=x[0]δ[n],其余各项均等于0.当n=1时，x[1]=x[1]δ[n-1],说明上面表达式是正确的。
-- C)所以有： $$ x[n]=\sum_{k=-\infty}^{+\infty} x[k]\delta[n-k] $$ 这就意味着可以把任何一个序列表示成一串移位单位脉冲序列δ[n-k]的线性组合，而在这个组合中，权因子就是x[k]
-- a)	例，x[n]=u[n]，用上式表示，$$ u[n]=\sum_{k=-\infty}^{+\infty} u[k]\delta[n-k] $$=$$ \sum_{k=0}^{+\infty} \delta[n-k] $$
-b)	将n－k用m表示，则 $ u[n]= \sum_{m=n}^\infty \δ[m] $=$  \sum_{k \to -\infty}^\n \δ[k] $，跟上一章的结果完全一样
-2)	连续x(t)用冲激函数表示（两种方法，一种直观推导，一种用公式）
-- A)	跟离散类似，连续时间函数也可用冲激函数来表示，形式也跟离散类似，不过是用积分表示：$$\int_{n \to -\infty}^{n \to +\infty} {x(t)\delta(t-\tau)} \,{\rm d}t$$ ，具体理解方式如下：
+- C)所以有： $$ x[n]=\sum_{k=-\infty}^{+\infty} x[k]δ[n-k] $$ 这就意味着可以把任何一个序列表示成一串移位单位脉冲序列δ[n-k]的线性组合，而在这个组合中，权因子就是x[k]
+- a)	例，x[n]=u[n]，用上式表示，$$ u[n]=\sum_{k=-\infty}^{+\infty} u[k]δ[n-k] $$=$$ \sum_{k=0}^{+\infty} δ[n-k] $$
+- b)	将n－k用m表示，则$$ u[n]=\sum_{m=n}^{-\infty} δ[m] $$=$$ \sum_{k=-\infty}^{n} δ[n-k] $$，跟上一章的结果完全一样
+- 2)	连续x(t)用冲激函数表示（两种方法，一种直观推导，一种用公式）
+- A)	跟离散类似，连续时间函数也可用冲激函数来表示，形式也跟离散类似，不过是用积分表示：$$ \int_{n=-\infty}^{n=+\infty} {x(t)δ(t-\tau)} \,{\rm d}t$$ ，具体理解方式如下：
 - B)	对于连续信号x（t），我们一般用\hat{x}(t) 来近似，图示
-- a)	为了将\hat{x} 用封闭数学公式表示，我们引入以前的δ_\Delta(t)=$ f(n)= \begin{cases} 1/\Delta, & \text {0<t<\delta} \\ 0, & \text{t^2为其他值} \end{cases} $$
-面积为1的矩形，这样的话，就有\hat{x}(t)=\sum_{k \to -\infty}^\infty \x(k\Delta)δ_Δ(t-kΔ)Δ $
-因为 ，δ_Δ(t)\Delta=1所以有上式
+- a)	为了将\hat{x} 用封闭数学公式表示，我们引入以前的δ_δ(t)=$ f(n)= \begin{cases} 1/δ, & \text {0<t<δ} \\ 0, & \text{t^2为其他值} \end{cases} $$
+面积为1的矩形，这样的话，就有\hat{x}(t)=\sum_{k \to -\infty}^\infty \x(kδ)δ_Δ(t-kΔ)Δ $
+因为 ，δ_Δ(t)δ=1所以有上式
 - b)	随着Δ \to 0，\hat{x}(t) 将愈来愈近似于x(t)，最后的极限是x(t)即有x(t)=$$ \lim_{Δ \to 0} $$\sum_{k=-\infty}^{+\infty} \xk(Δ)\δ_Δ(t-kΔ)Δ$$
 c)	与此同时 ,Δ则变成了dΔ，最后就是
-x(t)=$$\int_{-\infty}^{+\infty} {x(k\tau)\delta(t-\tau)} \,{\rm d}\tau$$
+x(t)=$$\int_{-\infty}^{+\infty} {x(k\tau)δ(t-\tau)} \,{\rm d}\tau$$
  
-d)	用上一章的公式x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0) ，我们也可推导出上式$$\int_-infty^+infty {x(\tau)\delta(t-\tau)} \,{\rm d}\tau$$=$$\int_-infty^+infty {x(t)\delta(t-\tau)} \,{\rm d}\tsu$$=x(t)$$\int_-infty^+infty {\delta(t-\tau)} \,{\rm d}\tau$$=x(t)
+d)	用上一章的公式x(t)δ(t-t_0)=x(t_0)δ(t-t_0) ，我们也可推导出上式$$\int_-infty^+infty {x(\tau)δ(t-\tau)} \,{\rm d}\tau$$=$$\int_-infty^+infty {x(t)δ(t-\tau)} \,{\rm d}\tsu$$=x(t)$$\int_-infty^+infty {δ(t-\tau)} \,{\rm d}\tau$$=x(t)
  
-e)	同样的，以u(t)为例，有 u(t)=$$\int_{n \to -\infty}^{n \to +\infty} {u(\tau)\delta(t-\tau)} \,{\rm d}\tau$$=$$\int_0^+infty {\delta(t-\tau)} \,{\rm d}\tau$$
-做简单的变量替换t-τ=v，就有 u(t)=$$\int_-infty^t {\delta(\tau)} \,{\rm d}\tau$$
+e)	同样的，以u(t)为例，有 u(t)=$$\int_{n \to -\infty}^{n \to +\infty} {u(\tau)δ(t-\tau)} \,{\rm d}\tau$$=$$\int_0^+infty {δ(t-\tau)} \,{\rm d}\tau$$
+做简单的变量替换t-τ=v，就有 u(t)=$$\int_-infty^t {δ(\tau)} \,{\rm d}\tau$$
 3)	到现在为止，我们已经能够将任何信号用单位冲激信号表示，那么要求出系统的响应结果，也只要先知道系统对单位冲激信号的响应即可，其他的就可以用该响应通过叠加得到。所以接下来，我们先看看单位冲激信号的响应，简称单位冲激响应。
 ## §2.2　离散时间LTI系统的时域分析
 1)	对于一个离散信号x[n]而言，可以用移位单位脉冲信号的线性组合来表示
-A)	 x[n]=$$\sum_{k=-infty}^+infty\x[k]\delta[n-k]$$
-B)	根据线性系统的叠加性和其次性，该线性系统的输出就可表示为系统对每个移位单位脉冲响应的线性组合。若令系统对每个移位单位脉冲\delta[n-k] 的响应为h_k[n]，则对x[n]的响应y[n]就为y[n]= $$\sum_{k=-infty}^+infty\x[k]h_k[n]
+A)	 x[n]=$$\sum_{k=-infty}^+infty\x[k]δ[n-k]$$
+B)	根据线性系统的叠加性和其次性，该线性系统的输出就可表示为系统对每个移位单位脉冲响应的线性组合。若令系统对每个移位单位脉冲δ[n-k] 的响应为h_k[n]，则对x[n]的响应y[n]就为y[n]= $$\sum_{k=-infty}^+infty\x[k]h_k[n]
 C)	由上式我们可以明确，只要知道一个线性系统对每个移位单位脉冲响应的话，则可求出系统对任意输入的响应。
 D)	图例，奥本海默第一版P56图3.5
 2)	单位冲激响应概念
 A)	一般来说，在线性系统中，对于不同k值，h_k[n]不一定有什么关系
 B)	但是在线性时不变系统中，就有一定关系： h_k[n]=h_0[n-k]
-a)	因为输入\delta[n-k] 是单位脉冲信号\delta[n] 的时移，那么输出h_k[n]也应该是h_0[n]时间移位的结果。
+a)	因为输入δ[n-k] 是单位脉冲信号δ[n] 的时移，那么输出h_k[n]也应该是h_0[n]时间移位的结果。
 C)	为了符号上的方便，将h_0[n]的下标去掉。定义系统的单位脉冲响应为h[n]。
-a)	因此 \delta[n] to h[n]就变成一对输入-输出的关系。
+a)	因此 δ[n] to h[n]就变成一对输入-输出的关系。
 D)	同样，系统的输出也变成y[n]=$$\sum_{k=-infty}^+infty \x[k]h_k[n]$$=$$\sum_{k=-infty}^+infty \x[k]h[n-k] ，记做y[n]=x[n]*h[n]，这个运算叫做序列x[n]和h[n]的卷积。在离散系统中，也叫卷积和；在连续系统中，也叫卷积积分；
 3)	通过系统输出方程，我们可以发现，系统的输出可以用系统的单位脉冲响应来表示，那么LTI系统的单位脉冲响应h[n]就完全刻画了系统的特性。后面我们会详细介绍h[n]和系统特点的关系。
 4)	接下来先深入了解一下卷积的计算方法。
@@ -92,8 +92,8 @@ C)	卷积求和的几个步骤：
 a)	
 D)	课堂练习，待定，矩形窗卷积，一个是相同宽度，一个是不同宽度。
 ## §2.3　连续时间LTI系统的时域分析
-1)	根据前面式子，我们有：x(t)=$$ \lim_{\Delta \to 0} \$\sum_{k=-infty^+infty \x(k\Delta)\delta_\Delta(t-k\Delta)\Delta$$ 
-A)	同样道理，如果我们知道\delta_\Delta(t-k\Delta) 的响应是\hat{h}_k\Delta(t) ，根据叠加性质，系统输出为y(t)=$$ \lim_{\Delta \to 0} \sum_{k=-infty}^+infty \x(k\Delta)\hat{h}_k\Delta(t)\Delta ，这个结果跟离散信号类似。
+1)	根据前面式子，我们有：x(t)=$$ \lim_{δ \to 0} \$\sum_{k=-infty^+infty \x(kδ)δ_δ(t-kδ)δ$$ 
+A)	同样道理，如果我们知道δ_δ(t-kδ) 的响应是\hat{h}_kδ(t) ，根据叠加性质，系统输出为y(t)=$$ \lim_{δ \to 0} \sum_{k=-infty}^+infty \x(kδ)\hat{h}_kδ(t)δ ，这个结果跟离散信号类似。
 B)	当Δ \to 0时，上式就变成积分y(t)=$$\int_-infty^+infty {x(\tau)h_tau(t)} \,{\rm d}\tau$$ 
 C)	因为有x(t)=$$\int_-infty^+infty {x(\tau)h_delta(t-\tau)} \,{\rm d}\tau$$ ，所以如果我们知道δ（t-τ）的输出响应hτ(t)，那么就可知道整个输出。
 2)	同样道理，对于线性时不变系统（LTI），如果知道δ(t)的响应h0（t），那么就可以知道δ(t-t0)的响应是h0（t-t0）
@@ -143,12 +143,12 @@ c)	证明请自己看课本
 E)	积分性质
 a)	同样， $$\int_-infty^t {x(\lambda)*h(\lambda)} \,{\rm d}\lambda$$=[$$\int_-infty^tx(\lambda)\,{\rm d}\lambda$$*h(t)x(t)*[$$\int_-infty^tx(\lambda)\,{\rm d}\lambda$$
 F)	跟单位脉冲/冲激信号的卷积
-a)	由前面信号分解，我们知道$$\int_-infty^+infty {x(\tau)\delta(t-\tau)} \,{\rm d}\tau$$ ,而这正好也是卷积的定义，所以有x(t)=x(t)*δ(t)
+a)	由前面信号分解，我们知道$$\int_-infty^+infty {x(\tau)δ(t-\tau)} \,{\rm d}\tau$$ ,而这正好也是卷积的定义，所以有x(t)=x(t)*δ(t)
 b)	任何信号跟单位冲激信号的卷积，就是其本身
 c)	离散信号也是如此
 d)	x(t)* δ(t-t0)=x(t-t0)，冲激信号时延之后再跟x(t)卷积，则就是x(t)延迟响应时间
 G)	跟单位阶跃信号的卷积
-a)	 x(t)*u(t)=x(t)*$$\int_-infty^t {\delta(t)} \,{\rm d}t$$=$$int_-infty^t{x(t)} \,{\rm d}t$$*\delta(t)=$$\int_-infty^t {x(t)} \,{\rm d}t$$
+a)	 x(t)*u(t)=x(t)*$$\int_-infty^t {δ(t)} \,{\rm d}t$$=$$int_-infty^t{x(t)} \,{\rm d}t$$*δ(t)=$$\int_-infty^t {x(t)} \,{\rm d}t$$
 b)	信号跟u(t)的卷积，就是对自己的积分，u(t)就是积分器。
 2)	LTI系统各个不同性质跟单位冲激响应之间的关系。
 A)	记忆性
@@ -279,25 +279,25 @@ ii.	并且算得起始条件为：i(0-)=2A,di(0-)/dt=0
 iii.	根据特征根，我们可得t>=0时的完全解形式为
  i(t)=(A_1e^-t+A_2e^-3t+4)u(t)
 iv.	由此可得：i(0+)=A1+A2+4,di(0+)/dt=-A1-3A2
-v.	由于在t=0时，i(t)从i(0-)跳变到i(0+)，所以i(t)的导数包含冲激函数，即\delta[$$ \left. \frac{{\rm d}i(0)}{{\rm d}t}$$]=(i(0_+)-i(0_-))\delta(t)=(A_1+A_2+4-2)\delta(t)=(A_1+A_2+2)\delta(t)，其中\delta(e(t)) 中所含的δ（t）及其相关导数
-vi.	而i（t）的二阶导数为 $$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$$=$$ \left. \frac{{\rm d}$$\delta[$$ \left. \frac{{\rm d}i(0)}{{\rm d}t}$$]}{{\rm d}t}+[$$ \left. \frac{{\rm d}i(0_+)}{{\rm d}t}$$-$$ \left. \frac{{\rm d}i(0_-)}{{\rm d}t}$$]\delta(t)=(A_1+A_2+2)\delta(t)+(-A_1-3A_2-0)\delta(t)
+v.	由于在t=0时，i(t)从i(0-)跳变到i(0+)，所以i(t)的导数包含冲激函数，即δ[$$ \left. \frac{{\rm d}i(0)}{{\rm d}t}$$]=(i(0_+)-i(0_-))δ(t)=(A_1+A_2+4-2)δ(t)=(A_1+A_2+2)δ(t)，其中δ(e(t)) 中所含的δ（t）及其相关导数
+vi.	而i（t）的二阶导数为 $$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$$=$$ \left. \frac{{\rm d}$$δ[$$ \left. \frac{{\rm d}i(0)}{{\rm d}t}$$]}{{\rm d}t}+[$$ \left. \frac{{\rm d}i(0_+)}{{\rm d}t}$$-$$ \left. \frac{{\rm d}i(0_-)}{{\rm d}t}$$]δ(t)=(A_1+A_2+2)δ(t)+(-A_1-3A_2-0)δ(t)
  
-vii.	同时有 e"(t)=2\delta'(t)
+vii.	同时有 e"(t)=2δ'(t)
 viii.	在t=0处，将上述所有值代入，仅考虑在t=0时刻的δ(t)及其相关导数项，其余不考虑，则有
- (A_1+A_2+2)\delta'(t)+(-A_1-3A_2)\delta(t)+4(A_1+A_2+2)\delta(t)=2\delta'(t)
+ (A_1+A_2+2)δ'(t)+(-A_1-3A_2)δ(t)+4(A_1+A_2+2)δ(t)=2δ'(t)
 根据系数相等法则，可得方程 ，解得 ，其完全响应为 i(t)=4(-e_-t+e_-3t+1)u(t)
 c)	例3，求上题的零状态响应和零输入响应。
 i.	解，首先得到系统方程：$$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$$+4$$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$$ +3i(t)=$$ \left. \frac{{\rm d}e(t)^2}{{\rm d}t^2}$$+3e(t)，及其初始条件i(0-)=2,i’(0-)=0
-ii.	先求零输入响应。满足$$ \left. \frac{{\rm d}i_zi(t)}^2{{\rm d}t^2}$$ +4$$ \left. \frac{{\rm d}i_zi(t)}{{\rm d}t}$$+3i_zi(t)=0，但在t＝0时刻，应该满足冲激函数匹配法则。即\delta{i"_zi(0)+4i'_zi(0)+3i_zi(0)}=\delta{e(tu(-t))}
- ，由于u(t)不包含t=0时刻，因此 \delta{e(t)u(-t)}=0
-iii.	所以上式化成:  \delta{i"_zi(0)+4i'_zi(0)+3i_zi(0)}=-2\delta'(t)(1)
+ii.	先求零输入响应。满足$$ \left. \frac{{\rm d}i_zi(t)}^2{{\rm d}t^2}$$ +4$$ \left. \frac{{\rm d}i_zi(t)}{{\rm d}t}$$+3i_zi(t)=0，但在t＝0时刻，应该满足冲激函数匹配法则。即δ{i"_zi(0)+4i'_zi(0)+3i_zi(0)}=δ{e(tu(-t))}
+ ，由于u(t)不包含t=0时刻，因此 δ{e(t)u(-t)}=0
+iii.	所以上式化成:  δ{i"_zi(0)+4i'_zi(0)+3i_zi(0)}=-2δ'(t)(1)
 iv.	由此可见， 在t=0处无冲激函数，否则的话，经过两阶导数会出现 ，而现在只有 
 v.	因此，i_zi(t) 根据公式可以表示成其次解的形式(t>=0+)
  i_zi(t)=(C_$zi1$e^-t+C_$zi2$e^-3t)u(t)(2)
 vi.	在t=0时刻， 所包含的 函数项有
- 、\delta{i'_$zi$(0)}=(i_$zi$(0_+)-i_$zi$(0_))\delta(t)
- 、\delta{i"-$zi$(0)}=(i_$zi$(0_+)-i_$zi$(0_))\delta'(t)+(i'_$zi$(0_+)-i_$zi$(0_))\delta(t)
- \delta{i_$zi$(0)}=0
+ 、δ{i'_$zi$(0)}=(i_$zi$(0_+)-i_$zi$(0_))δ(t)
+ 、δ{i"-$zi$(0)}=(i_$zi$(0_+)-i_$zi$(0_))δ'(t)+(i'_$zi$(0_+)-i_$zi$(0_))δ(t)
+ δ{i_$zi$(0)}=0
 vii.	代入式(1)，即有 ，再代入(2)式，即得 
 viii.	所以零输入响应为 i_zi(t)=(4e^-t-4e^-3t)u(t)
 d)	再计算零状态响应
