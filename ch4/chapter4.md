@@ -495,9 +495,9 @@ $$
 <table>
 <tr rowspan="2">
 <td></td>
-<td>连续时间</td>
+<td colspan>连续时间</td>
 <td></td>
-<td>离散时间</td>
+<td colspan>离散时间</td>
 <td></td>
 </tr>
 <tr>
@@ -508,7 +508,7 @@ $$
 <td>频域</td>
 </tr>
 <tr>
-<td>傅立叶级数</td>
+<td>傅<br>立<br>叶<br>级<br>数</td>
 <td>$$x(t)=\sum_{k=-\infty}^{=\infty} a_k{\it e}^{jk\omega_0 t}$$，时域连续周期信号</td>
 <td>$$a_k=\frac{1}{T_0}\int_{T_0} {x(t){\it e}^{jk\omega_0 t}} \,{\rm d}t$$</td>
 <td>$$x[n]=\sum_{k=<N>}  a_k{\it e}^{jk(2\pi/N)n}$$时域离散周期</td>
