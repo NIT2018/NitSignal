@@ -493,7 +493,7 @@ $$
 
 ### 4.9.3 对偶性的总结表 
 <table>
-<tr colspan="2">
+<tr rowspan="2">
 <td></td>
 <td>连续时间</td>
 <td></td>
