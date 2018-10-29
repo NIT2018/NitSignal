@@ -496,7 +496,6 @@ $$
 <tr rowspan="2">
 <td></td>
 <td colspan="2">连续时间</td>
-<td></td>
 <td colspan="2">离散时间</td>
 <td></td>
 </tr>
@@ -509,11 +508,17 @@ $$
 </tr>
 <tr>
 <td>傅<br>立<br>叶<br>级<br>数</td>
-<td>$$x(t)=\sum_{k=-\infty}^{=\infty} a_k{\it e}^{jk\omega_0 t}$$，时域连续周期信号</td>
-<td>$$a_k=\frac{1}{T_0}\int_{T_0} {x(t){\it e}^{jk\omega_0 t}} \,{\rm d}t$$</td>
-<td>$$x[n]=\sum_{k=<N>}  a_k{\it e}^{jk(2\pi/N)n}$$时域离散周期</td>
-<td></td>
+<td>$$x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jk\omega_0 t}$$，时域连续周期信号</td>
+<td>$$a_k=\frac{1}{T_0}\int_{T_0} {x(t){\it e}^{jk\omega_0 t}} \,{\rm d}t$$频域离散非周期</td>
+<td>$$x[n]=\sum_{k=\langle N \rangle}  a_k{\it e}^{jk(2\pi/N)n}$$时域离散周期</td>
+<td>$$a_k=\frac{1}{N} \sum_{n=\langle N \rangle} x[n]{\it e}^{-jk(2\pi/N)n}$$频域离散周期</td>
 </tr>
+<tr>
+<td>傅<br>立<br>叶<br>变<br>换</td>
+<td>$$x(t)=\frac{1}{2\pi} \int_{-\infty}^{+\infty} {X(j\omega){\it e}^{j\omega t}} \,{\rm d}\omega$$时域连续非周期</td>
+<td>$$X(j\omega)=\int_{-\infty}^{+\infty} {X(t){\it e}^{j\omega t}} \,{\rm d}t$$频域连续非周期</td>
+<td>$$x[n]=\frac{1}{2\pi} \int_{2\pi} {X({\it e}^{j\omega}){\it e}^{j\omega n}} \,{\rm d}\omega$$时域离散非周期</td>
+<td>$$X({\it e}^{j\omega}=\sum_{k=-\infty}^{+\infty}x[n]{\it e}^{-j\omega n}$$频域连续周期</td>
 </table>
 <cente>
   <img
