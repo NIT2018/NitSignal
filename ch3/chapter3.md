@@ -82,14 +82,14 @@ B)$=1+\frac{1}{2}\cos2πt+\cos4πt+\frac{2}{3}\cos6πt$
 - §3.2.2　周期信号傅立叶级数表示中系数的确定
  1)	$ x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t} $ 是周期信号的傅立叶级数表示，那么这些系数$a_k$是如何确定的？
  2)	上式两边乘以${\it e}^{-jkw_0t}$ ，得 $ x(t){\it e}^{-jkw_0t}=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}{\it e}^{-jkw_0t} $
- 3)	再两边从0到$T_0$＝2π/$ω_0$积分，有$\int_0^{T_0} {x(t){\it e}^{-jn\omega_0 t}} \,{\rm d}t$ =$\int_0^{T_0} \sum_{k=-\infty}^{+\infty} {a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t}} \ {\rm d}t$ ，其中$T_0$是基波周期。$$X(j\omega)=\int_{-\infty}^{+\infty} {x(t){\it e}^{-j\omega t}} \ {\rm d}t$$
- 4)	将上式右边交换求和与积分顺序后有$\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t},t =\int_0^{T_0}\sum_{k=-\infty}^{+\infty}a_k(\int_0^{T_0}{\it e}^{j(k-n)w_0t}\ {\rm d}t) $ 
+ 3)	再两边从0到$T_0$＝2π/$ω_0$积分，有$\int_0^{T_0} {x(t){\it e}^{-jn\omega_0 t}} \ {\rm d}t$ =$\int_0^{T_0} \sum_{k=-\infty}^{+\infty} {a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t}} \ {\rm d}t$ ，其中$T_0$是基波周期。
+ 4)	将上式右边交换求和与积分顺序后有$\int_0^{T_0} {x(t)}{\it e}^{-jnw_0t} \ {\rm d}t =\sum_{k=-\infty}^{+\infty}a_k[\int_0^{T_0}{\it e}^{j(k-n)w_0t}\ {\rm d}t] $ 
  5)	我们先求出右边积分。
 - A)	若k=n，则积分结果为$T_0$；
-- B)	若k<>n，则 $\int_0^{T_0} {x(t){\it e}^{jk-w_0t}} \ {\rm d}t=\frac{1}{j(k-n)-w_0}t|_0^{T_0}$
+- B)	若k<>n，则 $\int_0^{T_0} {\it e}^{j(k-n)\omega_0t} \ {\rm d}t=\frac{1}{j(k-n)w_0}{\it e}^{j(k-n)\omega_0t}|_0^{T_0}$
  
-6)	(2)式变成：$\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t} \ {\rm d}t=a_nT_0$ ，右边只留下k=n的结果，其余均为0
-7)	所以级数的系数为：$a_n=\frac{1}{T_0}\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t} \ {\rm d}t$ 
+6)	(2)式变成：$\int_0^{T_0} {x(t)}{\it e}^{-jnw_0t} \ {\rm d}t=a_nT_0$ ，右边只留下k=n的结果，其余均为0
+7)	所以级数的系数为：$a_n=\frac{1}{T_0}\int_0^{T_0} {x(t)}{\it e}^{-jnw_0t} \ {\rm d}t$ 
 8)	另外，这个积分区间只要是连续的一个周期内即可，不一定要从0-$T_0$，所以周期信号的傅立叶级数公式有
 - A)	      分析公式$a_n=\frac{1}{T_0}\int_{T_0} {x(t)}{\it e}^{jk-w_0t} \ {\rm d}t$
 - B)	      综合公式$x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}$
