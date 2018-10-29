@@ -51,7 +51,7 @@
 ## 3.1　连续时间LTI系统对复指数信号的响应
 1)	LTI系统对于对复指数信号的响应也是同样一个复指数信号，只是在幅度上有点变化，即 ${\it e}^{st} \to {\mit H}(s){\it e}^{st}$，H(s)一般是s的函数
 2)	一个信号，若系统对该信号的输出响应仅是一个常数乘以该输入，则该信号称为系统的*特征函数*，而幅度因子H(s)称为*特征值*。
-3)	 就是一个特征函数，证明如下：$y(t)=h(t)*x(t)=\int_{-\infty}^{+\infty} h(\tau)x(t-\tau)\ {\rm d}\tau=\int_{-\infty}^{+\infty} h(\tau){\it e}^{s(t-\tau)}\ {\rm d}\tau={\it e}^{s(t-\tau)}\int_{-\infty}^{+\infty} h(\tau){\it e}^{-st}\ {\rm d}\tau=H(s){\it e}^{st}$
+3)	 $x(t)={\it e}^{st}$就是一个特征函数，证明如下：$y(t)=h(t)*x(t)=\int_{-\infty}^{+\infty} h(\tau)x(t-\tau)\ {\rm d}\tau=\int_{-\infty}^{+\infty} h(\tau){\it e}^{s(t-\tau)}\ {\rm d}\tau={\it e}^{st}\int_{-\infty}^{+\infty} h(\tau){\it e}^{-st}\ {\rm d}\tau=H(s){\it e}^{st}$
  
 4)	任何复指数函数$ {\it e}^{st} $就是LTI系统的特征函数，$H(s)=\int_{-\infty}^{+\infty} h(\tau){\it e}^{-st}\ {\rm d}\tau$ 就是跟$ {\it e}^{st} $有关的特征值
 5)	对于信号 $x(t)=a_1{\it e}^{s_1t}+a_2{\it e}^{s_2t}+a_3{\it e}^{s_3t}$ ，系统对于每个分量的响应分别是：
@@ -70,18 +70,18 @@
 9)	当s＝jw时，为傅立叶级数或傅立叶变换，当s=σ+jw时，则是拉普拉斯变换，本章首先研究傅立叶级数。
 ## 3.2　周期信号的表示：连续时间傅立叶级数
 - §3.2.1　成谐波关系的复指数线性组合
-1)	周期复指数信号：$x(t)={\it e}^{st}={\it e}^{jw_0t}$ ，对应复指数信号集$\phi_k[n]={\it e}^{jkw_0t}$ k=0,$\pm$1,$\pm$ 2......  ，这些信号中每一个都有一个基波角频率，它是$w_0$的倍数。
+1)	周期复指数信号：$x(t)={\it e}^{st}={\it e}^{jw_0t}$ ，对应复指数信号集$\phi_k(t)={\it e}^{jkw_0t}$ k=0,$\pm$1,$\pm$ 2......  ，这些信号中每一个都有一个基波角频率，它是$w_0$的倍数。
 2)	一个周期信号可以表示成 ，也是周期函数，这是一个级数表示形式。（级数：数列各项依次用加号加起来求和，就形成无穷级数，其中的每一项叫通项）叫傅立叶级数。
 - A)	k＝0，就是直流或者常数项$a_0$；
-- B)	k=1或-1，就是基波分量或一次谐波分量； $a_1{\it e}^{jw_0t}+a_{-1}{\it e}^{-jw_0t}$
+- B)	k=1或-1，就是基波分量或一次谐波分量； $a_1{\it e}^{jw_1t}+a_{-1}{\it e}^{-jw_0t}$
 - C)	k=2或-2，就是二次谐波分量；
 - D)	依次类推；
 3)	例：一个周期信号x(t)，其基波周期为2π，写成(1)式为$x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jk2πt}$，其中有$\lbrace a_0=1, a_1=a_{-1}=\frac{1}{4}, a_2=a_{-2}+\frac{1}{3}, a_3=a_{-3}+\frac{1}{2}$ ，写出x(t)的表达式。
-- A)	解， $x(t)={\it e}^{j0}+\frac{1}{4}{\it e}^{j2πt}+\frac{1}{4}{\it e}^{j(-2π)t}+\frac{1}{2}{\it e}^{j4πt}+\frac{1}{2}{\it e}^{j(-2π)t}+\frac{1}{2}{\it e}^{j6πt}+\frac{1}{4}{\it e}^{j(-6πt}$
+- A)	解， $x(t)={\it e}^{j0}+\frac{1}{4}{\it e}^{j2πt}+\frac{1}{4}{\it e}^{j(-2π)t}+\frac{1}{2}{\it e}^{j4πt}+\frac{1}{2}{\it e}^{j(-4π)t}+\frac{1}{2}{\it e}^{j6πt}+\frac{1}{4}{\it e}^{j(-6π)t}$
 B)$=1+\frac{1}{2}\cos2πt+\cos4πt+\frac{2}{3}\cos6πt$
 - §3.2.2　周期信号傅立叶级数表示中系数的确定
  1)	$ x(t)=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t} $ 是周期信号的傅立叶级数表示，那么这些系数$a_k$是如何确定的？
- 2)	上式两边乘以${\it e}^{jk-w_0t}$ ，得 $ x(t){\it e}^{jkw_0t}=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t} $
+ 2)	上式两边乘以${\it e}^{-jkw_0t}$ ，得 $ x(t){\it e}^{-jkw_0t}=\sum_{k=-\infty}^{+\infty} a_k{\it e}^{jkw_0t}{\it e}^{-jkw_0t} $
  3)	再两边从0到$T_0$＝2π/$ω_0$积分，有$\int_0^{T_0} {x(t){\it e}^{-jn\omega_0 t}} \,{\rm d}t$ =$\int_0^{T_0} \sum_{k=-\infty}^{+\infty} {a_k{\it e}^{jkw_0t}{\it e}^{jk-w_0t}} \ {\rm d}t$ ，其中$T_0$是基波周期。$$X(j\omega)=\int_{-\infty}^{+\infty} {x(t){\it e}^{-j\omega t}} \ {\rm d}t$$
  4)	将上式右边交换求和与积分顺序后有$\int_0^{T_0} {x(t)}{\it e}^{jk-w_0t},t =\int_0^{T_0}\sum_{k=-\infty}^{+\infty}a_k(\int_0^{T_0}{\it e}^{j(k-n)w_0t}\ {\rm d}t) $ 
  5)	我们先求出右边积分。
