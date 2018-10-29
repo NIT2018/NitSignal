@@ -47,7 +47,7 @@
 c)	与此同时 ,Δ则变成了dΔ，最后就是
 x(t)=$ \int_{-\infty}^{+\infty} {x(k\tau)δ(t-\tau)} \,{\rm d}\tau $
  
-d)	用上一章的公式$ x(t)δ(t-t_0)=x(t_0)δ(t-t_0) $ ，我们也可推导出上式$ \int_{-infty}^{+infty} {x(\tau)δ(t-\tau)} \,{\rm d}\tau $=$ \int_{-infty}^{+infty} {x(t)δ(t-\tau)} \,{\rm d}\tsu $=$ x(t)\int_-infty^+infty {δ(t-\tau)} \,{\rm d}\tau $=x(t)
+d)	用上一章的公式$ x(t)δ(t-t_0)=x(t_0)δ(t-t_0) $ ，我们也可推导出上式$ \int_{-\infty}^{+\infty} {x(\tau)δ(t-\tau)} \{\rm d}\tau $=$ \int_{-infty}^{+infty} {x(t)δ(t-\tau)} \,{\rm d}\tsu $=$ x(t)\int_-infty^+infty {δ(t-\tau)} \,{\rm d}\tau $=x(t)
  
 e)	同样的，以u(t)为例，有 u(t)=$$\int_{n \to -\infty}^{n \to +\infty} {u(\tau)δ(t-\tau)} \,{\rm d}\tau$$=$$\int_0^+infty {δ(t-\tau)} \,{\rm d}\tau$$
 做简单的变量替换t-τ=v，就有 u(t)=$$\int_-infty^t {δ(\tau)} \,{\rm d}\tau$$
