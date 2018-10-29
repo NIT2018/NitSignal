@@ -42,8 +42,8 @@
 - B)	对于连续信号x（t），我们一般用$ \hat{x}(t) $ 来近似，图示
 - a)	为了将$ \hat{x} $ 用封闭数学公式表示，我们引入以前的$ δ_δ(t) $=$ f(n)= \begin{cases} 1/δ, & \text {0<t<δ} \\ 0, & \text{$ t^2 $为其他值} \end{cases} $
 面积为1的矩形，这样的话，就有$ \hat{x}(t)=\sum_{k=-\infty}^{\infty} x(kΔ)δ_Δ(t-kΔ)Δ $
-因为 ，$ δ_Δ(t)δ $=1所以有上式
-- b)	随着$ Δ \to 0 $，$ \hat{x}(t) $ 将愈来愈近似于x(t)，最后的极限是x(t)即有x(t)=$ \lim_{Δ \to 0}\sum_{k=-\infty}^{+\infty} \xk(Δ)\δ_Δ(t-kΔ)Δ $
+因为$ δ_Δ(t)Δ $=1所以有上式
+- b)	随着$ Δ \to 0 $，$ \hat{x}(t) $ 将愈来愈近似于x(t)，最后的极限是x(t)即有x(t)=$ \lim_{Δ \to 0} $ $ \sum_{k=-\infty}^{+\infty} xk(Δ)δ_Δ(t-kΔ)Δ $
 c)	与此同时 ,Δ则变成了dΔ，最后就是
 x(t)=$ \int_{-\infty}^{+\infty} {x(k\tau)δ(t-\tau)} \,{\rm d}\tau $
  
