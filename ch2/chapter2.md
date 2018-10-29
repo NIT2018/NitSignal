@@ -44,14 +44,14 @@
 面积为1的矩形，这样的话，就有$ \hat{x}(t)=\sum_{k=-\infty}^{\infty} x(kΔ)δ_Δ(t-kΔ)Δ $
 因为$ δ_Δ(t)Δ $=1所以有上式
 - b)	随着$ Δ \to 0 $，$ \hat{x}(t) $ 将愈来愈近似于x(t)，最后的极限是x(t)即有x(t)=$ \lim_{Δ \to 0} $ $ \sum_{k=-\infty}^{+\infty} xk(Δ)δ_Δ(t-kΔ)Δ $
-c)	与此同时 ,Δ则变成了dΔ，最后就是
-x(t)=$ \int_{-\infty}^{+\infty} {x(k\tau)δ(t-\tau)} \,{\rm d}\tau $
+- c)	与此同时 ,Δ则变成了dΔ，最后就是
+x(t)=$ \int_{-\infty}^{+\infty} {x(k\tau)δ(t-\tau)} \{\rm d}\tau $
  
-d)	用上一章的公式$ x(t)δ(t-t_0)=x(t_0)δ(t-t_0) $ ，我们也可推导出上式$ \int_{-\infty}^{+\infty} {x(\tau)δ(t-\tau)} \{\rm d}\tau $=$ \int_{-infty}^{+infty} {x(t)δ(t-\tau)} \,{\rm d}\tsu $=$ x(t)\int_-infty^+infty {δ(t-\tau)} \,{\rm d}\tau $=x(t)
+- d)	用上一章的公式$ x(t)δ(t-t_0)=x(t_0)δ(t-t_0) $ ，我们也可推导出上式$ \int_{-\infty}^{+\infty} {x(\tau)δ(t-\tau)} \{\rm d}\tau $=$ \int_{-\infty}^{+\infty} {x(t)δ(t-\tau)} \{\rm d}\tau $=$ x(t)\int_{-\infty}^{+\infty} {δ(t-\tau)} \{\rm d}\tau $=x(t)
  
-e)	同样的，以u(t)为例，有 u(t)=$$\int_{n \to -\infty}^{n \to +\infty} {u(\tau)δ(t-\tau)} \,{\rm d}\tau$$=$$\int_0^+infty {δ(t-\tau)} \,{\rm d}\tau$$
-做简单的变量替换t-τ=v，就有 u(t)=$$\int_-infty^t {δ(\tau)} \,{\rm d}\tau$$
-3)	到现在为止，我们已经能够将任何信号用单位冲激信号表示，那么要求出系统的响应结果，也只要先知道系统对单位冲激信号的响应即可，其他的就可以用该响应通过叠加得到。所以接下来，我们先看看单位冲激信号的响应，简称单位冲激响应。
+- e)	同样的，以u(t)为例，有 u(t)=$ \int_{n=-\infty}^{n=+\infty} {u(\tau)δ(t-\tau)} \{\rm d}\tau $=$ \int_{0}^{+\infty} {δ(t-\tau)} \{\rm d}\tau $
+做简单的变量替换t-τ=v，就有$ u(t)=$$\int_{-\infty}^{t} {δ(\tau)} \{\rm d}\tau $
+- 3)	到现在为止，我们已经能够将任何信号用单位冲激信号表示，那么要求出系统的响应结果，也只要先知道系统对单位冲激信号的响应即可，其他的就可以用该响应通过叠加得到。所以接下来，我们先看看单位冲激信号的响应，简称单位冲激响应。
 ## §2.2　离散时间LTI系统的时域分析
 1)	对于一个离散信号x[n]而言，可以用移位单位脉冲信号的线性组合来表示
 A)	 x[n]=$$\sum_{k=-infty}^+infty\x[k]δ[n-k]$$
