@@ -495,9 +495,9 @@ $$
 <table>
 <tr rowspan="2">
 <td></td>
-<td colspan>连续时间</td>
+<td colspan="2">连续时间</td>
 <td></td>
-<td colspan>离散时间</td>
+<td colspan="2">离散时间</td>
 <td></td>
 </tr>
 <tr>
