@@ -112,8 +112,8 @@ $ ，写成闭式表达式为y[n]=$\frac{1-a^n+1}{1-a}$u[n] 。图示。
 - a)	跟上例一样，需要分段考虑
 - b)	解：当t<0时，结果为0。
 - c)	当0≤t<T时， y(t)=$ \int_{0}^{t} {t-\tau} \{\rm d}\tau $=$ t^2-0.5t^2=0.5t^2 $
-- d)	当T≤t<2T 时， y(t)=$\int_0^T {t-\tau} \,{\rm d}\tau$=tT-0.5T^2
-- e)	当2T≤t<3T时， y(t)=$\int_t-2T^T {t-\tau} \,{\rm d}\tau$=t(3T-t)-0.5(T^2-(t-2T)^2)=0.5t^2+tT+1.5T^2
+- d)	当T≤t<2T 时， y(t)=$ \int_{0}^{T} {t-\tau} \{\rm d}\tau$=tT-0.5T^2 $
+- e)	当2T≤t<3T时， y(t)=$ \int_{t-2T}^{T} {t-\tau} \{\rm d}\tau $=$ t(3T-t)-0.5(T^2-(t-2T)^2)=0.5t^2+tT+1.5T^2 $
  
 - f)	当t≥3T时，y(t)=0，
 - g)	所以最终的输出y可以写成分段函数
@@ -125,7 +125,7 @@ $ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5
 - 1)	卷积的基本性质（交换律、分配律、结合律、积分性质和微分性质）
 - A)	交换律
 - a)	x[n]*h[n]=h[n]*x[n]
-- b)	证明：左=$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$ =$\sum_{r \to -\infty }^\infty \x[n-r]h[r]=h[n]*x[n]=右
+- b)	证明：左=$ \sum_{k=-\infty}^{+\infty} \x[k]h[n-k] $ =$ \sum_{r=-\infty }^{+\infty} \x[n-r]h[r] $=h[n]*x[n]=右
 - c)	连续时间信号也用类似方法可以证明x(t)*h(t)=h(t)*x(t)
 - B)	结合律
 - a)	(x[n]*h1[n])*h2[n]=x[n]*(h1[n]*h2[n])
