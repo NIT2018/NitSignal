@@ -56,9 +56,12 @@
 a)	解:$x(z)=\sum_{n=-\infty}^{+\infty}{x[n]z^{-n}}=\sum_{n=-\infty}^{+\infty}{a^nu[n]z^{-n}}=\sum_{n=0}^{+\infty}{(az^{-1})^n}$要使上式收敛,必须要$|az^{-1}|$,即|z|>|a|,此时,对应的结果为:$X(z)=\frac{1}{1-az^{-1}}=\frac{z}{z-a}$  
 <center>
   <img src="https://github.com/NIT2018/NitSignal/raw/master/ch7/%E5%9B%BE7-1.png">
-8)	例2:求$x[n]=-a^nu[-n-1]$的Z变换。  
-a)解：$X(z)=\sum_{n=-\infty}^{+\infty}{x[n]z^{-n}}=\sum_{n=-\infty}^{+\infty}{-a^{n}u[-n-1]z^{-n}}=-\sum_{n=-\infty}^{-1}{(az^{-1})^{-n}}=1-\sum_{n=0}^{+\infty}{(a^{-1}z)^n}$  
-b)	要使上式收敛,必须有$|a^{-1}z|<1$,即|z|<|a|  
+8)	例2:求$x[n]=-a^nu[-n-1]$的Z变换。
+
+a)解：$X(z)=\sum_{n=-\infty}^{+\infty}{x[n]z^{-n}}=\sum_{n=-\infty}^{+\infty}{-a^{n}u[-n-1]z^{-n}}=-\sum_{n=-\infty}^{-1}{(az^{-1})^{-n}}=1-\sum_{n=0}^{+\infty}{(a^{-1}z)^n}$ 
+
+b)	要使上式收敛,必须有$|a^{-1}z|<1$,即|z|<|a| 
+ 
 c)	最后结果为:$X(z)=1-\frac{1}{1-a^{-1}z}=1-\frac{az^{-1}}{az^{-1}-1}=\frac{1}{1-az^{-1}}=\frac{z}{z-a}$
 <center>
   <img src="https://github.com/NIT2018/NitSignal/raw/master/ch7/%E5%9B%BE7-2.png"> 
