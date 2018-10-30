@@ -125,7 +125,7 @@ $ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5
 - 1)	卷积的基本性质（交换律、分配律、结合律、积分性质和微分性质）
 - A)	交换律
 - a)	x[n]*h[n]=h[n]*x[n]
-- b)	证明：左=$ \sum_{k=-\infty}^{+\infty} \x[k]h[n-k] $ =$ \sum_{r=-\infty }^{+\infty} \x[n-r]h[r] $=h[n]*x[n]=右
+- b)	证明：左=$ \sum_{k=-\infty}^{+\infty} x[k]h[n-k] $ =$ \sum_{r=-\infty }^{+\infty} x[n-r]h[r] $=h[n]*x[n]=右
 - c)	连续时间信号也用类似方法可以证明x(t)*h(t)=h(t)*x(t)
 - B)	结合律
 - a)	(x[n]*h1[n])*h2[n]=x[n]*(h1[n]*h2[n])
