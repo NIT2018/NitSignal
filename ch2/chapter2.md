@@ -29,9 +29,9 @@
 
 - B)	上章:x[n]δ[n]=x[0]δ[n]=x[0]，和x[n]δ[n-n_0]=x[n_0]δ[n-n_0]=x[n_0],
 ### 上面信号的每一个分量都可以用该式来表达
-- a) x[-1]δ[n+1]=$$ f(n)= \begin{cases} x[-1], & \text {$n=-1$} \\ 0, & \text{$n\neq-1$} \end{cases} $$
-- b) x[0]δ[n]=$$ f(n)= \begin{cases} x[0], & \text {$n=0$} \\ 0, & \text{$n\neq0$} \end{cases} $$
-- c)x[1]δ[n-1]=$$ f(n)= \begin{cases} x[1], & \text {$n=1$} \\ 0, & \text{$n\neq1$} \end{cases} $$
+- a) x[-1]δ[n+1]=$ f(n)= \begin{cases} x[-1], & \text {$n=-1$} \\ 0, & \text{$n\neq-1$} \end{cases} $
+- b) x[0]δ[n]=$ f(n)= \begin{cases} x[0], & \text {$n=0$} \\ 0, & \text{$n\neq0$} \end{cases} $
+- c)x[1]δ[n-1]=$ f(n)= \begin{cases} x[1], & \text {$n=1$} \\ 0, & \text{$n\neq1$} \end{cases} $
 - d)由此推广,可得: x[n]=Λ+x[-4]δ[n+4]+x[-3]δ[n+3]+x[-2]δ[n+2]+x[-1]δ[n+1]+x[0]δ[n-1]+x[2]δ[n-2]+x[3]δ[n-3]+x[4]δ[n-4]+Λ
 - e)当n=0时,根据上式x[0]=x[0]δ[n],其余各项均等于0.当n=1时，x[1]=x[1]δ[n-1],说明上面表达式是正确的。
 - C)所以有： $ x[n]=\sum_{k=-\infty}^{+\infty} x[k]δ[n-k] $ 这就意味着可以把任何一个序列表示成一串移位单位脉冲序列δ[n-k]的线性组合，而在这个组合中，权因子就是x[k]
@@ -50,11 +50,12 @@ x(t)=$ \int_{-\infty}^{+\infty} {x(k\tau)δ(t-\tau)} \{\rm d}\tau $
 - d)	用上一章的公式$ x(t)δ(t-t_0)=x(t_0)δ(t-t_0) $ ，我们也可推导出上式$ \int_{-\infty}^{+\infty} {x(\tau)δ(t-\tau)} \{\rm d}\tau $=$ \int_{-\infty}^{+\infty} {x(t)δ(t-\tau)} \{\rm d}\tau $=$ x(t)\int_{-\infty}^{+\infty} {δ(t-\tau)} \{\rm d}\tau $=x(t)
  
 - e)	同样的，以u(t)为例，有 u(t)=$ \int_{n=-\infty}^{n=+\infty} {u(\tau)δ(t-\tau)} \{\rm d}\tau $=$ \int_{0}^{+\infty} {δ(t-\tau)} \{\rm d}\tau $
-做简单的变量替换t-τ=v，就有$ u(t)=$$\int_{-\infty}^{t} {δ(\tau)} \{\rm d}\tau $
+做简单的变量替换t-τ=v，就有$ u(t)=$\int_{-\infty}^{t} {δ(\tau)} \{\rm d}\tau $
 - 3)	到现在为止，我们已经能够将任何信号用单位冲激信号表示，那么要求出系统的响应结果，也只要先知道系统对单位冲激信号的响应即可，其他的就可以用该响应通过叠加得到。所以接下来，我们先看看单位冲激信号的响应，简称单位冲激响应。
 ## §2.2　离散时间LTI系统的时域分析
 - 1)	对于一个离散信号x[n]而言，可以用移位单位脉冲信号的线性组合来表示
-- A)	 x[n]=$ \sum_{k=-\infty}^{+\infty} x[k]δ[n-k] $
+- A)	 x[n]=$ \sum_{k=-\inf
+ty}^{+\infty} x[k]δ[n-k] $
 - B)	根据线性系统的叠加性和其次性，该线性系统的输出就可表示为系统对每个移位单位脉冲响应的线性组合。若令系统对每个移位单位脉冲δ[n-k] 的响应为$ h_k[n] $，则对x[n]的响应y[n]就为y[n]= $ \sum_{k=-\infty}^{+\infty} x[k]h_k[n] $
 - C)	由上式我们可以明确，只要知道一个线性系统对每个移位单位脉冲响应的话，则可求出系统对任意输入的响应。
 - D)	图例，奥本海默第一版P56图3.5
@@ -70,53 +71,53 @@ x(t)=$ \int_{-\infty}^{+\infty} {x(k\tau)δ(t-\tau)} \{\rm d}\tau $
 - A)	例1：已知一个LTI系统的输入和单位脉冲响应为
 $ x[n]=a^nu[n],0<a<1 $
 h[n]=u[n]，求y[n]
-- a)	解：先求y[0]=$ \sum_{k=-infty}^{+\infty}  x[k]h[0-k] $ ，用图示说明各个不同位置相乘后，成绩的和就是y[0]=1
+- a)	解：先求y[0]=$ \sum_{k=-\infty}^{+\infty}  x[k]h[0-k] $ ，用图示说明各个不同位置相乘后，成绩的和就是y[0]=1
 - b)	然后发现y[-1],y[-2],y[-3]均为0
 - c)	y[1]=1+a,y[2]=1+a+a*a……
 - d)	对于m>0，有y[m]= 1+a+a^2+a^m=$ \frac{1-a^m+1}{1+a} $ 
-- e)	所以y[n]＝$$
+- e)	所以y[n]＝$
         
         \begin{cases}
         0,  & \text{$n<0$} \\
-        $$\frac{1-a^n+1}{1-a}$$, & \text{$n\geq0$}
+        $\frac{1-a^n+1}{1-a}$, & \text{$n\geq0$}
         \end{cases}
-$$ ，写成闭式表达式为y[n]=$$\frac{1-a^n+1}{1-a}$$u[n] 。图示。
+$ ，写成闭式表达式为y[n]=$\frac{1-a^n+1}{1-a}$u[n] 。图示。
 - B)	例2：已知x[n]，h[n]分别为
  ， ，求y[n]
 - a)	解：图示可以看出，当n<0时，y[n]=0
-- b)	当0≤n≤4时，y[n]=  1+a+a^2+K+a^n=$$\frac{1-a^n+1}{1-a}$$
-- c)	当4<n≤6时，y[n]= a^{n-4}+a^{n-3}+a^{n-2}+a^{n-1}+a^{n}=a^{n-4}$$\frac{1-a^5}{1-a}$$
-- d)	当7≤n≤10,有y[n]=a^6+a^5+......+a^{n-4}=a^{n-4}$$\frac{1-a^11-n}{1-a}$$ 
+- b)	当0≤n≤4时，y[n]=  1+a+a^2+K+a^n=$\frac{1-a^n+1}{1-a}$
+- c)	当4<n≤6时，y[n]= a^{n-4}+a^{n-3}+a^{n-2}+a^{n-1}+a^{n}=a^{n-4}$\frac{1-a^5}{1-a}$
+- d)	当7≤n≤10,有y[n]=a^6+a^5+......+a^{n-4}=a^{n-4}$\frac{1-a^11-n}{1-a}$ 
 - e)	当n>10时，y[n]=0
 - C)	卷积求和的几个步骤：
 - a)	
 - D)	课堂练习，待定，矩形窗卷积，一个是相同宽度，一个是不同宽度。
 ## §2.3　连续时间LTI系统的时域分析
-- 1)	根据前面式子，我们有：x(t)=$$ \lim_{δ \to 0} \$\sum_{k=-infty^+infty \x(kδ)δ_δ(t-kδ)δ$$ 
-- A)	同样道理，如果我们知道δ_δ(t-kδ) 的响应是\hat{h}_kδ(t) ，根据叠加性质，系统输出为y(t)=$$ \lim_{δ \to 0} \sum_{k=-infty}^+infty \x(kδ)\hat{h}_kδ(t)δ ，这个结果跟离散信号类似。
-- B)	当Δ \to 0时，上式就变成积分y(t)=$$\int_-infty^+infty {x(\tau)h_tau(t)} \,{\rm d}\tau$$ 
-- C)	因为有x(t)=$$\int_-infty^+infty {x(\tau)h_delta(t-\tau)} \,{\rm d}\tau$$ ，所以如果我们知道δ（t-τ）的输出响应hτ(t)，那么就可知道整个输出。
+- 1)	根据前面式子，我们有：x(t)=$ \lim_{δ \to 0} \sum_{k=-\infty}^{+\infty} x(kδ)δ_δ(t-kδ)δ$ 
+- A)	同样道理，如果我们知道$ δ_δ(t-kδ) $的响应是$ \hat{h}_kδ(t) $ ，根据叠加性质，系统输出为y(t)=$ \lim_{δ \to 0} \sum_{k=-\infty}^{+\infty} x(kδ)\hat{h}_kδ(t)δ $，这个结果跟离散信号类似。
+- B)	当Δ \to 0时，上式就变成积分y(t)=$ \int_{-\infty}^{+\infty} {x(\tau)h_tau(t)} \{\rm d}\tau $ 
+- C)	因为有x(t)=$ \int_{-\infty}^{+\infty} {x(\tau)h_delta(t-\tau)} \{\rm d}\tau $ ，所以如果我们知道δ（t-τ）的输出响应hτ(t)，那么就可知道整个输出。
 - 2)	同样道理，对于线性时不变系统（LTI），如果知道δ(t)的响应h0（t），那么就可以知道δ(t-t0)的响应是h0（t-t0）
 - A)	我们定义δ(t)的响应为h(t)，把下标0去掉，这个叫单位冲激响应。那么δ(t-τ)的响应为h(t-τ)
-- B)	整个系统的响应为$$\int_-infty^+infty {x(\tau)h(t-\tau)} \,{\rm d}\tau$$ ，记做y(t)=x(t)*h(t)，叫做卷积积分。
+- B)	整个系统的响应为$ \int_{-\infty}^{+\infty} {x(\tau)h(t-\tau)} \{\rm d}\tau $ ，记做y(t)=x(t)*h(t)，叫做卷积积分。
 - 3)	系统响应的计算方法.
 - A)	例1，某一LTI系统的单位冲激响应h(t)和加在该系统的输入x(t)为
- x(t)=e^-atu(t)，a>0，h(t)=u(t) 。求系统输出y(t)。
+ $ x(t)=e^-atu(t) $，a>0，h(t)=u(t) 。求系统输出y(t)。
 - a)	解：先画出x(t)示意图，
 - b)	再画出h(t-τ)的示意图，我们发现当t<0时，两者没有重叠部分，积分为0，因此t<0时，y输出也为0
-- c)	当t>0时，有重叠部分，输出为 $$\int_0^t {e_-a\tau} \,{\rm d}\tau$$=$$\frac{-1}{a}$$e_-a\tau=$$\frac{1}{a}$$(1-e_-at)  
-- d)	两者综合起来写成闭式表达式就是y(t)=$$\frac{1}{a}(1-e_-at)u(t)$$  
+- c)	当t>0时，有重叠部分，输出为 $ \int_{0}^{t} {e_-a\tau} \{\rm d}\tau$=$\frac{-1}{a} $ $ e_-a\tau $=$ \frac{1}{a}(1-e_-at)  $
+- d)	两者综合起来写成闭式表达式就是y(t)=$ \frac{1}{a}(1-e_-at)u(t) $  
 - B)	例2，求以下两个信号的卷积。
  
 - a)	跟上例一样，需要分段考虑
 - b)	解：当t<0时，结果为0。
-- c)	当0≤t<T时， y(t)=$$\int_0^t {t-\tau} \,{\rm d}\tau$$=t^2-0.5t^2=0.5t^2
-- d)	当T≤t<2T 时， y(t)=$$\int_0^T {t-\tau} \,{\rm d}\tau$$=tT-0.5T^2
-- e)	当2T≤t<3T时， y(t)=$$\int_t-2T^T {t-\tau} \,{\rm d}\tau$$=t(3T-t)-0.5(T^2-(t-2T)^2)=0.5t^2+tT+1.5T^2
+- c)	当0≤t<T时， y(t)=$ \int_{0}^{t} {t-\tau} \{\rm d}\tau $=$ t^2-0.5t^2=0.5t^2 $
+- d)	当T≤t<2T 时， y(t)=$\int_0^T {t-\tau} \,{\rm d}\tau$=tT-0.5T^2
+- e)	当2T≤t<3T时， y(t)=$\int_t-2T^T {t-\tau} \,{\rm d}\tau$=t(3T-t)-0.5(T^2-(t-2T)^2)=0.5t^2+tT+1.5T^2
  
 - f)	当t≥3T时，y(t)=0，
 - g)	所以最终的输出y可以写成分段函数
-$ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5T^2,&\text {$T\leq<2T}\\ $-0.5t^2+tT+1.5T^2,&\text {2T\leqt<3T}\\ 0,&\text {$t\geq3Tend{cases} $$
+$ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5T^2,&\text {$T\leq<2T}\\ $-0.5t^2+tT+1.5T^2,&\text {2T\leqt<3T}\\ 0,&\text {$t\geq3Tend{cases} $
  
 - 4)	总结一下卷积积分的计算步骤。
 - 5)	举例，练习，矩形窗卷积，一个是同样宽度，一个是不同宽度。
@@ -124,7 +125,7 @@ $ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5
 - 1)	卷积的基本性质（交换律、分配律、结合律、积分性质和微分性质）
 - A)	交换律
 - a)	x[n]*h[n]=h[n]*x[n]
-- b)	证明：左=$$\sum_{k \to -infty}^+infty \x[k]h[n-k]$$ =$$\sum_{r \to -infty }^infty \x[n-r]h[r]=h[n]*x[n]=右
+- b)	证明：左=$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$ =$\sum_{r \to -\infty }^\infty \x[n-r]h[r]=h[n]*x[n]=右
 - c)	连续时间信号也用类似方法可以证明x(t)*h(t)=h(t)*x(t)
 - B)	结合律
 - a)	(x[n]*h1[n])*h2[n]=x[n]*(h1[n]*h2[n])
@@ -137,23 +138,23 @@ $ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5
 - c)	证明略
 - d)	框图说明，第一版P62图3.13
 - D)	微分性质
-a)	 $$ \left. \frac{{\rm d}x(t)*h(t)}{{\rm d}t} $$=$$ \left. \frac{{\rm d}h(t)*x(t)}{{\rm d}t} $$=$$ \left. \frac{{\rm d}h(t)}{{\rm d}t} $$*x(t)=x(t)*=$$ \left. \frac{{\rm d}h(t)}{{\rm d}t} $$
+a)	 $ \left. \frac{{\rm d}x(t)*h(t)}{{\rm d}t} $=$ \left. \frac{{\rm d}h(t)*x(t)}{{\rm d}t} $=$ \left. \frac{{\rm d}h(t)}{{\rm d}t} $*x(t)=x(t)*=$ \left. \frac{{\rm d}h(t)}{{\rm d}t} $
 b)	也即两个信号卷积后的微分等于其中一个信号微分后同另一个信号的卷积，课本P38最下面两句
 c)	证明请自己看课本
 E)	积分性质
-a)	同样， $$\int_-infty^t {x(\lambda)*h(\lambda)} \,{\rm d}\lambda$$=[$$\int_-infty^tx(\lambda)\,{\rm d}\lambda$$*h(t)x(t)*[$$\int_-infty^tx(\lambda)\,{\rm d}\lambda$$
+a)	同样， $\int_-\infty^t {x(\lambda)*h(\lambda)} \,{\rm d}\lambda$=[$\int_-\infty^tx(\lambda)\,{\rm d}\lambda$*h(t)x(t)*[$\int_-\infty^tx(\lambda)\,{\rm d}\lambda$
 F)	跟单位脉冲/冲激信号的卷积
-a)	由前面信号分解，我们知道$$\int_-infty^+infty {x(\tau)δ(t-\tau)} \,{\rm d}\tau$$ ,而这正好也是卷积的定义，所以有x(t)=x(t)*δ(t)
+a)	由前面信号分解，我们知道$\int_-\infty^+\infty {x(\tau)δ(t-\tau)} \,{\rm d}\tau$ ,而这正好也是卷积的定义，所以有x(t)=x(t)*δ(t)
 b)	任何信号跟单位冲激信号的卷积，就是其本身
 c)	离散信号也是如此
 d)	x(t)* δ(t-t0)=x(t-t0)，冲激信号时延之后再跟x(t)卷积，则就是x(t)延迟响应时间
 G)	跟单位阶跃信号的卷积
-a)	 x(t)*u(t)=x(t)*$$\int_-infty^t {δ(t)} \,{\rm d}t$$=$$int_-infty^t{x(t)} \,{\rm d}t$$*δ(t)=$$\int_-infty^t {x(t)} \,{\rm d}t$$
+a)	 x(t)*u(t)=x(t)*$\int_-\infty^t {δ(t)} \,{\rm d}t$=$int_-\infty^t{x(t)} \,{\rm d}t$*δ(t)=$\int_-\infty^t {x(t)} \,{\rm d}t$
 b)	信号跟u(t)的卷积，就是对自己的积分，u(t)就是积分器。
 2)	LTI系统各个不同性质跟单位冲激响应之间的关系。
 A)	记忆性
 a)	上一章说过，所谓无记忆系统，就是在任何时刻t，其输出仅决定于同一时刻输入值的系统。
-b)	而对于LTI系统，有y[n]=x[n]*h[n]=$$\sum_{k \to -infty}^+infty \x[k]h[n-k]$$ ，现在我们考查h[n]跟无记忆系统的关系
+b)	而对于LTI系统，有y[n]=x[n]*h[n]=$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$ ，现在我们考查h[n]跟无记忆系统的关系
 c)	要使y[n]只跟x[n]有关，而跟其他的x[n]无关，那只有满足下面这个条件，即当n<>0时，h[n]=0
 I.	y[n]=…x[n-1]h[1]+x[n]h[0]+x[n+1]h[-1]+……
 II.	要是y[n]只跟x[n]有关，只有满足上面那个条件时才可能
@@ -176,21 +177,21 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 C)	因果性
 a)	系统的因果性是说一个因果系统的输出只决定于现在和过去的输入，而跟将来的输入无关
 b)	我们就来看这样的系统其单位冲激/脉冲响应有什么特性
-c)	 y[n]=x[n}*h[n]=$$\sum_{k \to -infty}^+infty \x[k]h[n-k]$$
-d)	再看y[n]=…x[n-1]h[1]+x[n]h[0]+x[n+1]h[-1]+……，要使系统是因果的，必须有n<0时，h[n]=0，这时y[n]=$$\sum_{k \to -infty}^+infty \x[k]h[n-k]$$=$$\sum_{k \to -infty}^n \x[k]h[n-k]$$ $$\sum_{k \to 0}^+infty \x[k]h[n-k]$$
+c)	 y[n]=x[n}*h[n]=$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$
+d)	再看y[n]=…x[n-1]h[1]+x[n]h[0]+x[n+1]h[-1]+……，要使系统是因果的，必须有n<0时，h[n]=0，这时y[n]=$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$=$\sum_{k \to -\infty}^n \x[k]h[n-k]$ $\sum_{k \to 0}^+\infty \x[k]h[n-k]$
  
 e)	类似的，在连续系统中，只要满足h(t)=0,t<0，该LTI系统就是因果系统。
 D)	稳定性
 a)	稳定性：如果一个系统对于有界的输入，其输出都是有界的话，那么我们说该系统是稳定的。
 b)	接下来我们看看一个稳定的LTI系统，其冲激响应应该具备什么特点。
-c)	设输入是稳定的，界为B，也即 ，将该信号加到LTI系统上，有|y[n]|=|$$\sum_{k \to -infty}^+infty \x[k]h[n-k]$$|\leq$$\sum_{k \to -infty}^+infty \|x[k]||h[n-k]|$$=$$\sum_{k \to -infty}^+infty \|h[k]||x[n-k]|$$
-d)	 ，该式对于任何n均成立，因此只要$$\sum_{k \to -infty}^+infty \|h[k]|$$ 有界，即$$\sum_{k \to -infty}^+infty \|h[k]|$$infty，该离散LTI系统就是稳定的，也即只要单位脉冲响应是绝对可和的，那么对应的离散LTI系统就是稳定的，这是充分条件。我们可以证明，该条件也是必要条件。（奥本海默第一版习题3.21）
+c)	设输入是稳定的，界为B，也即 ，将该信号加到LTI系统上，有|y[n]|=|$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$|\leq$\sum_{k \to -\infty}^+\infty \|x[k]||h[n-k]|$=$\sum_{k \to -\infty}^+\infty \|h[k]||x[n-k]|$
+d)	 ，该式对于任何n均成立，因此只要$\sum_{k \to -\infty}^+\infty \|h[k]|$ 有界，即$\sum_{k \to -\infty}^+\infty \|h[k]|$\infty，该离散LTI系统就是稳定的，也即只要单位脉冲响应是绝对可和的，那么对应的离散LTI系统就是稳定的，这是充分条件。我们可以证明，该条件也是必要条件。（奥本海默第一版习题3.21）
 e)	对于连续LTI系统来说，单位冲激响应绝对可积，该系统就是稳定的。
 3)	单位阶跃响应
 A)	从前面介绍，我们看到一个LTI系统的特性可以用其单位冲激响应来刻画，从h(t)或h[n]中能够看到一个LTI系统的性质
 B)	除了冲激响应之外，我们也常用单位阶跃响应来描述一个LTI系统的特性，记做s[n]或s(t)，s[n]就是输入为u[n]是系统的输出，s(t)同理。
 C)	显然，有s[n]=u[n]*h[n]，s(t)= u(t)*h(t)
-D)	我们已经知道单位脉冲响应为u[n]的系统是一个累加器，所以有s[n]=$$\sum_{k \to -infty}^n \h[k]$$ ，反之，也有h[n]=s[n]-s[n-1]
+D)	我们已经知道单位脉冲响应为u[n]的系统是一个累加器，所以有s[n]=$\sum_{k \to -\infty}^n \h[k]$ ，反之，也有h[n]=s[n]-s[n-1]
 E)	连续系统也有类似结果，此处从略
 §2.5　LTI系统的微分、差分方程描述
 §2.5.1　应用背景
@@ -199,23 +200,23 @@ E)	连续系统也有类似结果，此处从略
 3)	因此，研究LTI系统用微分、差分方程描述且求解是进行时域分析的重要内容。
 4)	例1：RC电路方程
 A)	对于一个RC电路，输入为ui(t)，输出是电容两端电压uc(t)，画示意图
-B)	根据公式$ f(n)= \begin{cases} R_i(t)+u_c(t)=u_i(t),  \\ c$$ \left. \frac{{\rm d}u_C(t)}{{\rm d}t} \ $$=i(t)end{cases} $$ ，所以有 ，这就是输入输出之间的关系。是一阶微分方程。
+B)	根据公式$ f(n)= \begin{cases} R_i(t)+u_c(t)=u_i(t),  \\ c$ \left. \frac{{\rm d}u_C(t)}{{\rm d}t} \ $=i(t)end{cases} $ ，所以有 ，这就是输入输出之间的关系。是一阶微分方程。
 5)	例2：RLC电路方程，就是二阶微分方程。
 A)	同样的，输入为ui(t)，输出是电容两端电压uc(t)，具体草图在速写本中。
-B)	公式$ f(n)= \begin{cases} R_i(t)+u_c(t)+u_L=u_i(t),  \\ c$$ \left. \frac{{\rm d}u_C(t)}{{\rm d}t} \ $$=i(t),\\u_L=L$$ \left. \frac{{\rm d}i(t)}{{\rm d}t}  $$end{cases} $$ ，有LC$$ \left. \frac{{\rm d}u_c(t)}^2{{\rm d}t^2}  $$+RC$$ \left. \frac{{\rm d}u_c(t)}{{\rm d}t^2}  $$+u_c(t) =u_i(t)，这是二阶微分方程。
+B)	公式$ f(n)= \begin{cases} R_i(t)+u_c(t)+u_L=u_i(t),  \\ c$ \left. \frac{{\rm d}u_C(t)}{{\rm d}t} \ $=i(t),\\u_L=L$ \left. \frac{{\rm d}i(t)}{{\rm d}t}  $end{cases} $ ，有LC$ \left. \frac{{\rm d}u_c(t)}^2{{\rm d}t^2}  $+RC$ \left. \frac{{\rm d}u_c(t)}{{\rm d}t^2}  $+u_c(t) =u_i(t)，这是二阶微分方程。
 §2.5.2　微分方程描述的系统
 1)	微分方程求解
 A)	根据高等数学基本知识，我们可以对常系数微分方程求解
 B)	一般方程形式为：
-a)	 a_N$$ \left. \frac{{\rm d}y(t)}^N{{\rm d}t} $$+a_N-1$$ \left. \frac{{\rm d}y(t)}^N-1{{\rm d}t} $$+a_1$$ \left. \frac{{\rm d}y(t)}{{\rm d}t} $$+a_0y(t)=b_M$$ \left. \frac{{\rm d}x(t)}^M{{\rm d}t} $$+b_M-1$$ \left. \frac{{\rm d}x(t)}^M-1{{\rm d}t} $$+\Lambda+b_1$$ \left. \frac{{\rm d}x(t)}{{\rm d}t} $$+b_0x(t)
-b)	也即 $$\sum_{k=0}^N \a_k$$ \left. \frac{{\rm d}y(t)}^K{{\rm d}t} $$=$$\sum_{l=0}^M \b_l$$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $$
-c)	若N＝0，则y(t)=1/a_0$$\sum_{l=0}^m \b_1$$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $$ ，显示方程，输入输出间关系清晰；
+a)	 a_N$ \left. \frac{{\rm d}y(t)}^N{{\rm d}t} $+a_N-1$ \left. \frac{{\rm d}y(t)}^N-1{{\rm d}t} $+a_1$ \left. \frac{{\rm d}y(t)}{{\rm d}t} $+a_0y(t)=b_M$ \left. \frac{{\rm d}x(t)}^M{{\rm d}t} $+b_M-1$ \left. \frac{{\rm d}x(t)}^M-1{{\rm d}t} $+\Lambda+b_1$ \left. \frac{{\rm d}x(t)}{{\rm d}t} $+b_0x(t)
+b)	也即 $\sum_{k=0}^N \a_k$ \left. \frac{{\rm d}y(t)}^K{{\rm d}t} $=$\sum_{l=0}^M \b_l$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $
+c)	若N＝0，则y(t)=1/a_0$\sum_{l=0}^m \b_1$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $ ，显示方程，输入输出间关系清晰；
 d)	若N>=1，则需要解微分方程
 C)	该常系数微分方程的解由其次解和特解组成
-a)	其次解就是$$\sum_{K=0}^N \a_k$$ \left. \frac{{\rm d}y(t)}^k{{\rm d}t} $$=0 时得到的y(t)表达式
+a)	其次解就是$\sum_{K=0}^N \a_k$ \left. \frac{{\rm d}y(t)}^k{{\rm d}t} $=0 时得到的y(t)表达式
 b)	特解就是挣对具体输入信号得到的输出信号
 D)	其次解的解法：
-a)	根据a_N$$ \left. \frac{{\rm d}y(t)}^N{{\rm d}t} $$+a_N-1$$ \left. \frac{{\rm d}y(t)}^N-1{{\rm d}t} $$+\Lambda+a_1$$ \left. \frac{{\rm d}y(t)}{{\rm d}t} $$+a_0y(t)=0 ，我们可以得到特征方程 a_N\alpha^N+a_N-1\alpha^N-1+\Lambda+a_1\alpha+a_0=0
+a)	根据a_N$ \left. \frac{{\rm d}y(t)}^N{{\rm d}t} $+a_N-1$ \left. \frac{{\rm d}y(t)}^N-1{{\rm d}t} $+\Lambda+a_1$ \left. \frac{{\rm d}y(t)}{{\rm d}t} $+a_0y(t)=0 ，我们可以得到特征方程 a_N\alpha^N+a_N-1\alpha^N-1+\Lambda+a_1\alpha+a_0=0
 b)	若得到N个不重复的特征根，分别是a_1,a_2,\Lambda \Lambda ,a_N，则其次解的基本形式就是y_h(t)=A_1e^\alpha_1t+A_2e^\alpha_2t+\Lambda \Lambda+A_Ne^\alpha_Nt ，Ai，（i＝1，2，…，N）为待定系数，根据N个初始条件确定待定系数
 c)	若α1为二阶重根，则对应于α1的部分为： (A_11t+A_12)e^\alpha_1t
 d)	若α1为k阶重根，则对应于α1的部分为：
@@ -231,19 +232,19 @@ eαt(α为特征方程的k次重根)
 
 …	…
 Ci的求解为yp(t)代入方程, 两边系数匹配求得
-F)	完全解＝其次解＋特解y(t)=yh(t)+yp(t)，h：homogeneous solution， p：particular solution y(t)=y_h(t)+y_p(t)=$$\sum_{i=1}^N \A_ie^\alpha_1t+y_p(t)$$ ，由N个初始条件确定待定系数Ai；例：给定线性常系数方程$$ \left. \frac{{\rm d}y(t)}^2{{\rm d}t^2}  $$+3$$ \left. \frac{{\rm d}y(t)}{{\rm d}t}  $$+2y(t)=x(t) ，求当x(t)=4e^-3tu(t);$$ y(t) \right| _{t=0_+} $$=3,$$ \left. \frac{{\rm d}y(t)}{{\rm d}t} \right| _{t=0} $$=4 时的全解。解：y(t)=y_h(t)+y_p(t) 先求其次解特征方程a^2+3a+2=0 ，得特征根a_1=-1,a_2=-2 其次解为y_h(t)=A_1e^-t+A_2e^-2t 再求特解当输入为4e^-3t 时，特解可设为y_p(t)=Be^-3t 其一、二阶导数分别为 y_p(t)=-3Be^-3t，y"_p(t)=9Be^-3t 
+F)	完全解＝其次解＋特解y(t)=yh(t)+yp(t)，h：homogeneous solution， p：particular solution y(t)=y_h(t)+y_p(t)=$\sum_{i=1}^N \A_ie^\alpha_1t+y_p(t)$ ，由N个初始条件确定待定系数Ai；例：给定线性常系数方程$ \left. \frac{{\rm d}y(t)}^2{{\rm d}t^2}  $+3$ \left. \frac{{\rm d}y(t)}{{\rm d}t}  $+2y(t)=x(t) ，求当x(t)=4e^-3tu(t);$ y(t) \right| _{t=0_+} $=3,$ \left. \frac{{\rm d}y(t)}{{\rm d}t} \right| _{t=0} $=4 时的全解。解：y(t)=y_h(t)+y_p(t) 先求其次解特征方程a^2+3a+2=0 ，得特征根a_1=-1,a_2=-2 其次解为y_h(t)=A_1e^-t+A_2e^-2t 再求特解当输入为4e^-3t 时，特解可设为y_p(t)=Be^-3t 其一、二阶导数分别为 y_p(t)=-3Be^-3t，y"_p(t)=9Be^-3t 
 iii.	代入原方程后有：9Be^-3t-9Be^-3t+2Be^-3t=4e^-3t ，得B＝2
 d)	得全解为y(t)=A_1e^-t+A_2e^-2t+2e^-3t ，代入y(t)和y’(t)初始值，有
-e)$$ f(n)= \begin{cases} A_1+A_2+2=3,  \\ -A_1-2A_2-6=4, \end{cases} $$	 ，得 $$ f(n)= \begin{cases} A_1=12,  \\ A_2=-11,  \end{cases} $$
+e)$ f(n)= \begin{cases} A_1+A_2+2=3,  \\ -A_1-2A_2-6=4, \end{cases} $	 ，得 $ f(n)= \begin{cases} A_1=12,  \\ A_2=-11,  \end{cases} $
 f)	有 y(t)=(12e^-t-11e^-2t+2e^-3t)u(t)
 H)	上解中，前两项其次解，只跟系统特性有关，而跟输入信号无关，叫自由响应或者固有响应，后一项则跟输入信号有关，叫强迫响应。
 I)	需要说明的是，自由响应前面得系数跟输入信号还是有关的。
 §2.5.3　差分方程描述的系统
-1)	跟连续系统类似，离散系统也可以用线性常系数差分方程来表述；一个N阶线性常系数差分方程为 $$\sum_{k=0}^N \a_k{y[n-k]}$$=$$\sum_{i=1}^n \$$\sum_{k=0}^M \b_k{x[n-k]
+1)	跟连续系统类似，离散系统也可以用线性常系数差分方程来表述；一个N阶线性常系数差分方程为 $\sum_{k=0}^N \a_k{y[n-k]}$=$\sum_{i=1}^n \$\sum_{k=0}^M \b_k{x[n-k]
 2)	差分方程求解方法跟上述微分方程求解类似，也分其次解和特解，其次解对应着自由响应，特解对应着强迫响应。请自己阅读课本P57－P59
 3)	下面介绍另外一种思路和方法（下面开始奥本海默第一版P79-P81）
 A)	可以将公式写成：y[n]=1/a_0{$\sum_{k=0}^M \b_k{x[n-k]$-$\sum_{k=1}^N \a_k{y[n-k]} ，也即系统在时间n的输出y[n]可以用输入的过去和现在值以及输出的过去值来表示。只要知道了一组附加条件入y[-N]、y[-N+1]、y[-N+2]、……、y[-1]，即可求出接下来的一系列y[n]值。这样的方程叫递归方程。
-B)	当N=0时，输出方程是y[n]=$$\sum_{k=0}^M \$\frac{b_k}{a_0}$x[n-k]$$ ，这个是非递归方程，根据卷积和公式：y[n]=$$\sum_{k \to -infty}^+infty \h[k]x[n-k] $$，我们可知该系统的单位脉冲响应为$$ f(n)= \begin{cases} $\frac{b_n}{a_0}S, & \text {$0\leqn\leqM$ } \\ 0, & \text{ $n$是其余值 } \end{cases} $$
+B)	当N=0时，输出方程是y[n]=$\sum_{k=0}^M \$\frac{b_k}{a_0}$x[n-k]$ ，这个是非递归方程，根据卷积和公式：y[n]=$\sum_{k \to -\infty}^+\infty \h[k]x[n-k] $，我们可知该系统的单位脉冲响应为$ f(n)= \begin{cases} $\frac{b_n}{a_0}S, & \text {$0\leqn\leqM$ } \\ 0, & \text{ $n$是其余值 } \end{cases} $
  ，这种系统的单位脉冲响应有一个有限的持续期，也即它仅在一个有限时间间隔内是非零的，具有这样性质的系统叫有限脉冲响应系统，简称FIR（Finite Impulse Response）系统。
 C)	当N>=1时，则存在递归情况
 a)	以y[n]-0.5y[n-1]=x[n]，为例。
@@ -264,31 +265,31 @@ a)
 6)	在本课程中，我们一般关注的是零状态响应；
 7)	零状态响应和零输入响应的求解
 a)	首先要能够区分0+和0-的不同情况，讲课本P54例2-15。如图所示电路，t<0时开关S处于“1”的位置而且已经达到稳态；当t＝0时，S由“1”转向“2”，建立电流i(t)的微分方程，并求解i(t)在t≥0+的时域解。
-i.	解：首先可以列出回路方程；$$ f(n)= \begin{cases} Ri(t)+v_c(t)=e(t)\Lambda \Lambda(1), \\ v_c(t)=L$$ \left. \frac{{\rm d}i_L(t)}{{\rm d}t}$$\Lambda \Lambda(2)  , \\i(t)=c$$ \left. \frac{{\rm d}v_c(t)}{{\rm d}t}  $$ +i_L(t)$$\Lambda \Lambda(3) \end{cases} $$ ，目标是得到i(t)和e(t)的表达式。(3)式两边对t求导，得$$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$$=c$$ \left. \frac{{\rm d}v_c(t)}^2{{\rm d}t^2} $$+L$$ \left. \frac{{\rm d}i_L(t)}{{\rm d}t}$$ \lambda(4) ，将（2）式代入（4）式，有$$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$$=c$$ \left. \frac{{\rm d}v_c(t)}^2{{\rm d}t^2} $$+ $$ \left. \frac{{\rm d}i_L(t)}{{\rm d}t}$$ \Lambda(5)，再将（1）式带入（5）式，有$$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$$=c$$ \left. \frac{{\rm d}e(t)-R_i(t)}^2{{\rm d}t^2}$$+$$\frac{e(t)-R_i(t)}{L}$$ \Lambda(6) ，最后整理得$$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}  $$ +1/RC$$ \left. \fract{\rm d}i(t)}{{\rm d}t} $$+1/LCi(t)=1/R$$ \left. \frac{{\rm d}e(t)}^2{{\rm d}t^2}  $$+1/RLCe(t)\Lambda \Lambda(7)带入参数值后得 $$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}+4$$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$$+3i(t)=$$ \left. \frac{{\rm d}e(t)}^2{{\rm d}t^2}$$+3e(t)\Lambda \Lambda(8)
+i.	解：首先可以列出回路方程；$ f(n)= \begin{cases} Ri(t)+v_c(t)=e(t)\Lambda \Lambda(1), \\ v_c(t)=L$ \left. \frac{{\rm d}i_L(t)}{{\rm d}t}$\Lambda \Lambda(2)  , \\i(t)=c$ \left. \frac{{\rm d}v_c(t)}{{\rm d}t}  $ +i_L(t)$\Lambda \Lambda(3) \end{cases} $ ，目标是得到i(t)和e(t)的表达式。(3)式两边对t求导，得$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$=c$ \left. \frac{{\rm d}v_c(t)}^2{{\rm d}t^2} $+L$ \left. \frac{{\rm d}i_L(t)}{{\rm d}t}$ \lambda(4) ，将（2）式代入（4）式，有$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$=c$ \left. \frac{{\rm d}v_c(t)}^2{{\rm d}t^2} $+ $ \left. \frac{{\rm d}i_L(t)}{{\rm d}t}$ \Lambda(5)，再将（1）式带入（5）式，有$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$=c$ \left. \frac{{\rm d}e(t)-R_i(t)}^2{{\rm d}t^2}$+$\frac{e(t)-R_i(t)}{L}$ \Lambda(6) ，最后整理得$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}  $ +1/RC$ \left. \fract{\rm d}i(t)}{{\rm d}t} $+1/LCi(t)=1/R$ \left. \frac{{\rm d}e(t)}^2{{\rm d}t^2}  $+1/RLCe(t)\Lambda \Lambda(7)带入参数值后得 $ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}+4$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$+3i(t)=$ \left. \frac{{\rm d}e(t)}^2{{\rm d}t^2}$+3e(t)\Lambda \Lambda(8)
 ii.	接下来求全响应的话，根据以前的知识，需要知道i’(0+)和i(0+)的值，但是，从电路特性中，我们可知在开关换路前，电路是稳定的。也即电容是断路的，电感则是短路的，而电流则是稳定不变的，所以有i(0-)=e(0-)/R=2A，而di(t)/dt＝0，当t=0-时。另外还能得到的信息是vc(0-)=0,iL(0-)=2A, diL(t)/dt＝0
 iii.	我们现在所要做的就是在已知0-下值的情况下，求出i’(0+)和i(0+)。
 iv.	在开关换路的一瞬间，t就从0-跳到了0+。这一瞬间，电容两端的电压和电感中的电流是不会发生突变的。因此e（0+）＝4，vc(0+)=vc(0-)=0V，iL(0+)=iL(0-)=2A，所以i(0+)=(e(0+)-vc(0+))/R=4A
-v.	  $$ \left. \frac{{\rm d}i(0_+)}{{\rm d}t}$$=$$1/R{$ \left. \frac{{\rm d}e(0_+)}{{\rm d}t}$-$ \left. \frac{{\rm d}v_c(0_+)}{{\rm d}t}$}=1/R[$ \left. \frac{{\rm d}e(0_+)}{{\rm d}t}$-1/c[i(0_+)-i_L(0_+)]]$$=$$1/R{$ \left. \frac{{\rm d}e(0_+)}{{\rm d}t}$-$ \left. \frac{{\rm d}v_c(0_+)}{{\rm d}t}$}=1/R[$ \left. \frac{{\rm d}e(0_+)}{{\rm d}t}$-1/c[i(0_+)-i_L(0_-)]]$$=[0-4x(4-2)]=-8A/s
+v.	  $ \left. \frac{{\rm d}i(0_+)}{{\rm d}t}$=$1/R{$ \left. \frac{{\rm d}e(0_+)}{{\rm d}t}$-$ \left. \frac{{\rm d}v_c(0_+)}{{\rm d}t}$}=1/R[$ \left. \frac{{\rm d}e(0_+)}{{\rm d}t}$-1/c[i(0_+)-i_L(0_+)]]$=$1/R{$ \left. \frac{{\rm d}e(0_+)}{{\rm d}t}$-$ \left. \frac{{\rm d}v_c(0_+)}{{\rm d}t}$}=1/R[$ \left. \frac{{\rm d}e(0_+)}{{\rm d}t}$-1/c[i(0_+)-i_L(0_-)]]$=[0-4x(4-2)]=-8A/s
 vi.	知道了i’(0+)和i(0+)值后，就可以用以前学过的方法求解全响应，先求其次解。特征方程为\lambda^2+4\lambda+3=0 ，得两个特征根分别是-1和-3。所以其次解为i_h(t)=A_1e^-t+A_2e^-3t+4 ，特解也为常数，B，带入原微分方程，可得3B=3×4，所以B＝4+A_2e^-3t+4
-vii.	所以全解为i(t)=i_h(t)+i_p(t)=A_1e^-t+A_2e^-3t+4 ，接着代入i(0_+)=4和$$ \left. \frac{{\rm d}i(0_+)}{{\rm d}t}$$=-8 ，有$$ f(n)= \begin{cases} A_1+A_2+4 \\-A_1-3A_2=-8,  \end{cases} $$ ，解得 $$ f(n)= \begin{cases} A_1=-4\\A_2=4,  \end{cases} $$
+vii.	所以全解为i(t)=i_h(t)+i_p(t)=A_1e^-t+A_2e^-3t+4 ，接着代入i(0_+)=4和$ \left. \frac{{\rm d}i(0_+)}{{\rm d}t}$=-8 ，有$ f(n)= \begin{cases} A_1+A_2+4 \\-A_1-3A_2=-8,  \end{cases} $ ，解得 $ f(n)= \begin{cases} A_1=-4\\A_2=4,  \end{cases} $
 viii.	最终得到全响应为 i(t)=(-4e^-t++A_2e^-3t+4),t\leq0_+
 ix.	此题关键是考虑了0-到0+的根据输入信号而产生的变化。
 b)	接下来用冲激函数匹配法介绍上述例子的求解方法；
-i.	解：根据电路方程，我们可得：$$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$$+4$$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$$ +3i(t)=$$ \left. \frac{{\rm d}e(t)}^2{{\rm d}t^2}$$+3e(t)
+i.	解：根据电路方程，我们可得：$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$+4$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$ +3i(t)=$ \left. \frac{{\rm d}e(t)}^2{{\rm d}t^2}$+3e(t)
 ii.	并且算得起始条件为：i(0-)=2A,di(0-)/dt=0
 iii.	根据特征根，我们可得t>=0时的完全解形式为
  i(t)=(A_1e^-t+A_2e^-3t+4)u(t)
 iv.	由此可得：i(0+)=A1+A2+4,di(0+)/dt=-A1-3A2
-v.	由于在t=0时，i(t)从i(0-)跳变到i(0+)，所以i(t)的导数包含冲激函数，即δ[$$ \left. \frac{{\rm d}i(0)}{{\rm d}t}$$]=(i(0_+)-i(0_-))δ(t)=(A_1+A_2+4-2)δ(t)=(A_1+A_2+2)δ(t)，其中δ(e(t)) 中所含的δ（t）及其相关导数
-vi.	而i（t）的二阶导数为 $$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$$=$$ \left. \frac{{\rm d}$$δ[$$ \left. \frac{{\rm d}i(0)}{{\rm d}t}$$]}{{\rm d}t}+[$$ \left. \frac{{\rm d}i(0_+)}{{\rm d}t}$$-$$ \left. \frac{{\rm d}i(0_-)}{{\rm d}t}$$]δ(t)=(A_1+A_2+2)δ(t)+(-A_1-3A_2-0)δ(t)
+v.	由于在t=0时，i(t)从i(0-)跳变到i(0+)，所以i(t)的导数包含冲激函数，即δ[$ \left. \frac{{\rm d}i(0)}{{\rm d}t}$]=(i(0_+)-i(0_-))δ(t)=(A_1+A_2+4-2)δ(t)=(A_1+A_2+2)δ(t)，其中δ(e(t)) 中所含的δ（t）及其相关导数
+vi.	而i（t）的二阶导数为 $ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$=$ \left. \frac{{\rm d}$δ[$ \left. \frac{{\rm d}i(0)}{{\rm d}t}$]}{{\rm d}t}+[$ \left. \frac{{\rm d}i(0_+)}{{\rm d}t}$-$ \left. \frac{{\rm d}i(0_-)}{{\rm d}t}$]δ(t)=(A_1+A_2+2)δ(t)+(-A_1-3A_2-0)δ(t)
  
 vii.	同时有 e"(t)=2δ'(t)
 viii.	在t=0处，将上述所有值代入，仅考虑在t=0时刻的δ(t)及其相关导数项，其余不考虑，则有
  (A_1+A_2+2)δ'(t)+(-A_1-3A_2)δ(t)+4(A_1+A_2+2)δ(t)=2δ'(t)
 根据系数相等法则，可得方程 ，解得 ，其完全响应为 i(t)=4(-e_-t+e_-3t+1)u(t)
 c)	例3，求上题的零状态响应和零输入响应。
-i.	解，首先得到系统方程：$$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$$+4$$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$$ +3i(t)=$$ \left. \frac{{\rm d}e(t)^2}{{\rm d}t^2}$$+3e(t)，及其初始条件i(0-)=2,i’(0-)=0
-ii.	先求零输入响应。满足$$ \left. \frac{{\rm d}i_zi(t)}^2{{\rm d}t^2}$$ +4$$ \left. \frac{{\rm d}i_zi(t)}{{\rm d}t}$$+3i_zi(t)=0，但在t＝0时刻，应该满足冲激函数匹配法则。即δ{i"_zi(0)+4i'_zi(0)+3i_zi(0)}=δ{e(tu(-t))}
+i.	解，首先得到系统方程：$ \left. \frac{{\rm d}i(t)}^2{{\rm d}t^2}$+4$ \left. \frac{{\rm d}i(t)}{{\rm d}t}$ +3i(t)=$ \left. \frac{{\rm d}e(t)^2}{{\rm d}t^2}$+3e(t)，及其初始条件i(0-)=2,i’(0-)=0
+ii.	先求零输入响应。满足$ \left. \frac{{\rm d}i_zi(t)}^2{{\rm d}t^2}$ +4$ \left. \frac{{\rm d}i_zi(t)}{{\rm d}t}$+3i_zi(t)=0，但在t＝0时刻，应该满足冲激函数匹配法则。即δ{i"_zi(0)+4i'_zi(0)+3i_zi(0)}=δ{e(tu(-t))}
  ，由于u(t)不包含t=0时刻，因此 δ{e(t)u(-t)}=0
 iii.	所以上式化成:  δ{i"_zi(0)+4i'_zi(0)+3i_zi(0)}=-2δ'(t)(1)
 iv.	由此可见， 在t=0处无冲激函数，否则的话，经过两阶导数会出现 ，而现在只有 
