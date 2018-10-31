@@ -142,19 +142,19 @@ $ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5
 - b)	也即两个信号卷积后的微分等于其中一个信号微分后同另一个信号的卷积，课本P38最下面两句
 - c)	证明请自己看课本
 - E)	积分性质
-- a)	同样， $\int_-\infty^t {x(\lambda)*h(\lambda)} \,{\rm d}\lambda$=[$\int_-\infty^tx(\lambda)\,{\rm d}\lambda$*h(t)x(t)*[$\int_-\infty^tx(\lambda)\,{\rm d}\lambda$
+- a)	同样， $\int_{-\infty}^{t} {x(\lambda)*h(\lambda)} \{\rm d}\lambda$=$ \int_{-\infty}^{t}x(\lambda)\{\rm d}\lambda$*h(t)x(t)* $ \int_{-\infty}^{t}}x(\lambda)\{\rm d}\lambda $
 - F)	跟单位脉冲/冲激信号的卷积
-- a)	由前面信号分解，我们知道$\int_-\infty^+\infty {x(\tau)δ(t-\tau)} \,{\rm d}\tau$ ,而这正好也是卷积的定义，所以有x(t)=x(t)*δ(t)
+- a)	由前面信号分解，我们知道$ \int_{-\infty}^{+\infty} {x(\tau)δ(t-\tau)} \{\rm d}\tau $ ,而这正好也是卷积的定义，所以有x(t)=x(t)*δ(t)
 - b)	任何信号跟单位冲激信号的卷积，就是其本身
 - c)	离散信号也是如此
 - d)	x(t)* δ(t-t0)=x(t-t0)，冲激信号时延之后再跟x(t)卷积，则就是x(t)延迟响应时间
 - G)	跟单位阶跃信号的卷积
-- a)	 x(t)*u(t)=x(t)*$\int_-\infty^t {δ(t)} \,{\rm d}t$=$int_-\infty^t{x(t)} \,{\rm d}t$*δ(t)=$\int_-\infty^t {x(t)} \,{\rm d}t$
+- a)	 x(t)*u(t)=x(t)*$ \int_{-\infty}^{t} {δ(t)} \{\rm d}t$=$int_{-\infty}^{t} {x(t)} \{\rm d}t $*δ(t)=$ \int_{-\infty}^{t} {x(t)} \{\rm d}t$
 - b)	信号跟u(t)的卷积，就是对自己的积分，u(t)就是积分器。
 - 2)	LTI系统各个不同性质跟单位冲激响应之间的关系。
 - A)	记忆性
 - a)	上一章说过，所谓无记忆系统，就是在任何时刻t，其输出仅决定于同一时刻输入值的系统。
-- b)	而对于LTI系统，有y[n]=x[n]*h[n]=$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$ ，现在我们考查h[n]跟无记忆系统的关系
+- b)	而对于LTI系统，有y[n]=x[n]*h[n]=$\sum_{k=-\infty}^{+\infty} x[k]h[n-k] $ ，现在我们考查h[n]跟无记忆系统的关系
 - c)	要使y[n]只跟x[n]有关，而跟其他的x[n]无关，那只有满足下面这个条件，即当n<>0时，h[n]=0
 I.	y[n]=…x[n-1]h[1]+x[n]h[0]+x[n+1]h[-1]+……
 II.	要是y[n]只跟x[n]有关，只有满足上面那个条件时才可能
@@ -177,15 +177,15 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 - C)	因果性
 - a)	系统的因果性是说一个因果系统的输出只决定于现在和过去的输入，而跟将来的输入无关
 - b)	我们就来看这样的系统其单位冲激/脉冲响应有什么特性
-- c)	 y[n]=x[n}*h[n]=$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$
+- c)	 y[n]=x[n}*h[n]=$\sum_{k=-\infty}^{+\infty}  x[k]h[n-k]$
 - d)	再看y[n]=…x[n-1]h[1]+x[n]h[0]+x[n+1]h[-1]+……，要使系统是因果的，必须有n<0时，h[n]=0，这时y[n]=$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$=$\sum_{k \to -\infty}^n \x[k]h[n-k]$ $\sum_{k \to 0}^+\infty \x[k]h[n-k]$
  
 - e)	类似的，在连续系统中，只要满足h(t)=0,t<0，该LTI系统就是因果系统。
 - D)	稳定性
 - a)	稳定性：如果一个系统对于有界的输入，其输出都是有界的话，那么我们说该系统是稳定的。
 - b)	接下来我们看看一个稳定的LTI系统，其冲激响应应该具备什么特点。
-- c)	设输入是稳定的，界为B，也即 ，将该信号加到LTI系统上，有|y[n]|=|$\sum_{k \to -\infty}^+\infty \x[k]h[n-k]$|\leq$\sum_{k \to -\infty}^+\infty \|x[k]||h[n-k]|$=$\sum_{k \to -\infty}^+\infty \|h[k]||x[n-k]|$
-- d)	 ，该式对于任何n均成立，因此只要$\sum_{k \to -\infty}^+\infty \|h[k]|$ 有界，即$\sum_{k \to -\infty}^+\infty \|h[k]|$\infty，该离散LTI系统就是稳定的，也即只要单位脉冲响应是绝对可和的，那么对应的离散LTI系统就是稳定的，这是充分条件。我们可以证明，该条件也是必要条件。（奥本海默第一版习题3.21）
+- c)	设输入是稳定的，界为B，也即x[n]<B,对所有n,将该信号加到LTI系统上，有|y[n]|=|$\sum_{k=-\infty}^{+\infty} x[k]h[n-k] $ $ \leq $ $ \sum_{k=-\infty}^{+\infty} |x[k]||h[n-k]| $=$ \sum_{k=-\infty}^{+\infty} |h[k]||x[n-k]| $
+- d)	 ，该式对于任何n均成立，因此只要$\sum_{k=-\infty}^{+\infty} |h[k]| $ 有界，即$ \sum_{k=-\infty}^{+\infty} |h[k]| $<$ \infty $，该离散LTI系统就是稳定的，也即只要单位脉冲响应是绝对可和的，那么对应的离散LTI系统就是稳定的，这是充分条件。我们可以证明，该条件也是必要条件。（奥本海默第一版习题3.21）
 - e)	对于连续LTI系统来说，单位冲激响应绝对可积，该系统就是稳定的。
 - 3)	单位阶跃响应
 - A)	从前面介绍，我们看到一个LTI系统的特性可以用其单位冲激响应来刻画，从h(t)或h[n]中能够看到一个LTI系统的性质
