@@ -520,9 +520,9 @@ $$
 <td>$$x[n]=\frac{1}{2\pi} \int_{2\pi} {X({\it e}^{j\omega}){\it e}^{j\omega n}} \,{\rm d}\omega$$时域离散非周期</td>
 <td>$$X({\it e}^{j\omega}=\sum_{k=-\infty}^{+\infty}x[n]{\it e}^{-j\omega n}$$频域连续周期</td>
 </table>
-<cente>
+<center>
   <img
-  src="asd.png">
+  src="pingyi1.png">
 </center>
 
 ## 4.10 由线性常系数差分方程表征的系统的频率响应 
@@ -659,6 +659,5 @@ $$
 
     xv.	所以，最终系统输出： 
     $$
-    y[n]=-4(\frac{1}{4})^n u[n]-2(n+1)(\frac{1}{4})^n+8(\frac{1}{2})^n
+    y[n]=-4(\frac{1}{4})^n u[n]-2(n+1)(\frac{1}{4})^n+8(\frac{1}{2})^n u[n]
     $$
-
