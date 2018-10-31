@@ -522,7 +522,7 @@ $$
 </table>
 <center>
   <img
-  src="pingyi1.png">
+  src="asd.png">
 </center>
 
 ## 4.10 由线性常系数差分方程表征的系统的频率响应 
