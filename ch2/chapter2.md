@@ -208,7 +208,7 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 - 1)	微分方程求解
 - A)	根据高等数学基本知识，我们可以对常系数微分方程求解
 - B)	一般方程形式为：
-- a)	 a_N$ \left. \frac{{\rm d}y(t)}^N{{\rm d}t} $+a_N-1$ \left. \frac{{\rm d}y(t)}^N-1{{\rm d}t} $+a_1$ \left. \frac{{\rm d}y(t)}{{\rm d}t} $+a_0y(t)=b_M$ \left. \frac{{\rm d}x(t)}^M{{\rm d}t} $+b_M-1$ \left. \frac{{\rm d}x(t)}^M-1{{\rm d}t} $+\Lambda+b_1$ \left. \frac{{\rm d}x(t)}{{\rm d}t} $+b_0x(t)
+- a)	 $ a_N $ $ \left. \frac{{\rm d}y(t)}^{N} {{\rm d}t} $+$ a_N-1 \left. \frac{{\rm d}y(t)}^{N-1}{\rm d}t} $+$ a_1 $ $ \left. \frac{{\rm d}y(t)}{{\rm d}t} $+$ a_0y(t)=b_M$ \left. \frac{{\rm d}x(t)}^M{{\rm d}t} $+$ b_M-1 \left. \frac{{\rm d}x(t)}^M-1{{\rm d}t} $+$ \Lambda $+$ b_1 \left. \frac{{\rm d}x(t)}{{\rm d}t} $+$ b_0x(t) $
 - b)	也即 $\sum_{k=0}^N \a_k$ \left. \frac{{\rm d}y(t)}^K{{\rm d}t} $=$\sum_{l=0}^M \b_l$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $
 - c)	若N＝0，则y(t)=1/a_0$\sum_{l=0}^m \b_1$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $ ，显示方程，输入输出间关系清晰；
 - d)	若N>=1，则需要解微分方程
