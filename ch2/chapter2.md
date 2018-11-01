@@ -201,8 +201,7 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 - 5)	例2：RLC电路方程，就是二阶微分方程。
 - A)	同样的，输入为ui(t)，输出是电容两端电压uc(t)，具体草图在速写本中。
 - B)	公式$ f(n)= \begin{cases} R_i(t)+u_c(t)+u_L=u_i(t),  \\ c$ \left. \frac{{\rm d}u_C(t)}{{\rm d}t} \ $=i(t),\\u_L=L$ \left. \frac{{\rm d}i(t)}{{\rm d}t}  $end{cases} $ ，有LC$ \left. \frac{{\rm d}u_c(t)}^2{{\rm d}t^2}  $+RC$ \left. \frac{{\rm d}u_c(t)}{{\rm d}t^2}  $+u_c(t) =u_i(t)，这是二阶微分方程。
-### §2.5.2　微分方程描述的系统\frac{{\rm d}u(t)}{{\rm d}t}
-- 1)	微分方程求解
+### §2.5.2　微分方程描述的系统
 - A)	根据高等数学基本知识，我们可以对常系数微分方程求解
 - B)	一般方程形式为：
 - a)	 $ a_N $ $ \frac{{\rm d^N}y(t)}{{\rm d}t} $+$ a_N-1 $ $ \frac{{\rm d^{N-1}}y(t)}{{\rm d}t} $+$ a_1 $ $ \frac{{\rm d}y(t)}{{\rm d}t} $+$ a_0y(t) $=$ b_M $ $ \frac{{\rm d^M}x(t)}{{\rm d}t} $+$ b_M-1 $ $ \frac{{\rm d^{M-1}}x(t)}{{\rm d}t} $+$ \Lambda $+$ b_1 $ $ \frac{{\rm d}x(t)}{{\rm d}t} $+  $ b_0x(t) $
@@ -225,11 +224,11 @@ $  (A_{11}t^{k-1}+A_{12}T^{K-2}+\Lambda A_{1k-1}t+A_{1k})e^{\alpha_1t} $
 tp                               C0+C1t+C2t2+…+Cptp
 eαt(α为非特征根)                  Ceαt
 sinωt, cosωt	                 C1sinωt+C2cosωt
-eαt(α为特征方程的k次重根)	   $ (C_{k-1}t^{k-1}+C_{K-2}t^{k-2}+\Lambda+C_1t+C_0)e^{\alphat} 
+eαt(α为特征方程的k次重根)	   $ (C_{k-1}t^{k-1}+C_{K-2}t^{k-2}+\Lambda+C_1t+C_0)e^{\alphat} $
 
 …	…
 Ci的求解为yp(t)代入方程, 两边系数匹配求得
-- F)	完全解＝其次解＋特解y(t)=yh(t)+yp(t)，h：homogeneous solution， p：particular solution$ y(t)= $ y_h(t)+y_p(t) $=$ \sum_{i=1}^{N} A_ie^{\alpha_it}+y_p(t) $ ，由N个初始条件确定待定系数Ai；例：给定线性常系数方程$ \frac{{\rm d^2}y(t)}{{\rm d}t^2}  $+3$ \frac{{\rm d}y(t)}{{\rm d}t}  $+2y(t)=x(t) ，求当x(t)=$ 4e^{-3t}u(t) $;$ y(t) \right| _{t=0_+} $=3,$ \left. \frac{{\rm d}y(t)}{{\rm d}t} \right| _{t=0} $=4 时的全解。解：$ y(t)=y_h(t)+y_p(t) $先求其次解特征方程$ a^2+3a+2=0 $，得特征根$ a_1=-1,a_2=-2 $其次解为$ y_h(t)=A_1e^{-t}+A_2e^{-2t} $再求特解当输入为$ 4e^{-3t} $时，特解可设为$ y_p(t)=Be^{-3t} $其一、二阶导数分别为$ y_p(t)=-3Be^{-3t} $$，y"_p(t)=9Be^{-3t} $
+- F)	完全解＝其次解＋特解y(t)=yh(t)+yp(t)，h：homogeneous solution， p：particular solution$ y(t)= $ y_h(t)+y_p(t) $=$ \sum_{i=1}^{N} A_ie^{\alpha_it}+y_p(t) $ ，由N个初始条件确定待定系数Ai；例：给定线性常系数方程$ \frac{{\rm d^2}y(t){{\rm d}t^2}  $+3$ \frac{{\rm d}y(t)}{{\rm d}t}  $+2y(t)=x(t) ，求当x(t)=$ 4e^{-3t}u(t) $;$ y(t) \right| _{t=0_+} $=3,$ \left. \frac{{\rm d}y(t)}{{\rm d}t} \right| _{t=0} $=4 时的全解。解：$ y(t)=y_h(t)+y_p(t) $先求其次解特征方程$ a^2+3a+2=0 $，得特征根$ a_1=-1,a_2=-2 $其次解为$ y_h(t)=A_1e^{-t}+A_2e^{-2t} $再求特解当输入为$ 4e^{-3t} $时，特解可设为$ y_p(t)=Be^{-3t} $其一、二阶导数分别为$ y_p(t)=-3Be^{-3t} $$，y"_p(t)=9Be^{-3t} $
 iii.	代入原方程后有：$ 9Be^{-3t}-9Be^{-3t}+2Be^{-3t}=4e^{-3t} $ ，得B＝2
 - d)	得全解为y(t)=$ A_1e^{-t}+A_2e^{-2t}+2e^{-3t} $ ，代入y(t)和y’(t)初始值，有
 e)$ f(n)= \begin{cases} A_1+A_2+2=3,  \\ -A_1-2A_2-6=4, \end{cases} $	 ，得 $ f(n)= \begin{cases} A_1=12,  \\ A_2=-11,  \end{cases} $
