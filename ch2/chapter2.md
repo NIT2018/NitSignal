@@ -24,10 +24,7 @@
 ## §2.1　用单位冲激表示信号
 1)	离散x[n]用冲激函数表示
 - A)	考查一个离散信号x[n](下面补上图，奥本海默第一版P53 图3.1 (a))
-
-
-
-- B)	上章:x[n]δ[n]=x[0]δ[n]=x[0]，和x[n]δ[n-n_0]=x[n_0]δ[n-n_0]=x[n_0],
+- B)	上章:x[n]δ[n]=x[0]δ[n]=x[0]，和$ x[n]δ[n-n_0]=x[n_0]δ[n-n_0]=x[n_0] $,
 ### 上面信号的每一个分量都可以用该式来表达
 - a) x[-1]δ[n+1]=$ f(n)= \begin{cases} x[-1], & \text {$n=-1$} \\ 0, & \text{$n\neq-1$} \end{cases} $
 - b) x[0]δ[n]=$ f(n)= \begin{cases} x[0], & \text {$n=0$} \\ 0, & \text{$n\neq0$} \end{cases} $
@@ -204,12 +201,12 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 - 5)	例2：RLC电路方程，就是二阶微分方程。
 - A)	同样的，输入为ui(t)，输出是电容两端电压uc(t)，具体草图在速写本中。
 - B)	公式$ f(n)= \begin{cases} R_i(t)+u_c(t)+u_L=u_i(t),  \\ c$ \left. \frac{{\rm d}u_C(t)}{{\rm d}t} \ $=i(t),\\u_L=L$ \left. \frac{{\rm d}i(t)}{{\rm d}t}  $end{cases} $ ，有LC$ \left. \frac{{\rm d}u_c(t)}^2{{\rm d}t^2}  $+RC$ \left. \frac{{\rm d}u_c(t)}{{\rm d}t^2}  $+u_c(t) =u_i(t)，这是二阶微分方程。
-### §2.5.2　微分方程描述的系统
+### §2.5.2　微分方程描述的系统\frac{{\rm d}u(t)}{{\rm d}t}
 - 1)	微分方程求解
 - A)	根据高等数学基本知识，我们可以对常系数微分方程求解
 - B)	一般方程形式为：
-- a)	 $ a_N $ $ \left. \frac{{\rm d}y(t)}^{N} {{\rm d}t} $+$ a_N-1 \left. \frac{{\rm d}y(t)}^{N-1}{\rm d}t} $+$ a_1 $ $ \left. \frac{{\rm d}y(t)}{{\rm d}t} $+$ a_0y(t)=b_M$ \left. \frac{{\rm d}x(t)}^M{{\rm d}t} $+$ b_M-1 \left. \frac{{\rm d}x(t)}^M-1{{\rm d}t} $+$ \Lambda $+$ b_1 \left. \frac{{\rm d}x(t)}{{\rm d}t} $+$ b_0x(t) $
-- b)	也即 $\sum_{k=0}^N \a_k$ \left. \frac{{\rm d}y(t)}^K{{\rm d}t} $=$\sum_{l=0}^M \b_l$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $
+- a)	 $ a_N $ $ \frac{{\rm d^N}y(t)} {{\rm d}t} $+$ a_N-1 \left. \frac{{\rm d}y(t)}^{N-1}{\rm d}t} $+$ a_1 $ $ \left. \frac{{\rm d}y(t)}{{\rm d}t} $+$ a_0y(t)=b_M$ \left. \frac{{\rm d}x(t)}^M{{\rm d}t} $+$ b_M-1 \left. \frac{{\rm d}x(t)}^M-1{{\rm d}t} $+$ \Lambda $+$ b_1 \left. \frac{{\rm d}x(t)}{{\rm d}t} $+$ b_0x(t) $
+- b)	也即 $\sum_{k=0}^{N} a_k $ $ \left. \frac{{\rm d}y(t)}^K{{\rm d}t} $=$\sum_{l=0}^M \b_l$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $
 - c)	若N＝0，则y(t)=1/a_0$\sum_{l=0}^m \b_1$ \left. \frac{{\rm d}x(t)}^l{{\rm d}t} $ ，显示方程，输入输出间关系清晰；
 - d)	若N>=1，则需要解微分方程
 - C)	该常系数微分方程的解由其次解和特解组成
