@@ -215,7 +215,7 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 - D)	其次解的解法：
 - a)	根据$ a_N $ $ \frac{{\rm d^N}y(t)}{{\rm d}t} $+$ a_N-1 $ $ \frac{{\rm d^{N-1}}y(t)}{{\rm d}t} $+$ a_1 $ $ \frac{{\rm d}y(t)}{{\rm d}t} $+$ a_0y(t) $，我们可以得到特征方程$ a_N\alpha^N $+$ a_N-1\alpha^N-1 $+$ \Lambda+a_1\alpha+a_0 $=0
 - b)	若得到N个不重复的特征根，分别是$ a_1 $,$ a_2 $,$ \Lambda $ $\Lambda $,$ a_N $，则其次解的基本形式就是$ y_h(t)=A_1e^{\alpha_1t}+A_2e^{\alpha_2t}+\Lambda \Lambda+A_Ne^{\alpha_Nt} $，Ai，（i＝1，2，…，N）为待定系数，根据N个初始条件确定待定系数
-- c)	若α1为二阶重根，则对应于α1的部分为：$ (A_11t+A_12)e^\alpha^{1t} $
+- c)	若α1为二阶重根，则对应于α1的部分为：$ (A_{11}t+A_{12})e^{\alpha_1t} $
 - d)	若α1为k阶重根，则对应于α1的部分为：
 $  (A_{11}t^{k-1}+A_{12}T^{K-2}+\Lambda A_{1k-1}t+A_{1k})e^{\alpha_1t} $
 - E)	特解的解法：
