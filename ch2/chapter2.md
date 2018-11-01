@@ -206,18 +206,18 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 - A)	根据高等数学基本知识，我们可以对常系数微分方程求解
 - B)	一般方程形式为：
 - a)	 $ a_N $ $ \frac{{\rm d^N}y(t)}{{\rm d}t} $+$ a_N-1 $ $ \frac{{\rm d^{N-1}}y(t)}{{\rm d}t} $+$ a_1 $ $ \frac{{\rm d}y(t)}{{\rm d}t} $+$ a_0y(t) $=$ b_M $ $ \frac{{\rm d^M}x(t)}{{\rm d}t} $+$ b_M-1 $ $ \frac{{\rm d^{M-1}}x(t)}{{\rm d}t} $+$ \Lambda $+$ b_1 $ $ \frac{{\rm d}x(t)}{{\rm d}t} $+  $ b_0x(t) $
-- b)	也即 $\sum_{k=0}^{N} a_k $ $ \frac{{\rm d^k}y(t)}{{\rm d}t} $=$ \sum_{l=0}^{M} \b_l $ $ \frac{{\rm d^1}x(t)}{{\rm d}t} $
+- b)	也即 $\sum_{k=0}^{N} a_k $ $ \frac{{\rm d^k}y(t)}{{\rm d}t} $=$ \sum_{l=0}^{M} b_l $ $ \frac{{\rm d^1}x(t)}{{\rm d}t} $
 - c)	若N＝0，则y(t)=$ 1/a_0 $ $ \sum_{l=0}^{m} b_1 $ \frac{{\rm d^1}x(t)}{{\rm d}t} $ ，显示方程，输入输出间关系清晰；
 - d)	若N>=1，则需要解微分方程
 - C)	该常系数微分方程的解由其次解和特解组成
 - a)	其次解就是$\sum_{K=0}^{N} a_k $ $ \frac{{\rm d^k}y(t)}{{\rm d}t} $=0 时得到的y(t)表达式
 - b)	特解就是挣对具体输入信号得到的输出信号
 - D)	其次解的解法：
-- a)	根据a_N$ \left. \frac{{\rm d}y(t)}^N{{\rm d}t} $+a_N-1$ \left. \frac{{\rm d}y(t)}^N-1{{\rm d}t} $+\Lambda+a_1$ \left. \frac{{\rm d}y(t)}{{\rm d}t} $+a_0y(t)=0 ，我们可以得到特征方程 a_N\alpha^N+a_N-1\alpha^N-1+\Lambda+a_1\alpha+a_0=0
-- b)	若得到N个不重复的特征根，分别是a_1,a_2,\Lambda \Lambda ,a_N，则其次解的基本形式就是y_h(t)=A_1e^\alpha_1t+A_2e^\alpha_2t+\Lambda \Lambda+A_Ne^\alpha_Nt ，Ai，（i＝1，2，…，N）为待定系数，根据N个初始条件确定待定系数
-- c)	若α1为二阶重根，则对应于α1的部分为： (A_11t+A_12)e^\alpha_1t
+- a)	根据$ a_N $ $ \frac{{\rm d^N}y(t)}{{\rm d}t} $+$ a_N-1 $ $ \frac{{\rm d^{N-1}}y(t)}{{\rm d}t} $+$ a_1 $ $ \frac{{\rm d}y(t)}{{\rm d}t} $+$ a_0y(t) $，我们可以得到特征方程$ a_N\alpha^N $+$ a_N-1\alpha^N-1 $+$ \Lambda+a_1\alpha+a_0 $=0
+- b)	若得到N个不重复的特征根，分别是$ a_1 $,$ a_2 $,$ \Lambda $ $\Lambda $,$ a_N $，则其次解的基本形式就是$ y_h(t)=A_1e^{\alpha_1t}+A_2e^{\alpha_2t}+\Lambda \Lambda+A_Ne^{\alpha_Nt} $，Ai，（i＝1，2，…，N）为待定系数，根据N个初始条件确定待定系数
+- c)	若α1为二阶重根，则对应于α1的部分为：$ (A_11t+A_12)e^\alpha^{1t} $
 - d)	若α1为k阶重根，则对应于α1的部分为：
- (A_11t^k-1+A_12T^K-2+\Lambda A_1k-1t+A_1k)e^\alpha_1t
+$  (A_{11}t^{k-1}+A_{12}T^{K-2}+\Lambda A_{1k-1}t+A_{1k})e^{\alpha_1t} $
 - E)	特解的解法：
 - a)	根据不同的输入信号形式，我们可以得知特解为：
 输入形式	输出yp(t)
