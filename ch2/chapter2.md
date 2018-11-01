@@ -197,7 +197,7 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 - 3)	因此，研究LTI系统用微分、差分方程描述且求解是进行时域分析的重要内容。
 - 4)	例1：RC电路方程
 - A)	对于一个RC电路，输入为ui(t)，输出是电容两端电压uc(t)，画示意图
-- B)	根据公式$ f(n)= \begin{cases} R_i(t)+u_c(t)=u_i(t),  \\ c$ \left. \frac{{\rm d}u_C(t)}{{\rm - d}t} \ $=i(t)end{cases} $ ，所以有 ，这就是输入输出之间的关系。是一阶微分方程。
+- B)	根据公式$ f(n)=$ \begin{cases}$ R_i(t)+u_c(t) $=$ u_i(t) $,  \\ c$ \frac{{\rm d}u_C(t)}{{\rm - d}t} $=i(t)end{cases} $ ，所以有 ，这就是输入输出之间的关系。是一阶微分方程。
 - 5)	例2：RLC电路方程，就是二阶微分方程。
 - A)	同样的，输入为ui(t)，输出是电容两端电压uc(t)，具体草图在速写本中。
 - B)	公式$ f(n)= \begin{cases} R_i(t)+u_c(t)+u_L=u_i(t),  \\ c$ \left. \frac{{\rm d}u_C(t)}{{\rm d}t} \ $=i(t),\\u_L=L$ \left. \frac{{\rm d}i(t)}{{\rm d}t}  $end{cases} $ ，有LC$ \left. \frac{{\rm d}u_c(t)}^2{{\rm d}t^2}  $+RC$ \left. \frac{{\rm d}u_c(t)}{{\rm d}t^2}  $+u_c(t) =u_i(t)，这是二阶微分方程。
