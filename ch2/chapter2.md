@@ -220,28 +220,28 @@ iv.	所以逆系统的单位脉冲响应就是h[n]=δ[n]-δ[n-1]
 $  (A_{11}t^{k-1}+A_{12}T^{K-2}+\Lambda A_{1k-1}t+A_{1k})e^{\alpha_1t} $
 - E)	特解的解法：
 - a)	根据不同的输入信号形式，我们可以得知特解为：
-输入形式	输出yp(t)
-常数A	常数C
-tp	C0+C1t+C2t2+…+Cptp
-eαt(α为非特征根)	Ceαt
-sinωt, cosωt	C1sinωt+C2cosωt
-eαt(α为特征方程的k次重根)	 
+输入形式	                 输出yp(t)
+常数A	                         常数C
+tp                               C0+C1t+C2t2+…+Cptp
+eαt(α为非特征根)                  Ceαt
+sinωt, cosωt	                 C1sinωt+C2cosωt
+eαt(α为特征方程的k次重根)	   $ (C_{k-1}t^{k-1}+C_{K-2}t^{k-2}+\Lambda+C_1t+C_0)e^{\alphat} 
 
 …	…
 Ci的求解为yp(t)代入方程, 两边系数匹配求得
-- F)	完全解＝其次解＋特解y(t)=yh(t)+yp(t)，h：homogeneous solution， p：particular solution y(t)=y_h(t)+y_p(t)=$\sum_{i=1}^N \A_ie^\alpha_1t+y_p(t)$ ，由N个初始条件确定待定系数Ai；例：给定线性常系数方程$ \left. \frac{{\rm d}y(t)}^2{{\rm d}t^2}  $+3$ \left. \frac{{\rm d}y(t)}{{\rm d}t}  $+2y(t)=x(t) ，求当x(t)=4e^-3tu(t);$ y(t) \right| _{t=0_+} $=3,$ \left. \frac{{\rm d}y(t)}{{\rm d}t} \right| _{t=0} $=4 时的全解。解：y(t)=y_h(t)+y_p(t) 先求其次解特征方程a^2+3a+2=0 ，得特征根a_1=-1,a_2=-2 其次解为y_h(t)=A_1e^-t+A_2e^-2t 再求特解当输入为4e^-3t 时，特解可设为y_p(t)=Be^-3t 其一、二阶导数分别为 y_p(t)=-3Be^-3t，y"_p(t)=9Be^-3t 
-iii.	代入原方程后有：9Be^-3t-9Be^-3t+2Be^-3t=4e^-3t ，得B＝2
-- d)	得全解为y(t)=A_1e^-t+A_2e^-2t+2e^-3t ，代入y(t)和y’(t)初始值，有
+- F)	完全解＝其次解＋特解y(t)=yh(t)+yp(t)，h：homogeneous solution， p：particular solution$ y(t)= $ y_h(t)+y_p(t) $=$ \sum_{i=1}^{N} A_ie^{\alpha_it}+y_p(t) $ ，由N个初始条件确定待定系数Ai；例：给定线性常系数方程$ \frac{{\rm d^2}y(t)}{{\rm d}t^2}  $+3$ \frac{{\rm d}y(t)}{{\rm d}t}  $+2y(t)=x(t) ，求当x(t)=$ 4e^{-3t}u(t) $;$ y(t) \right| _{t=0_+} $=3,$ \left. \frac{{\rm d}y(t)}{{\rm d}t} \right| _{t=0} $=4 时的全解。解：$ y(t)=y_h(t)+y_p(t) $先求其次解特征方程$ a^2+3a+2=0 $，得特征根$ a_1=-1,a_2=-2 $其次解为$ y_h(t)=A_1e^{-t}+A_2e^{-2t} $再求特解当输入为$ 4e^{-3t} $时，特解可设为$ y_p(t)=Be^{-3t} $其一、二阶导数分别为$ y_p(t)=-3Be^{-3t} $$，y"_p(t)=9Be^{-3t} $
+iii.	代入原方程后有：$ 9Be^{-3t}-9Be^{-3t}+2Be^{-3t}=4e^{-3t} $ ，得B＝2
+- d)	得全解为y(t)=$ A_1e^{-t}+A_2e^{-2t}+2e^{-3t} $ ，代入y(t)和y’(t)初始值，有
 e)$ f(n)= \begin{cases} A_1+A_2+2=3,  \\ -A_1-2A_2-6=4, \end{cases} $	 ，得 $ f(n)= \begin{cases} A_1=12,  \\ A_2=-11,  \end{cases} $
-- f)	有 y(t)=(12e^-t-11e^-2t+2e^-3t)u(t)
+- f)	有 y(t)=$ (12e^{-t}-11e^{-2t}+2e^{-3t})u(t) $
 - H)	上解中，前两项其次解，只跟系统特性有关，而跟输入信号无关，叫自由响应或者固有响应，后一项则跟输入信号有关，叫强迫响应。
 I)	需要说明的是，自由响应前面得系数跟输入信号还是有关的。
 §2.5.3　差分方程描述的系统
-1)	跟连续系统类似，离散系统也可以用线性常系数差分方程来表述；一个N阶线性常系数差分方程为 $\sum_{k=0}^N \a_k{y[n-k]}$=$\sum_{i=1}^n \$\sum_{k=0}^M \b_k{x[n-k]
+1)	跟连续系统类似，离散系统也可以用线性常系数差分方程来表述；一个N阶线性常系数差分方程为 $\sum_{k=0}^{N} a_ky[n-k]} $=$ \sum_{i=1}^{n} \sum_{k=0}^{M} b_kx[n-k] $
 2)	差分方程求解方法跟上述微分方程求解类似，也分其次解和特解，其次解对应着自由响应，特解对应着强迫响应。请自己阅读课本P57－P59
 3)	下面介绍另外一种思路和方法（下面开始奥本海默第一版P79-P81）
-- A)	可以将公式写成：y[n]=1/a_0{$\sum_{k=0}^M \b_k{x[n-k]$-$\sum_{k=1}^N \a_k{y[n-k]} ，也即系统在时间n的输出y[n]可以用输入的过去和现在值以及输出的过去值来表示。只要知道了一组附加条件入y[-N]、y[-N+1]、y[-N+2]、……、y[-1]，即可求出接下来的一系列y[n]值。这样的方程叫递归方程。
-- B)	当N=0时，输出方程是y[n]=$\sum_{k=0}^M \$\frac{b_k}{a_0}$x[n-k]$ ，这个是非递归方程，根据卷积和公式：y[n]=$\sum_{k \to -\infty}^+\infty \h[k]x[n-k] $，我们可知该系统的单位脉冲响应为$ f(n)= \begin{cases} $\frac{b_n}{a_0}S, & \text {$0\leqn\leqM$ } \\ 0, & \text{ $n$是其余值 } \end{cases} $
+- A)	可以将公式写成：$ y[n]=1/a_0{$\sum_{k=0}^{M} b_k{x[n-k]$-$\sum_{k=1}^{N} a_k{y[n-k]} ，也即系统在时间n的输出y[n]可以用输入的过去和现在值以及输出的过去值来表示。只要知道了一组附加条件入y[-N]、y[-N+1]、y[-N+2]、……、y[-1]，即可求出接下来的一系列y[n]值。这样的方程叫递归方程。
+- B)	当N=0时，输出方程是y[n]=$ \sum_{k=0}^{M} $\frac{b_k}{a_0}$x[n-k]$ ，这个是非递归方程，根据卷积和公式：y[n]=$\sum_{k \to -\infty}^+\infty \h[k]x[n-k] $，我们可知该系统的单位脉冲响应为$ f(n)= \begin{cases} $\frac{b_n}{a_0}S, & \text {$0\leqn\leqM$ } \\ 0, & \text{ $n$是其余值 } \end{cases} $
  ，这种系统的单位脉冲响应有一个有限的持续期，也即它仅在一个有限时间间隔内是非零的，具有这样性质的系统叫有限脉冲响应系统，简称FIR（Finite Impulse Response）系统。
 - C)	当N>=1时，则存在递归情况
 - a)	以y[n]-0.5y[n-1]=x[n]，为例。
