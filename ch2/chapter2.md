@@ -139,7 +139,7 @@ $ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5
 - b)	也即两个信号卷积后的微分等于其中一个信号微分后同另一个信号的卷积，课本P38最下面两句
 - c)	证明请自己看课本
 - E)	积分性质
-- a)	同样， $\int_{-\infty}^{t} {x(\lambda)*h(\lambda)} \{\rm d}\lambda$=$ \int_{-\infty}^{t}x(\lambda)\{\rm d}\lambda$*h(t)x(t)* $ \int_{-\infty}^{t}}x(\lambda)\{\rm d}\lambda $
+- a)	同样， $\int_{-\infty}^{t} {x(\lambda)*h(\lambda)} \{\rm d}\lambda $=$ \int_{-\infty}^{t}x(\lambda)\{\rm d}\lambda$*h(t)*x(t) $ $ \int_{-\infty}^{t}}x(\lambda)\{\rm d}\lambda $
 - F)	跟单位脉冲/冲激信号的卷积
 - a)	由前面信号分解，我们知道$ \int_{-\infty}^{+\infty} {x(\tau)δ(t-\tau)} \{\rm d}\tau $ ,而这正好也是卷积的定义，所以有x(t)=x(t)*δ(t)
 - b)	任何信号跟单位冲激信号的卷积，就是其本身
