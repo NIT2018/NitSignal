@@ -135,7 +135,7 @@ $ y(t)= \begin{cases} 0, & \text {$t<0$} \\ 0.5t^2, & \text{$0\leqt<T$} \\tT-0.5
 - c)	证明略
 - d)	框图说明，第一版P62图3.13
 - D)	微分性质
-- a)	 $ \left. \frac{{\rm d}x(t)*h(t)}{{\rm d}t} $=$ \left. \frac{{\rm d}h(t)*x(t)}{{\rm d}t} $=$ \left. \frac{{\rm d}h(t)}{{\rm d}t} $*x(t)=x(t)*=$ \left. \frac{{\rm d}h(t)}{{\rm d}t} $
+- a)	 $ \frac{{\rm d}x(t)*h(t)}{{\rm d}t} $=$ \frac{{\rm d}h(t)*x(t)}{{\rm d}t} $=$ \frac{{\rm d}h(t)}{{\rm d}t} $*x(t)=x(t)*$ \frac{{\rm d}h(t)}{{\rm d}t} $
 - b)	也即两个信号卷积后的微分等于其中一个信号微分后同另一个信号的卷积，课本P38最下面两句
 - c)	证明请自己看课本
 - E)	积分性质
