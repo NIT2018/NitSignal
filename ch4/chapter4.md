@@ -661,5 +661,4 @@ $$
     $$
     y[n]=-4(\frac{1}{4})^n u[n]-2(n+1)(\frac{1}{4})^n+8(\frac{1}{2})^n u[n]
     $$
-
-    $$f(n)=\begin{cases} n/2, & \text {if $n$ is even} \\ 3n+1, & \text{if $n$ is odd} \end{cases}$$
+$${F}\over{=}$$
