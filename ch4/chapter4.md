@@ -662,4 +662,4 @@ $$
     y[n]=-4(\frac{1}{4})^n u[n]-2(n+1)(\frac{1}{4})^n+8(\frac{1}{2})^n u[n]
     $$
 $${x[n]为实数}\over{=}$$
-$$\because \therefore$$
+$$\therefore$$
