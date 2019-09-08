@@ -49,6 +49,7 @@
   图1-6 信号增强之后的示意图
   </center>
 
+[海洋深处奇怪声音](http://k.sina.com.cn/article_6016288719_m1669947cf001007y87.html)
 
 [^_^]:
     ![image](https://raw.githubusercontent.com/NIT2018/NitSignal/master/ch1/flag-1.png)
